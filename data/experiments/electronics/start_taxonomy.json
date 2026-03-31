@@ -1,0 +1,102 @@
+{
+  "id": "electronics",
+  "name": "Electronics",
+  "description": "Electronic devices, components, and related accessories",
+  "children": [
+    {
+      "id": "arcade_equipment",
+      "name": "Arcade Equipment",
+      "description": "Products and items in the Arcade Equipment category"
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "description": "Products and items in the Audio category"
+    },
+    {
+      "id": "circuit_boards_and_components",
+      "name": "Circuit Boards & Components",
+      "description": "Products and items in the Circuit Boards & Components category"
+    },
+    {
+      "id": "communications",
+      "name": "Communications",
+      "description": "Products and items in the Communications category"
+    },
+    {
+      "id": "components",
+      "name": "Components",
+      "description": "Products and items in the Components category"
+    },
+    {
+      "id": "computers",
+      "name": "Computers",
+      "description": "Products and items in the Computers category"
+    },
+    {
+      "id": "electronics_accessories",
+      "name": "Electronics Accessories",
+      "description": "Products and items in the Electronics Accessories category"
+    },
+    {
+      "id": "gps_accessories",
+      "name": "GPS Accessories",
+      "description": "Products and items in the GPS Accessories category"
+    },
+    {
+      "id": "gps_navigation_systems",
+      "name": "GPS Navigation Systems",
+      "description": "Products and items in the GPS Navigation Systems category"
+    },
+    {
+      "id": "gps_tracking_devices",
+      "name": "GPS Tracking Devices",
+      "description": "Products and items in the GPS Tracking Devices category"
+    },
+    {
+      "id": "marine_electronics",
+      "name": "Marine Electronics",
+      "description": "Products and items in the Marine Electronics category"
+    },
+    {
+      "id": "networking",
+      "name": "Networking",
+      "description": "Products and items in the Networking category"
+    },
+    {
+      "id": "print_copy_scan_and_fax",
+      "name": "Print, Copy, Scan & Fax",
+      "description": "Products and items in the Print, Copy, Scan & Fax category"
+    },
+    {
+      "id": "radar_detectors",
+      "name": "Radar Detectors",
+      "description": "Products and items in the Radar Detectors category"
+    },
+    {
+      "id": "speed_radars",
+      "name": "Speed Radars",
+      "description": "Products and items in the Speed Radars category"
+    },
+    {
+      "id": "toll_collection_devices",
+      "name": "Toll Collection Devices",
+      "description": "Products and items in the Toll Collection Devices category"
+    },
+    {
+      "id": "video",
+      "name": "Video",
+      "description": "Products and items in the Video category"
+    },
+    {
+      "id": "video_game_console_accessories",
+      "name": "Video Game Console Accessories",
+      "description": "Products and items in the Video Game Console Accessories category"
+    },
+    {
+      "id": "video_game_consoles",
+      "name": "Video Game Consoles",
+      "description": "Products and items in the Video Game Consoles category"
+    }
+  ]
+}

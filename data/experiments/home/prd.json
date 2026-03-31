@@ -1,0 +1,55 @@
+{
+  "projectName": "Home & Garden Taxonomy Construction",
+  "domain": "home",
+  "branchName": "taxonomy-home-v1",
+  "userStories": [
+    {
+      "id": 1,
+      "title": "Verify and complete L1 categories under Home & Garden",
+      "acceptanceCriteria": "Home & Garden has 21 direct children. validate.py passes with 0 errors.",
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Expand 'Bathroom Accessories' to L2 subcategories",
+      "acceptanceCriteria": "'Bathroom Accessories' has at least 21 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "Expand 'Business & Home Security' to L2 subcategories",
+      "acceptanceCriteria": "'Business & Home Security' has at least 9 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Expand 'Decor' to L2 subcategories",
+      "acceptanceCriteria": "'Decor' has at least 75 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Expand 'Emergency Preparedness' to L2 subcategories",
+      "acceptanceCriteria": "'Emergency Preparedness' has at least 5 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Add L3 leaf categories across Home & Garden subcategories",
+      "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
+      "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
+      "passes": false
+    },
+    {
+      "id": 8,
+      "title": "Achieve edge F1 > 0.5 vs gold standard",
+      "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
+      "passes": false
+    }
+  ]
+}

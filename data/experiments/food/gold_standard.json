@@ -1,0 +1,1890 @@
+{
+  "id": "food_beverages_tobacco",
+  "name": "Food, Beverages & Tobacco",
+  "description": "Food products, drinks, tobacco, and related items",
+  "children": [
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "description": "Products and items in the Beverages category",
+      "children": [
+        {
+          "id": "alcoholic_beverages",
+          "name": "Alcoholic Beverages",
+          "description": "Products and items in the Alcoholic Beverages category",
+          "children": [
+            {
+              "id": "beer",
+              "name": "Beer",
+              "description": "Products and items in the Beer category"
+            },
+            {
+              "id": "bitters",
+              "name": "Bitters",
+              "description": "Products and items in the Bitters category"
+            },
+            {
+              "id": "cocktail_mixes",
+              "name": "Cocktail Mixes",
+              "description": "Products and items in the Cocktail Mixes category",
+              "children": [
+                {
+                  "id": "frozen_cocktail_mixes",
+                  "name": "Frozen Cocktail Mixes",
+                  "description": "Products and items in the Frozen Cocktail Mixes category"
+                },
+                {
+                  "id": "shelf_stable_cocktail_mixes",
+                  "name": "Shelf-stable Cocktail Mixes",
+                  "description": "Products and items in the Shelf-stable Cocktail Mixes category"
+                }
+              ]
+            },
+            {
+              "id": "flavored_alcoholic_beverages",
+              "name": "Flavored Alcoholic Beverages",
+              "description": "Products and items in the Flavored Alcoholic Beverages category"
+            },
+            {
+              "id": "hard_cider",
+              "name": "Hard Cider",
+              "description": "Products and items in the Hard Cider category"
+            },
+            {
+              "id": "liquor_and_spirits",
+              "name": "Liquor & Spirits",
+              "description": "Products and items in the Liquor & Spirits category",
+              "children": [
+                {
+                  "id": "absinthe",
+                  "name": "Absinthe",
+                  "description": "Products and items in the Absinthe category"
+                },
+                {
+                  "id": "brandy",
+                  "name": "Brandy",
+                  "description": "Products and items in the Brandy category"
+                },
+                {
+                  "id": "gin",
+                  "name": "Gin",
+                  "description": "Products and items in the Gin category"
+                },
+                {
+                  "id": "liqueurs",
+                  "name": "Liqueurs",
+                  "description": "Products and items in the Liqueurs category"
+                },
+                {
+                  "id": "rum",
+                  "name": "Rum",
+                  "description": "Products and items in the Rum category"
+                },
+                {
+                  "id": "shochu_and_soju",
+                  "name": "Shochu & Soju",
+                  "description": "Products and items in the Shochu & Soju category",
+                  "children": [
+                    {
+                      "id": "shochu",
+                      "name": "Shochu",
+                      "description": "Products and items in the Shochu category"
+                    },
+                    {
+                      "id": "soju",
+                      "name": "Soju",
+                      "description": "Products and items in the Soju category"
+                    }
+                  ]
+                },
+                {
+                  "id": "tequila",
+                  "name": "Tequila",
+                  "description": "Products and items in the Tequila category"
+                },
+                {
+                  "id": "vodka",
+                  "name": "Vodka",
+                  "description": "Products and items in the Vodka category"
+                },
+                {
+                  "id": "whiskey",
+                  "name": "Whiskey",
+                  "description": "Products and items in the Whiskey category"
+                }
+              ]
+            },
+            {
+              "id": "wine",
+              "name": "Wine",
+              "description": "Products and items in the Wine category"
+            }
+          ]
+        },
+        {
+          "id": "buttermilk",
+          "name": "Buttermilk",
+          "description": "Products and items in the Buttermilk category"
+        },
+        {
+          "id": "coffee",
+          "name": "Coffee",
+          "description": "Products and items in the Coffee category"
+        },
+        {
+          "id": "eggnog",
+          "name": "Eggnog",
+          "description": "Products and items in the Eggnog category"
+        },
+        {
+          "id": "fruit_flavored_drinks",
+          "name": "Fruit Flavored Drinks",
+          "description": "Products and items in the Fruit Flavored Drinks category"
+        },
+        {
+          "id": "hot_chocolate",
+          "name": "Hot Chocolate",
+          "description": "Products and items in the Hot Chocolate category"
+        },
+        {
+          "id": "juice",
+          "name": "Juice",
+          "description": "Products and items in the Juice category"
+        },
+        {
+          "id": "milk",
+          "name": "Milk",
+          "description": "Products and items in the Milk category"
+        },
+        {
+          "id": "non_dairy_milk",
+          "name": "Non-Dairy Milk",
+          "description": "Products and items in the Non-Dairy Milk category"
+        },
+        {
+          "id": "powdered_beverage_mixes",
+          "name": "Powdered Beverage Mixes",
+          "description": "Products and items in the Powdered Beverage Mixes category"
+        },
+        {
+          "id": "soda",
+          "name": "Soda",
+          "description": "Products and items in the Soda category"
+        },
+        {
+          "id": "sports_and_energy_drinks",
+          "name": "Sports & Energy Drinks",
+          "description": "Products and items in the Sports & Energy Drinks category"
+        },
+        {
+          "id": "tea_and_infusions",
+          "name": "Tea & Infusions",
+          "description": "Products and items in the Tea & Infusions category"
+        },
+        {
+          "id": "vinegar_drinks",
+          "name": "Vinegar Drinks",
+          "description": "Products and items in the Vinegar Drinks category"
+        },
+        {
+          "id": "water",
+          "name": "Water",
+          "description": "Products and items in the Water category",
+          "children": [
+            {
+              "id": "carbonated_water",
+              "name": "Carbonated Water",
+              "description": "Products and items in the Carbonated Water category",
+              "children": [
+                {
+                  "id": "flavored_carbonated_water",
+                  "name": "Flavored Carbonated Water",
+                  "description": "Products and items in the Flavored Carbonated Water category"
+                },
+                {
+                  "id": "unflavored_carbonated_water",
+                  "name": "Unflavored Carbonated Water",
+                  "description": "Products and items in the Unflavored Carbonated Water category"
+                }
+              ]
+            },
+            {
+              "id": "distilled_water",
+              "name": "Distilled Water",
+              "description": "Products and items in the Distilled Water category"
+            },
+            {
+              "id": "flat_mineral_water",
+              "name": "Flat Mineral Water",
+              "description": "Products and items in the Flat Mineral Water category"
+            },
+            {
+              "id": "spring_water",
+              "name": "Spring Water",
+              "description": "Products and items in the Spring Water category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "food_items",
+      "name": "Food Items",
+      "description": "Products and items in the Food Items category",
+      "children": [
+        {
+          "id": "bakery",
+          "name": "Bakery",
+          "description": "Products and items in the Bakery category",
+          "children": [
+            {
+              "id": "bagels",
+              "name": "Bagels",
+              "description": "Products and items in the Bagels category"
+            },
+            {
+              "id": "bakery_assortments",
+              "name": "Bakery Assortments",
+              "description": "Products and items in the Bakery Assortments category"
+            },
+            {
+              "id": "breads_and_buns",
+              "name": "Breads & Buns",
+              "description": "Products and items in the Breads & Buns category"
+            },
+            {
+              "id": "cakes_and_dessert_bars",
+              "name": "Cakes & Dessert Bars",
+              "description": "Products and items in the Cakes & Dessert Bars category"
+            },
+            {
+              "id": "coffee_cakes",
+              "name": "Coffee Cakes",
+              "description": "Products and items in the Coffee Cakes category"
+            },
+            {
+              "id": "cookies",
+              "name": "Cookies",
+              "description": "Products and items in the Cookies category"
+            },
+            {
+              "id": "cupcakes",
+              "name": "Cupcakes",
+              "description": "Products and items in the Cupcakes category"
+            },
+            {
+              "id": "donuts",
+              "name": "Donuts",
+              "description": "Products and items in the Donuts category"
+            },
+            {
+              "id": "fudge",
+              "name": "Fudge",
+              "description": "Products and items in the Fudge category"
+            },
+            {
+              "id": "ice_cream_cones",
+              "name": "Ice Cream Cones",
+              "description": "Products and items in the Ice Cream Cones category"
+            },
+            {
+              "id": "muffins",
+              "name": "Muffins",
+              "description": "Products and items in the Muffins category"
+            },
+            {
+              "id": "pastries_and_scones",
+              "name": "Pastries & Scones",
+              "description": "Products and items in the Pastries & Scones category"
+            },
+            {
+              "id": "pies_and_tarts",
+              "name": "Pies & Tarts",
+              "description": "Products and items in the Pies & Tarts category"
+            },
+            {
+              "id": "taco_shells_and_tostadas",
+              "name": "Taco Shells & Tostadas",
+              "description": "Products and items in the Taco Shells & Tostadas category"
+            },
+            {
+              "id": "tortillas_and_wraps",
+              "name": "Tortillas & Wraps",
+              "description": "Products and items in the Tortillas & Wraps category"
+            }
+          ]
+        },
+        {
+          "id": "candied_and_chocolate_covered_fruit",
+          "name": "Candied & Chocolate Covered Fruit",
+          "description": "Products and items in the Candied & Chocolate Covered Fruit category"
+        },
+        {
+          "id": "candy_and_chocolate",
+          "name": "Candy & Chocolate",
+          "description": "Products and items in the Candy & Chocolate category"
+        },
+        {
+          "id": "condiments_and_sauces",
+          "name": "Condiments & Sauces",
+          "description": "Products and items in the Condiments & Sauces category",
+          "children": [
+            {
+              "id": "cocktail_sauce",
+              "name": "Cocktail Sauce",
+              "description": "Products and items in the Cocktail Sauce category"
+            },
+            {
+              "id": "curry_sauce",
+              "name": "Curry Sauce",
+              "description": "Products and items in the Curry Sauce category"
+            },
+            {
+              "id": "dessert_toppings",
+              "name": "Dessert Toppings",
+              "description": "Products and items in the Dessert Toppings category",
+              "children": [
+                {
+                  "id": "fruit_toppings",
+                  "name": "Fruit Toppings",
+                  "description": "Products and items in the Fruit Toppings category"
+                },
+                {
+                  "id": "ice_cream_syrup",
+                  "name": "Ice Cream Syrup",
+                  "description": "Products and items in the Ice Cream Syrup category"
+                }
+              ]
+            },
+            {
+              "id": "fish_sauce",
+              "name": "Fish Sauce",
+              "description": "Products and items in the Fish Sauce category"
+            },
+            {
+              "id": "gravy",
+              "name": "Gravy",
+              "description": "Products and items in the Gravy category"
+            },
+            {
+              "id": "honey",
+              "name": "Honey",
+              "description": "Products and items in the Honey category"
+            },
+            {
+              "id": "horseradish_sauce",
+              "name": "Horseradish Sauce",
+              "description": "Products and items in the Horseradish Sauce category"
+            },
+            {
+              "id": "hot_sauce",
+              "name": "Hot Sauce",
+              "description": "Products and items in the Hot Sauce category"
+            },
+            {
+              "id": "ketchup",
+              "name": "Ketchup",
+              "description": "Products and items in the Ketchup category"
+            },
+            {
+              "id": "marinades_and_grilling_sauces",
+              "name": "Marinades & Grilling Sauces",
+              "description": "Products and items in the Marinades & Grilling Sauces category"
+            },
+            {
+              "id": "mayonnaise",
+              "name": "Mayonnaise",
+              "description": "Products and items in the Mayonnaise category"
+            },
+            {
+              "id": "mustard",
+              "name": "Mustard",
+              "description": "Products and items in the Mustard category"
+            },
+            {
+              "id": "olives_and_capers",
+              "name": "Olives & Capers",
+              "description": "Products and items in the Olives & Capers category"
+            },
+            {
+              "id": "pasta_sauce",
+              "name": "Pasta Sauce",
+              "description": "Products and items in the Pasta Sauce category"
+            },
+            {
+              "id": "pickled_fruits_and_vegetables",
+              "name": "Pickled Fruits & Vegetables",
+              "description": "Products and items in the Pickled Fruits & Vegetables category"
+            },
+            {
+              "id": "pizza_sauce",
+              "name": "Pizza Sauce",
+              "description": "Products and items in the Pizza Sauce category"
+            },
+            {
+              "id": "relish_and_chutney",
+              "name": "Relish & Chutney",
+              "description": "Products and items in the Relish & Chutney category"
+            },
+            {
+              "id": "salad_dressing",
+              "name": "Salad Dressing",
+              "description": "Products and items in the Salad Dressing category"
+            },
+            {
+              "id": "satay_sauce",
+              "name": "Satay Sauce",
+              "description": "Products and items in the Satay Sauce category"
+            },
+            {
+              "id": "soy_sauce",
+              "name": "Soy Sauce",
+              "description": "Products and items in the Soy Sauce category"
+            },
+            {
+              "id": "sweet_and_sour_sauces",
+              "name": "Sweet and Sour Sauces",
+              "description": "Products and items in the Sweet and Sour Sauces category"
+            },
+            {
+              "id": "syrup",
+              "name": "Syrup",
+              "description": "Products and items in the Syrup category"
+            },
+            {
+              "id": "tahini",
+              "name": "Tahini",
+              "description": "Products and items in the Tahini category"
+            },
+            {
+              "id": "tartar_sauce",
+              "name": "Tartar Sauce",
+              "description": "Products and items in the Tartar Sauce category"
+            },
+            {
+              "id": "white_and_cream_sauces",
+              "name": "White & Cream Sauces",
+              "description": "Products and items in the White & Cream Sauces category"
+            },
+            {
+              "id": "worcestershire_sauce",
+              "name": "Worcestershire Sauce",
+              "description": "Products and items in the Worcestershire Sauce category"
+            }
+          ]
+        },
+        {
+          "id": "cooking_and_baking_ingredients",
+          "name": "Cooking & Baking Ingredients",
+          "description": "Products and items in the Cooking & Baking Ingredients category",
+          "children": [
+            {
+              "id": "baking_chips",
+              "name": "Baking Chips",
+              "description": "Products and items in the Baking Chips category"
+            },
+            {
+              "id": "baking_chocolate",
+              "name": "Baking Chocolate",
+              "description": "Products and items in the Baking Chocolate category"
+            },
+            {
+              "id": "baking_flavors_and_extracts",
+              "name": "Baking Flavors & Extracts",
+              "description": "Products and items in the Baking Flavors & Extracts category"
+            },
+            {
+              "id": "baking_mixes",
+              "name": "Baking Mixes",
+              "description": "Products and items in the Baking Mixes category"
+            },
+            {
+              "id": "baking_powder",
+              "name": "Baking Powder",
+              "description": "Products and items in the Baking Powder category"
+            },
+            {
+              "id": "baking_soda",
+              "name": "Baking Soda",
+              "description": "Products and items in the Baking Soda category"
+            },
+            {
+              "id": "batter_and_coating_mixes",
+              "name": "Batter & Coating Mixes",
+              "description": "Products and items in the Batter & Coating Mixes category"
+            },
+            {
+              "id": "bean_paste",
+              "name": "Bean Paste",
+              "description": "Products and items in the Bean Paste category"
+            },
+            {
+              "id": "bread_crumbs",
+              "name": "Bread Crumbs",
+              "description": "Products and items in the Bread Crumbs category"
+            },
+            {
+              "id": "canned_and_dry_milk",
+              "name": "Canned & Dry Milk",
+              "description": "Products and items in the Canned & Dry Milk category"
+            },
+            {
+              "id": "cookie_decorating_kits",
+              "name": "Cookie Decorating Kits",
+              "description": "Products and items in the Cookie Decorating Kits category"
+            },
+            {
+              "id": "cooking_oils",
+              "name": "Cooking Oils",
+              "description": "Products and items in the Cooking Oils category"
+            },
+            {
+              "id": "cooking_starch",
+              "name": "Cooking Starch",
+              "description": "Products and items in the Cooking Starch category"
+            },
+            {
+              "id": "cooking_wine",
+              "name": "Cooking Wine",
+              "description": "Products and items in the Cooking Wine category"
+            },
+            {
+              "id": "corn_syrup",
+              "name": "Corn Syrup",
+              "description": "Products and items in the Corn Syrup category"
+            },
+            {
+              "id": "dough",
+              "name": "Dough",
+              "description": "Products and items in the Dough category",
+              "children": [
+                {
+                  "id": "bread_and_pastry_dough",
+                  "name": "Bread & Pastry Dough",
+                  "description": "Products and items in the Bread & Pastry Dough category"
+                },
+                {
+                  "id": "cookie_and_brownie_dough",
+                  "name": "Cookie & Brownie Dough",
+                  "description": "Products and items in the Cookie & Brownie Dough category"
+                },
+                {
+                  "id": "pie_crusts",
+                  "name": "Pie Crusts",
+                  "description": "Products and items in the Pie Crusts category"
+                }
+              ]
+            },
+            {
+              "id": "edible_baking_decorations",
+              "name": "Edible Baking Decorations",
+              "description": "Products and items in the Edible Baking Decorations category"
+            },
+            {
+              "id": "egg_replacers",
+              "name": "Egg Replacers",
+              "description": "Products and items in the Egg Replacers category"
+            },
+            {
+              "id": "floss_sugar",
+              "name": "Floss Sugar",
+              "description": "Products and items in the Floss Sugar category"
+            },
+            {
+              "id": "flour",
+              "name": "Flour",
+              "description": "Products and items in the Flour category"
+            },
+            {
+              "id": "food_coloring",
+              "name": "Food Coloring",
+              "description": "Products and items in the Food Coloring category"
+            },
+            {
+              "id": "frosting_and_icing",
+              "name": "Frosting & Icing",
+              "description": "Products and items in the Frosting & Icing category"
+            },
+            {
+              "id": "lemon_and_lime_juice",
+              "name": "Lemon & Lime Juice",
+              "description": "Products and items in the Lemon & Lime Juice category"
+            },
+            {
+              "id": "marshmallows",
+              "name": "Marshmallows",
+              "description": "Products and items in the Marshmallows category"
+            },
+            {
+              "id": "meal",
+              "name": "Meal",
+              "description": "Products and items in the Meal category"
+            },
+            {
+              "id": "molasses",
+              "name": "Molasses",
+              "description": "Products and items in the Molasses category"
+            },
+            {
+              "id": "pie_and_pastry_fillings",
+              "name": "Pie & Pastry Fillings",
+              "description": "Products and items in the Pie & Pastry Fillings category"
+            },
+            {
+              "id": "shortening_and_lard",
+              "name": "Shortening & Lard",
+              "description": "Products and items in the Shortening & Lard category"
+            },
+            {
+              "id": "starter_cultures",
+              "name": "Starter Cultures",
+              "description": "Products and items in the Starter Cultures category"
+            },
+            {
+              "id": "sugar_and_sweeteners",
+              "name": "Sugar & Sweeteners",
+              "description": "Products and items in the Sugar & Sweeteners category"
+            },
+            {
+              "id": "tapioca_pearls",
+              "name": "Tapioca Pearls",
+              "description": "Products and items in the Tapioca Pearls category"
+            },
+            {
+              "id": "tomato_paste",
+              "name": "Tomato Paste",
+              "description": "Products and items in the Tomato Paste category"
+            },
+            {
+              "id": "unflavored_gelatin",
+              "name": "Unflavored Gelatin",
+              "description": "Products and items in the Unflavored Gelatin category"
+            },
+            {
+              "id": "vinegar",
+              "name": "Vinegar",
+              "description": "Products and items in the Vinegar category"
+            },
+            {
+              "id": "waffle_and_pancake_mixes",
+              "name": "Waffle & Pancake Mixes",
+              "description": "Products and items in the Waffle & Pancake Mixes category"
+            },
+            {
+              "id": "yeast",
+              "name": "Yeast",
+              "description": "Products and items in the Yeast category"
+            }
+          ]
+        },
+        {
+          "id": "dairy_products",
+          "name": "Dairy Products",
+          "description": "Products and items in the Dairy Products category",
+          "children": [
+            {
+              "id": "butter_and_margarine",
+              "name": "Butter & Margarine",
+              "description": "Products and items in the Butter & Margarine category"
+            },
+            {
+              "id": "cheese",
+              "name": "Cheese",
+              "description": "Products and items in the Cheese category"
+            },
+            {
+              "id": "coffee_creamer",
+              "name": "Coffee Creamer",
+              "description": "Products and items in the Coffee Creamer category"
+            },
+            {
+              "id": "cottage_cheese",
+              "name": "Cottage Cheese",
+              "description": "Products and items in the Cottage Cheese category"
+            },
+            {
+              "id": "cream",
+              "name": "Cream",
+              "description": "Products and items in the Cream category"
+            },
+            {
+              "id": "sour_cream",
+              "name": "Sour Cream",
+              "description": "Products and items in the Sour Cream category"
+            },
+            {
+              "id": "whipped_cream",
+              "name": "Whipped Cream",
+              "description": "Products and items in the Whipped Cream category"
+            },
+            {
+              "id": "yogurt",
+              "name": "Yogurt",
+              "description": "Products and items in the Yogurt category"
+            }
+          ]
+        },
+        {
+          "id": "dips_and_spreads",
+          "name": "Dips & Spreads",
+          "description": "Products and items in the Dips & Spreads category",
+          "children": [
+            {
+              "id": "apple_butter",
+              "name": "Apple Butter",
+              "description": "Products and items in the Apple Butter category"
+            },
+            {
+              "id": "cheese_dips_and_spreads",
+              "name": "Cheese Dips & Spreads",
+              "description": "Products and items in the Cheese Dips & Spreads category"
+            },
+            {
+              "id": "cream_cheese",
+              "name": "Cream Cheese",
+              "description": "Products and items in the Cream Cheese category"
+            },
+            {
+              "id": "guacamole",
+              "name": "Guacamole",
+              "description": "Products and items in the Guacamole category"
+            },
+            {
+              "id": "hummus",
+              "name": "Hummus",
+              "description": "Products and items in the Hummus category"
+            },
+            {
+              "id": "jams_and_jellies",
+              "name": "Jams & Jellies",
+              "description": "Products and items in the Jams & Jellies category"
+            },
+            {
+              "id": "nut_butters",
+              "name": "Nut Butters",
+              "description": "Products and items in the Nut Butters category"
+            },
+            {
+              "id": "salsa",
+              "name": "Salsa",
+              "description": "Products and items in the Salsa category"
+            },
+            {
+              "id": "tapenade",
+              "name": "Tapenade",
+              "description": "Products and items in the Tapenade category"
+            },
+            {
+              "id": "vegetable_dip",
+              "name": "Vegetable Dip",
+              "description": "Products and items in the Vegetable Dip category"
+            }
+          ]
+        },
+        {
+          "id": "food_gift_baskets",
+          "name": "Food Gift Baskets",
+          "description": "Products and items in the Food Gift Baskets category"
+        },
+        {
+          "id": "frozen_desserts_and_novelties",
+          "name": "Frozen Desserts & Novelties",
+          "description": "Products and items in the Frozen Desserts & Novelties category",
+          "children": [
+            {
+              "id": "ice_cream_and_frozen_yogurt",
+              "name": "Ice Cream & Frozen Yogurt",
+              "description": "Products and items in the Ice Cream & Frozen Yogurt category"
+            },
+            {
+              "id": "ice_cream_novelties",
+              "name": "Ice Cream Novelties",
+              "description": "Products and items in the Ice Cream Novelties category"
+            },
+            {
+              "id": "ice_pops",
+              "name": "Ice Pops",
+              "description": "Products and items in the Ice Pops category"
+            }
+          ]
+        },
+        {
+          "id": "fruits_and_vegetables",
+          "name": "Fruits & Vegetables",
+          "description": "Products and items in the Fruits & Vegetables category",
+          "children": [
+            {
+              "id": "canned_and_jarred_fruits",
+              "name": "Canned & Jarred Fruits",
+              "description": "Products and items in the Canned & Jarred Fruits category"
+            },
+            {
+              "id": "canned_and_jarred_vegetables",
+              "name": "Canned & Jarred Vegetables",
+              "description": "Products and items in the Canned & Jarred Vegetables category"
+            },
+            {
+              "id": "canned_and_prepared_beans",
+              "name": "Canned & Prepared Beans",
+              "description": "Products and items in the Canned & Prepared Beans category"
+            },
+            {
+              "id": "dried_fruits",
+              "name": "Dried Fruits",
+              "description": "Products and items in the Dried Fruits category"
+            },
+            {
+              "id": "dried_vegetables",
+              "name": "Dried Vegetables",
+              "description": "Products and items in the Dried Vegetables category"
+            },
+            {
+              "id": "dry_beans",
+              "name": "Dry Beans",
+              "description": "Products and items in the Dry Beans category"
+            },
+            {
+              "id": "fresh_and_frozen_fruits",
+              "name": "Fresh & Frozen Fruits",
+              "description": "Products and items in the Fresh & Frozen Fruits category",
+              "children": [
+                {
+                  "id": "apples",
+                  "name": "Apples",
+                  "description": "Products and items in the Apples category"
+                },
+                {
+                  "id": "atemoyas",
+                  "name": "Atemoyas",
+                  "description": "Products and items in the Atemoyas category"
+                },
+                {
+                  "id": "avocados",
+                  "name": "Avocados",
+                  "description": "Products and items in the Avocados category"
+                },
+                {
+                  "id": "babacos",
+                  "name": "Babacos",
+                  "description": "Products and items in the Babacos category"
+                },
+                {
+                  "id": "bananas",
+                  "name": "Bananas",
+                  "description": "Products and items in the Bananas category"
+                },
+                {
+                  "id": "berries",
+                  "name": "Berries",
+                  "description": "Products and items in the Berries category"
+                },
+                {
+                  "id": "breadfruit",
+                  "name": "Breadfruit",
+                  "description": "Products and items in the Breadfruit category"
+                },
+                {
+                  "id": "cactus_pears",
+                  "name": "Cactus Pears",
+                  "description": "Products and items in the Cactus Pears category"
+                },
+                {
+                  "id": "cherimoyas",
+                  "name": "Cherimoyas",
+                  "description": "Products and items in the Cherimoyas category"
+                },
+                {
+                  "id": "citrus_fruits",
+                  "name": "Citrus Fruits",
+                  "description": "Products and items in the Citrus Fruits category",
+                  "children": [
+                    {
+                      "id": "grapefruits",
+                      "name": "Grapefruits",
+                      "description": "Products and items in the Grapefruits category"
+                    },
+                    {
+                      "id": "kumquats",
+                      "name": "Kumquats",
+                      "description": "Products and items in the Kumquats category"
+                    },
+                    {
+                      "id": "lemons",
+                      "name": "Lemons",
+                      "description": "Products and items in the Lemons category"
+                    },
+                    {
+                      "id": "limequats",
+                      "name": "Limequats",
+                      "description": "Products and items in the Limequats category"
+                    },
+                    {
+                      "id": "limes",
+                      "name": "Limes",
+                      "description": "Products and items in the Limes category"
+                    },
+                    {
+                      "id": "oranges",
+                      "name": "Oranges",
+                      "description": "Products and items in the Oranges category"
+                    },
+                    {
+                      "id": "tangelos",
+                      "name": "Tangelos",
+                      "description": "Products and items in the Tangelos category"
+                    }
+                  ]
+                },
+                {
+                  "id": "coconuts",
+                  "name": "Coconuts",
+                  "description": "Products and items in the Coconuts category"
+                },
+                {
+                  "id": "dates",
+                  "name": "Dates",
+                  "description": "Products and items in the Dates category"
+                },
+                {
+                  "id": "feijoas",
+                  "name": "Feijoas",
+                  "description": "Products and items in the Feijoas category"
+                },
+                {
+                  "id": "figs",
+                  "name": "Figs",
+                  "description": "Products and items in the Figs category"
+                },
+                {
+                  "id": "fruit_mixes",
+                  "name": "Fruit Mixes",
+                  "description": "Products and items in the Fruit Mixes category"
+                },
+                {
+                  "id": "grapes",
+                  "name": "Grapes",
+                  "description": "Products and items in the Grapes category"
+                },
+                {
+                  "id": "guavas",
+                  "name": "Guavas",
+                  "description": "Products and items in the Guavas category"
+                },
+                {
+                  "id": "homely_fruits",
+                  "name": "Homely Fruits",
+                  "description": "Products and items in the Homely Fruits category"
+                },
+                {
+                  "id": "kiwis",
+                  "name": "Kiwis",
+                  "description": "Products and items in the Kiwis category"
+                },
+                {
+                  "id": "longan",
+                  "name": "Longan",
+                  "description": "Products and items in the Longan category"
+                },
+                {
+                  "id": "loquats",
+                  "name": "Loquats",
+                  "description": "Products and items in the Loquats category"
+                },
+                {
+                  "id": "lychees",
+                  "name": "Lychees",
+                  "description": "Products and items in the Lychees category"
+                },
+                {
+                  "id": "madro_o",
+                  "name": "Madroño",
+                  "description": "Products and items in the Madroño category"
+                },
+                {
+                  "id": "mamey",
+                  "name": "Mamey",
+                  "description": "Products and items in the Mamey category"
+                },
+                {
+                  "id": "mangosteens",
+                  "name": "Mangosteens",
+                  "description": "Products and items in the Mangosteens category"
+                },
+                {
+                  "id": "melons",
+                  "name": "Melons",
+                  "description": "Products and items in the Melons category"
+                },
+                {
+                  "id": "papayas",
+                  "name": "Papayas",
+                  "description": "Products and items in the Papayas category"
+                },
+                {
+                  "id": "passion_fruit",
+                  "name": "Passion Fruit",
+                  "description": "Products and items in the Passion Fruit category"
+                },
+                {
+                  "id": "pears",
+                  "name": "Pears",
+                  "description": "Products and items in the Pears category"
+                },
+                {
+                  "id": "persimmons",
+                  "name": "Persimmons",
+                  "description": "Products and items in the Persimmons category"
+                },
+                {
+                  "id": "physalis",
+                  "name": "Physalis",
+                  "description": "Products and items in the Physalis category"
+                },
+                {
+                  "id": "pineapples",
+                  "name": "Pineapples",
+                  "description": "Products and items in the Pineapples category"
+                },
+                {
+                  "id": "pitahayas",
+                  "name": "Pitahayas",
+                  "description": "Products and items in the Pitahayas category"
+                },
+                {
+                  "id": "pomegranates",
+                  "name": "Pomegranates",
+                  "description": "Products and items in the Pomegranates category"
+                },
+                {
+                  "id": "quince",
+                  "name": "Quince",
+                  "description": "Products and items in the Quince category"
+                },
+                {
+                  "id": "rambutans",
+                  "name": "Rambutans",
+                  "description": "Products and items in the Rambutans category"
+                },
+                {
+                  "id": "sapodillo",
+                  "name": "Sapodillo",
+                  "description": "Products and items in the Sapodillo category"
+                },
+                {
+                  "id": "sapote",
+                  "name": "Sapote",
+                  "description": "Products and items in the Sapote category"
+                },
+                {
+                  "id": "soursops",
+                  "name": "Soursops",
+                  "description": "Products and items in the Soursops category"
+                },
+                {
+                  "id": "starfruits",
+                  "name": "Starfruits",
+                  "description": "Products and items in the Starfruits category"
+                },
+                {
+                  "id": "stone_fruits",
+                  "name": "Stone Fruits",
+                  "description": "Products and items in the Stone Fruits category",
+                  "children": [
+                    {
+                      "id": "apricots",
+                      "name": "Apricots",
+                      "description": "Products and items in the Apricots category"
+                    },
+                    {
+                      "id": "cherries",
+                      "name": "Cherries",
+                      "description": "Products and items in the Cherries category"
+                    },
+                    {
+                      "id": "mangoes",
+                      "name": "Mangoes",
+                      "description": "Products and items in the Mangoes category"
+                    },
+                    {
+                      "id": "peaches_and_nectarines",
+                      "name": "Peaches & Nectarines",
+                      "description": "Products and items in the Peaches & Nectarines category"
+                    },
+                    {
+                      "id": "plumcots",
+                      "name": "Plumcots",
+                      "description": "Products and items in the Plumcots category"
+                    },
+                    {
+                      "id": "plums",
+                      "name": "Plums",
+                      "description": "Products and items in the Plums category"
+                    }
+                  ]
+                },
+                {
+                  "id": "sugar_apples",
+                  "name": "Sugar Apples",
+                  "description": "Products and items in the Sugar Apples category"
+                },
+                {
+                  "id": "tamarindo",
+                  "name": "Tamarindo",
+                  "description": "Products and items in the Tamarindo category"
+                }
+              ]
+            },
+            {
+              "id": "fresh_and_frozen_vegetables",
+              "name": "Fresh & Frozen Vegetables",
+              "description": "Products and items in the Fresh & Frozen Vegetables category",
+              "children": [
+                {
+                  "id": "arracachas",
+                  "name": "Arracachas",
+                  "description": "Products and items in the Arracachas category"
+                },
+                {
+                  "id": "artichokes",
+                  "name": "Artichokes",
+                  "description": "Products and items in the Artichokes category"
+                },
+                {
+                  "id": "asparagus",
+                  "name": "Asparagus",
+                  "description": "Products and items in the Asparagus category"
+                },
+                {
+                  "id": "beans",
+                  "name": "Beans",
+                  "description": "Products and items in the Beans category"
+                },
+                {
+                  "id": "beets",
+                  "name": "Beets",
+                  "description": "Products and items in the Beets category"
+                },
+                {
+                  "id": "borage",
+                  "name": "Borage",
+                  "description": "Products and items in the Borage category"
+                },
+                {
+                  "id": "broccoli",
+                  "name": "Broccoli",
+                  "description": "Products and items in the Broccoli category"
+                },
+                {
+                  "id": "brussel_sprouts",
+                  "name": "Brussel Sprouts",
+                  "description": "Products and items in the Brussel Sprouts category"
+                },
+                {
+                  "id": "cabbage",
+                  "name": "Cabbage",
+                  "description": "Products and items in the Cabbage category"
+                },
+                {
+                  "id": "cactus_leaves",
+                  "name": "Cactus Leaves",
+                  "description": "Products and items in the Cactus Leaves category"
+                },
+                {
+                  "id": "cardoon",
+                  "name": "Cardoon",
+                  "description": "Products and items in the Cardoon category"
+                },
+                {
+                  "id": "carrots",
+                  "name": "Carrots",
+                  "description": "Products and items in the Carrots category"
+                },
+                {
+                  "id": "cauliflower",
+                  "name": "Cauliflower",
+                  "description": "Products and items in the Cauliflower category"
+                },
+                {
+                  "id": "celery",
+                  "name": "Celery",
+                  "description": "Products and items in the Celery category"
+                },
+                {
+                  "id": "celery_roots",
+                  "name": "Celery Roots",
+                  "description": "Products and items in the Celery Roots category"
+                },
+                {
+                  "id": "corn",
+                  "name": "Corn",
+                  "description": "Products and items in the Corn category"
+                },
+                {
+                  "id": "cucumbers",
+                  "name": "Cucumbers",
+                  "description": "Products and items in the Cucumbers category"
+                },
+                {
+                  "id": "eggplants",
+                  "name": "Eggplants",
+                  "description": "Products and items in the Eggplants category"
+                },
+                {
+                  "id": "fennel_bulbs",
+                  "name": "Fennel Bulbs",
+                  "description": "Products and items in the Fennel Bulbs category"
+                },
+                {
+                  "id": "fiddlehead_ferns",
+                  "name": "Fiddlehead Ferns",
+                  "description": "Products and items in the Fiddlehead Ferns category"
+                },
+                {
+                  "id": "gai_choy",
+                  "name": "Gai Choy",
+                  "description": "Products and items in the Gai Choy category"
+                },
+                {
+                  "id": "gai_lan",
+                  "name": "Gai Lan",
+                  "description": "Products and items in the Gai Lan category"
+                },
+                {
+                  "id": "garlic",
+                  "name": "Garlic",
+                  "description": "Products and items in the Garlic category"
+                },
+                {
+                  "id": "ginger_root",
+                  "name": "Ginger Root",
+                  "description": "Products and items in the Ginger Root category"
+                },
+                {
+                  "id": "gobo_root",
+                  "name": "Gobo Root",
+                  "description": "Products and items in the Gobo Root category"
+                },
+                {
+                  "id": "greens",
+                  "name": "Greens",
+                  "description": "Products and items in the Greens category",
+                  "children": [
+                    {
+                      "id": "arugula",
+                      "name": "Arugula",
+                      "description": "Products and items in the Arugula category"
+                    },
+                    {
+                      "id": "beet_greens",
+                      "name": "Beet Greens",
+                      "description": "Products and items in the Beet Greens category"
+                    },
+                    {
+                      "id": "bok_choy",
+                      "name": "Bok Choy",
+                      "description": "Products and items in the Bok Choy category"
+                    },
+                    {
+                      "id": "chard",
+                      "name": "Chard",
+                      "description": "Products and items in the Chard category"
+                    },
+                    {
+                      "id": "chicory",
+                      "name": "Chicory",
+                      "description": "Products and items in the Chicory category"
+                    },
+                    {
+                      "id": "choy_sum",
+                      "name": "Choy Sum",
+                      "description": "Products and items in the Choy Sum category"
+                    },
+                    {
+                      "id": "kale",
+                      "name": "Kale",
+                      "description": "Products and items in the Kale category"
+                    },
+                    {
+                      "id": "lettuce",
+                      "name": "Lettuce",
+                      "description": "Products and items in the Lettuce category"
+                    },
+                    {
+                      "id": "on_choy",
+                      "name": "On Choy",
+                      "description": "Products and items in the On Choy category"
+                    },
+                    {
+                      "id": "salad_mixes",
+                      "name": "Salad Mixes",
+                      "description": "Products and items in the Salad Mixes category"
+                    },
+                    {
+                      "id": "spinach",
+                      "name": "Spinach",
+                      "description": "Products and items in the Spinach category"
+                    },
+                    {
+                      "id": "yu_choy",
+                      "name": "Yu Choy",
+                      "description": "Products and items in the Yu Choy category"
+                    }
+                  ]
+                },
+                {
+                  "id": "horseradish_root",
+                  "name": "Horseradish Root",
+                  "description": "Products and items in the Horseradish Root category"
+                },
+                {
+                  "id": "jicama",
+                  "name": "Jicama",
+                  "description": "Products and items in the Jicama category"
+                },
+                {
+                  "id": "kohlrabi",
+                  "name": "Kohlrabi",
+                  "description": "Products and items in the Kohlrabi category"
+                },
+                {
+                  "id": "leeks",
+                  "name": "Leeks",
+                  "description": "Products and items in the Leeks category"
+                },
+                {
+                  "id": "lotus_roots",
+                  "name": "Lotus Roots",
+                  "description": "Products and items in the Lotus Roots category"
+                },
+                {
+                  "id": "malangas",
+                  "name": "Malangas",
+                  "description": "Products and items in the Malangas category"
+                },
+                {
+                  "id": "mushrooms",
+                  "name": "Mushrooms",
+                  "description": "Products and items in the Mushrooms category"
+                },
+                {
+                  "id": "okra",
+                  "name": "Okra",
+                  "description": "Products and items in the Okra category"
+                },
+                {
+                  "id": "onions",
+                  "name": "Onions",
+                  "description": "Products and items in the Onions category"
+                },
+                {
+                  "id": "parsley_roots",
+                  "name": "Parsley Roots",
+                  "description": "Products and items in the Parsley Roots category"
+                },
+                {
+                  "id": "parsnips",
+                  "name": "Parsnips",
+                  "description": "Products and items in the Parsnips category"
+                },
+                {
+                  "id": "peas",
+                  "name": "Peas",
+                  "description": "Products and items in the Peas category"
+                },
+                {
+                  "id": "peppers",
+                  "name": "Peppers",
+                  "description": "Products and items in the Peppers category"
+                },
+                {
+                  "id": "potatoes",
+                  "name": "Potatoes",
+                  "description": "Products and items in the Potatoes category"
+                },
+                {
+                  "id": "radishes",
+                  "name": "Radishes",
+                  "description": "Products and items in the Radishes category"
+                },
+                {
+                  "id": "rhubarb",
+                  "name": "Rhubarb",
+                  "description": "Products and items in the Rhubarb category"
+                },
+                {
+                  "id": "shallots",
+                  "name": "Shallots",
+                  "description": "Products and items in the Shallots category"
+                },
+                {
+                  "id": "sprouts",
+                  "name": "Sprouts",
+                  "description": "Products and items in the Sprouts category"
+                },
+                {
+                  "id": "squashes_and_gourds",
+                  "name": "Squashes & Gourds",
+                  "description": "Products and items in the Squashes & Gourds category"
+                },
+                {
+                  "id": "sugar_cane",
+                  "name": "Sugar Cane",
+                  "description": "Products and items in the Sugar Cane category"
+                },
+                {
+                  "id": "sunchokes",
+                  "name": "Sunchokes",
+                  "description": "Products and items in the Sunchokes category"
+                },
+                {
+                  "id": "sweet_potatoes",
+                  "name": "Sweet Potatoes",
+                  "description": "Products and items in the Sweet Potatoes category"
+                },
+                {
+                  "id": "tamarillos",
+                  "name": "Tamarillos",
+                  "description": "Products and items in the Tamarillos category"
+                },
+                {
+                  "id": "taro_root",
+                  "name": "Taro Root",
+                  "description": "Products and items in the Taro Root category"
+                },
+                {
+                  "id": "tomatoes",
+                  "name": "Tomatoes",
+                  "description": "Products and items in the Tomatoes category"
+                },
+                {
+                  "id": "turnips_and_rutabagas",
+                  "name": "Turnips & Rutabagas",
+                  "description": "Products and items in the Turnips & Rutabagas category"
+                },
+                {
+                  "id": "vegetable_mixes",
+                  "name": "Vegetable Mixes",
+                  "description": "Products and items in the Vegetable Mixes category"
+                },
+                {
+                  "id": "water_chestnuts",
+                  "name": "Water Chestnuts",
+                  "description": "Products and items in the Water Chestnuts category"
+                },
+                {
+                  "id": "watercress",
+                  "name": "Watercress",
+                  "description": "Products and items in the Watercress category"
+                },
+                {
+                  "id": "wheatgrass",
+                  "name": "Wheatgrass",
+                  "description": "Products and items in the Wheatgrass category"
+                },
+                {
+                  "id": "yams",
+                  "name": "Yams",
+                  "description": "Products and items in the Yams category"
+                },
+                {
+                  "id": "yuca_root",
+                  "name": "Yuca Root",
+                  "description": "Products and items in the Yuca Root category"
+                }
+              ]
+            },
+            {
+              "id": "fruit_sauces",
+              "name": "Fruit Sauces",
+              "description": "Products and items in the Fruit Sauces category"
+            }
+          ]
+        },
+        {
+          "id": "grains_rice_and_cereal",
+          "name": "Grains, Rice & Cereal",
+          "description": "Products and items in the Grains, Rice & Cereal category",
+          "children": [
+            {
+              "id": "amaranth",
+              "name": "Amaranth",
+              "description": "Products and items in the Amaranth category"
+            },
+            {
+              "id": "barley",
+              "name": "Barley",
+              "description": "Products and items in the Barley category"
+            },
+            {
+              "id": "buckwheat",
+              "name": "Buckwheat",
+              "description": "Products and items in the Buckwheat category"
+            },
+            {
+              "id": "cereal_and_granola",
+              "name": "Cereal & Granola",
+              "description": "Products and items in the Cereal & Granola category"
+            },
+            {
+              "id": "couscous",
+              "name": "Couscous",
+              "description": "Products and items in the Couscous category"
+            },
+            {
+              "id": "millet",
+              "name": "Millet",
+              "description": "Products and items in the Millet category"
+            },
+            {
+              "id": "oats_grits_and_hot_cereal",
+              "name": "Oats, Grits & Hot Cereal",
+              "description": "Products and items in the Oats, Grits & Hot Cereal category"
+            },
+            {
+              "id": "quinoa",
+              "name": "Quinoa",
+              "description": "Products and items in the Quinoa category"
+            },
+            {
+              "id": "rice",
+              "name": "Rice",
+              "description": "Products and items in the Rice category"
+            },
+            {
+              "id": "rye",
+              "name": "Rye",
+              "description": "Products and items in the Rye category"
+            },
+            {
+              "id": "wheat",
+              "name": "Wheat",
+              "description": "Products and items in the Wheat category"
+            }
+          ]
+        },
+        {
+          "id": "meat_seafood_and_eggs",
+          "name": "Meat, Seafood & Eggs",
+          "description": "Products and items in the Meat, Seafood & Eggs category",
+          "children": [
+            {
+              "id": "eggs",
+              "name": "Eggs",
+              "description": "Products and items in the Eggs category",
+              "children": [
+                {
+                  "id": "egg_whites",
+                  "name": "Egg Whites",
+                  "description": "Products and items in the Egg Whites category"
+                },
+                {
+                  "id": "liquid_and_frozen_eggs",
+                  "name": "Liquid & Frozen Eggs",
+                  "description": "Products and items in the Liquid & Frozen Eggs category"
+                },
+                {
+                  "id": "prepared_eggs",
+                  "name": "Prepared Eggs",
+                  "description": "Products and items in the Prepared Eggs category"
+                },
+                {
+                  "id": "whole_eggs",
+                  "name": "Whole Eggs",
+                  "description": "Products and items in the Whole Eggs category"
+                }
+              ]
+            },
+            {
+              "id": "meat",
+              "name": "Meat",
+              "description": "Products and items in the Meat category",
+              "children": [
+                {
+                  "id": "canned_meats",
+                  "name": "Canned Meats",
+                  "description": "Products and items in the Canned Meats category"
+                },
+                {
+                  "id": "fresh_and_frozen_meats",
+                  "name": "Fresh & Frozen Meats",
+                  "description": "Products and items in the Fresh & Frozen Meats category"
+                },
+                {
+                  "id": "lunch_and_deli_meats",
+                  "name": "Lunch & Deli Meats",
+                  "description": "Products and items in the Lunch & Deli Meats category"
+                }
+              ]
+            },
+            {
+              "id": "seafood",
+              "name": "Seafood",
+              "description": "Products and items in the Seafood category",
+              "children": [
+                {
+                  "id": "canned_seafood",
+                  "name": "Canned Seafood",
+                  "description": "Products and items in the Canned Seafood category"
+                },
+                {
+                  "id": "fresh_and_frozen_seafood",
+                  "name": "Fresh & Frozen Seafood",
+                  "description": "Products and items in the Fresh & Frozen Seafood category"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "nuts_and_seeds",
+          "name": "Nuts & Seeds",
+          "description": "Products and items in the Nuts & Seeds category"
+        },
+        {
+          "id": "pasta_and_noodles",
+          "name": "Pasta & Noodles",
+          "description": "Products and items in the Pasta & Noodles category"
+        },
+        {
+          "id": "prepared_foods",
+          "name": "Prepared Foods",
+          "description": "Products and items in the Prepared Foods category",
+          "children": [
+            {
+              "id": "prepared_appetizers_and_side_dishes",
+              "name": "Prepared Appetizers & Side Dishes",
+              "description": "Products and items in the Prepared Appetizers & Side Dishes category"
+            },
+            {
+              "id": "prepared_meals_and_entr_es",
+              "name": "Prepared Meals & Entrées",
+              "description": "Products and items in the Prepared Meals & Entrées category"
+            }
+          ]
+        },
+        {
+          "id": "seasonings_and_spices",
+          "name": "Seasonings & Spices",
+          "description": "Products and items in the Seasonings & Spices category",
+          "children": [
+            {
+              "id": "herbs_and_spices",
+              "name": "Herbs & Spices",
+              "description": "Products and items in the Herbs & Spices category"
+            },
+            {
+              "id": "msg",
+              "name": "MSG",
+              "description": "Products and items in the MSG category"
+            },
+            {
+              "id": "pepper",
+              "name": "Pepper",
+              "description": "Products and items in the Pepper category"
+            },
+            {
+              "id": "salt",
+              "name": "Salt",
+              "description": "Products and items in the Salt category"
+            }
+          ]
+        },
+        {
+          "id": "snack_foods",
+          "name": "Snack Foods",
+          "description": "Products and items in the Snack Foods category",
+          "children": [
+            {
+              "id": "breadsticks",
+              "name": "Breadsticks",
+              "description": "Products and items in the Breadsticks category"
+            },
+            {
+              "id": "cereal_and_granola_bars",
+              "name": "Cereal & Granola Bars",
+              "description": "Products and items in the Cereal & Granola Bars category",
+              "children": [
+                {
+                  "id": "cereal_bars",
+                  "name": "Cereal Bars",
+                  "description": "Products and items in the Cereal Bars category"
+                },
+                {
+                  "id": "granola_bars",
+                  "name": "Granola Bars",
+                  "description": "Products and items in the Granola Bars category"
+                }
+              ]
+            },
+            {
+              "id": "cheese_puffs",
+              "name": "Cheese Puffs",
+              "description": "Products and items in the Cheese Puffs category"
+            },
+            {
+              "id": "chips",
+              "name": "Chips",
+              "description": "Products and items in the Chips category"
+            },
+            {
+              "id": "crackers",
+              "name": "Crackers",
+              "description": "Products and items in the Crackers category"
+            },
+            {
+              "id": "croutons",
+              "name": "Croutons",
+              "description": "Products and items in the Croutons category"
+            },
+            {
+              "id": "fruit_snacks",
+              "name": "Fruit Snacks",
+              "description": "Products and items in the Fruit Snacks category"
+            },
+            {
+              "id": "jerky",
+              "name": "Jerky",
+              "description": "Products and items in the Jerky category"
+            },
+            {
+              "id": "popcorn",
+              "name": "Popcorn",
+              "description": "Products and items in the Popcorn category"
+            },
+            {
+              "id": "pork_rinds",
+              "name": "Pork Rinds",
+              "description": "Products and items in the Pork Rinds category"
+            },
+            {
+              "id": "pretzels",
+              "name": "Pretzels",
+              "description": "Products and items in the Pretzels category"
+            },
+            {
+              "id": "pudding_and_gelatin_snacks",
+              "name": "Pudding & Gelatin Snacks",
+              "description": "Products and items in the Pudding & Gelatin Snacks category"
+            },
+            {
+              "id": "puffed_rice_cakes",
+              "name": "Puffed Rice Cakes",
+              "description": "Products and items in the Puffed Rice Cakes category"
+            },
+            {
+              "id": "salad_toppings",
+              "name": "Salad Toppings",
+              "description": "Products and items in the Salad Toppings category"
+            },
+            {
+              "id": "sesame_sticks",
+              "name": "Sesame Sticks",
+              "description": "Products and items in the Sesame Sticks category"
+            },
+            {
+              "id": "snack_cakes",
+              "name": "Snack Cakes",
+              "description": "Products and items in the Snack Cakes category"
+            },
+            {
+              "id": "sticky_rice_cakes",
+              "name": "Sticky Rice Cakes",
+              "description": "Products and items in the Sticky Rice Cakes category"
+            },
+            {
+              "id": "trail_and_snack_mixes",
+              "name": "Trail & Snack Mixes",
+              "description": "Products and items in the Trail & Snack Mixes category"
+            }
+          ]
+        },
+        {
+          "id": "soups_and_broths",
+          "name": "Soups & Broths",
+          "description": "Products and items in the Soups & Broths category"
+        },
+        {
+          "id": "tofu_soy_and_vegetarian_products",
+          "name": "Tofu, Soy & Vegetarian Products",
+          "description": "Products and items in the Tofu, Soy & Vegetarian Products category",
+          "children": [
+            {
+              "id": "cheese_alternatives",
+              "name": "Cheese Alternatives",
+              "description": "Products and items in the Cheese Alternatives category"
+            },
+            {
+              "id": "meat_alternatives",
+              "name": "Meat Alternatives",
+              "description": "Products and items in the Meat Alternatives category"
+            },
+            {
+              "id": "seitan",
+              "name": "Seitan",
+              "description": "Products and items in the Seitan category"
+            },
+            {
+              "id": "tempeh",
+              "name": "Tempeh",
+              "description": "Products and items in the Tempeh category"
+            },
+            {
+              "id": "tofu",
+              "name": "Tofu",
+              "description": "Products and items in the Tofu category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tobacco_products",
+      "name": "Tobacco Products",
+      "description": "Products and items in the Tobacco Products category",
+      "children": [
+        {
+          "id": "chewing_tobacco",
+          "name": "Chewing Tobacco",
+          "description": "Products and items in the Chewing Tobacco category"
+        },
+        {
+          "id": "cigarettes",
+          "name": "Cigarettes",
+          "description": "Products and items in the Cigarettes category"
+        },
+        {
+          "id": "cigars",
+          "name": "Cigars",
+          "description": "Products and items in the Cigars category"
+        },
+        {
+          "id": "loose_tobacco",
+          "name": "Loose Tobacco",
+          "description": "Products and items in the Loose Tobacco category"
+        },
+        {
+          "id": "smoking_pipes",
+          "name": "Smoking Pipes",
+          "description": "Products and items in the Smoking Pipes category"
+        },
+        {
+          "id": "vaporizers_and_electronic_cigarettes",
+          "name": "Vaporizers & Electronic Cigarettes",
+          "description": "Products and items in the Vaporizers & Electronic Cigarettes category",
+          "children": [
+            {
+              "id": "electronic_cigarettes",
+              "name": "Electronic Cigarettes",
+              "description": "Products and items in the Electronic Cigarettes category"
+            },
+            {
+              "id": "vaporizers",
+              "name": "Vaporizers",
+              "description": "Products and items in the Vaporizers category"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

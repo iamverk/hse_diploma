@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "taxonomy": {
+      "command": "python",
+      "args": ["tools/taxonomy_mcp_server.py"],
+      "env": {
+        "TAXONOMY_PATH": "taxonomy.json",
+        "REFERENCE_PATH": "reference/gold_standard.json"
+      }
+    }
+  }
+}

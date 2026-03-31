@@ -1,0 +1,2248 @@
+{
+  "id": "electronics",
+  "name": "Electronics",
+  "description": "Electronic devices, components, and related accessories",
+  "children": [
+    {
+      "id": "arcade_equipment",
+      "name": "Arcade Equipment",
+      "description": "Products and items in the Arcade Equipment category",
+      "children": [
+        {
+          "id": "basketball_arcade_games",
+          "name": "Basketball Arcade Games",
+          "description": "Products and items in the Basketball Arcade Games category"
+        },
+        {
+          "id": "pinball_machine_accessories",
+          "name": "Pinball Machine Accessories",
+          "description": "Products and items in the Pinball Machine Accessories category"
+        },
+        {
+          "id": "pinball_machines",
+          "name": "Pinball Machines",
+          "description": "Products and items in the Pinball Machines category"
+        },
+        {
+          "id": "skee_ball_machines",
+          "name": "Skee-Ball Machines",
+          "description": "Products and items in the Skee-Ball Machines category"
+        },
+        {
+          "id": "video_game_arcade_cabinet_accessories",
+          "name": "Video Game Arcade Cabinet Accessories",
+          "description": "Products and items in the Video Game Arcade Cabinet Accessories category"
+        },
+        {
+          "id": "video_game_arcade_cabinets",
+          "name": "Video Game Arcade Cabinets",
+          "description": "Products and items in the Video Game Arcade Cabinets category"
+        }
+      ]
+    },
+    {
+      "id": "audio",
+      "name": "Audio",
+      "description": "Products and items in the Audio category",
+      "children": [
+        {
+          "id": "audio_accessories",
+          "name": "Audio Accessories",
+          "description": "Products and items in the Audio Accessories category",
+          "children": [
+            {
+              "id": "audio_and_video_receiver_accessories",
+              "name": "Audio & Video Receiver Accessories",
+              "description": "Products and items in the Audio & Video Receiver Accessories category"
+            },
+            {
+              "id": "headphone_and_headset_accessories",
+              "name": "Headphone & Headset Accessories",
+              "description": "Products and items in the Headphone & Headset Accessories category",
+              "children": [
+                {
+                  "id": "headphone_cushions_and_tips",
+                  "name": "Headphone Cushions & Tips",
+                  "description": "Products and items in the Headphone Cushions & Tips category"
+                }
+              ]
+            },
+            {
+              "id": "karaoke_system_accessories",
+              "name": "Karaoke System Accessories",
+              "description": "Products and items in the Karaoke System Accessories category",
+              "children": [
+                {
+                  "id": "karaoke_chips",
+                  "name": "Karaoke Chips",
+                  "description": "Products and items in the Karaoke Chips category"
+                }
+              ]
+            },
+            {
+              "id": "mp3_player_accessories",
+              "name": "MP3 Player Accessories",
+              "description": "Products and items in the MP3 Player Accessories category",
+              "children": [
+                {
+                  "id": "mp3_player_and_mobile_phone_accessory_sets",
+                  "name": "MP3 Player & Mobile Phone Accessory Sets",
+                  "description": "Products and items in the MP3 Player & Mobile Phone Accessory Sets category"
+                },
+                {
+                  "id": "mp3_player_cases",
+                  "name": "MP3 Player Cases",
+                  "description": "Products and items in the MP3 Player Cases category"
+                }
+              ]
+            },
+            {
+              "id": "microphone_accessories",
+              "name": "Microphone Accessories",
+              "description": "Products and items in the Microphone Accessories category"
+            },
+            {
+              "id": "microphone_stands",
+              "name": "Microphone Stands",
+              "description": "Products and items in the Microphone Stands category"
+            },
+            {
+              "id": "satellite_radio_accessories",
+              "name": "Satellite Radio Accessories",
+              "description": "Products and items in the Satellite Radio Accessories category"
+            },
+            {
+              "id": "speaker_accessories",
+              "name": "Speaker Accessories",
+              "description": "Products and items in the Speaker Accessories category",
+              "children": [
+                {
+                  "id": "speaker_bags_covers_and_cases",
+                  "name": "Speaker Bags, Covers & Cases",
+                  "description": "Products and items in the Speaker Bags, Covers & Cases category"
+                },
+                {
+                  "id": "speaker_components_and_kits",
+                  "name": "Speaker Components & Kits",
+                  "description": "Products and items in the Speaker Components & Kits category"
+                },
+                {
+                  "id": "speaker_stand_bags",
+                  "name": "Speaker Stand Bags",
+                  "description": "Products and items in the Speaker Stand Bags category"
+                },
+                {
+                  "id": "speaker_stands_and_mounts",
+                  "name": "Speaker Stands & Mounts",
+                  "description": "Products and items in the Speaker Stands & Mounts category"
+                },
+                {
+                  "id": "tactile_transducers",
+                  "name": "Tactile Transducers",
+                  "description": "Products and items in the Tactile Transducers category"
+                }
+              ]
+            },
+            {
+              "id": "turntable_accessories",
+              "name": "Turntable Accessories",
+              "description": "Products and items in the Turntable Accessories category"
+            }
+          ]
+        },
+        {
+          "id": "audio_components",
+          "name": "Audio Components",
+          "description": "Products and items in the Audio Components category",
+          "children": [
+            {
+              "id": "audio_and_video_receivers",
+              "name": "Audio & Video Receivers",
+              "description": "Products and items in the Audio & Video Receivers category"
+            },
+            {
+              "id": "audio_amplifiers",
+              "name": "Audio Amplifiers",
+              "description": "Products and items in the Audio Amplifiers category",
+              "children": [
+                {
+                  "id": "headphone_amplifiers",
+                  "name": "Headphone Amplifiers",
+                  "description": "Products and items in the Headphone Amplifiers category"
+                },
+                {
+                  "id": "power_amplifiers",
+                  "name": "Power Amplifiers",
+                  "description": "Products and items in the Power Amplifiers category"
+                }
+              ]
+            },
+            {
+              "id": "audio_mixers",
+              "name": "Audio Mixers",
+              "description": "Products and items in the Audio Mixers category"
+            },
+            {
+              "id": "audio_transmitters",
+              "name": "Audio Transmitters",
+              "description": "Products and items in the Audio Transmitters category",
+              "children": [
+                {
+                  "id": "bluetooth_transmitters",
+                  "name": "Bluetooth Transmitters",
+                  "description": "Products and items in the Bluetooth Transmitters category"
+                },
+                {
+                  "id": "fm_transmitters",
+                  "name": "FM Transmitters",
+                  "description": "Products and items in the FM Transmitters category"
+                }
+              ]
+            },
+            {
+              "id": "channel_strips",
+              "name": "Channel Strips",
+              "description": "Products and items in the Channel Strips category"
+            },
+            {
+              "id": "direct_boxes",
+              "name": "Direct Boxes",
+              "description": "Products and items in the Direct Boxes category"
+            },
+            {
+              "id": "headphones_and_headsets",
+              "name": "Headphones & Headsets",
+              "description": "Products and items in the Headphones & Headsets category",
+              "children": [
+                {
+                  "id": "headphones",
+                  "name": "Headphones",
+                  "description": "Products and items in the Headphones category"
+                },
+                {
+                  "id": "headsets",
+                  "name": "Headsets",
+                  "description": "Products and items in the Headsets category"
+                }
+              ]
+            },
+            {
+              "id": "microphones",
+              "name": "Microphones",
+              "description": "Products and items in the Microphones category"
+            },
+            {
+              "id": "signal_processors",
+              "name": "Signal Processors",
+              "description": "Products and items in the Signal Processors category",
+              "children": [
+                {
+                  "id": "crossovers",
+                  "name": "Crossovers",
+                  "description": "Products and items in the Crossovers category"
+                },
+                {
+                  "id": "effects_processors",
+                  "name": "Effects Processors",
+                  "description": "Products and items in the Effects Processors category"
+                },
+                {
+                  "id": "equalizers",
+                  "name": "Equalizers",
+                  "description": "Products and items in the Equalizers category"
+                },
+                {
+                  "id": "loudspeaker_management_systems",
+                  "name": "Loudspeaker Management Systems",
+                  "description": "Products and items in the Loudspeaker Management Systems category"
+                },
+                {
+                  "id": "microphone_preamps",
+                  "name": "Microphone Preamps",
+                  "description": "Products and items in the Microphone Preamps category"
+                },
+                {
+                  "id": "noise_gates_and_compressors",
+                  "name": "Noise Gates & Compressors",
+                  "description": "Products and items in the Noise Gates & Compressors category"
+                },
+                {
+                  "id": "phono_preamps",
+                  "name": "Phono Preamps",
+                  "description": "Products and items in the Phono Preamps category"
+                }
+              ]
+            },
+            {
+              "id": "speakers",
+              "name": "Speakers",
+              "description": "Products and items in the Speakers category"
+            },
+            {
+              "id": "studio_recording_bundles",
+              "name": "Studio Recording Bundles",
+              "description": "Products and items in the Studio Recording Bundles category"
+            }
+          ]
+        },
+        {
+          "id": "audio_players_and_recorders",
+          "name": "Audio Players & Recorders",
+          "description": "Products and items in the Audio Players & Recorders category",
+          "children": [
+            {
+              "id": "boomboxes",
+              "name": "Boomboxes",
+              "description": "Products and items in the Boomboxes category"
+            },
+            {
+              "id": "cd_players_and_recorders",
+              "name": "CD Players & Recorders",
+              "description": "Products and items in the CD Players & Recorders category"
+            },
+            {
+              "id": "cassette_players_and_recorders",
+              "name": "Cassette Players & Recorders",
+              "description": "Products and items in the Cassette Players & Recorders category"
+            },
+            {
+              "id": "home_theater_systems",
+              "name": "Home Theater Systems",
+              "description": "Products and items in the Home Theater Systems category"
+            },
+            {
+              "id": "jukeboxes",
+              "name": "Jukeboxes",
+              "description": "Products and items in the Jukeboxes category"
+            },
+            {
+              "id": "karaoke_systems",
+              "name": "Karaoke Systems",
+              "description": "Products and items in the Karaoke Systems category"
+            },
+            {
+              "id": "mp3_players",
+              "name": "MP3 Players",
+              "description": "Products and items in the MP3 Players category"
+            },
+            {
+              "id": "minidisc_players_and_recorders",
+              "name": "MiniDisc Players & Recorders",
+              "description": "Products and items in the MiniDisc Players & Recorders category"
+            },
+            {
+              "id": "multitrack_recorders",
+              "name": "Multitrack Recorders",
+              "description": "Products and items in the Multitrack Recorders category"
+            },
+            {
+              "id": "radios",
+              "name": "Radios",
+              "description": "Products and items in the Radios category"
+            },
+            {
+              "id": "reel_to_reel_tape_players_and_recorders",
+              "name": "Reel-to-Reel Tape Players & Recorders",
+              "description": "Products and items in the Reel-to-Reel Tape Players & Recorders category"
+            },
+            {
+              "id": "stereo_systems",
+              "name": "Stereo Systems",
+              "description": "Products and items in the Stereo Systems category"
+            },
+            {
+              "id": "turntables_and_record_players",
+              "name": "Turntables & Record Players",
+              "description": "Products and items in the Turntables & Record Players category"
+            },
+            {
+              "id": "voice_recorders",
+              "name": "Voice Recorders",
+              "description": "Products and items in the Voice Recorders category"
+            }
+          ]
+        },
+        {
+          "id": "bullhorns",
+          "name": "Bullhorns",
+          "description": "Products and items in the Bullhorns category"
+        },
+        {
+          "id": "dj_and_specialty_audio",
+          "name": "DJ & Specialty Audio",
+          "description": "Products and items in the DJ & Specialty Audio category",
+          "children": [
+            {
+              "id": "dj_cd_players",
+              "name": "DJ CD Players",
+              "description": "Products and items in the DJ CD Players category"
+            },
+            {
+              "id": "dj_systems",
+              "name": "DJ Systems",
+              "description": "Products and items in the DJ Systems category"
+            }
+          ]
+        },
+        {
+          "id": "public_address_systems",
+          "name": "Public Address Systems",
+          "description": "Products and items in the Public Address Systems category"
+        },
+        {
+          "id": "stage_equipment",
+          "name": "Stage Equipment",
+          "description": "Products and items in the Stage Equipment category",
+          "children": [
+            {
+              "id": "wireless_transmitters",
+              "name": "Wireless Transmitters",
+              "description": "Products and items in the Wireless Transmitters category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "circuit_boards_and_components",
+      "name": "Circuit Boards & Components",
+      "description": "Products and items in the Circuit Boards & Components category",
+      "children": [
+        {
+          "id": "circuit_board_accessories",
+          "name": "Circuit Board Accessories",
+          "description": "Products and items in the Circuit Board Accessories category"
+        },
+        {
+          "id": "circuit_decoders_and_encoders",
+          "name": "Circuit Decoders & Encoders",
+          "description": "Products and items in the Circuit Decoders & Encoders category"
+        },
+        {
+          "id": "circuit_prototyping",
+          "name": "Circuit Prototyping",
+          "description": "Products and items in the Circuit Prototyping category",
+          "children": [
+            {
+              "id": "breadboards",
+              "name": "Breadboards",
+              "description": "Products and items in the Breadboards category"
+            }
+          ]
+        },
+        {
+          "id": "electronic_filters",
+          "name": "Electronic Filters",
+          "description": "Products and items in the Electronic Filters category"
+        },
+        {
+          "id": "passive_circuit_components",
+          "name": "Passive Circuit Components",
+          "description": "Products and items in the Passive Circuit Components category",
+          "children": [
+            {
+              "id": "capacitors",
+              "name": "Capacitors",
+              "description": "Products and items in the Capacitors category"
+            },
+            {
+              "id": "electronic_oscillators",
+              "name": "Electronic Oscillators",
+              "description": "Products and items in the Electronic Oscillators category"
+            },
+            {
+              "id": "inductors",
+              "name": "Inductors",
+              "description": "Products and items in the Inductors category"
+            },
+            {
+              "id": "resistors",
+              "name": "Resistors",
+              "description": "Products and items in the Resistors category"
+            }
+          ]
+        },
+        {
+          "id": "printed_circuit_boards",
+          "name": "Printed Circuit Boards",
+          "description": "Products and items in the Printed Circuit Boards category",
+          "children": [
+            {
+              "id": "camera_circuit_boards",
+              "name": "Camera Circuit Boards",
+              "description": "Products and items in the Camera Circuit Boards category"
+            },
+            {
+              "id": "computer_circuit_boards",
+              "name": "Computer Circuit Boards",
+              "description": "Products and items in the Computer Circuit Boards category",
+              "children": [
+                {
+                  "id": "computer_inverter_boards",
+                  "name": "Computer Inverter Boards",
+                  "description": "Products and items in the Computer Inverter Boards category"
+                },
+                {
+                  "id": "hard_drive_circuit_boards",
+                  "name": "Hard Drive Circuit Boards",
+                  "description": "Products and items in the Hard Drive Circuit Boards category"
+                },
+                {
+                  "id": "motherboards",
+                  "name": "Motherboards",
+                  "description": "Products and items in the Motherboards category"
+                }
+              ]
+            },
+            {
+              "id": "development_boards",
+              "name": "Development Boards",
+              "description": "Products and items in the Development Boards category"
+            },
+            {
+              "id": "exercise_machine_circuit_boards",
+              "name": "Exercise Machine Circuit Boards",
+              "description": "Products and items in the Exercise Machine Circuit Boards category"
+            },
+            {
+              "id": "household_appliance_circuit_boards",
+              "name": "Household Appliance Circuit Boards",
+              "description": "Products and items in the Household Appliance Circuit Boards category"
+            },
+            {
+              "id": "pool_and_spa_circuit_boards",
+              "name": "Pool & Spa Circuit Boards",
+              "description": "Products and items in the Pool & Spa Circuit Boards category"
+            },
+            {
+              "id": "printer_copier_and_fax_machine_circuit_boards",
+              "name": "Printer, Copier, & Fax Machine Circuit Boards",
+              "description": "Products and items in the Printer, Copier, & Fax Machine Circuit Boards category"
+            },
+            {
+              "id": "scanner_circuit_boards",
+              "name": "Scanner Circuit Boards",
+              "description": "Products and items in the Scanner Circuit Boards category"
+            },
+            {
+              "id": "television_circuit_boards",
+              "name": "Television Circuit Boards",
+              "description": "Products and items in the Television Circuit Boards category"
+            }
+          ]
+        },
+        {
+          "id": "semiconductors",
+          "name": "Semiconductors",
+          "description": "Products and items in the Semiconductors category",
+          "children": [
+            {
+              "id": "diodes",
+              "name": "Diodes",
+              "description": "Products and items in the Diodes category"
+            },
+            {
+              "id": "integrated_circuits_and_chips",
+              "name": "Integrated Circuits & Chips",
+              "description": "Products and items in the Integrated Circuits & Chips category"
+            },
+            {
+              "id": "microcontrollers",
+              "name": "Microcontrollers",
+              "description": "Products and items in the Microcontrollers category"
+            },
+            {
+              "id": "transistors",
+              "name": "Transistors",
+              "description": "Products and items in the Transistors category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "communications",
+      "name": "Communications",
+      "description": "Products and items in the Communications category",
+      "children": [
+        {
+          "id": "answering_machines",
+          "name": "Answering Machines",
+          "description": "Products and items in the Answering Machines category"
+        },
+        {
+          "id": "caller_ids",
+          "name": "Caller IDs",
+          "description": "Products and items in the Caller IDs category"
+        },
+        {
+          "id": "communication_radio_accessories",
+          "name": "Communication Radio Accessories",
+          "description": "Products and items in the Communication Radio Accessories category"
+        },
+        {
+          "id": "communication_radios",
+          "name": "Communication Radios",
+          "description": "Products and items in the Communication Radios category",
+          "children": [
+            {
+              "id": "cb_radios",
+              "name": "CB Radios",
+              "description": "Products and items in the CB Radios category"
+            },
+            {
+              "id": "radio_scanners",
+              "name": "Radio Scanners",
+              "description": "Products and items in the Radio Scanners category"
+            },
+            {
+              "id": "two_way_radios",
+              "name": "Two-Way Radios",
+              "description": "Products and items in the Two-Way Radios category"
+            }
+          ]
+        },
+        {
+          "id": "intercom_accessories",
+          "name": "Intercom Accessories",
+          "description": "Products and items in the Intercom Accessories category"
+        },
+        {
+          "id": "intercoms",
+          "name": "Intercoms",
+          "description": "Products and items in the Intercoms category"
+        },
+        {
+          "id": "pagers",
+          "name": "Pagers",
+          "description": "Products and items in the Pagers category"
+        },
+        {
+          "id": "telephony",
+          "name": "Telephony",
+          "description": "Products and items in the Telephony category",
+          "children": [
+            {
+              "id": "conference_phones",
+              "name": "Conference Phones",
+              "description": "Products and items in the Conference Phones category"
+            },
+            {
+              "id": "corded_phones",
+              "name": "Corded Phones",
+              "description": "Products and items in the Corded Phones category"
+            },
+            {
+              "id": "cordless_phones",
+              "name": "Cordless Phones",
+              "description": "Products and items in the Cordless Phones category"
+            },
+            {
+              "id": "mobile_phone_accessories",
+              "name": "Mobile Phone Accessories",
+              "description": "Products and items in the Mobile Phone Accessories category",
+              "children": [
+                {
+                  "id": "mobile_phone_camera_accessories",
+                  "name": "Mobile Phone Camera Accessories",
+                  "description": "Products and items in the Mobile Phone Camera Accessories category"
+                },
+                {
+                  "id": "mobile_phone_cases",
+                  "name": "Mobile Phone Cases",
+                  "description": "Products and items in the Mobile Phone Cases category"
+                },
+                {
+                  "id": "mobile_phone_charms_and_straps",
+                  "name": "Mobile Phone Charms & Straps",
+                  "description": "Products and items in the Mobile Phone Charms & Straps category"
+                },
+                {
+                  "id": "mobile_phone_pre_paid_cards_and_sim_cards",
+                  "name": "Mobile Phone Pre-Paid Cards & SIM Cards",
+                  "description": "Products and items in the Mobile Phone Pre-Paid Cards & SIM Cards category",
+                  "children": [
+                    {
+                      "id": "mobile_phone_pre_paid_cards",
+                      "name": "Mobile Phone Pre-Paid Cards",
+                      "description": "Products and items in the Mobile Phone Pre-Paid Cards category"
+                    },
+                    {
+                      "id": "sim_cards",
+                      "name": "SIM Cards",
+                      "description": "Products and items in the SIM Cards category"
+                    }
+                  ]
+                },
+                {
+                  "id": "mobile_phone_replacement_parts",
+                  "name": "Mobile Phone Replacement Parts",
+                  "description": "Products and items in the Mobile Phone Replacement Parts category"
+                },
+                {
+                  "id": "mobile_phone_stands",
+                  "name": "Mobile Phone Stands",
+                  "description": "Products and items in the Mobile Phone Stands category"
+                },
+                {
+                  "id": "sim_card_ejection_tools",
+                  "name": "SIM Card Ejection Tools",
+                  "description": "Products and items in the SIM Card Ejection Tools category"
+                }
+              ]
+            },
+            {
+              "id": "mobile_phones",
+              "name": "Mobile Phones",
+              "description": "Products and items in the Mobile Phones category",
+              "children": [
+                {
+                  "id": "contract_mobile_phones",
+                  "name": "Contract Mobile Phones",
+                  "description": "Products and items in the Contract Mobile Phones category"
+                },
+                {
+                  "id": "pre_paid_mobile_phones",
+                  "name": "Pre-paid Mobile Phones",
+                  "description": "Products and items in the Pre-paid Mobile Phones category"
+                },
+                {
+                  "id": "unlocked_mobile_phones",
+                  "name": "Unlocked Mobile Phones",
+                  "description": "Products and items in the Unlocked Mobile Phones category"
+                }
+              ]
+            },
+            {
+              "id": "satellite_phones",
+              "name": "Satellite Phones",
+              "description": "Products and items in the Satellite Phones category"
+            },
+            {
+              "id": "telephone_accessories",
+              "name": "Telephone Accessories",
+              "description": "Products and items in the Telephone Accessories category",
+              "children": [
+                {
+                  "id": "phone_cards",
+                  "name": "Phone Cards",
+                  "description": "Products and items in the Phone Cards category"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "video_conferencing",
+          "name": "Video Conferencing",
+          "description": "Products and items in the Video Conferencing category"
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "name": "Components",
+      "description": "Products and items in the Components category",
+      "children": [
+        {
+          "id": "accelerometers",
+          "name": "Accelerometers",
+          "description": "Products and items in the Accelerometers category"
+        },
+        {
+          "id": "converters",
+          "name": "Converters",
+          "description": "Products and items in the Converters category",
+          "children": [
+            {
+              "id": "audio_converters",
+              "name": "Audio Converters",
+              "description": "Products and items in the Audio Converters category"
+            },
+            {
+              "id": "scan_converters",
+              "name": "Scan Converters",
+              "description": "Products and items in the Scan Converters category"
+            }
+          ]
+        },
+        {
+          "id": "electronics_component_connectors",
+          "name": "Electronics Component Connectors",
+          "description": "Products and items in the Electronics Component Connectors category"
+        },
+        {
+          "id": "modulators",
+          "name": "Modulators",
+          "description": "Products and items in the Modulators category"
+        },
+        {
+          "id": "splitters",
+          "name": "Splitters",
+          "description": "Products and items in the Splitters category"
+        }
+      ]
+    },
+    {
+      "id": "computers",
+      "name": "Computers",
+      "description": "Products and items in the Computers category",
+      "children": [
+        {
+          "id": "barebone_computers",
+          "name": "Barebone Computers",
+          "description": "Products and items in the Barebone Computers category"
+        },
+        {
+          "id": "computer_servers",
+          "name": "Computer Servers",
+          "description": "Products and items in the Computer Servers category"
+        },
+        {
+          "id": "desktop_computers",
+          "name": "Desktop Computers",
+          "description": "Products and items in the Desktop Computers category"
+        },
+        {
+          "id": "handheld_devices",
+          "name": "Handheld Devices",
+          "description": "Products and items in the Handheld Devices category",
+          "children": [
+            {
+              "id": "data_collectors",
+              "name": "Data Collectors",
+              "description": "Products and items in the Data Collectors category"
+            },
+            {
+              "id": "e_book_readers",
+              "name": "E-Book Readers",
+              "description": "Products and items in the E-Book Readers category"
+            },
+            {
+              "id": "pdas",
+              "name": "PDAs",
+              "description": "Products and items in the PDAs category"
+            }
+          ]
+        },
+        {
+          "id": "interactive_kiosks",
+          "name": "Interactive Kiosks",
+          "description": "Products and items in the Interactive Kiosks category"
+        },
+        {
+          "id": "laptops",
+          "name": "Laptops",
+          "description": "Products and items in the Laptops category"
+        },
+        {
+          "id": "smart_glasses",
+          "name": "Smart Glasses",
+          "description": "Products and items in the Smart Glasses category"
+        },
+        {
+          "id": "tablet_computers",
+          "name": "Tablet Computers",
+          "description": "Products and items in the Tablet Computers category"
+        },
+        {
+          "id": "thin_and_zero_clients",
+          "name": "Thin & Zero Clients",
+          "description": "Products and items in the Thin & Zero Clients category",
+          "children": [
+            {
+              "id": "thin_client_computers",
+              "name": "Thin Client Computers",
+              "description": "Products and items in the Thin Client Computers category"
+            },
+            {
+              "id": "zero_client_computers",
+              "name": "Zero Client Computers",
+              "description": "Products and items in the Zero Client Computers category"
+            }
+          ]
+        },
+        {
+          "id": "touch_table_computers",
+          "name": "Touch Table Computers",
+          "description": "Products and items in the Touch Table Computers category"
+        }
+      ]
+    },
+    {
+      "id": "electronics_accessories",
+      "name": "Electronics Accessories",
+      "description": "Products and items in the Electronics Accessories category",
+      "children": [
+        {
+          "id": "adapters",
+          "name": "Adapters",
+          "description": "Products and items in the Adapters category",
+          "children": [
+            {
+              "id": "audio_and_video_cable_adapters_and_couplers",
+              "name": "Audio & Video Cable Adapters & Couplers",
+              "description": "Products and items in the Audio & Video Cable Adapters & Couplers category"
+            },
+            {
+              "id": "memory_card_adapters",
+              "name": "Memory Card Adapters",
+              "description": "Products and items in the Memory Card Adapters category"
+            },
+            {
+              "id": "usb_adapters",
+              "name": "USB Adapters",
+              "description": "Products and items in the USB Adapters category"
+            }
+          ]
+        },
+        {
+          "id": "antenna_accessories",
+          "name": "Antenna Accessories",
+          "description": "Products and items in the Antenna Accessories category",
+          "children": [
+            {
+              "id": "antenna_mounts_and_brackets",
+              "name": "Antenna Mounts & Brackets",
+              "description": "Products and items in the Antenna Mounts & Brackets category"
+            },
+            {
+              "id": "antenna_rotators",
+              "name": "Antenna Rotators",
+              "description": "Products and items in the Antenna Rotators category"
+            },
+            {
+              "id": "satellite_lnbs",
+              "name": "Satellite LNBs",
+              "description": "Products and items in the Satellite LNBs category"
+            }
+          ]
+        },
+        {
+          "id": "antennas",
+          "name": "Antennas",
+          "description": "Products and items in the Antennas category"
+        },
+        {
+          "id": "audio_and_video_splitters_and_switches",
+          "name": "Audio & Video Splitters & Switches",
+          "description": "Products and items in the Audio & Video Splitters & Switches category",
+          "children": [
+            {
+              "id": "dvi_splitters_and_switches",
+              "name": "DVI Splitters & Switches",
+              "description": "Products and items in the DVI Splitters & Switches category"
+            },
+            {
+              "id": "hdmi_splitters_and_switches",
+              "name": "HDMI Splitters & Switches",
+              "description": "Products and items in the HDMI Splitters & Switches category"
+            },
+            {
+              "id": "vga_splitters_and_switches",
+              "name": "VGA Splitters & Switches",
+              "description": "Products and items in the VGA Splitters & Switches category"
+            }
+          ]
+        },
+        {
+          "id": "blank_media",
+          "name": "Blank Media",
+          "description": "Products and items in the Blank Media category"
+        },
+        {
+          "id": "cable_management",
+          "name": "Cable Management",
+          "description": "Products and items in the Cable Management category",
+          "children": [
+            {
+              "id": "cable_clips",
+              "name": "Cable Clips",
+              "description": "Products and items in the Cable Clips category"
+            },
+            {
+              "id": "cable_tie_guns",
+              "name": "Cable Tie Guns",
+              "description": "Products and items in the Cable Tie Guns category"
+            },
+            {
+              "id": "cable_trays",
+              "name": "Cable Trays",
+              "description": "Products and items in the Cable Trays category"
+            },
+            {
+              "id": "patch_panels",
+              "name": "Patch Panels",
+              "description": "Products and items in the Patch Panels category"
+            },
+            {
+              "id": "wire_and_cable_identification_markers",
+              "name": "Wire & Cable Identification Markers",
+              "description": "Products and items in the Wire & Cable Identification Markers category"
+            },
+            {
+              "id": "wire_and_cable_sleeves",
+              "name": "Wire & Cable Sleeves",
+              "description": "Products and items in the Wire & Cable Sleeves category"
+            },
+            {
+              "id": "wire_and_cable_ties",
+              "name": "Wire & Cable Ties",
+              "description": "Products and items in the Wire & Cable Ties category"
+            }
+          ]
+        },
+        {
+          "id": "cables",
+          "name": "Cables",
+          "description": "Products and items in the Cables category",
+          "children": [
+            {
+              "id": "audio_and_video_cables",
+              "name": "Audio & Video Cables",
+              "description": "Products and items in the Audio & Video Cables category"
+            },
+            {
+              "id": "kvm_cables",
+              "name": "KVM Cables",
+              "description": "Products and items in the KVM Cables category"
+            },
+            {
+              "id": "network_cables",
+              "name": "Network Cables",
+              "description": "Products and items in the Network Cables category"
+            },
+            {
+              "id": "storage_and_data_transfer_cables",
+              "name": "Storage & Data Transfer Cables",
+              "description": "Products and items in the Storage & Data Transfer Cables category"
+            },
+            {
+              "id": "system_and_power_cables",
+              "name": "System & Power Cables",
+              "description": "Products and items in the System & Power Cables category"
+            },
+            {
+              "id": "telephone_cables",
+              "name": "Telephone Cables",
+              "description": "Products and items in the Telephone Cables category"
+            }
+          ]
+        },
+        {
+          "id": "computer_accessories",
+          "name": "Computer Accessories",
+          "description": "Products and items in the Computer Accessories category",
+          "children": [
+            {
+              "id": "computer_accessory_sets",
+              "name": "Computer Accessory Sets",
+              "description": "Products and items in the Computer Accessory Sets category"
+            },
+            {
+              "id": "computer_covers_and_skins",
+              "name": "Computer Covers & Skins",
+              "description": "Products and items in the Computer Covers & Skins category"
+            },
+            {
+              "id": "computer_risers_and_stands",
+              "name": "Computer Risers & Stands",
+              "description": "Products and items in the Computer Risers & Stands category"
+            },
+            {
+              "id": "handheld_device_accessories",
+              "name": "Handheld Device Accessories",
+              "description": "Products and items in the Handheld Device Accessories category",
+              "children": [
+                {
+                  "id": "e_book_reader_accessories",
+                  "name": "E-Book Reader Accessories",
+                  "description": "Products and items in the E-Book Reader Accessories category",
+                  "children": [
+                    {
+                      "id": "e_book_reader_cases",
+                      "name": "E-Book Reader Cases",
+                      "description": "Products and items in the E-Book Reader Cases category"
+                    }
+                  ]
+                },
+                {
+                  "id": "pda_accessories",
+                  "name": "PDA Accessories",
+                  "description": "Products and items in the PDA Accessories category",
+                  "children": [
+                    {
+                      "id": "pda_cases",
+                      "name": "PDA Cases",
+                      "description": "Products and items in the PDA Cases category"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "keyboard_and_mouse_wrist_rests",
+              "name": "Keyboard & Mouse Wrist Rests",
+              "description": "Products and items in the Keyboard & Mouse Wrist Rests category"
+            },
+            {
+              "id": "keyboard_trays_and_platforms",
+              "name": "Keyboard Trays & Platforms",
+              "description": "Products and items in the Keyboard Trays & Platforms category"
+            },
+            {
+              "id": "laptop_docking_stations",
+              "name": "Laptop Docking Stations",
+              "description": "Products and items in the Laptop Docking Stations category"
+            },
+            {
+              "id": "mouse_pads",
+              "name": "Mouse Pads",
+              "description": "Products and items in the Mouse Pads category"
+            },
+            {
+              "id": "stylus_pen_nibs_and_refills",
+              "name": "Stylus Pen Nibs & Refills",
+              "description": "Products and items in the Stylus Pen Nibs & Refills category"
+            },
+            {
+              "id": "stylus_pens",
+              "name": "Stylus Pens",
+              "description": "Products and items in the Stylus Pens category"
+            },
+            {
+              "id": "tablet_computer_docks_and_stands",
+              "name": "Tablet Computer Docks & Stands",
+              "description": "Products and items in the Tablet Computer Docks & Stands category"
+            }
+          ]
+        },
+        {
+          "id": "computer_components",
+          "name": "Computer Components",
+          "description": "Products and items in the Computer Components category",
+          "children": [
+            {
+              "id": "blade_server_enclosures",
+              "name": "Blade Server Enclosures",
+              "description": "Products and items in the Blade Server Enclosures category"
+            },
+            {
+              "id": "computer_backplates_and_i_and_o_shields",
+              "name": "Computer Backplates & I/O Shields",
+              "description": "Products and items in the Computer Backplates & I/O Shields category"
+            },
+            {
+              "id": "computer_power_supplies",
+              "name": "Computer Power Supplies",
+              "description": "Products and items in the Computer Power Supplies category"
+            },
+            {
+              "id": "computer_processors",
+              "name": "Computer Processors",
+              "description": "Products and items in the Computer Processors category"
+            },
+            {
+              "id": "computer_racks_and_mounts",
+              "name": "Computer Racks & Mounts",
+              "description": "Products and items in the Computer Racks & Mounts category"
+            },
+            {
+              "id": "computer_starter_kits",
+              "name": "Computer Starter Kits",
+              "description": "Products and items in the Computer Starter Kits category"
+            },
+            {
+              "id": "computer_system_cooling_parts",
+              "name": "Computer System Cooling Parts",
+              "description": "Products and items in the Computer System Cooling Parts category"
+            },
+            {
+              "id": "desktop_computer_and_server_cases",
+              "name": "Desktop Computer & Server Cases",
+              "description": "Products and items in the Desktop Computer & Server Cases category"
+            },
+            {
+              "id": "e_book_reader_parts",
+              "name": "E-Book Reader Parts",
+              "description": "Products and items in the E-Book Reader Parts category",
+              "children": [
+                {
+                  "id": "e_book_reader_screens_and_screen_digitizers",
+                  "name": "E-Book Reader Screens & Screen Digitizers",
+                  "description": "Products and items in the E-Book Reader Screens & Screen Digitizers category"
+                }
+              ]
+            },
+            {
+              "id": "i_and_o_cards_and_adapters",
+              "name": "I/O Cards & Adapters",
+              "description": "Products and items in the I/O Cards & Adapters category",
+              "children": [
+                {
+                  "id": "audio_cards_and_adapters",
+                  "name": "Audio Cards & Adapters",
+                  "description": "Products and items in the Audio Cards & Adapters category"
+                },
+                {
+                  "id": "computer_interface_cards_and_adapters",
+                  "name": "Computer Interface Cards & Adapters",
+                  "description": "Products and items in the Computer Interface Cards & Adapters category"
+                },
+                {
+                  "id": "riser_cards",
+                  "name": "Riser Cards",
+                  "description": "Products and items in the Riser Cards category"
+                },
+                {
+                  "id": "tv_tuner_cards_and_adapters",
+                  "name": "TV Tuner Cards & Adapters",
+                  "description": "Products and items in the TV Tuner Cards & Adapters category"
+                },
+                {
+                  "id": "video_cards_and_adapters",
+                  "name": "Video Cards & Adapters",
+                  "description": "Products and items in the Video Cards & Adapters category"
+                }
+              ]
+            },
+            {
+              "id": "input_device_accessories",
+              "name": "Input Device Accessories",
+              "description": "Products and items in the Input Device Accessories category",
+              "children": [
+                {
+                  "id": "barcode_scanner_stands",
+                  "name": "Barcode Scanner Stands",
+                  "description": "Products and items in the Barcode Scanner Stands category"
+                },
+                {
+                  "id": "game_controller_accessories",
+                  "name": "Game Controller Accessories",
+                  "description": "Products and items in the Game Controller Accessories category"
+                },
+                {
+                  "id": "keyboard_keys_and_caps",
+                  "name": "Keyboard Keys & Caps",
+                  "description": "Products and items in the Keyboard Keys & Caps category"
+                },
+                {
+                  "id": "mice_and_trackball_accessories",
+                  "name": "Mice & Trackball Accessories",
+                  "description": "Products and items in the Mice & Trackball Accessories category"
+                }
+              ]
+            },
+            {
+              "id": "input_devices",
+              "name": "Input Devices",
+              "description": "Products and items in the Input Devices category",
+              "children": [
+                {
+                  "id": "barcode_scanners",
+                  "name": "Barcode Scanners",
+                  "description": "Products and items in the Barcode Scanners category"
+                },
+                {
+                  "id": "digital_note_taking_pens",
+                  "name": "Digital Note Taking Pens",
+                  "description": "Products and items in the Digital Note Taking Pens category"
+                },
+                {
+                  "id": "electronic_card_readers",
+                  "name": "Electronic Card Readers",
+                  "description": "Products and items in the Electronic Card Readers category"
+                },
+                {
+                  "id": "fingerprint_readers",
+                  "name": "Fingerprint Readers",
+                  "description": "Products and items in the Fingerprint Readers category"
+                },
+                {
+                  "id": "game_controllers",
+                  "name": "Game Controllers",
+                  "description": "Products and items in the Game Controllers category",
+                  "children": [
+                    {
+                      "id": "game_racing_wheels",
+                      "name": "Game Racing Wheels",
+                      "description": "Products and items in the Game Racing Wheels category"
+                    },
+                    {
+                      "id": "game_remotes",
+                      "name": "Game Remotes",
+                      "description": "Products and items in the Game Remotes category"
+                    },
+                    {
+                      "id": "gaming_pads",
+                      "name": "Gaming Pads",
+                      "description": "Products and items in the Gaming Pads category"
+                    },
+                    {
+                      "id": "joystick_controllers",
+                      "name": "Joystick Controllers",
+                      "description": "Products and items in the Joystick Controllers category"
+                    },
+                    {
+                      "id": "musical_instrument_game_controllers",
+                      "name": "Musical Instrument Game Controllers",
+                      "description": "Products and items in the Musical Instrument Game Controllers category"
+                    }
+                  ]
+                },
+                {
+                  "id": "gesture_control_input_devices",
+                  "name": "Gesture Control Input Devices",
+                  "description": "Products and items in the Gesture Control Input Devices category"
+                },
+                {
+                  "id": "graphics_tablets",
+                  "name": "Graphics Tablets",
+                  "description": "Products and items in the Graphics Tablets category"
+                },
+                {
+                  "id": "kvm_switches",
+                  "name": "KVM Switches",
+                  "description": "Products and items in the KVM Switches category"
+                },
+                {
+                  "id": "keyboards",
+                  "name": "Keyboards",
+                  "description": "Products and items in the Keyboards category"
+                },
+                {
+                  "id": "memory_card_readers",
+                  "name": "Memory Card Readers",
+                  "description": "Products and items in the Memory Card Readers category"
+                },
+                {
+                  "id": "mice_and_trackballs",
+                  "name": "Mice & Trackballs",
+                  "description": "Products and items in the Mice & Trackballs category"
+                },
+                {
+                  "id": "numeric_keypads",
+                  "name": "Numeric Keypads",
+                  "description": "Products and items in the Numeric Keypads category"
+                },
+                {
+                  "id": "touchpads",
+                  "name": "Touchpads",
+                  "description": "Products and items in the Touchpads category"
+                }
+              ]
+            },
+            {
+              "id": "laptop_parts",
+              "name": "Laptop Parts",
+              "description": "Products and items in the Laptop Parts category",
+              "children": [
+                {
+                  "id": "laptop_hinges",
+                  "name": "Laptop Hinges",
+                  "description": "Products and items in the Laptop Hinges category"
+                },
+                {
+                  "id": "laptop_housings_and_trim",
+                  "name": "Laptop Housings & Trim",
+                  "description": "Products and items in the Laptop Housings & Trim category"
+                },
+                {
+                  "id": "laptop_replacement_cables",
+                  "name": "Laptop Replacement Cables",
+                  "description": "Products and items in the Laptop Replacement Cables category"
+                },
+                {
+                  "id": "laptop_replacement_keyboards",
+                  "name": "Laptop Replacement Keyboards",
+                  "description": "Products and items in the Laptop Replacement Keyboards category"
+                },
+                {
+                  "id": "laptop_replacement_screens",
+                  "name": "Laptop Replacement Screens",
+                  "description": "Products and items in the Laptop Replacement Screens category"
+                },
+                {
+                  "id": "laptop_replacement_speakers",
+                  "name": "Laptop Replacement Speakers",
+                  "description": "Products and items in the Laptop Replacement Speakers category"
+                },
+                {
+                  "id": "laptop_screen_digitizers",
+                  "name": "Laptop Screen Digitizers",
+                  "description": "Products and items in the Laptop Screen Digitizers category"
+                }
+              ]
+            },
+            {
+              "id": "storage_devices",
+              "name": "Storage Devices",
+              "description": "Products and items in the Storage Devices category",
+              "children": [
+                {
+                  "id": "disk_duplicators",
+                  "name": "Disk Duplicators",
+                  "description": "Products and items in the Disk Duplicators category",
+                  "children": [
+                    {
+                      "id": "cd_and_dvd_duplicators",
+                      "name": "CD/DVD Duplicators",
+                      "description": "Products and items in the CD/DVD Duplicators category"
+                    },
+                    {
+                      "id": "hard_drive_duplicators",
+                      "name": "Hard Drive Duplicators",
+                      "description": "Products and items in the Hard Drive Duplicators category"
+                    },
+                    {
+                      "id": "usb_drive_duplicators",
+                      "name": "USB Drive Duplicators",
+                      "description": "Products and items in the USB Drive Duplicators category"
+                    }
+                  ]
+                },
+                {
+                  "id": "floppy_drives",
+                  "name": "Floppy Drives",
+                  "description": "Products and items in the Floppy Drives category"
+                },
+                {
+                  "id": "hard_drive_accessories",
+                  "name": "Hard Drive Accessories",
+                  "description": "Products and items in the Hard Drive Accessories category",
+                  "children": [
+                    {
+                      "id": "hard_drive_carrying_cases",
+                      "name": "Hard Drive Carrying Cases",
+                      "description": "Products and items in the Hard Drive Carrying Cases category"
+                    },
+                    {
+                      "id": "hard_drive_docks",
+                      "name": "Hard Drive Docks",
+                      "description": "Products and items in the Hard Drive Docks category"
+                    },
+                    {
+                      "id": "hard_drive_enclosures_and_mounts",
+                      "name": "Hard Drive Enclosures & Mounts",
+                      "description": "Products and items in the Hard Drive Enclosures & Mounts category"
+                    }
+                  ]
+                },
+                {
+                  "id": "hard_drive_arrays",
+                  "name": "Hard Drive Arrays",
+                  "description": "Products and items in the Hard Drive Arrays category"
+                },
+                {
+                  "id": "hard_drives",
+                  "name": "Hard Drives",
+                  "description": "Products and items in the Hard Drives category"
+                },
+                {
+                  "id": "network_storage_systems",
+                  "name": "Network Storage Systems",
+                  "description": "Products and items in the Network Storage Systems category"
+                },
+                {
+                  "id": "optical_drives",
+                  "name": "Optical Drives",
+                  "description": "Products and items in the Optical Drives category"
+                },
+                {
+                  "id": "tape_drives",
+                  "name": "Tape Drives",
+                  "description": "Products and items in the Tape Drives category"
+                },
+                {
+                  "id": "usb_flash_drives",
+                  "name": "USB Flash Drives",
+                  "description": "Products and items in the USB Flash Drives category"
+                }
+              ]
+            },
+            {
+              "id": "tablet_computer_parts",
+              "name": "Tablet Computer Parts",
+              "description": "Products and items in the Tablet Computer Parts category",
+              "children": [
+                {
+                  "id": "tablet_computer_housings_and_trim",
+                  "name": "Tablet Computer Housings & Trim",
+                  "description": "Products and items in the Tablet Computer Housings & Trim category"
+                },
+                {
+                  "id": "tablet_computer_replacement_speakers",
+                  "name": "Tablet Computer Replacement Speakers",
+                  "description": "Products and items in the Tablet Computer Replacement Speakers category"
+                },
+                {
+                  "id": "tablet_computer_screens_and_screen_digitizers",
+                  "name": "Tablet Computer Screens & Screen Digitizers",
+                  "description": "Products and items in the Tablet Computer Screens & Screen Digitizers category"
+                }
+              ]
+            },
+            {
+              "id": "usb_and_firewire_hubs",
+              "name": "USB & FireWire Hubs",
+              "description": "Products and items in the USB & FireWire Hubs category"
+            }
+          ]
+        },
+        {
+          "id": "electronics_cleaners",
+          "name": "Electronics Cleaners",
+          "description": "Products and items in the Electronics Cleaners category"
+        },
+        {
+          "id": "electronics_films_and_shields",
+          "name": "Electronics Films & Shields",
+          "description": "Products and items in the Electronics Films & Shields category",
+          "children": [
+            {
+              "id": "electronics_stickers_and_decals",
+              "name": "Electronics Stickers & Decals",
+              "description": "Products and items in the Electronics Stickers & Decals category"
+            },
+            {
+              "id": "keyboard_protectors",
+              "name": "Keyboard Protectors",
+              "description": "Products and items in the Keyboard Protectors category"
+            },
+            {
+              "id": "privacy_filters",
+              "name": "Privacy Filters",
+              "description": "Products and items in the Privacy Filters category"
+            },
+            {
+              "id": "screen_protectors",
+              "name": "Screen Protectors",
+              "description": "Products and items in the Screen Protectors category"
+            }
+          ]
+        },
+        {
+          "id": "memory",
+          "name": "Memory",
+          "description": "Products and items in the Memory category",
+          "children": [
+            {
+              "id": "cache_memory",
+              "name": "Cache Memory",
+              "description": "Products and items in the Cache Memory category"
+            },
+            {
+              "id": "flash_memory",
+              "name": "Flash Memory",
+              "description": "Products and items in the Flash Memory category",
+              "children": [
+                {
+                  "id": "flash_memory_cards",
+                  "name": "Flash Memory Cards",
+                  "description": "Products and items in the Flash Memory Cards category"
+                }
+              ]
+            },
+            {
+              "id": "ram",
+              "name": "RAM",
+              "description": "Products and items in the RAM category"
+            },
+            {
+              "id": "rom",
+              "name": "ROM",
+              "description": "Products and items in the ROM category"
+            },
+            {
+              "id": "video_memory",
+              "name": "Video Memory",
+              "description": "Products and items in the Video Memory category"
+            }
+          ]
+        },
+        {
+          "id": "memory_accessories",
+          "name": "Memory Accessories",
+          "description": "Products and items in the Memory Accessories category",
+          "children": [
+            {
+              "id": "memory_cases",
+              "name": "Memory Cases",
+              "description": "Products and items in the Memory Cases category"
+            }
+          ]
+        },
+        {
+          "id": "mobile_phone_and_tablet_tripods_and_monopods",
+          "name": "Mobile Phone & Tablet Tripods & Monopods",
+          "description": "Products and items in the Mobile Phone & Tablet Tripods & Monopods category"
+        },
+        {
+          "id": "power",
+          "name": "Power",
+          "description": "Products and items in the Power category",
+          "children": [
+            {
+              "id": "batteries",
+              "name": "Batteries",
+              "description": "Products and items in the Batteries category",
+              "children": [
+                {
+                  "id": "camera_batteries",
+                  "name": "Camera Batteries",
+                  "description": "Products and items in the Camera Batteries category"
+                },
+                {
+                  "id": "cordless_phone_batteries",
+                  "name": "Cordless Phone Batteries",
+                  "description": "Products and items in the Cordless Phone Batteries category"
+                },
+                {
+                  "id": "e_book_reader_batteries",
+                  "name": "E-Book Reader Batteries",
+                  "description": "Products and items in the E-Book Reader Batteries category"
+                },
+                {
+                  "id": "general_purpose_batteries",
+                  "name": "General Purpose Batteries",
+                  "description": "Products and items in the General Purpose Batteries category"
+                },
+                {
+                  "id": "laptop_batteries",
+                  "name": "Laptop Batteries",
+                  "description": "Products and items in the Laptop Batteries category"
+                },
+                {
+                  "id": "mp3_player_batteries",
+                  "name": "MP3 Player Batteries",
+                  "description": "Products and items in the MP3 Player Batteries category"
+                },
+                {
+                  "id": "mobile_phone_batteries",
+                  "name": "Mobile Phone Batteries",
+                  "description": "Products and items in the Mobile Phone Batteries category"
+                },
+                {
+                  "id": "pda_batteries",
+                  "name": "PDA Batteries",
+                  "description": "Products and items in the PDA Batteries category"
+                },
+                {
+                  "id": "tablet_computer_batteries",
+                  "name": "Tablet Computer Batteries",
+                  "description": "Products and items in the Tablet Computer Batteries category"
+                },
+                {
+                  "id": "ups_batteries",
+                  "name": "UPS Batteries",
+                  "description": "Products and items in the UPS Batteries category"
+                },
+                {
+                  "id": "video_camera_batteries",
+                  "name": "Video Camera Batteries",
+                  "description": "Products and items in the Video Camera Batteries category"
+                },
+                {
+                  "id": "video_game_console_and_controller_batteries",
+                  "name": "Video Game Console & Controller Batteries",
+                  "description": "Products and items in the Video Game Console & Controller Batteries category"
+                }
+              ]
+            },
+            {
+              "id": "battery_accessories",
+              "name": "Battery Accessories",
+              "description": "Products and items in the Battery Accessories category",
+              "children": [
+                {
+                  "id": "battery_charge_controllers",
+                  "name": "Battery Charge Controllers",
+                  "description": "Products and items in the Battery Charge Controllers category"
+                },
+                {
+                  "id": "battery_holders",
+                  "name": "Battery Holders",
+                  "description": "Products and items in the Battery Holders category"
+                },
+                {
+                  "id": "camera_battery_chargers",
+                  "name": "Camera Battery Chargers",
+                  "description": "Products and items in the Camera Battery Chargers category"
+                },
+                {
+                  "id": "general_purpose_battery_chargers",
+                  "name": "General Purpose Battery Chargers",
+                  "description": "Products and items in the General Purpose Battery Chargers category"
+                },
+                {
+                  "id": "general_purpose_battery_testers",
+                  "name": "General Purpose Battery Testers",
+                  "description": "Products and items in the General Purpose Battery Testers category"
+                }
+              ]
+            },
+            {
+              "id": "fuel_cells",
+              "name": "Fuel Cells",
+              "description": "Products and items in the Fuel Cells category"
+            },
+            {
+              "id": "power_adapter_and_charger_accessories",
+              "name": "Power Adapter & Charger Accessories",
+              "description": "Products and items in the Power Adapter & Charger Accessories category"
+            },
+            {
+              "id": "power_adapters_and_chargers",
+              "name": "Power Adapters & Chargers",
+              "description": "Products and items in the Power Adapters & Chargers category"
+            },
+            {
+              "id": "power_control_units",
+              "name": "Power Control Units",
+              "description": "Products and items in the Power Control Units category"
+            },
+            {
+              "id": "power_strips_and_surge_suppressors",
+              "name": "Power Strips & Surge Suppressors",
+              "description": "Products and items in the Power Strips & Surge Suppressors category"
+            },
+            {
+              "id": "power_supply_enclosures",
+              "name": "Power Supply Enclosures",
+              "description": "Products and items in the Power Supply Enclosures category"
+            },
+            {
+              "id": "surge_protection_devices",
+              "name": "Surge Protection Devices",
+              "description": "Products and items in the Surge Protection Devices category"
+            },
+            {
+              "id": "travel_converters_and_adapters",
+              "name": "Travel Converters & Adapters",
+              "description": "Products and items in the Travel Converters & Adapters category"
+            },
+            {
+              "id": "ups",
+              "name": "UPS",
+              "description": "Products and items in the UPS category"
+            },
+            {
+              "id": "ups_accessories",
+              "name": "UPS Accessories",
+              "description": "Products and items in the UPS Accessories category"
+            }
+          ]
+        },
+        {
+          "id": "remote_controls",
+          "name": "Remote Controls",
+          "description": "Products and items in the Remote Controls category"
+        },
+        {
+          "id": "signal_boosters",
+          "name": "Signal Boosters",
+          "description": "Products and items in the Signal Boosters category"
+        },
+        {
+          "id": "signal_jammers",
+          "name": "Signal Jammers",
+          "description": "Products and items in the Signal Jammers category",
+          "children": [
+            {
+              "id": "gps_jammers",
+              "name": "GPS Jammers",
+              "description": "Products and items in the GPS Jammers category"
+            },
+            {
+              "id": "mobile_phone_jammers",
+              "name": "Mobile Phone Jammers",
+              "description": "Products and items in the Mobile Phone Jammers category"
+            },
+            {
+              "id": "radar_jammers",
+              "name": "Radar Jammers",
+              "description": "Products and items in the Radar Jammers category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gps_accessories",
+      "name": "GPS Accessories",
+      "description": "Products and items in the GPS Accessories category",
+      "children": [
+        {
+          "id": "gps_cases",
+          "name": "GPS Cases",
+          "description": "Products and items in the GPS Cases category"
+        },
+        {
+          "id": "gps_mounts",
+          "name": "GPS Mounts",
+          "description": "Products and items in the GPS Mounts category"
+        }
+      ]
+    },
+    {
+      "id": "gps_navigation_systems",
+      "name": "GPS Navigation Systems",
+      "description": "Products and items in the GPS Navigation Systems category"
+    },
+    {
+      "id": "gps_tracking_devices",
+      "name": "GPS Tracking Devices",
+      "description": "Products and items in the GPS Tracking Devices category"
+    },
+    {
+      "id": "marine_electronics",
+      "name": "Marine Electronics",
+      "description": "Products and items in the Marine Electronics category",
+      "children": [
+        {
+          "id": "fish_finders",
+          "name": "Fish Finders",
+          "description": "Products and items in the Fish Finders category"
+        },
+        {
+          "id": "marine_audio_and_video_receivers",
+          "name": "Marine Audio & Video Receivers",
+          "description": "Products and items in the Marine Audio & Video Receivers category"
+        },
+        {
+          "id": "marine_chartplotters_and_gps",
+          "name": "Marine Chartplotters & GPS",
+          "description": "Products and items in the Marine Chartplotters & GPS category"
+        },
+        {
+          "id": "marine_radar",
+          "name": "Marine Radar",
+          "description": "Products and items in the Marine Radar category"
+        },
+        {
+          "id": "marine_radios",
+          "name": "Marine Radios",
+          "description": "Products and items in the Marine Radios category"
+        },
+        {
+          "id": "marine_speakers",
+          "name": "Marine Speakers",
+          "description": "Products and items in the Marine Speakers category"
+        }
+      ]
+    },
+    {
+      "id": "networking",
+      "name": "Networking",
+      "description": "Products and items in the Networking category",
+      "children": [
+        {
+          "id": "bridges_and_routers",
+          "name": "Bridges & Routers",
+          "description": "Products and items in the Bridges & Routers category",
+          "children": [
+            {
+              "id": "network_bridges",
+              "name": "Network Bridges",
+              "description": "Products and items in the Network Bridges category"
+            },
+            {
+              "id": "voip_gateways_and_routers",
+              "name": "VoIP Gateways & Routers",
+              "description": "Products and items in the VoIP Gateways & Routers category"
+            },
+            {
+              "id": "wireless_access_points",
+              "name": "Wireless Access Points",
+              "description": "Products and items in the Wireless Access Points category"
+            },
+            {
+              "id": "wireless_routers",
+              "name": "Wireless Routers",
+              "description": "Products and items in the Wireless Routers category"
+            }
+          ]
+        },
+        {
+          "id": "concentrators_and_multiplexers",
+          "name": "Concentrators & Multiplexers",
+          "description": "Products and items in the Concentrators & Multiplexers category"
+        },
+        {
+          "id": "hubs_and_switches",
+          "name": "Hubs & Switches",
+          "description": "Products and items in the Hubs & Switches category"
+        },
+        {
+          "id": "modem_accessories",
+          "name": "Modem Accessories",
+          "description": "Products and items in the Modem Accessories category"
+        },
+        {
+          "id": "modems",
+          "name": "Modems",
+          "description": "Products and items in the Modems category"
+        },
+        {
+          "id": "network_cards_and_adapters",
+          "name": "Network Cards & Adapters",
+          "description": "Products and items in the Network Cards & Adapters category"
+        },
+        {
+          "id": "network_security_and_firewall_devices",
+          "name": "Network Security & Firewall Devices",
+          "description": "Products and items in the Network Security & Firewall Devices category"
+        },
+        {
+          "id": "power_over_ethernet_adapters",
+          "name": "Power Over Ethernet Adapters",
+          "description": "Products and items in the Power Over Ethernet Adapters category"
+        },
+        {
+          "id": "print_servers",
+          "name": "Print Servers",
+          "description": "Products and items in the Print Servers category"
+        },
+        {
+          "id": "repeaters_and_transceivers",
+          "name": "Repeaters & Transceivers",
+          "description": "Products and items in the Repeaters & Transceivers category"
+        }
+      ]
+    },
+    {
+      "id": "print_copy_scan_and_fax",
+      "name": "Print, Copy, Scan & Fax",
+      "description": "Products and items in the Print, Copy, Scan & Fax category",
+      "children": [
+        {
+          "id": "3d_printer_accessories",
+          "name": "3D Printer Accessories",
+          "description": "Products and items in the 3D Printer Accessories category"
+        },
+        {
+          "id": "3d_printers",
+          "name": "3D Printers",
+          "description": "Products and items in the 3D Printers category"
+        },
+        {
+          "id": "printer_copier_and_fax_machine_accessories",
+          "name": "Printer, Copier & Fax Machine Accessories",
+          "description": "Products and items in the Printer, Copier & Fax Machine Accessories category",
+          "children": [
+            {
+              "id": "printer_consumables",
+              "name": "Printer Consumables",
+              "description": "Products and items in the Printer Consumables category",
+              "children": [
+                {
+                  "id": "printer_drums_and_drum_kits",
+                  "name": "Printer Drums & Drum Kits",
+                  "description": "Products and items in the Printer Drums & Drum Kits category"
+                },
+                {
+                  "id": "printer_filters",
+                  "name": "Printer Filters",
+                  "description": "Products and items in the Printer Filters category"
+                },
+                {
+                  "id": "printer_maintenance_kits",
+                  "name": "Printer Maintenance Kits",
+                  "description": "Products and items in the Printer Maintenance Kits category"
+                },
+                {
+                  "id": "printer_ribbons",
+                  "name": "Printer Ribbons",
+                  "description": "Products and items in the Printer Ribbons category"
+                },
+                {
+                  "id": "printheads",
+                  "name": "Printheads",
+                  "description": "Products and items in the Printheads category"
+                },
+                {
+                  "id": "toner_and_inkjet_cartridge_refills",
+                  "name": "Toner & Inkjet Cartridge Refills",
+                  "description": "Products and items in the Toner & Inkjet Cartridge Refills category"
+                },
+                {
+                  "id": "toner_and_inkjet_cartridges",
+                  "name": "Toner & Inkjet Cartridges",
+                  "description": "Products and items in the Toner & Inkjet Cartridges category"
+                }
+              ]
+            },
+            {
+              "id": "printer_duplexers",
+              "name": "Printer Duplexers",
+              "description": "Products and items in the Printer Duplexers category"
+            },
+            {
+              "id": "printer_memory",
+              "name": "Printer Memory",
+              "description": "Products and items in the Printer Memory category"
+            },
+            {
+              "id": "printer_stands",
+              "name": "Printer Stands",
+              "description": "Products and items in the Printer Stands category"
+            },
+            {
+              "id": "printer_copier_and_fax_machine_replacement_parts",
+              "name": "Printer, Copier & Fax Machine Replacement Parts",
+              "description": "Products and items in the Printer, Copier & Fax Machine Replacement Parts category"
+            }
+          ]
+        },
+        {
+          "id": "printers_copiers_and_fax_machines",
+          "name": "Printers, Copiers & Fax Machines",
+          "description": "Products and items in the Printers, Copiers & Fax Machines category"
+        },
+        {
+          "id": "scanner_accessories",
+          "name": "Scanner Accessories",
+          "description": "Products and items in the Scanner Accessories category"
+        },
+        {
+          "id": "scanners",
+          "name": "Scanners",
+          "description": "Products and items in the Scanners category"
+        }
+      ]
+    },
+    {
+      "id": "radar_detectors",
+      "name": "Radar Detectors",
+      "description": "Products and items in the Radar Detectors category"
+    },
+    {
+      "id": "speed_radars",
+      "name": "Speed Radars",
+      "description": "Products and items in the Speed Radars category"
+    },
+    {
+      "id": "toll_collection_devices",
+      "name": "Toll Collection Devices",
+      "description": "Products and items in the Toll Collection Devices category"
+    },
+    {
+      "id": "video",
+      "name": "Video",
+      "description": "Products and items in the Video category",
+      "children": [
+        {
+          "id": "computer_monitors",
+          "name": "Computer Monitors",
+          "description": "Products and items in the Computer Monitors category"
+        },
+        {
+          "id": "projectors",
+          "name": "Projectors",
+          "description": "Products and items in the Projectors category",
+          "children": [
+            {
+              "id": "multimedia_projectors",
+              "name": "Multimedia Projectors",
+              "description": "Products and items in the Multimedia Projectors category"
+            },
+            {
+              "id": "overhead_projectors",
+              "name": "Overhead Projectors",
+              "description": "Products and items in the Overhead Projectors category"
+            },
+            {
+              "id": "slide_projectors",
+              "name": "Slide Projectors",
+              "description": "Products and items in the Slide Projectors category"
+            }
+          ]
+        },
+        {
+          "id": "satellite_and_cable_tv",
+          "name": "Satellite & Cable TV",
+          "description": "Products and items in the Satellite & Cable TV category",
+          "children": [
+            {
+              "id": "cable_tv_receivers",
+              "name": "Cable TV Receivers",
+              "description": "Products and items in the Cable TV Receivers category"
+            },
+            {
+              "id": "satellite_receivers",
+              "name": "Satellite Receivers",
+              "description": "Products and items in the Satellite Receivers category"
+            }
+          ]
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "Products and items in the Televisions category"
+        },
+        {
+          "id": "video_accessories",
+          "name": "Video Accessories",
+          "description": "Products and items in the Video Accessories category",
+          "children": [
+            {
+              "id": "3d_glasses",
+              "name": "3D Glasses",
+              "description": "Products and items in the 3D Glasses category"
+            },
+            {
+              "id": "computer_monitor_accessories",
+              "name": "Computer Monitor Accessories",
+              "description": "Products and items in the Computer Monitor Accessories category",
+              "children": [
+                {
+                  "id": "color_calibrators",
+                  "name": "Color Calibrators",
+                  "description": "Products and items in the Color Calibrators category"
+                }
+              ]
+            },
+            {
+              "id": "projector_accessories",
+              "name": "Projector Accessories",
+              "description": "Products and items in the Projector Accessories category",
+              "children": [
+                {
+                  "id": "projection_and_tripod_skirts",
+                  "name": "Projection & Tripod Skirts",
+                  "description": "Products and items in the Projection & Tripod Skirts category"
+                },
+                {
+                  "id": "projection_screen_stands",
+                  "name": "Projection Screen Stands",
+                  "description": "Products and items in the Projection Screen Stands category"
+                },
+                {
+                  "id": "projection_screens",
+                  "name": "Projection Screens",
+                  "description": "Products and items in the Projection Screens category"
+                },
+                {
+                  "id": "projector_mounts",
+                  "name": "Projector Mounts",
+                  "description": "Products and items in the Projector Mounts category"
+                },
+                {
+                  "id": "projector_replacement_lamps",
+                  "name": "Projector Replacement Lamps",
+                  "description": "Products and items in the Projector Replacement Lamps category"
+                }
+              ]
+            },
+            {
+              "id": "rewinders",
+              "name": "Rewinders",
+              "description": "Products and items in the Rewinders category"
+            },
+            {
+              "id": "television_parts_and_accessories",
+              "name": "Television Parts & Accessories",
+              "description": "Products and items in the Television Parts & Accessories category",
+              "children": [
+                {
+                  "id": "tv_and_monitor_mounts",
+                  "name": "TV & Monitor Mounts",
+                  "description": "Products and items in the TV & Monitor Mounts category"
+                },
+                {
+                  "id": "tv_converter_boxes",
+                  "name": "TV Converter Boxes",
+                  "description": "Products and items in the TV Converter Boxes category"
+                },
+                {
+                  "id": "tv_replacement_lamps",
+                  "name": "TV Replacement Lamps",
+                  "description": "Products and items in the TV Replacement Lamps category"
+                },
+                {
+                  "id": "tv_replacement_speakers",
+                  "name": "TV Replacement Speakers",
+                  "description": "Products and items in the TV Replacement Speakers category"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "video_editing_hardware_and_production_equipment",
+          "name": "Video Editing Hardware & Production Equipment",
+          "description": "Products and items in the Video Editing Hardware & Production Equipment category"
+        },
+        {
+          "id": "video_multiplexers",
+          "name": "Video Multiplexers",
+          "description": "Products and items in the Video Multiplexers category"
+        },
+        {
+          "id": "video_players_and_recorders",
+          "name": "Video Players & Recorders",
+          "description": "Products and items in the Video Players & Recorders category",
+          "children": [
+            {
+              "id": "dvd_and_blu_ray_players",
+              "name": "DVD & Blu-ray Players",
+              "description": "Products and items in the DVD & Blu-ray Players category"
+            },
+            {
+              "id": "dvd_recorders",
+              "name": "DVD Recorders",
+              "description": "Products and items in the DVD Recorders category"
+            },
+            {
+              "id": "digital_video_recorders",
+              "name": "Digital Video Recorders",
+              "description": "Products and items in the Digital Video Recorders category"
+            },
+            {
+              "id": "streaming_and_home_media_players",
+              "name": "Streaming & Home Media Players",
+              "description": "Products and items in the Streaming & Home Media Players category"
+            },
+            {
+              "id": "vcrs",
+              "name": "VCRs",
+              "description": "Products and items in the VCRs category"
+            }
+          ]
+        },
+        {
+          "id": "video_servers",
+          "name": "Video Servers",
+          "description": "Products and items in the Video Servers category"
+        },
+        {
+          "id": "video_transmitters",
+          "name": "Video Transmitters",
+          "description": "Products and items in the Video Transmitters category"
+        }
+      ]
+    },
+    {
+      "id": "video_game_console_accessories",
+      "name": "Video Game Console Accessories",
+      "description": "Products and items in the Video Game Console Accessories category",
+      "children": [
+        {
+          "id": "home_game_console_accessories",
+          "name": "Home Game Console Accessories",
+          "description": "Products and items in the Home Game Console Accessories category"
+        },
+        {
+          "id": "portable_game_console_accessories",
+          "name": "Portable Game Console Accessories",
+          "description": "Products and items in the Portable Game Console Accessories category"
+        }
+      ]
+    },
+    {
+      "id": "video_game_consoles",
+      "name": "Video Game Consoles",
+      "description": "Products and items in the Video Game Consoles category"
+    }
+  ]
+}

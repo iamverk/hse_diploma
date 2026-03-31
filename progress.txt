@@ -1,0 +1,3 @@
+# Progress Log — Taxonomy-as-Code
+# Each iteration appends learnings here.
+# Future agents read this to avoid repeating mistakes.

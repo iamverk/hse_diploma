@@ -1,0 +1,112 @@
+{
+  "id": "home_garden",
+  "name": "Home & Garden",
+  "description": "Home furnishings, garden supplies, and household items",
+  "children": [
+    {
+      "id": "bathroom_accessories",
+      "name": "Bathroom Accessories",
+      "description": "Products and items in the Bathroom Accessories category"
+    },
+    {
+      "id": "business_and_home_security",
+      "name": "Business & Home Security",
+      "description": "Products and items in the Business & Home Security category"
+    },
+    {
+      "id": "decor",
+      "name": "Decor",
+      "description": "Products and items in the Decor category"
+    },
+    {
+      "id": "emergency_preparedness",
+      "name": "Emergency Preparedness",
+      "description": "Products and items in the Emergency Preparedness category"
+    },
+    {
+      "id": "fireplace_and_wood_stove_accessories",
+      "name": "Fireplace & Wood Stove Accessories",
+      "description": "Products and items in the Fireplace & Wood Stove Accessories category"
+    },
+    {
+      "id": "fireplaces",
+      "name": "Fireplaces",
+      "description": "Products and items in the Fireplaces category"
+    },
+    {
+      "id": "flood_fire_and_gas_safety",
+      "name": "Flood, Fire & Gas Safety",
+      "description": "Products and items in the Flood, Fire & Gas Safety category"
+    },
+    {
+      "id": "household_appliance_accessories",
+      "name": "Household Appliance Accessories",
+      "description": "Products and items in the Household Appliance Accessories category"
+    },
+    {
+      "id": "household_appliances",
+      "name": "Household Appliances",
+      "description": "Products and items in the Household Appliances category"
+    },
+    {
+      "id": "household_supplies",
+      "name": "Household Supplies",
+      "description": "Products and items in the Household Supplies category"
+    },
+    {
+      "id": "kitchen_and_dining",
+      "name": "Kitchen & Dining",
+      "description": "Products and items in the Kitchen & Dining category"
+    },
+    {
+      "id": "lawn_and_garden",
+      "name": "Lawn & Garden",
+      "description": "Products and items in the Lawn & Garden category"
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting",
+      "description": "Products and items in the Lighting category"
+    },
+    {
+      "id": "lighting_accessories",
+      "name": "Lighting Accessories",
+      "description": "Products and items in the Lighting Accessories category"
+    },
+    {
+      "id": "linens_and_bedding",
+      "name": "Linens & Bedding",
+      "description": "Products and items in the Linens & Bedding category"
+    },
+    {
+      "id": "parasols_and_rain_umbrellas",
+      "name": "Parasols & Rain Umbrellas",
+      "description": "Products and items in the Parasols & Rain Umbrellas category"
+    },
+    {
+      "id": "plants",
+      "name": "Plants",
+      "description": "Products and items in the Plants category"
+    },
+    {
+      "id": "pool_and_spa",
+      "name": "Pool & Spa",
+      "description": "Products and items in the Pool & Spa category"
+    },
+    {
+      "id": "smoking_accessories",
+      "name": "Smoking Accessories",
+      "description": "Products and items in the Smoking Accessories category"
+    },
+    {
+      "id": "umbrella_sleeves_and_cases",
+      "name": "Umbrella Sleeves & Cases",
+      "description": "Products and items in the Umbrella Sleeves & Cases category"
+    },
+    {
+      "id": "wood_stoves",
+      "name": "Wood Stoves",
+      "description": "Products and items in the Wood Stoves category"
+    }
+  ]
+}

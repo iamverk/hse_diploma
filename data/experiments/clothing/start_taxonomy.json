@@ -1,0 +1,47 @@
+{
+  "id": "apparel_accessories",
+  "name": "Apparel & Accessories",
+  "description": "Clothing, shoes, jewelry, and fashion accessories",
+  "children": [
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Products and items in the Clothing category"
+    },
+    {
+      "id": "clothing_accessories",
+      "name": "Clothing Accessories",
+      "description": "Products and items in the Clothing Accessories category"
+    },
+    {
+      "id": "costumes_and_accessories",
+      "name": "Costumes & Accessories",
+      "description": "Products and items in the Costumes & Accessories category"
+    },
+    {
+      "id": "handbag_and_wallet_accessories",
+      "name": "Handbag & Wallet Accessories",
+      "description": "Products and items in the Handbag & Wallet Accessories category"
+    },
+    {
+      "id": "handbags_wallets_and_cases",
+      "name": "Handbags, Wallets & Cases",
+      "description": "Products and items in the Handbags, Wallets & Cases category"
+    },
+    {
+      "id": "jewelry",
+      "name": "Jewelry",
+      "description": "Products and items in the Jewelry category"
+    },
+    {
+      "id": "shoe_accessories",
+      "name": "Shoe Accessories",
+      "description": "Products and items in the Shoe Accessories category"
+    },
+    {
+      "id": "shoes",
+      "name": "Shoes",
+      "description": "Products and items in the Shoes category"
+    }
+  ]
+}

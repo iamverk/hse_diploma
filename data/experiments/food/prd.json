@@ -1,0 +1,49 @@
+{
+  "projectName": "Food, Beverages & Tobacco Taxonomy Construction",
+  "domain": "food",
+  "branchName": "taxonomy-food-v1",
+  "userStories": [
+    {
+      "id": 1,
+      "title": "Verify and complete L1 categories under Food, Beverages & Tobacco",
+      "acceptanceCriteria": "Food, Beverages & Tobacco has 3 direct children. validate.py passes with 0 errors.",
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Expand 'Beverages' to L2 subcategories",
+      "acceptanceCriteria": "'Beverages' has at least 15 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "Expand 'Food Items' to L2 subcategories",
+      "acceptanceCriteria": "'Food Items' has at least 19 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Expand 'Tobacco Products' to L2 subcategories",
+      "acceptanceCriteria": "'Tobacco Products' has at least 6 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Add L3 leaf categories across Food, Beverages & Tobacco subcategories",
+      "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
+      "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Achieve edge F1 > 0.5 vs gold standard",
+      "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
+      "passes": false
+    }
+  ]
+}

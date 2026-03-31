@@ -31,7 +31,7 @@
       "id": 5,
       "title": "Expand 'Communications' to L2 subcategories",
       "acceptanceCriteria": "'Communications' has at least 9 children. validate.py passes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 6,

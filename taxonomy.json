@@ -127,7 +127,54 @@
     {
       "id": "communications",
       "name": "Communications",
-      "description": "Products and items in the Communications category"
+      "description": "Products and items in the Communications category",
+      "children": [
+        {
+          "id": "answering_machines",
+          "name": "Answering Machines",
+          "description": "Products and items in the Answering Machines category"
+        },
+        {
+          "id": "caller_ids",
+          "name": "Caller IDs",
+          "description": "Products and items in the Caller IDs category"
+        },
+        {
+          "id": "communication_radio_accessories",
+          "name": "Communication Radio Accessories",
+          "description": "Products and items in the Communication Radio Accessories category"
+        },
+        {
+          "id": "communication_radios",
+          "name": "Communication Radios",
+          "description": "Products and items in the Communication Radios category"
+        },
+        {
+          "id": "intercom_accessories",
+          "name": "Intercom Accessories",
+          "description": "Products and items in the Intercom Accessories category"
+        },
+        {
+          "id": "intercoms",
+          "name": "Intercoms",
+          "description": "Products and items in the Intercoms category"
+        },
+        {
+          "id": "pagers",
+          "name": "Pagers",
+          "description": "Products and items in the Pagers category"
+        },
+        {
+          "id": "telephony",
+          "name": "Telephony",
+          "description": "Products and items in the Telephony category"
+        },
+        {
+          "id": "video_conferencing",
+          "name": "Video Conferencing",
+          "description": "Products and items in the Video Conferencing category"
+        }
+      ]
     },
     {
       "id": "components",

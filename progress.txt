@@ -82,3 +82,25 @@ Edge F1:         0.1711
 Node Coverage:   0.0957
 Ancestor F1:     1.0000
 
+--- Metrics after iteration 3 (story 4) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 40
+Gold nodes:      418
+Common nodes:    40
+
+Edge Precision:  1.0000
+Edge Recall:     0.0935
+Edge F1:         0.1711
+
+Node Coverage:   0.0957
+Ancestor F1:     1.0000
+
+Story: 5 — Expand 'Communications' to L2 subcategories
+- Added 9 children under `communications` to meet acceptance: `answering_machines`, `caller_ids`, `communication_radio_accessories`, `communication_radios`, `intercom_accessories`, `intercoms`, `pagers`, `telephony`, and `video_conferencing`.
+- Updated `prd.json` to set story 5 `passes` to `true`.
+- Validation passed in the taxonomy-as-code environment using the explicit Python binary with 1 existing root fanout warning only.
+- Metrics edge F1 before/after: 0.1711 (story 4 baseline) → 0.2065 after communications expansion.
+- Quirk/guardrail: continue using `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python` because the system interpreter can fail on `typing` union syntax in this repo.
+

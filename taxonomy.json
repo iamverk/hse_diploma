@@ -43,7 +43,44 @@
     {
       "id": "audio",
       "name": "Audio",
-      "description": "Products and items in the Audio category"
+      "description": "Products and items in the Audio category",
+      "children": [
+        {
+          "id": "audio_accessories",
+          "name": "Audio Accessories",
+          "description": "Products and items in the Audio Accessories category"
+        },
+        {
+          "id": "audio_components",
+          "name": "Audio Components",
+          "description": "Products and items in the Audio Components category"
+        },
+        {
+          "id": "audio_players_and_recorders",
+          "name": "Audio Players & Recorders",
+          "description": "Products and items in the Audio Players & Recorders category"
+        },
+        {
+          "id": "bullhorns",
+          "name": "Bullhorns",
+          "description": "Products and items in the Bullhorns category"
+        },
+        {
+          "id": "dj_and_specialty_audio",
+          "name": "DJ & Specialty Audio",
+          "description": "Products and items in the DJ & Specialty Audio category"
+        },
+        {
+          "id": "public_address_systems",
+          "name": "Public Address Systems",
+          "description": "Products and items in the Public Address Systems category"
+        },
+        {
+          "id": "stage_equipment",
+          "name": "Stage Equipment",
+          "description": "Products and items in the Stage Equipment category"
+        }
+      ]
     },
     {
       "id": "circuit_boards_and_components",

@@ -55,6 +55,8 @@ done
 PRD_FILE="prd.json"
 PROGRESS_FILE="progress.txt"
 TAXONOMY_FILE="taxonomy.json"
+PYTHON="/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python"
+LOG_DIR="results/logs"
 
 echo "==========================================="
 echo "  TAXONOMY RALPH LOOP"
@@ -114,7 +116,13 @@ if [ ! -d ".git" ]; then
 fi
 
 # ── Main loop ────────────────────────────────────────────────────────────────
+# ── Init per-iteration log ────────────────────────────────────────────────────
+mkdir -p "$LOG_DIR"
+METRICS_CSV="$LOG_DIR/metrics_${TOOL}_$(date +%Y%m%d_%H%M%S).csv"
+echo "iteration,story_id,story_title,passed,edge_f1,node_coverage,ancestor_f1,elapsed_sec" > "$METRICS_CSV"
+
 for i in $(seq 1 $MAX_ITERATIONS); do
+    ITER_START=$(date +%s)
     echo ""
     echo "--- Iteration $i / $MAX_ITERATIONS ---"
 
@@ -162,7 +170,7 @@ for i in $(seq 1 $MAX_ITERATIONS); do
 
         # Log metrics to progress.txt
         echo "--- Metrics after iteration $i (story $CURRENT_ID) ---" >> "$PROGRESS_FILE"
-        python tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json >> "$PROGRESS_FILE" 2>&1 || true
+        $PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json >> "$PROGRESS_FILE" 2>&1 || true
         echo "" >> "$PROGRESS_FILE"
     else
         echo "Story [$CURRENT_ID] not completed. Will retry next iteration."
@@ -170,6 +178,15 @@ for i in $(seq 1 $MAX_ITERATIONS); do
         echo "Agent did not mark story as complete." >> "$PROGRESS_FILE"
         echo "" >> "$PROGRESS_FILE"
     fi
+
+    # ── Per-iteration metrics to CSV ────────────────────────────────────────
+    ITER_END=$(date +%s)
+    ELAPSED=$((ITER_END - ITER_START))
+    METRICS_RAW=$($PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json 2>/dev/null || echo "")
+    EDGE_F1=$(echo "$METRICS_RAW" | grep -i "edge.*f1" | awk '{print $NF}' || echo "")
+    NODE_COV=$(echo "$METRICS_RAW" | grep -i "node.*coverage" | awk '{print $NF}' || echo "")
+    ANC_F1=$(echo "$METRICS_RAW" | grep -i "ancestor.*f1" | awk '{print $NF}' || echo "")
+    echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",$STORY_PASS,$EDGE_F1,$NODE_COV,$ANC_F1,$ELAPSED" >> "$METRICS_CSV"
 
     # Progress summary
     DONE=$(jq '[.userStories[] | select(.passes == true)] | length' "$PRD_FILE")
@@ -183,7 +200,35 @@ echo "==========================================="
 echo "  RALPH LOOP FINISHED"
 echo "==========================================="
 echo ""
-python tools/taxonomy_cli.py stats
+$PYTHON tools/taxonomy_cli.py stats
 echo ""
-python tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json 2>/dev/null \
+$PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json 2>/dev/null \
     || echo "(metrics unavailable)"
+
+# ── Save experiment log ──────────────────────────────────────────────────────
+TIMESTAMP=$(date +%Y%m%d_%H%M%S)
+DOMAIN=$(jq -r '.domain // "unknown"' "$PRD_FILE" 2>/dev/null)
+RUN_DIR="results/${TOOL}_${MODEL}_${DOMAIN}_${TIMESTAMP}"
+mkdir -p "$RUN_DIR"
+cp "$TAXONOMY_FILE"   "$RUN_DIR/final_taxonomy.json"
+cp "$PRD_FILE"        "$RUN_DIR/prd.json"
+cp "$PROGRESS_FILE"   "$RUN_DIR/progress.txt"
+git log --oneline > "$RUN_DIR/git_log.txt" 2>/dev/null || true
+$PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json > "$RUN_DIR/final_metrics.txt" 2>/dev/null || true
+
+# Save config
+cat > "$RUN_DIR/config.json" <<CFGEOF
+{
+  "tool": "$TOOL",
+  "model": "$MODEL",
+  "domain": "$DOMAIN",
+  "max_iterations": $MAX_ITERATIONS,
+  "actual_iterations": $i,
+  "timestamp": "$TIMESTAMP"
+}
+CFGEOF
+
+cp "$METRICS_CSV" "$RUN_DIR/metrics_per_iteration.csv"
+echo ""
+echo "Results saved to: $RUN_DIR/"
+echo "Metrics CSV: $METRICS_CSV"

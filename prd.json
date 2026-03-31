@@ -19,7 +19,7 @@
       "id": 3,
       "title": "Expand 'Audio' to L2 subcategories",
       "acceptanceCriteria": "'Audio' has at least 7 children. validate.py passes.",
-      "passes": false
+    "passes": true
     },
     {
       "id": 4,

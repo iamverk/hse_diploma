@@ -23,3 +23,25 @@ Story: 2 — Expand 'Arcade Equipment' to L2 subcategories
 - Metrics edge F1 before/after: 0.0872 (from prior log) → 0.1131.
 - Quirk observed: this environment’s `metrics.py` still errors under older Python due `|` union typing, so run it with the env Python binary.
 
+--- Metrics after iteration 1 (story 2) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 26
+Gold nodes:      418
+Common nodes:    26
+
+Edge Precision:  1.0000
+Edge Recall:     0.0600
+Edge F1:         0.1131
+
+Node Coverage:   0.0622
+Ancestor F1:     1.0000
+
+Story: 3 — Expand 'Audio' to L2 subcategories
+- Added 7 children under `audio` to satisfy the acceptance target and match key reference branches: `audio_accessories`, `audio_components`, `audio_players_and_recorders`, `bullhorns`, `dj_and_specialty_audio`, `public_address_systems`, and `stage_equipment`.
+- Each added node includes required fields (`id`, `name`, `description`).
+- Validation passed with the project Python environment; same non-blocking root fanout warning remains.
+- Metrics edge F1 improved from 0.1131 to 0.1425 after this change.
+- Note: validation/metrics still require Python from `taxonomy-as-code` env due older Python compatibility (`|` union type issue in legacy runtime).
+

@@ -7,7 +7,7 @@
       "id": 1,
       "title": "Verify and complete L1 categories under Electronics",
       "acceptanceCriteria": "Electronics has 19 direct children. validate.py passes with 0 errors.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,

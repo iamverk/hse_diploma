@@ -7,3 +7,19 @@ Story: 1 — Verify and complete L1 categories under Electronics
 - Ran validation in the required taxonomy-as-code environment: passed with 0 errors and 1 lint warning (root fanout 19 > 15).
 - Ran metrics before/after; edge F1 remained 0.0872 because no structural taxonomy changes were needed for this task.
 - Validation script requires Python 3.10+; running `python tools/validate.py` with system Python failed, but `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python` succeeds.
+--- Metrics after iteration 1 (story 1) ---
+Traceback (most recent call last):
+  File "tools/metrics.py", line 14, in <module>
+    from taxonomy_core import load_taxonomy, compute_metrics
+  File "/Users/iamverk/Desktop/HSE/diploma/diploma/tools/taxonomy_core.py", line 24, in <module>
+    def load_taxonomy(path: str | Path) -> dict:
+TypeError: unsupported operand type(s) for |: 'type' and 'type'
+
+---
+Story: 2 — Expand 'Arcade Equipment' to L2 subcategories
+- Added 6 children under `arcade_equipment` to satisfy the acceptance target and align with the reference structure: `basketball_arcade_games`, `pinball_machine_accessories`, `pinball_machines`, `skee_ball_machines`, `video_game_arcade_cabinet_accessories`, and `video_game_arcade_cabinets`.
+- Updated `prd.json` to set story 2 `passes` to `true`.
+- Validation passed in the pinned taxonomy-as-code environment (`/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python`) with 1 warning (root fanout split recommendation).
+- Metrics edge F1 before/after: 0.0872 (from prior log) → 0.1131.
+- Quirk observed: this environment’s `metrics.py` still errors under older Python due `|` union typing, so run it with the env Python binary.
+

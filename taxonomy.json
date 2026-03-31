@@ -6,7 +6,39 @@
     {
       "id": "arcade_equipment",
       "name": "Arcade Equipment",
-      "description": "Products and items in the Arcade Equipment category"
+      "description": "Products and items in the Arcade Equipment category",
+      "children": [
+        {
+          "id": "basketball_arcade_games",
+          "name": "Basketball Arcade Games",
+          "description": "Products and items in the Basketball Arcade Games category"
+        },
+        {
+          "id": "pinball_machine_accessories",
+          "name": "Pinball Machine Accessories",
+          "description": "Products and items in the Pinball Machine Accessories category"
+        },
+        {
+          "id": "pinball_machines",
+          "name": "Pinball Machines",
+          "description": "Products and items in the Pinball Machines category"
+        },
+        {
+          "id": "skee_ball_machines",
+          "name": "Skee-Ball Machines",
+          "description": "Products and items in the Skee-Ball Machines category"
+        },
+        {
+          "id": "video_game_arcade_cabinet_accessories",
+          "name": "Video Game Arcade Cabinet Accessories",
+          "description": "Products and items in the Video Game Arcade Cabinet Accessories category"
+        },
+        {
+          "id": "video_game_arcade_cabinets",
+          "name": "Video Game Arcade Cabinets",
+          "description": "Products and items in the Video Game Arcade Cabinets category"
+        }
+      ]
     },
     {
       "id": "audio",

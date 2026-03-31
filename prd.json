@@ -13,7 +13,7 @@
       "id": 2,
       "title": "Expand 'Arcade Equipment' to L2 subcategories",
       "acceptanceCriteria": "'Arcade Equipment' has at least 6 children. validate.py passes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,

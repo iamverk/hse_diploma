@@ -43,7 +43,7 @@
       "id": 7,
       "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
       "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 8,

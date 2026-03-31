@@ -56,28 +56,24 @@
               "description": "Products and items in the Audio & Video Receiver Accessories category"
             },
             {
-              "id": "headphone_and_headset_accessories",
-              "name": "Headphone & Headset Accessories",
-              "description": "Products and items in the Headphone & Headset Accessories category",
-              "children": [
-                {
-                  "id": "headphone_cushions_and_tips",
-                  "name": "Headphone Cushions & Tips",
-                  "description": "Products and items in the Headphone Cushions & Tips category"
-                }
-              ]
+              "id": "headphone_cushions_and_tips",
+              "name": "Headphone Cushions & Tips",
+              "description": "Products and items in the Headphone Cushions & Tips category"
             },
             {
-              "id": "karaoke_system_accessories",
-              "name": "Karaoke System Accessories",
-              "description": "Products and items in the Karaoke System Accessories category",
-              "children": [
-                {
-                  "id": "karaoke_chips",
-                  "name": "Karaoke Chips",
-                  "description": "Products and items in the Karaoke Chips category"
-                }
-              ]
+              "id": "karaoke_chips",
+              "name": "Karaoke Chips",
+              "description": "Products and items in the Karaoke Chips category"
+            },
+            {
+              "id": "microphone_accessories",
+              "name": "Microphone Accessories",
+              "description": "Products and items in the Microphone Accessories category"
+            },
+            {
+              "id": "microphone_stands",
+              "name": "Microphone Stands",
+              "description": "Products and items in the Microphone Stands category"
             },
             {
               "id": "mp3_player_accessories",
@@ -95,16 +91,6 @@
                   "description": "Products and items in the MP3 Player Cases category"
                 }
               ]
-            },
-            {
-              "id": "microphone_accessories",
-              "name": "Microphone Accessories",
-              "description": "Products and items in the Microphone Accessories category"
-            },
-            {
-              "id": "microphone_stands",
-              "name": "Microphone Stands",
-              "description": "Products and items in the Microphone Stands category"
             },
             {
               "id": "satellite_radio_accessories",
@@ -156,11 +142,6 @@
           "description": "Products and items in the Audio Components category",
           "children": [
             {
-              "id": "audio_and_video_receivers",
-              "name": "Audio & Video Receivers",
-              "description": "Products and items in the Audio & Video Receivers category"
-            },
-            {
               "id": "audio_amplifiers",
               "name": "Audio Amplifiers",
               "description": "Products and items in the Audio Amplifiers category",
@@ -176,6 +157,11 @@
                   "description": "Products and items in the Power Amplifiers category"
                 }
               ]
+            },
+            {
+              "id": "audio_and_video_receivers",
+              "name": "Audio & Video Receivers",
+              "description": "Products and items in the Audio & Video Receivers category"
             },
             {
               "id": "audio_mixers",
@@ -296,14 +282,14 @@
               "description": "Products and items in the Boomboxes category"
             },
             {
-              "id": "cd_players_and_recorders",
-              "name": "CD Players & Recorders",
-              "description": "Products and items in the CD Players & Recorders category"
-            },
-            {
               "id": "cassette_players_and_recorders",
               "name": "Cassette Players & Recorders",
               "description": "Products and items in the Cassette Players & Recorders category"
+            },
+            {
+              "id": "cd_players_and_recorders",
+              "name": "CD Players & Recorders",
+              "description": "Products and items in the CD Players & Recorders category"
             },
             {
               "id": "home_theater_systems",
@@ -321,14 +307,14 @@
               "description": "Products and items in the Karaoke Systems category"
             },
             {
-              "id": "mp3_players",
-              "name": "MP3 Players",
-              "description": "Products and items in the MP3 Players category"
-            },
-            {
               "id": "minidisc_players_and_recorders",
               "name": "MiniDisc Players & Recorders",
               "description": "Products and items in the MiniDisc Players & Recorders category"
+            },
+            {
+              "id": "mp3_players",
+              "name": "MP3 Players",
+              "description": "Products and items in the MP3 Players category"
             },
             {
               "id": "multitrack_recorders",
@@ -390,16 +376,9 @@
           "description": "Products and items in the Public Address Systems category"
         },
         {
-          "id": "stage_equipment",
-          "name": "Stage Equipment",
-          "description": "Products and items in the Stage Equipment category",
-          "children": [
-            {
-              "id": "wireless_transmitters",
-              "name": "Wireless Transmitters",
-              "description": "Products and items in the Wireless Transmitters category"
-            }
-          ]
+          "id": "wireless_transmitters",
+          "name": "Wireless Transmitters",
+          "description": "Products and items in the Wireless Transmitters category"
         }
       ]
     },
@@ -409,6 +388,11 @@
       "description": "Products and items in the Circuit Boards & Components category",
       "children": [
         {
+          "id": "breadboards",
+          "name": "Breadboards",
+          "description": "Products and items in the Breadboards category"
+        },
+        {
           "id": "circuit_board_accessories",
           "name": "Circuit Board Accessories",
           "description": "Products and items in the Circuit Board Accessories category"
@@ -417,18 +401,6 @@
           "id": "circuit_decoders_and_encoders",
           "name": "Circuit Decoders & Encoders",
           "description": "Products and items in the Circuit Decoders & Encoders category"
-        },
-        {
-          "id": "circuit_prototyping",
-          "name": "Circuit Prototyping",
-          "description": "Products and items in the Circuit Prototyping category",
-          "children": [
-            {
-              "id": "breadboards",
-              "name": "Breadboards",
-              "description": "Products and items in the Breadboards category"
-            }
-          ]
         },
         {
           "id": "electronic_filters",
@@ -714,21 +686,14 @@
               ]
             },
             {
+              "id": "phone_cards",
+              "name": "Phone Cards",
+              "description": "Products and items in the Phone Cards category"
+            },
+            {
               "id": "satellite_phones",
               "name": "Satellite Phones",
               "description": "Products and items in the Satellite Phones category"
-            },
-            {
-              "id": "telephone_accessories",
-              "name": "Telephone Accessories",
-              "description": "Products and items in the Telephone Accessories category",
-              "children": [
-                {
-                  "id": "phone_cards",
-                  "name": "Phone Cards",
-                  "description": "Products and items in the Phone Cards category"
-                }
-              ]
             }
           ]
         },
@@ -755,21 +720,6 @@
       "description": "Products and items in the Electronics Accessories category"
     },
     {
-      "id": "gps_accessories",
-      "name": "GPS Accessories",
-      "description": "Products and items in the GPS Accessories category"
-    },
-    {
-      "id": "gps_navigation_systems",
-      "name": "GPS Navigation Systems",
-      "description": "Products and items in the GPS Navigation Systems category"
-    },
-    {
-      "id": "gps_tracking_devices",
-      "name": "GPS Tracking Devices",
-      "description": "Products and items in the GPS Tracking Devices category"
-    },
-    {
       "id": "marine_electronics",
       "name": "Marine Electronics",
       "description": "Products and items in the Marine Electronics category"
@@ -780,19 +730,41 @@
       "description": "Products and items in the Networking category"
     },
     {
+      "id": "positioning_and_tracking_electronics",
+      "name": "Positioning & Tracking Electronics",
+      "description": "Electronics for location, navigation, tracking, and detection applications",
+      "children": [
+        {
+          "id": "gps_accessories",
+          "name": "GPS Accessories",
+          "description": "Products and items in the GPS Accessories category"
+        },
+        {
+          "id": "gps_navigation_systems",
+          "name": "GPS Navigation Systems",
+          "description": "Products and items in the GPS Navigation Systems category"
+        },
+        {
+          "id": "gps_tracking_devices",
+          "name": "GPS Tracking Devices",
+          "description": "Products and items in the GPS Tracking Devices category"
+        },
+        {
+          "id": "radar_detectors",
+          "name": "Radar Detectors",
+          "description": "Products and items in the Radar Detectors category"
+        },
+        {
+          "id": "speed_radars",
+          "name": "Speed Radars",
+          "description": "Products and items in the Speed Radars category"
+        }
+      ]
+    },
+    {
       "id": "print_copy_scan_and_fax",
       "name": "Print, Copy, Scan & Fax",
       "description": "Products and items in the Print, Copy, Scan & Fax category"
-    },
-    {
-      "id": "radar_detectors",
-      "name": "Radar Detectors",
-      "description": "Products and items in the Radar Detectors category"
-    },
-    {
-      "id": "speed_radars",
-      "name": "Speed Radars",
-      "description": "Products and items in the Speed Radars category"
     },
     {
       "id": "toll_collection_devices",

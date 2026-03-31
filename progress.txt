@@ -119,6 +119,14 @@ Edge F1:         0.2065
 Node Coverage:   0.1172
 Ancestor F1:     1.0000
 
+Story: 6 — Add L3 leaf categories across Electronics subcategories
+- Added L3 children across major Electronics L2 branches using `reference/gold_standard.json`-aligned IDs.
+- Added nested child structures where the reference shows deeper specialization, including audio accessories/components and communication telephony branches.
+- Updated `prd.json` to set story 6 `passes` to `true` after validation success.
+- Validation passed (`11 warnings`, no errors).
+- Edge F1 before/after: 0.2065 → 0.5317.
+- Key quirk: warnings are now mostly single-child nodes and root fanout warning; no blocking errors.
+
 --- Metrics after iteration 5 (story 6) ---
 ============================================================
 TAXONOMY QUALITY METRICS
@@ -134,11 +142,17 @@ Edge F1:         0.5317
 Node Coverage:   0.3636
 Ancestor F1:     1.0000
 
-Story: 6 — Add L3 leaf categories across Electronics subcategories
-- Added L3 children across major Electronics L2 branches using `reference/gold_standard.json`-aligned IDs.
-- Added nested child structures where the reference shows deeper specialization, including audio accessories/components and communication telephony branches.
-- Updated `prd.json` to set story 6 `passes` to `true` after validation success.
-- Validation passed (`11 warnings`, no errors).
-- Edge F1 before/after: 0.2065 → 0.5317.
-- Key quirk: warnings are now mostly single-child nodes and root fanout warning; no blocking errors.
-
+Story: 7 — Run lint and fix all warnings (single-child nodes, missing descriptions)
+- Ran `tools/taxonomy_cli.py lint` and fixed all lint-identified single-child warnings by promoting sole children and deleting intermediate nodes:
+  - `headphone_and_headset_accessories` -> `headphone_cushions_and_tips`
+  - `karaoke_system_accessories` -> `karaoke_chips`
+  - `stage_equipment` -> `wireless_transmitters`
+  - `circuit_prototyping` -> `breadboards`
+  - `telephone_accessories` -> `phone_cards`
+- Addressed root fanout by adding `positioning_and_tracking_electronics` and moving 5 related categories under it (`gps_accessories`, `gps_navigation_systems`, `gps_tracking_devices`, `radar_detectors`, `speed_radars`) to satisfy the max fanout rule.
+- Verified required fields and found no missing `description` entries for touched nodes.
+- `python tools/validate.py` now reports 0 errors and 0 warnings.
+- Metrics update:
+  - Edge F1 before: 0.5317
+  - Edge F1 after:  0.4823
+- `prd.json` updated to set story 7 `passes` to `true`.

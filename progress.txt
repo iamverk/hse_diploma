@@ -45,3 +45,40 @@ Story: 3 — Expand 'Audio' to L2 subcategories
 - Metrics edge F1 improved from 0.1131 to 0.1425 after this change.
 - Note: validation/metrics still require Python from `taxonomy-as-code` env due older Python compatibility (`|` union type issue in legacy runtime).
 
+--- Metrics after iteration 2 (story 3) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 33
+Gold nodes:      418
+Common nodes:    33
+
+Edge Precision:  1.0000
+Edge Recall:     0.0767
+Edge F1:         0.1425
+
+Node Coverage:   0.0789
+Ancestor F1:     1.0000
+
+---
+Story: 4 — Expand 'Circuit Boards & Components' to L2 subcategories
+- Added 7 L2 children under `circuit_boards_and_components`: `circuit_board_accessories`, `circuit_decoders_and_encoders`, `circuit_prototyping`, `electronic_filters`, `passive_circuit_components`, `printed_circuit_boards`, and `semiconductors`.
+- Validation passed with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/validate.py`; only existing root fanout warning remains.
+- `prd.json` updated to set story 4 `passes` to `true`.
+- Metrics edge F1 before/after: 0.1425 → 0.1711.
+
+--- Metrics after iteration 4 (story 4) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 40
+Gold nodes:      418
+Common nodes:    40
+
+Edge Precision:  1.0000
+Edge Recall:     0.0935
+Edge F1:         0.1711
+
+Node Coverage:   0.0957
+Ancestor F1:     1.0000
+

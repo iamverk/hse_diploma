@@ -85,7 +85,44 @@
     {
       "id": "circuit_boards_and_components",
       "name": "Circuit Boards & Components",
-      "description": "Products and items in the Circuit Boards & Components category"
+      "description": "Products and items in the Circuit Boards & Components category",
+      "children": [
+        {
+          "id": "circuit_board_accessories",
+          "name": "Circuit Board Accessories",
+          "description": "Products and items in the Circuit Board Accessories category"
+        },
+        {
+          "id": "circuit_decoders_and_encoders",
+          "name": "Circuit Decoders & Encoders",
+          "description": "Products and items in the Circuit Decoders & Encoders category"
+        },
+        {
+          "id": "circuit_prototyping",
+          "name": "Circuit Prototyping",
+          "description": "Products and items in the Circuit Prototyping category"
+        },
+        {
+          "id": "electronic_filters",
+          "name": "Electronic Filters",
+          "description": "Products and items in the Electronic Filters category"
+        },
+        {
+          "id": "passive_circuit_components",
+          "name": "Passive Circuit Components",
+          "description": "Products and items in the Passive Circuit Components category"
+        },
+        {
+          "id": "printed_circuit_boards",
+          "name": "Printed Circuit Boards",
+          "description": "Products and items in the Printed Circuit Boards category"
+        },
+        {
+          "id": "semiconductors",
+          "name": "Semiconductors",
+          "description": "Products and items in the Semiconductors category"
+        }
+      ]
     },
     {
       "id": "communications",

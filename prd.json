@@ -25,7 +25,7 @@
       "id": 4,
       "title": "Expand 'Circuit Boards & Components' to L2 subcategories",
       "acceptanceCriteria": "'Circuit Boards & Components' has at least 7 children. validate.py passes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,

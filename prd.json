@@ -37,7 +37,7 @@
       "id": 6,
       "title": "Add L3 leaf categories across Electronics subcategories",
       "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 7,

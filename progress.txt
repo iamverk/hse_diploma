@@ -104,3 +104,41 @@ Story: 5 — Expand 'Communications' to L2 subcategories
 - Metrics edge F1 before/after: 0.1711 (story 4 baseline) → 0.2065 after communications expansion.
 - Quirk/guardrail: continue using `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python` because the system interpreter can fail on `typing` union syntax in this repo.
 
+--- Metrics after iteration 4 (story 5) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 49
+Gold nodes:      418
+Common nodes:    49
+
+Edge Precision:  1.0000
+Edge Recall:     0.1151
+Edge F1:         0.2065
+
+Node Coverage:   0.1172
+Ancestor F1:     1.0000
+
+--- Metrics after iteration 5 (story 6) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 152
+Gold nodes:      418
+Common nodes:    152
+
+Edge Precision:  1.0000
+Edge Recall:     0.3621
+Edge F1:         0.5317
+
+Node Coverage:   0.3636
+Ancestor F1:     1.0000
+
+Story: 6 — Add L3 leaf categories across Electronics subcategories
+- Added L3 children across major Electronics L2 branches using `reference/gold_standard.json`-aligned IDs.
+- Added nested child structures where the reference shows deeper specialization, including audio accessories/components and communication telephony branches.
+- Updated `prd.json` to set story 6 `passes` to `true` after validation success.
+- Validation passed (`11 warnings`, no errors).
+- Edge F1 before/after: 0.2065 → 0.5317.
+- Key quirk: warnings are now mostly single-child nodes and root fanout warning; no blocking errors.
+

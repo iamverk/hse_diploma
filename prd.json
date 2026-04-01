@@ -49,7 +49,7 @@
       "id": 8,
       "title": "Achieve edge F1 > 0.5 vs gold standard",
       "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
-      "passes": false
+      "passes": true
     }
   ]
 }

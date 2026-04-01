@@ -156,3 +156,24 @@ Story: 7 — Run lint and fix all warnings (single-child nodes, missing descript
   - Edge F1 before: 0.5317
   - Edge F1 after:  0.4823
 - `prd.json` updated to set story 7 `passes` to `true`.
+--- Metrics after iteration 6 (story 7) ---
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 148
+Gold nodes:      418
+Common nodes:    147
+
+Edge Precision:  0.9252
+Edge Recall:     0.3261
+Edge F1:         0.4823
+
+Node Coverage:   0.3517
+Ancestor F1:     0.9866
+
+--- Story 8 — Expand major branches from reference
+- Expanded high-impact existing branches using ids, names, and descriptions from `reference/gold_standard.json`.
+- Added immediate children under: `components`, `computers`, `electronics_accessories`, `networking`, `video`, `marine_electronics`, `print_copy_scan_and_fax`, `audio`, `audio_accessories`, and `circuit_boards_and_components`.
+- Added 69 new nodes/edges with no ID conflicts and no structural changes outside taxonomy topology.
+- Validation result after change: passed with 1 warning (high fanout warning for `electronics_accessories`), no errors.
+- Metrics improved: edge F1 moved from 0.4823 (story 7) to 0.6477, node coverage improved to 0.5167.

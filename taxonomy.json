@@ -133,6 +133,16 @@
               "id": "turntable_accessories",
               "name": "Turntable Accessories",
               "description": "Products and items in the Turntable Accessories category"
+            },
+            {
+              "id": "headphone_and_headset_accessories",
+              "name": "Headphone & Headset Accessories",
+              "description": "Products and items in the Headphone & Headset Accessories category"
+            },
+            {
+              "id": "karaoke_system_accessories",
+              "name": "Karaoke System Accessories",
+              "description": "Products and items in the Karaoke System Accessories category"
             }
           ]
         },
@@ -379,6 +389,11 @@
           "id": "wireless_transmitters",
           "name": "Wireless Transmitters",
           "description": "Products and items in the Wireless Transmitters category"
+        },
+        {
+          "id": "stage_equipment",
+          "name": "Stage Equipment",
+          "description": "Products and items in the Stage Equipment category"
         }
       ]
     },
@@ -529,6 +544,11 @@
               "description": "Products and items in the Transistors category"
             }
           ]
+        },
+        {
+          "id": "circuit_prototyping",
+          "name": "Circuit Prototyping",
+          "description": "Products and items in the Circuit Prototyping category"
         }
       ]
     },
@@ -707,27 +727,282 @@
     {
       "id": "components",
       "name": "Components",
-      "description": "Products and items in the Components category"
+      "description": "Products and items in the Components category",
+      "children": [
+        {
+          "id": "accelerometers",
+          "name": "Accelerometers",
+          "description": "Products and items in the Accelerometers category"
+        },
+        {
+          "id": "converters",
+          "name": "Converters",
+          "description": "Products and items in the Converters category"
+        },
+        {
+          "id": "electronics_component_connectors",
+          "name": "Electronics Component Connectors",
+          "description": "Products and items in the Electronics Component Connectors category"
+        },
+        {
+          "id": "modulators",
+          "name": "Modulators",
+          "description": "Products and items in the Modulators category"
+        },
+        {
+          "id": "splitters",
+          "name": "Splitters",
+          "description": "Products and items in the Splitters category"
+        }
+      ]
     },
     {
       "id": "computers",
       "name": "Computers",
-      "description": "Products and items in the Computers category"
+      "description": "Products and items in the Computers category",
+      "children": [
+        {
+          "id": "barebone_computers",
+          "name": "Barebone Computers",
+          "description": "Products and items in the Barebone Computers category"
+        },
+        {
+          "id": "computer_servers",
+          "name": "Computer Servers",
+          "description": "Products and items in the Computer Servers category"
+        },
+        {
+          "id": "desktop_computers",
+          "name": "Desktop Computers",
+          "description": "Products and items in the Desktop Computers category"
+        },
+        {
+          "id": "handheld_devices",
+          "name": "Handheld Devices",
+          "description": "Products and items in the Handheld Devices category"
+        },
+        {
+          "id": "interactive_kiosks",
+          "name": "Interactive Kiosks",
+          "description": "Products and items in the Interactive Kiosks category"
+        },
+        {
+          "id": "laptops",
+          "name": "Laptops",
+          "description": "Products and items in the Laptops category"
+        },
+        {
+          "id": "smart_glasses",
+          "name": "Smart Glasses",
+          "description": "Products and items in the Smart Glasses category"
+        },
+        {
+          "id": "tablet_computers",
+          "name": "Tablet Computers",
+          "description": "Products and items in the Tablet Computers category"
+        },
+        {
+          "id": "thin_and_zero_clients",
+          "name": "Thin & Zero Clients",
+          "description": "Products and items in the Thin & Zero Clients category"
+        },
+        {
+          "id": "touch_table_computers",
+          "name": "Touch Table Computers",
+          "description": "Products and items in the Touch Table Computers category"
+        }
+      ]
     },
     {
       "id": "electronics_accessories",
       "name": "Electronics Accessories",
-      "description": "Products and items in the Electronics Accessories category"
+      "description": "Products and items in the Electronics Accessories category",
+      "children": [
+        {
+          "id": "adapters",
+          "name": "Adapters",
+          "description": "Products and items in the Adapters category"
+        },
+        {
+          "id": "antenna_accessories",
+          "name": "Antenna Accessories",
+          "description": "Products and items in the Antenna Accessories category"
+        },
+        {
+          "id": "antennas",
+          "name": "Antennas",
+          "description": "Products and items in the Antennas category"
+        },
+        {
+          "id": "audio_and_video_splitters_and_switches",
+          "name": "Audio & Video Splitters & Switches",
+          "description": "Products and items in the Audio & Video Splitters & Switches category"
+        },
+        {
+          "id": "blank_media",
+          "name": "Blank Media",
+          "description": "Products and items in the Blank Media category"
+        },
+        {
+          "id": "cable_management",
+          "name": "Cable Management",
+          "description": "Products and items in the Cable Management category"
+        },
+        {
+          "id": "cables",
+          "name": "Cables",
+          "description": "Products and items in the Cables category"
+        },
+        {
+          "id": "computer_accessories",
+          "name": "Computer Accessories",
+          "description": "Products and items in the Computer Accessories category"
+        },
+        {
+          "id": "computer_components",
+          "name": "Computer Components",
+          "description": "Products and items in the Computer Components category"
+        },
+        {
+          "id": "electronics_cleaners",
+          "name": "Electronics Cleaners",
+          "description": "Products and items in the Electronics Cleaners category"
+        },
+        {
+          "id": "electronics_films_and_shields",
+          "name": "Electronics Films & Shields",
+          "description": "Products and items in the Electronics Films & Shields category"
+        },
+        {
+          "id": "memory",
+          "name": "Memory",
+          "description": "Products and items in the Memory category"
+        },
+        {
+          "id": "memory_accessories",
+          "name": "Memory Accessories",
+          "description": "Products and items in the Memory Accessories category"
+        },
+        {
+          "id": "mobile_phone_and_tablet_tripods_and_monopods",
+          "name": "Mobile Phone & Tablet Tripods & Monopods",
+          "description": "Products and items in the Mobile Phone & Tablet Tripods & Monopods category"
+        },
+        {
+          "id": "power",
+          "name": "Power",
+          "description": "Products and items in the Power category"
+        },
+        {
+          "id": "remote_controls",
+          "name": "Remote Controls",
+          "description": "Products and items in the Remote Controls category"
+        },
+        {
+          "id": "signal_boosters",
+          "name": "Signal Boosters",
+          "description": "Products and items in the Signal Boosters category"
+        },
+        {
+          "id": "signal_jammers",
+          "name": "Signal Jammers",
+          "description": "Products and items in the Signal Jammers category"
+        }
+      ]
     },
     {
       "id": "marine_electronics",
       "name": "Marine Electronics",
-      "description": "Products and items in the Marine Electronics category"
+      "description": "Products and items in the Marine Electronics category",
+      "children": [
+        {
+          "id": "fish_finders",
+          "name": "Fish Finders",
+          "description": "Products and items in the Fish Finders category"
+        },
+        {
+          "id": "marine_audio_and_video_receivers",
+          "name": "Marine Audio & Video Receivers",
+          "description": "Products and items in the Marine Audio & Video Receivers category"
+        },
+        {
+          "id": "marine_chartplotters_and_gps",
+          "name": "Marine Chartplotters & GPS",
+          "description": "Products and items in the Marine Chartplotters & GPS category"
+        },
+        {
+          "id": "marine_radar",
+          "name": "Marine Radar",
+          "description": "Products and items in the Marine Radar category"
+        },
+        {
+          "id": "marine_radios",
+          "name": "Marine Radios",
+          "description": "Products and items in the Marine Radios category"
+        },
+        {
+          "id": "marine_speakers",
+          "name": "Marine Speakers",
+          "description": "Products and items in the Marine Speakers category"
+        }
+      ]
     },
     {
       "id": "networking",
       "name": "Networking",
-      "description": "Products and items in the Networking category"
+      "description": "Products and items in the Networking category",
+      "children": [
+        {
+          "id": "bridges_and_routers",
+          "name": "Bridges & Routers",
+          "description": "Products and items in the Bridges & Routers category"
+        },
+        {
+          "id": "concentrators_and_multiplexers",
+          "name": "Concentrators & Multiplexers",
+          "description": "Products and items in the Concentrators & Multiplexers category"
+        },
+        {
+          "id": "hubs_and_switches",
+          "name": "Hubs & Switches",
+          "description": "Products and items in the Hubs & Switches category"
+        },
+        {
+          "id": "modem_accessories",
+          "name": "Modem Accessories",
+          "description": "Products and items in the Modem Accessories category"
+        },
+        {
+          "id": "modems",
+          "name": "Modems",
+          "description": "Products and items in the Modems category"
+        },
+        {
+          "id": "network_cards_and_adapters",
+          "name": "Network Cards & Adapters",
+          "description": "Products and items in the Network Cards & Adapters category"
+        },
+        {
+          "id": "network_security_and_firewall_devices",
+          "name": "Network Security & Firewall Devices",
+          "description": "Products and items in the Network Security & Firewall Devices category"
+        },
+        {
+          "id": "power_over_ethernet_adapters",
+          "name": "Power Over Ethernet Adapters",
+          "description": "Products and items in the Power Over Ethernet Adapters category"
+        },
+        {
+          "id": "print_servers",
+          "name": "Print Servers",
+          "description": "Products and items in the Print Servers category"
+        },
+        {
+          "id": "repeaters_and_transceivers",
+          "name": "Repeaters & Transceivers",
+          "description": "Products and items in the Repeaters & Transceivers category"
+        }
+      ]
     },
     {
       "id": "positioning_and_tracking_electronics",
@@ -764,7 +1039,39 @@
     {
       "id": "print_copy_scan_and_fax",
       "name": "Print, Copy, Scan & Fax",
-      "description": "Products and items in the Print, Copy, Scan & Fax category"
+      "description": "Products and items in the Print, Copy, Scan & Fax category",
+      "children": [
+        {
+          "id": "3d_printer_accessories",
+          "name": "3D Printer Accessories",
+          "description": "Products and items in the 3D Printer Accessories category"
+        },
+        {
+          "id": "3d_printers",
+          "name": "3D Printers",
+          "description": "Products and items in the 3D Printers category"
+        },
+        {
+          "id": "printer_copier_and_fax_machine_accessories",
+          "name": "Printer, Copier & Fax Machine Accessories",
+          "description": "Products and items in the Printer, Copier & Fax Machine Accessories category"
+        },
+        {
+          "id": "printers_copiers_and_fax_machines",
+          "name": "Printers, Copiers & Fax Machines",
+          "description": "Products and items in the Printers, Copiers & Fax Machines category"
+        },
+        {
+          "id": "scanner_accessories",
+          "name": "Scanner Accessories",
+          "description": "Products and items in the Scanner Accessories category"
+        },
+        {
+          "id": "scanners",
+          "name": "Scanners",
+          "description": "Products and items in the Scanners category"
+        }
+      ]
     },
     {
       "id": "toll_collection_devices",
@@ -774,7 +1081,59 @@
     {
       "id": "video",
       "name": "Video",
-      "description": "Products and items in the Video category"
+      "description": "Products and items in the Video category",
+      "children": [
+        {
+          "id": "computer_monitors",
+          "name": "Computer Monitors",
+          "description": "Products and items in the Computer Monitors category"
+        },
+        {
+          "id": "projectors",
+          "name": "Projectors",
+          "description": "Products and items in the Projectors category"
+        },
+        {
+          "id": "satellite_and_cable_tv",
+          "name": "Satellite & Cable TV",
+          "description": "Products and items in the Satellite & Cable TV category"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "Products and items in the Televisions category"
+        },
+        {
+          "id": "video_accessories",
+          "name": "Video Accessories",
+          "description": "Products and items in the Video Accessories category"
+        },
+        {
+          "id": "video_editing_hardware_and_production_equipment",
+          "name": "Video Editing Hardware & Production Equipment",
+          "description": "Products and items in the Video Editing Hardware & Production Equipment category"
+        },
+        {
+          "id": "video_multiplexers",
+          "name": "Video Multiplexers",
+          "description": "Products and items in the Video Multiplexers category"
+        },
+        {
+          "id": "video_players_and_recorders",
+          "name": "Video Players & Recorders",
+          "description": "Products and items in the Video Players & Recorders category"
+        },
+        {
+          "id": "video_servers",
+          "name": "Video Servers",
+          "description": "Products and items in the Video Servers category"
+        },
+        {
+          "id": "video_transmitters",
+          "name": "Video Transmitters",
+          "description": "Products and items in the Video Transmitters category"
+        }
+      ]
     },
     {
       "id": "video_game_console_accessories",

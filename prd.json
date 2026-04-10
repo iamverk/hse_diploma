@@ -20,7 +20,7 @@
       "id": 3,
       "title": "Expand L2 for Home Goods and Books",
       "acceptanceCriteria": "Home Goods and Books each have 3-7 L2 children. NLIV > 0.35. >=50 nodes total.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 4,

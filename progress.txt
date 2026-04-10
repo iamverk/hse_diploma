@@ -2,10 +2,11 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Story 2 status: passes true
-- Validation: validate.py passed (31 nodes, 30 edges, max depth 3, 0 warnings)
-- Weak edges: none
+- Story 3 status: passes true
+- Validation: validate.py passed (72 nodes, 71 edges, max depth 3), NLIV=0.6030, CSC=0.4569, Composite=0.6452, nodes=72
+- Weak edges: Electronics -> Video (0.276)
 
 ## Decisions This Iteration
-- Added 7 L2 children under `electronics` and 7 L2 children under `clothing_and_accessories`, with 2 additional L3 leaves for each of: `electronics_accessories`, `electronics_audio`, `clothing_shoes` to satisfy Story 2 node-count target while keeping each non-leaf at fanout >=2.
-- Expanded via start-domain priors with descriptions aligned to domain groupings; updated `taxonomy.json`, set Story 2 `passes` to true in `prd.json`.
+- Confirmed `Home Goods` already has 4 L2 children and `Books` has 6 L2 children, both satisfying Story 3 L2 bounds.
+- `validate.py` passes; `metrics_v2.py` reports NLIV mean above acceptance threshold (0.6030) and node count above minimum (72 total).
+- Updated Story 3 `passes` to true in `prd.json`; no taxonomy changes required for this story.

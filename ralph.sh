@@ -1,34 +1,24 @@
 #!/bin/bash
 #
-# ralph.sh — Autonomous taxonomy builder loop.
-# Adapted from https://github.com/snarktank/ralph
+# ralph.sh — Autonomous taxonomy builder loop v5 (with rollback + keep/discard).
+#
+# Improvements over v3:
+#   - Git rollback: if composite score drops after an iteration → git reset
+#   - Keep/discard logging: each iteration logged as keep|discard|crash
+#   - Auto-archive: backs up previous experiment before starting
+#   - One-story-per-iteration enforced in prompt
 #
 # Usage:
 #   ./ralph.sh [max_iterations] [--tool claude|amp|cursor] [--model MODEL]
-#
-# Examples:
-#   ./ralph.sh 10                                                  # claude (default)
-#   ./ralph.sh 10 --tool cursor                                    # cursor, default model
-#   ./ralph.sh 10 --tool cursor --model gpt-5.3-codex-spark-preview-xhigh
-#   ./ralph.sh 5 --tool amp
-#
-# Each iteration:
-#   1. Spawns a fresh AI agent (clean context each time)
-#   2. Agent reads AGENTS.md (cursor) or CLAUDE.md (claude) + progress.txt + prd.json
-#   3. Picks next unfinished story, implements it
-#   4. Runs validate.py (stop hook)
-#   5. Commits if valid, logs learnings to progress.txt
-#   6. Repeats until all stories pass or max iterations reached
 
-set -e
+trap '' HUP  # Ignore SIGHUP — survive laptop lid close
 
-# ── Cursor Agent models ──────────────────────────────────────────────────────
-#   gpt-5.3-codex-spark-preview-high   → GPT-5.3 Codex Spark High   (faster)
-#   gpt-5.3-codex-spark-preview-xhigh  → GPT-5.3 Codex Spark Extra High (stronger)
+# ── Ensure homebrew tools (jq, etc.) are in PATH ────────────────────────────
+export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 # ── Defaults ────────────────────────────────────────────────────────────────
-MAX_ITERATIONS=10
-TOOL="claude"
+MAX_ITERATIONS=40
+TOOL="cursor"
 MODEL="gpt-5.3-codex-spark-preview-high"
 
 # ── Parse arguments ──────────────────────────────────────────────────────────
@@ -57,9 +47,13 @@ PROGRESS_FILE="progress.txt"
 TAXONOMY_FILE="taxonomy.json"
 PYTHON="/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python"
 LOG_DIR="results/logs"
+HISTORY_DIR="output/taxonomy_history"
+
+STUCK_FILE="output/stuck_domains.txt"
+ROLLBACK_COUNTS="output/rollback_counts.json"
 
 echo "==========================================="
-echo "  TAXONOMY RALPH LOOP"
+echo "  TAXONOMY RALPH LOOP (v8 — hooks+rules+skills)"
 echo "  Tool:           $TOOL"
 echo "  Max iterations: $MAX_ITERATIONS"
 if [ "$TOOL" = "cursor" ]; then
@@ -81,7 +75,7 @@ fi
 case "$TOOL" in
     claude)
         if ! command -v claude &> /dev/null; then
-            echo "ERROR: claude CLI not found (npm install -g @anthropic-ai/claude-code)"
+            echo "ERROR: claude CLI not found"
             exit 1
         fi ;;
     amp)
@@ -91,20 +85,16 @@ case "$TOOL" in
         fi ;;
     cursor)
         if ! command -v cursor-agent &> /dev/null; then
-            echo "ERROR: cursor-agent not found (curl https://cursor.com/install -fsSL | bash)"
+            echo "ERROR: cursor-agent not found"
             exit 1
         fi
-        # Validate model choice
         VALID_MODELS="gpt-5.3-codex-spark-preview-high gpt-5.3-codex-spark-preview-xhigh"
         if [[ ! " $VALID_MODELS " =~ " $MODEL " ]]; then
             echo "ERROR: unsupported model '$MODEL'"
-            echo "Available models:"
-            echo "  gpt-5.3-codex-spark-preview-high   (GPT-5.3 Codex Spark High)"
-            echo "  gpt-5.3-codex-spark-preview-xhigh  (GPT-5.3 Codex Spark Extra High)"
             exit 1
         fi ;;
     *)
-        echo "ERROR: unknown tool '$TOOL'. Choose: claude | amp | cursor"
+        echo "ERROR: unknown tool '$TOOL'"
         exit 1 ;;
 esac
 
@@ -115,83 +105,224 @@ if [ ! -d ".git" ]; then
     git commit -m "Initial taxonomy setup"
 fi
 
-# ── Main loop ────────────────────────────────────────────────────────────────
-# ── Init per-iteration log ────────────────────────────────────────────────────
-mkdir -p "$LOG_DIR"
-METRICS_CSV="$LOG_DIR/metrics_${TOOL}_$(date +%Y%m%d_%H%M%S).csv"
-echo "iteration,story_id,story_title,passed,edge_f1,node_coverage,ancestor_f1,elapsed_sec" > "$METRICS_CSV"
+# ── Auto-archive previous run if iteration_log exists ────────────────────────
+if [ -f "output/iteration_log.jsonl" ]; then
+    ARCHIVE_TS=$(date +%Y%m%d_%H%M%S)
+    ARCHIVE_DIR="output/archive/${ARCHIVE_TS}"
+    mkdir -p "$ARCHIVE_DIR"
+    cp "$PRD_FILE" "$ARCHIVE_DIR/" 2>/dev/null || true
+    cp "$PROGRESS_FILE" "$ARCHIVE_DIR/" 2>/dev/null || true
+    cp "$TAXONOMY_FILE" "$ARCHIVE_DIR/" 2>/dev/null || true
+    cp "output/iteration_log.jsonl" "$ARCHIVE_DIR/" 2>/dev/null || true
+    echo "Archived previous run to $ARCHIVE_DIR/"
+fi
 
+# ── Create output directories ────────────────────────────────────────────────
+mkdir -p "$LOG_DIR" "$HISTORY_DIR" "output"
+
+# ── Clear iteration log for fresh run ────────────────────────────────────────
+> "output/iteration_log.jsonl"
+
+# ── Init per-run CSV log ─────────────────────────────────────────────────────
+METRICS_CSV="$LOG_DIR/metrics_${TOOL}_$(date +%Y%m%d_%H%M%S).csv"
+echo "iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec" > "$METRICS_CSV"
+
+# ── Track previous composite for rollback ────────────────────────────────────
+PREV_COMPOSITE=""
+
+# ── Main loop ────────────────────────────────────────────────────────────────
 for i in $(seq 1 $MAX_ITERATIONS); do
     ITER_START=$(date +%s)
     echo ""
-    echo "--- Iteration $i / $MAX_ITERATIONS ---"
+    echo "╔══════════════════════════════════════════╗"
+    echo "║  Iteration $i / $MAX_ITERATIONS"
+    echo "╚══════════════════════════════════════════╝"
 
     # Check if all stories pass
     ALL_PASS=$(jq '[.userStories[].passes] | all' "$PRD_FILE")
     if [ "$ALL_PASS" = "true" ]; then
-        echo "All stories completed! Exiting loop."
+        echo "✓ All stories completed! Exiting loop."
         break
     fi
 
     # Find first incomplete story
     CURRENT_STORY=$(jq -r '.userStories[] | select(.passes == false) | .title' "$PRD_FILE" | head -1)
     CURRENT_ID=$(jq -r '.userStories[] | select(.passes == false) | .id' "$PRD_FILE" | head -1)
-    echo "Current task: [$CURRENT_ID] $CURRENT_STORY"
+    echo "▸ Current task: [Story $CURRENT_ID] $CURRENT_STORY"
+
+    # ── Stuck-domain auto-skip ──────────────────────────────────────────
+    if [ -f "$STUCK_FILE" ]; then
+        DOMAIN_NAME=$(echo "$CURRENT_STORY" | grep -oP '(?:Expand|Refine|Fix).*?:\s*\K\S+' 2>/dev/null || echo "")
+        if [ -n "$DOMAIN_NAME" ] && grep -qw "$DOMAIN_NAME" "$STUCK_FILE" 2>/dev/null; then
+            echo "⏭ SKIP: Domain '$DOMAIN_NAME' is in stuck_domains.txt (3+ consecutive rollbacks)"
+            # Auto-mark story as passed with skip note
+            jq "(.userStories[] | select(.id == $CURRENT_ID)) .passes = true | (.userStories[] | select(.id == $CURRENT_ID)) .notes = \"skipped — CSC metric ceiling\"" "$PRD_FILE" > "${PRD_FILE}.tmp" && mv "${PRD_FILE}.tmp" "$PRD_FILE"
+            git add -A && git commit -m "story $CURRENT_ID: skip $DOMAIN_NAME — CSC metric ceiling" 2>/dev/null || true
+            echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",true,skip,N/A,N/A,N/A,N/A,N/A,0" >> "$METRICS_CSV"
+            continue
+        fi
+    fi
 
     # Snapshot taxonomy before this iteration
-    cp "$TAXONOMY_FILE" "/tmp/taxonomy_before_iter_${i}.json"
+    cp "$TAXONOMY_FILE" "$HISTORY_DIR/taxonomy_iter_${i}_before.json"
+
+    # Record git HEAD before agent runs (for potential rollback)
+    HEAD_BEFORE=$(git rev-parse HEAD 2>/dev/null || echo "")
+
+    # ── Build agent prompt ───────────────────────────────────────────────────
+    PROMPT="Read AGENTS.md for instructions. Read progress.txt for context and discovered patterns. Your current task from prd.json is: [Story $CURRENT_ID] $CURRENT_STORY. IMPORTANT: Work on THIS ONE STORY ONLY. You have an embedder: $PYTHON tools/check_edge.py 'parent' 'child' — use it to verify NLIV BEFORE adding edges. Use grep for product discovery, embedder for validation. Complete this task, run validate.py to check quality, fix any issues, and if acceptance criteria are met, mark the story as passes:true in prd.json. Update progress.txt: overwrite the ## Current State section but PRESERVE the ## Discovered Patterns section at the top — only add new patterns if you discover something reusable. Then commit with message 'story $CURRENT_ID: <description>'."
 
     # ── Run the agent ────────────────────────────────────────────────────────
+    ITER_STATUS="keep"  # default; changed to discard/crash below
+
     if [ "$TOOL" = "claude" ]; then
-        # Claude Code reads CLAUDE.md for its iteration workflow
-        PROMPT="Read CLAUDE.md for instructions. Read progress.txt for learnings from previous iterations. Your current task from prd.json is: [$CURRENT_ID] $CURRENT_STORY. Complete this task, run validate.py, and if it passes, mark the story as passes:true in prd.json and append your learnings to progress.txt. Then commit."
         echo "$PROMPT" | claude --dangerously-skip-permissions
+        AGENT_EXIT=$?
 
     elif [ "$TOOL" = "amp" ]; then
-        PROMPT="Read CLAUDE.md for instructions. Read progress.txt for learnings from previous iterations. Your current task from prd.json is: [$CURRENT_ID] $CURRENT_STORY. Complete this task, run validate.py, and if it passes, mark the story as passes:true in prd.json and append your learnings to progress.txt. Then commit."
         echo "$PROMPT" | amp
+        AGENT_EXIT=$?
 
     elif [ "$TOOL" = "cursor" ]; then
-        # Cursor Agent reads AGENTS.md — its native instruction file
-        CURSOR_PROMPT="Read AGENTS.md for instructions. Read progress.txt for learnings from previous iterations. Your current task from prd.json is: [$CURRENT_ID] $CURRENT_STORY. Complete this task, run validate.py, and if it passes, mark the story as passes:true in prd.json and append your learnings to progress.txt. Then commit."
+        AGENT_PID=""
         cursor-agent \
             --print \
             --model "$MODEL" \
             --yolo \
             --trust \
             --workspace . \
-            "$CURSOR_PROMPT"
+            "$PROMPT" &
+        AGENT_PID=$!
+        # Wait up to 45 min, then kill if stuck
+        WAIT_SECS=0
+        while kill -0 $AGENT_PID 2>/dev/null; do
+            sleep 10
+            WAIT_SECS=$((WAIT_SECS + 10))
+            if [ $WAIT_SECS -ge 1500 ]; then
+                echo "TIMEOUT: cursor-agent exceeded 25 minutes — killing PID $AGENT_PID"
+                kill $AGENT_PID 2>/dev/null
+                sleep 2
+                kill -9 $AGENT_PID 2>/dev/null
+                ITER_STATUS="crash"
+                break
+            fi
+        done
+        wait $AGENT_PID 2>/dev/null
+        AGENT_EXIT=$?
+    fi
+
+    # Check if agent crashed
+    if [ "${AGENT_EXIT:-0}" -ne 0 ] && [ "$ITER_STATUS" != "crash" ]; then
+        echo "⚠ Agent exited with code $AGENT_EXIT"
+        # Don't mark as crash if taxonomy was modified (agent may have just had exit code issues)
+        if ! git diff --quiet "$TAXONOMY_FILE" 2>/dev/null; then
+            echo "  (taxonomy was modified, treating as partial success)"
+        else
+            ITER_STATUS="crash"
+        fi
+    fi
+
+    # ── Post-iteration: snapshot ─────────────────────────────────────────────
+    cp "$TAXONOMY_FILE" "$HISTORY_DIR/taxonomy_iter_${i}_after.json"
+
+    # ── Collect metrics ──────────────────────────────────────────────────────
+    ITER_END=$(date +%s)
+    ELAPSED=$((ITER_END - ITER_START))
+
+    # Reference-free metrics (NLIV/CSC)
+    V2_RAW=$($PYTHON tools/metrics_v2.py "$TAXONOMY_FILE" --json 2>/dev/null || echo "{}")
+    NLIV_MEAN=$(echo "$V2_RAW" | jq -r '.nliv_mean // "N/A"' 2>/dev/null || echo "N/A")
+    CSC_SCORE=$(echo "$V2_RAW" | jq -r '.csc_score // "N/A"' 2>/dev/null || echo "N/A")
+    COMPOSITE=$(echo "$V2_RAW" | jq -r '.composite_score // "N/A"' 2>/dev/null || echo "N/A")
+    NODE_COUNT=$(echo "$V2_RAW" | jq -r '.node_count // "N/A"' 2>/dev/null || echo "N/A")
+
+    # Reference-based metrics (Edge F1 vs gold — post-hoc only)
+    GOLD_PATH="/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/gold_standard.json"
+    METRICS_RAW=$($PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" 2>/dev/null || echo "")
+    SEM_F1=$(echo "$METRICS_RAW" | grep -i "^Sem Edge F1" | head -1 | awk '{print $NF}')
+    [ -z "$SEM_F1" ] && SEM_F1="N/A"
+
+    # ── ROLLBACK CHECK: did composite score degrade? ─────────────────────────
+    if [ "$ITER_STATUS" != "crash" ] && [ -n "$PREV_COMPOSITE" ] && [ "$COMPOSITE" != "N/A" ]; then
+        # Compare composites using Python (bash can't do float comparison)
+        SHOULD_ROLLBACK=$($PYTHON -c "
+prev = $PREV_COMPOSITE
+curr = $COMPOSITE
+# Rollback if composite dropped by more than 0.02 (tolerance for noise)
+print('yes' if curr < prev - 0.02 else 'no')
+" 2>/dev/null || echo "no")
+
+        if [ "$SHOULD_ROLLBACK" = "yes" ]; then
+            echo "⚠ COMPOSITE DEGRADED: $PREV_COMPOSITE → $COMPOSITE (Δ > 0.02)"
+            echo "  Rolling back to HEAD before this iteration..."
+            HEAD_AFTER=$(git rev-parse HEAD 2>/dev/null || echo "")
+            if [ -n "$HEAD_BEFORE" ] && [ "$HEAD_BEFORE" != "$HEAD_AFTER" ]; then
+                git reset --hard "$HEAD_BEFORE"
+                # Restore taxonomy from before snapshot
+                cp "$HISTORY_DIR/taxonomy_iter_${i}_before.json" "$TAXONOMY_FILE"
+                ITER_STATUS="discard"
+                echo "  ✓ Rolled back to $HEAD_BEFORE"
+                # Also revert the story pass status if agent set it
+                # (prd.json was rolled back by git reset)
+            else
+                echo "  (no new commits to roll back — agent may not have committed)"
+                ITER_STATUS="discard"
+            fi
+        fi
+    fi
+
+    # ── Update rollback counts for stuck-domain detection ──────────────
+    DOMAIN_NAME=$(echo "$CURRENT_STORY" | grep -oP '(?:Expand|Refine|Fix).*?:\s*\K\S+' 2>/dev/null || echo "")
+    if [ -n "$DOMAIN_NAME" ]; then
+        [ ! -f "$ROLLBACK_COUNTS" ] && echo '{}' > "$ROLLBACK_COUNTS"
+        if [ "$ITER_STATUS" = "discard" ] || [ "$ITER_STATUS" = "crash" ]; then
+            CURR_COUNT=$(jq -r ".[\"$DOMAIN_NAME\"] // 0" "$ROLLBACK_COUNTS" 2>/dev/null || echo "0")
+            NEW_COUNT=$((CURR_COUNT + 1))
+            jq ".[\"$DOMAIN_NAME\"] = $NEW_COUNT" "$ROLLBACK_COUNTS" > "${ROLLBACK_COUNTS}.tmp" && mv "${ROLLBACK_COUNTS}.tmp" "$ROLLBACK_COUNTS"
+            if [ "$NEW_COUNT" -ge 3 ]; then
+                echo "$DOMAIN_NAME" >> "$STUCK_FILE"
+                sort -u "$STUCK_FILE" -o "$STUCK_FILE" 2>/dev/null || true
+                echo "⚠ Domain '$DOMAIN_NAME' marked as stuck ($NEW_COUNT consecutive failures)"
+            fi
+        elif [ "$ITER_STATUS" = "keep" ]; then
+            jq ".[\"$DOMAIN_NAME\"] = 0" "$ROLLBACK_COUNTS" > "${ROLLBACK_COUNTS}.tmp" && mv "${ROLLBACK_COUNTS}.tmp" "$ROLLBACK_COUNTS" 2>/dev/null || true
+        fi
+    fi
+
+    # Update previous composite for next iteration (only if kept)
+    if [ "$ITER_STATUS" = "keep" ] && [ "$COMPOSITE" != "N/A" ]; then
+        PREV_COMPOSITE="$COMPOSITE"
     fi
 
     # ── Check story completion ───────────────────────────────────────────────
     STORY_PASS=$(jq -r ".userStories[] | select(.id == $CURRENT_ID) | .passes" "$PRD_FILE")
-    if [ "$STORY_PASS" = "true" ]; then
-        echo "Story [$CURRENT_ID] completed successfully."
-
-        # Log metrics to progress.txt
-        echo "--- Metrics after iteration $i (story $CURRENT_ID) ---" >> "$PROGRESS_FILE"
-        $PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json >> "$PROGRESS_FILE" 2>&1 || true
-        echo "" >> "$PROGRESS_FILE"
+    if [ "$STORY_PASS" = "true" ] && [ "$ITER_STATUS" = "keep" ]; then
+        echo "✓ Story [$CURRENT_ID] completed successfully."
+    elif [ "$ITER_STATUS" = "discard" ]; then
+        echo "✗ Story [$CURRENT_ID] iteration discarded (quality regression)."
+    elif [ "$ITER_STATUS" = "crash" ]; then
+        echo "✗ Story [$CURRENT_ID] iteration crashed."
     else
-        echo "Story [$CURRENT_ID] not completed. Will retry next iteration."
-        echo "--- Iteration $i FAILED for story [$CURRENT_ID] ---" >> "$PROGRESS_FILE"
-        echo "Agent did not mark story as complete." >> "$PROGRESS_FILE"
-        echo "" >> "$PROGRESS_FILE"
+        echo "▸ Story [$CURRENT_ID] not completed. Will retry next iteration."
     fi
 
-    # ── Per-iteration metrics to CSV ────────────────────────────────────────
-    ITER_END=$(date +%s)
-    ELAPSED=$((ITER_END - ITER_START))
-    METRICS_RAW=$($PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json 2>/dev/null || echo "")
-    EDGE_F1=$(echo "$METRICS_RAW" | grep -i "edge.*f1" | awk '{print $NF}' || echo "")
-    NODE_COV=$(echo "$METRICS_RAW" | grep -i "node.*coverage" | awk '{print $NF}' || echo "")
-    ANC_F1=$(echo "$METRICS_RAW" | grep -i "ancestor.*f1" | awk '{print $NF}' || echo "")
-    echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",$STORY_PASS,$EDGE_F1,$NODE_COV,$ANC_F1,$ELAPSED" >> "$METRICS_CSV"
+    # ── Log to CSV (with status column) ──────────────────────────────────────
+    echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",$STORY_PASS,$ITER_STATUS,$NLIV_MEAN,$CSC_SCORE,$COMPOSITE,$SEM_F1,$NODE_COUNT,$ELAPSED" >> "$METRICS_CSV"
+
+    # ── Check convergence ────────────────────────────────────────────────────
+    CONV_OUTPUT=$($PYTHON tools/convergence.py 2>/dev/null || echo '{"stop": false}')
+    CONV_STOP=$(echo "$CONV_OUTPUT" | jq -r '.stop' 2>/dev/null || echo "false")
+    CONV_REASON=$(echo "$CONV_OUTPUT" | jq -r '.reason' 2>/dev/null || echo "")
+
+    if [ "$CONV_STOP" = "true" ]; then
+        echo ">>> CONVERGED at iteration $i: $CONV_REASON"
+        break
+    fi
 
     # Progress summary
     DONE=$(jq '[.userStories[] | select(.passes == true)] | length' "$PRD_FILE")
     TOTAL=$(jq '.userStories | length' "$PRD_FILE")
-    echo "Progress: $DONE / $TOTAL stories complete"
+    echo "Progress: $DONE/$TOTAL stories | NLIV=$NLIV_MEAN CSC=$CSC_SCORE Comp=$COMPOSITE | Status=$ITER_STATUS"
 done
 
 # ── Final summary ─────────────────────────────────────────────────────────────
@@ -200,10 +331,21 @@ echo "==========================================="
 echo "  RALPH LOOP FINISHED"
 echo "==========================================="
 echo ""
-$PYTHON tools/taxonomy_cli.py stats
+$PYTHON tools/taxonomy_cli.py stats 2>/dev/null || true
 echo ""
-$PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json 2>/dev/null \
-    || echo "(metrics unavailable)"
+echo "--- Reference-free metrics (NLIV/CSC) ---"
+$PYTHON tools/metrics_v2.py "$TAXONOMY_FILE" 2>/dev/null || echo "(metrics_v2 unavailable)"
+echo ""
+echo "--- Reference-based metrics (Edge F1 vs gold) ---"
+$PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" 2>/dev/null || echo "(metrics unavailable)"
+
+# ── Count keep/discard/crash ─────────────────────────────────────────────────
+echo ""
+echo "--- Iteration Stats ---"
+KEEP_COUNT=$(grep -c ",keep," "$METRICS_CSV" 2>/dev/null || echo "0")
+DISCARD_COUNT=$(grep -c ",discard," "$METRICS_CSV" 2>/dev/null || echo "0")
+CRASH_COUNT=$(grep -c ",crash," "$METRICS_CSV" 2>/dev/null || echo "0")
+echo "Keep: $KEEP_COUNT | Discard: $DISCARD_COUNT | Crash: $CRASH_COUNT"
 
 # ── Save experiment log ──────────────────────────────────────────────────────
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -214,9 +356,10 @@ cp "$TAXONOMY_FILE"   "$RUN_DIR/final_taxonomy.json"
 cp "$PRD_FILE"        "$RUN_DIR/prd.json"
 cp "$PROGRESS_FILE"   "$RUN_DIR/progress.txt"
 git log --oneline > "$RUN_DIR/git_log.txt" 2>/dev/null || true
-$PYTHON tools/metrics.py "$TAXONOMY_FILE" reference/gold_standard.json > "$RUN_DIR/final_metrics.txt" 2>/dev/null || true
+$PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" > "$RUN_DIR/final_metrics.txt" 2>/dev/null || true
+$PYTHON tools/metrics_v2.py "$TAXONOMY_FILE" > "$RUN_DIR/final_metrics_v2.txt" 2>/dev/null || true
+cp output/iteration_log.jsonl "$RUN_DIR/iteration_log.jsonl" 2>/dev/null || true
 
-# Save config
 cat > "$RUN_DIR/config.json" <<CFGEOF
 {
   "tool": "$TOOL",
@@ -224,7 +367,8 @@ cat > "$RUN_DIR/config.json" <<CFGEOF
   "domain": "$DOMAIN",
   "max_iterations": $MAX_ITERATIONS,
   "actual_iterations": $i,
-  "timestamp": "$TIMESTAMP"
+  "timestamp": "$TIMESTAMP",
+  "experiment": "v8-hooks-rules-skills"
 }
 CFGEOF
 

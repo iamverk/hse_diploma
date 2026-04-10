@@ -1,55 +1,86 @@
 {
-  "projectName": "Electronics Taxonomy Construction",
-  "domain": "electronics",
-  "branchName": "taxonomy-electronics-v1",
+  "projectName": "Taxonomy Construction — Exp 8 (Hooks + Rules + Skills)",
+  "domain": "multi",
+  "branchName": "experiment-08-hooks-rules-skills",
+  "iterationLimit": 40,
   "userStories": [
     {
       "id": 1,
-      "title": "Verify and complete L1 categories under Electronics",
-      "acceptanceCriteria": "Electronics has 19 direct children. validate.py passes with 0 errors.",
-      "passes": true
+      "title": "Initialize L1 skeleton from product corpus",
+      "acceptanceCriteria": "Root has 8+ L1 children covering all major product domains. validate.py passes. >=10 nodes total.",
+      "passes": false
     },
     {
       "id": 2,
-      "title": "Expand 'Arcade Equipment' to L2 subcategories",
-      "acceptanceCriteria": "'Arcade Equipment' has at least 6 children. validate.py passes.",
-      "passes": true
+      "title": "Expand L2 for Electronics and Clothing",
+      "acceptanceCriteria": "Electronics and Clothing each have 3-7 L2 children. NLIV > 0.35. >=30 nodes total.",
+      "passes": false
     },
     {
       "id": 3,
-      "title": "Expand 'Audio' to L2 subcategories",
-      "acceptanceCriteria": "'Audio' has at least 7 children. validate.py passes.",
-    "passes": true
+      "title": "Expand L2 for Home Goods and Books",
+      "acceptanceCriteria": "Home Goods and Books each have 3-7 L2 children. NLIV > 0.35. >=50 nodes total.",
+      "passes": false
     },
     {
       "id": 4,
-      "title": "Expand 'Circuit Boards & Components' to L2 subcategories",
-      "acceptanceCriteria": "'Circuit Boards & Components' has at least 7 children. validate.py passes.",
-      "passes": true
+      "title": "Expand L2 for remaining L1 domains",
+      "acceptanceCriteria": "All L1 domains have 3-7 L2 children. NLIV > 0.38. >=80 nodes total.",
+      "passes": false
     },
     {
       "id": 5,
-      "title": "Expand 'Communications' to L2 subcategories",
-      "acceptanceCriteria": "'Communications' has at least 9 children. validate.py passes.",
-      "passes": true
+      "title": "Expand L3: Electronics subtree",
+      "acceptanceCriteria": "Electronics L2 nodes each have 2-5 L3 children. NLIV > 0.40. >=110 nodes total.",
+      "passes": false
     },
     {
       "id": 6,
-      "title": "Add L3 leaf categories across Electronics subcategories",
-      "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
-      "passes": true
+      "title": "Expand L3: Clothing & Accessories subtree",
+      "acceptanceCriteria": "Clothing L2 nodes each have 2-5 L3 children. NLIV > 0.40. >=130 nodes total.",
+      "passes": false
     },
     {
       "id": 7,
-      "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
-      "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
-      "passes": true
+      "title": "Expand L3: Home Goods subtree",
+      "acceptanceCriteria": "Home Goods L2 nodes each have 2-5 L3 children. NLIV > 0.40. >=150 nodes total.",
+      "passes": false
     },
     {
       "id": 8,
-      "title": "Achieve edge F1 > 0.5 vs gold standard",
-      "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
-      "passes": true
+      "title": "Expand L3: Books and Toys subtrees",
+      "acceptanceCriteria": "Books and Toys L2 nodes each have 2-5 L3 children. NLIV > 0.40. >=170 nodes total.",
+      "passes": false
+    },
+    {
+      "id": 9,
+      "title": "Expand L3: Sporting Goods and Tools subtrees",
+      "acceptanceCriteria": "Sporting Goods and Tools L2 nodes each have 2-5 L3 children. NLIV > 0.40. >=190 nodes total.",
+      "passes": false
+    },
+    {
+      "id": 10,
+      "title": "Expand L3: Pet Products, Auto Parts, Cosmetics subtrees",
+      "acceptanceCriteria": "Remaining domains have L3 children. NLIV > 0.40. >=210 nodes total.",
+      "passes": false
+    },
+    {
+      "id": 11,
+      "title": "Refine: Fix weak edges (NLIV < 0.3)",
+      "acceptanceCriteria": "Zero weak edges. NLIV mean > 0.50. Zero chains.",
+      "passes": false
+    },
+    {
+      "id": 12,
+      "title": "Refine: MECE audit and structural balance",
+      "acceptanceCriteria": "CSC > 0.35. Branching CV < 0.8. All siblings mutually exclusive.",
+      "passes": false
+    },
+    {
+      "id": 13,
+      "title": "Refine: Final optimization — maximize composite",
+      "acceptanceCriteria": "Composite > 0.60. NLIV > 0.50. CSC > 0.35. >=200 nodes. Zero chains.",
+      "passes": false
     }
   ]
 }

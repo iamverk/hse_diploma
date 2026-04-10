@@ -329,11 +329,6 @@
               "id": "home_goods_kitchenware_utensils",
               "name": "Utensils",
               "description": "Kitchen utensils and food prep hand tools"
-            },
-            {
-              "id": "home_goods_kitchenware_food_storage",
-              "name": "Food Storage",
-              "description": "Containers and wraps for storing ingredients and meals"
             }
           ]
         },
@@ -356,11 +351,6 @@
               "id": "home_goods_furniture_dining_room",
               "name": "Dining Room Furniture",
               "description": "Dining tables and dining room seating"
-            },
-            {
-              "id": "home_goods_furniture_patio",
-              "name": "Patio Furniture",
-              "description": "Outdoor and garden seating and lounge furniture"
             }
           ]
         },
@@ -383,11 +373,6 @@
               "id": "home_goods_decor_rugs",
               "name": "Home Rugs",
               "description": "Area rugs and floor coverings"
-            },
-            {
-              "id": "home_goods_decor_curtains",
-              "name": "Curtains",
-              "description": "Window coverings and drape treatments"
             }
           ]
         },
@@ -410,11 +395,94 @@
               "id": "home_goods_storage_shelves",
               "name": "Shelving",
               "description": "Shelves and shelving systems for indoor storage"
+            }
+          ]
+        },
+        {
+          "id": "home_goods_food_and_kitchen_storage",
+          "name": "Food and Kitchen Storage",
+          "description": "Pantry organization, containers, and food prep storage",
+          "children": [
+            {
+              "id": "home_goods_kitchenware_food_storage",
+              "name": "Food Storage",
+              "description": "Containers and wraps for storing ingredients and meals"
             },
+            {
+              "id": "home_goods_food_and_kitchen_storage_food_containers",
+              "name": "Food Containers",
+              "description": "Reusable containers and jars for pantry and meal storage"
+            },
+            {
+              "id": "home_goods_food_and_kitchen_storage_spice_racks",
+              "name": "Spice Racks",
+              "description": "Spice and seasoning organizers for kitchen shelves"
+            }
+          ]
+        },
+        {
+          "id": "home_goods_window_coverings",
+          "name": "Window Coverings",
+          "description": "Window treatments and hanging room textiles",
+          "children": [
+            {
+              "id": "home_goods_decor_curtains",
+              "name": "Curtains",
+              "description": "Window coverings and drape treatments"
+            },
+            {
+              "id": "home_goods_window_coverings_blackout_blinds",
+              "name": "Blackout Blinds",
+              "description": "Blind styles for privacy and light control"
+            },
+            {
+              "id": "home_goods_window_coverings_window_ropes",
+              "name": "Window Ropes",
+              "description": "Rings, hooks, and fittings for curtains and blinds"
+            }
+          ]
+        },
+        {
+          "id": "home_goods_outdoor_living",
+          "name": "Outdoor Living",
+          "description": "Outdoor and patio room products and furniture accents",
+          "children": [
+            {
+              "id": "home_goods_furniture_patio",
+              "name": "Patio Furniture",
+              "description": "Outdoor and garden seating and lounge furniture"
+            },
+            {
+              "id": "home_goods_outdoor_living_garden_furniture",
+              "name": "Garden Furniture",
+              "description": "Durable furniture and pieces for garden spaces"
+            },
+            {
+              "id": "home_goods_outdoor_living_patio_decor",
+              "name": "Patio Decor",
+              "description": "Decorative accessories and accents for patio spaces"
+            }
+          ]
+        },
+        {
+          "id": "home_goods_laundry_and_bath",
+          "name": "Laundry and Bath",
+          "description": "Laundry and bathroom organization products",
+          "children": [
             {
               "id": "home_goods_storage_laundry",
               "name": "Laundry Storage",
               "description": "Laundry storage, baskets, and organizational tools"
+            },
+            {
+              "id": "home_goods_laundry_and_bath_bathroom_organizers",
+              "name": "Bathroom Organizers",
+              "description": "Wall and countertop organizers for bathroom items"
+            },
+            {
+              "id": "home_goods_laundry_and_bath_bath_towels",
+              "name": "Bath Towels",
+              "description": "Bath linen and towel storage accessories"
             }
           ]
         }

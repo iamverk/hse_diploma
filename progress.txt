@@ -2,11 +2,11 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Story 3 status: passes true
-- Validation: validate.py passed (72 nodes, 71 edges, max depth 3), NLIV=0.6030, CSC=0.4569, Composite=0.6452, nodes=72
+- Story 4 status: passes true
+- Validation: validate.py passed (106 nodes, 105 edges, max depth 3), NLIV=0.6104, CSC=0.3847, Composite=0.6314, nodes=106
 - Weak edges: Electronics -> Video (0.276)
 
 ## Decisions This Iteration
-- Confirmed `Home Goods` already has 4 L2 children and `Books` has 6 L2 children, both satisfying Story 3 L2 bounds.
-- `validate.py` passes; `metrics_v2.py` reports NLIV mean above acceptance threshold (0.6030) and node count above minimum (72 total).
-- Updated Story 3 `passes` to true in `prd.json`; no taxonomy changes required for this story.
+- Added one L2 child each to Toys, Sporting Goods, Tools, Pet Products, Cosmetics, and Auto Parts to satisfy Story 4 breadth.
+- Added two extra L2 children for a broader spread while keeping sibling fanout within 2-15 and checking NLIV before each add via `check_edge.py`.
+- Replaced weak initial candidates (`Auto Parts -> Tires & Wheels`, `Sporting Goods -> Camping & Hiking`) when re-checking embeddings showed weaker NLIV, and retained only the existing legacy weak edge (`Electronics -> Video`) from prior work.

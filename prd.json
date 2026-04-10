@@ -26,7 +26,7 @@
       "id": 4,
       "title": "Expand L2 for remaining L1 domains",
       "acceptanceCriteria": "All L1 domains have 3-7 L2 children. NLIV > 0.38. >=80 nodes total.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,

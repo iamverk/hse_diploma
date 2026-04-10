@@ -2,8 +2,9 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
+- Story 15 status: passes true
+- Validation: validate.py passed (nodes=237, edges=236, max depth=3, 0 warnings). NLIV mean=0.6262, weak edges=0 via nliv threshold 0.3.
 - Story 14 status: passes true
-- Validation: validate.py passed (nodes=237, edges=236, max depth=3, 0 warnings). Weak edges: none.
 - Story 9 status: passes true
 - Story 10 status: passes true
 - Story 11 status: passes true
@@ -11,6 +12,6 @@
 - Story 13 status: passes true
 
 ## Decisions This Iteration
-- Expanded all Auto Parts L2 nodes (`engine_parts`, `brake_components`, `tires`, `auto_batteries`) with 3 L3 children each, adding 12 nodes and 12 edges.
-- Validated all 12 new Auto Parts edges before adding using `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py --interactive`; every edge scored GOOD/EXCELLENT (all nliv >= 0.6642).
-- Re-ran `tools/validate.py` after edits (`237` nodes, `236` edges, max depth `3`, no warnings).
+- Completed Story 15 in-place because current taxonomy already had zero weak edges and NLIV mean above threshold.
+- Ran `tools/metrics_v2.py taxonomy.json --json` to verify weak-edge condition and `tools/validate.py` to confirm structural validity.
+- No taxonomy edges were added in this iteration, so no new `check_edge` calls were required.

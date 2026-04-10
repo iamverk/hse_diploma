@@ -92,7 +92,7 @@
       "id": 15,
       "title": "Refine: Fix weak edges",
       "acceptanceCriteria": "Zero weak edges (NLIV < 0.3). NLIV mean > 0.50.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 16,

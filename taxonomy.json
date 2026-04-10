@@ -391,6 +391,16 @@
           "id": "toys_dolls_and_stuffed_toys",
           "name": "Dolls and Stuffed Toys",
           "description": "Dolls, plush toys, and plush play companions"
+        },
+        {
+          "id": "toys_puzzles",
+          "name": "Puzzles",
+          "description": "Puzzle and brainteaser products for children and adults"
+        },
+        {
+          "id": "toys_outdoor_toys",
+          "name": "Outdoor Toys",
+          "description": "Active and outdoor play toys for children"
         }
       ]
     },
@@ -418,6 +428,11 @@
           "id": "sporting_goods_team_sports",
           "name": "Team Sports",
           "description": "Products for team-based sports and athletics"
+        },
+        {
+          "id": "sporting_goods_athletics",
+          "name": "Athletics",
+          "description": "Athletic competition and training sports equipment"
         }
       ]
     },
@@ -445,6 +460,16 @@
           "id": "tools_measuring_tools",
           "name": "Measuring Tools",
           "description": "Measurement and layout tools for accurate work"
+        },
+        {
+          "id": "tools_tool_kits",
+          "name": "Tool Kits",
+          "description": "Curated sets and kits for tooling and repairs"
+        },
+        {
+          "id": "tools_welding_tools",
+          "name": "Welding Tools",
+          "description": "Welding and brazing tools for repairs"
         }
       ]
     },
@@ -456,112 +481,32 @@
         {
           "id": "pet_food",
           "name": "Pet Food",
-          "description": "Nutrition and feeding products for pets",
-          "children": [
-            {
-              "id": "pet_food_dry_food",
-              "name": "Dry Pet Food",
-              "description": "Dry kibble and pellet diets for pets"
-            },
-            {
-              "id": "pet_food_wet_food",
-              "name": "Wet Pet Food",
-              "description": "Canned, pouch, and cooked wet diets for pets"
-            },
-            {
-              "id": "pet_food_treats",
-              "name": "Pet Treats",
-              "description": "Snack products and treats for pets"
-            }
-          ]
+          "description": "Nutrition and feeding products for pets"
         },
         {
           "id": "pet_health_care",
           "name": "Pet Health Care",
-          "description": "Veterinary and wellness products for pet health",
-          "children": [
-            {
-              "id": "pet_health_care_medications",
-              "name": "Pet Medications",
-              "description": "Prescription and over-the-counter medicines for pets"
-            },
-            {
-              "id": "pet_health_care_preventive_care",
-              "name": "Pet Preventive Care",
-              "description": "Flea, tick, and infection prevention products for pets"
-            },
-            {
-              "id": "pet_health_care_supplements",
-              "name": "Pet Health Supplements",
-              "description": "Nutritional supplements and wellness support products for pets"
-            }
-          ]
+          "description": "Veterinary and wellness products for pet health"
         },
         {
           "id": "pet_accessories",
           "name": "Pet Accessories",
-          "description": "Pet collars, leashes, carriers, beds, and general accessories",
-          "children": [
-            {
-              "id": "pet_accessories_collars_and_leashes",
-              "name": "Pet Collars and Leashes",
-              "description": "Collars, lead systems, and leash accessories for pets"
-            },
-            {
-              "id": "pet_accessories_carriers",
-              "name": "Pet Carriers",
-              "description": "Travel crates and containers for safe pet transport"
-            },
-            {
-              "id": "pet_accessories_beds",
-              "name": "Pet Beds",
-              "description": "Bedding and sleeping accessories for pets"
-            }
-          ]
+          "description": "Pet collars, leashes, carriers, beds, and general accessories"
         },
         {
           "id": "pet_toys",
           "name": "Pet Toys",
-          "description": "Interactive and enrichment toys for pets",
-          "children": [
-            {
-              "id": "pet_toys_chew_toys",
-              "name": "Chew Toys",
-              "description": "Chewable play items for dogs and other pets"
-            },
-            {
-              "id": "pet_toys_interactive_toys",
-              "name": "Interactive Pet Toys",
-              "description": "Motion and puzzle-based interactive toy products"
-            },
-            {
-              "id": "pet_toys_puzzle_toys",
-              "name": "Puzzle Toys",
-              "description": "Cognitive and enrichment toys for pet training"
-            }
-          ]
+          "description": "Interactive and enrichment toys for pets"
         },
         {
           "id": "pet_supplies",
           "name": "Pet Supplies",
-          "description": "Everyday consumables and general pet support products",
-          "children": [
-            {
-              "id": "pet_supplies_litter",
-              "name": "Pet Litter",
-              "description": "Litter products and associated waste management supplies"
-            },
-            {
-              "id": "pet_supplies_cleaning_and_hygiene",
-              "name": "Pet Cleaning and Hygiene Supplies",
-              "description": "Hygiene, cleaning, and odor-control supplies for pet spaces"
-            },
-            {
-              "id": "pet_supplies_travel_and_housing",
-              "name": "Pet Travel and Housing",
-              "description": "Travel aids and temporary housing for pets"
-            }
-          ]
+          "description": "Everyday consumables and general pet support products"
+        },
+        {
+          "id": "pet_products_grooming",
+          "name": "Pet Grooming",
+          "description": "Grooming essentials and accessories for pet care"
         }
       ]
     },
@@ -573,22 +518,87 @@
         {
           "id": "cosmetics_fragrances",
           "name": "Fragrances",
-          "description": "Perfumes, colognes, and body scents"
+          "description": "Perfumes, colognes, and body scents",
+          "children": [
+            {
+              "id": "cosmetics_fragrances_perfumes",
+              "name": "Perfumes",
+              "description": "Alcohol-based perfumes and fragrance concentrates"
+            },
+            {
+              "id": "cosmetics_fragrances_body_sprays",
+              "name": "Body Sprays",
+              "description": "Body-focused scented sprays and mist products"
+            }
+          ]
         },
         {
           "id": "cosmetics_hair_care",
           "name": "Hair Care",
-          "description": "Shampoos, conditioners, and hair styling products"
+          "description": "Shampoos, conditioners, and hair styling products",
+          "children": [
+            {
+              "id": "cosmetics_hair_care_shampoos",
+              "name": "Shampoos",
+              "description": "Hair wash products for cleansing and scalp care"
+            },
+            {
+              "id": "cosmetics_hair_care_styling_products",
+              "name": "Styling Products",
+              "description": "Products used to shape, hold, and style hair"
+            }
+          ]
         },
         {
           "id": "cosmetics_makeup",
           "name": "Makeup",
-          "description": "Face, eye, and lip cosmetic products"
+          "description": "Face, eye, and lip cosmetic products",
+          "children": [
+            {
+              "id": "cosmetics_makeup_face",
+              "name": "Face Makeup",
+              "description": "Products for base coverage and complexion"
+            },
+            {
+              "id": "cosmetics_makeup_eyes",
+              "name": "Eye Makeup",
+              "description": "Products for eye area color and definition"
+            }
+          ]
         },
         {
           "id": "cosmetics_skin_care",
           "name": "Skin Care",
-          "description": "Products for skin treatment, care, and maintenance"
+          "description": "Products for skin treatment, care, and maintenance",
+          "children": [
+            {
+              "id": "cosmetics_skin_care_cleaners",
+              "name": "Cleansers",
+              "description": "Skin wash products for daily facial cleansing"
+            },
+            {
+              "id": "cosmetics_skin_care_moisturizers",
+              "name": "Moisturizers",
+              "description": "Hydrating and protective skin moisturizing products"
+            }
+          ]
+        },
+        {
+          "id": "cosmetics_body_care",
+          "name": "Body Care",
+          "description": "Body lotions, oils, and skin treatment products",
+          "children": [
+            {
+              "id": "cosmetics_body_care_body_lotion",
+              "name": "Body Lotion",
+              "description": "Daily moisturizers for overall body hydration"
+            },
+            {
+              "id": "cosmetics_body_care_body_wash",
+              "name": "Body Wash",
+              "description": "Cleansing products for whole-body wash"
+            }
+          ]
         }
       ]
     },
@@ -616,6 +626,11 @@
           "id": "auto_parts_car_electronics",
           "name": "Car Electronics",
           "description": "In-car audio, sensors, and vehicle electronics"
+        },
+        {
+          "id": "auto_parts_replacement_parts",
+          "name": "Replacement Parts",
+          "description": "Replacement automotive components and replacement systems"
         }
       ]
     }

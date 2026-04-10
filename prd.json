@@ -80,7 +80,7 @@
       "id": 13,
       "title": "Expand L3: Cosmetics",
       "acceptanceCriteria": "Each Cosmetics L2 has 2-3 L3 children. NLIV > 0.40. >=215 nodes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 14,

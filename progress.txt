@@ -6,10 +6,10 @@
 - Story 10 status: passes true
 - Story 11 status: passes true
 - Story 12 status: passes true
-- Validation: NLIV check_edge (edge-level) had 15/15 edges GOOD/EXCELLENT (no WEAK), validate.py passed (nodes=113, edges=112, max depth=3). Weak edges: none.
-- Weak edges: none
+- Story 13 status: passes true
+- Validation: validate.py passed (nodes=116, edges=115, max depth=3, 0 warnings). Weak edges: none.
 
 ## Decisions This Iteration
-- Expanded all Pet Products L2 nodes (`pet_food`, `pet_health_care`, `pet_accessories`, `pet_toys`, `pet_supplies`) with 3 L3 children each, based on valid pet category structure.
-- Validated each new Pet Products edge with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py --batch`; all 15 edges were GOOD/EXCELLENT.
-- Re-ran `tools/validate.py` after edits (`113` nodes, `112` edges, max depth `3`, passed with no warnings).
+- Expanded all Cosmetics L2 nodes (`cosmetics_fragrances`, `cosmetics_hair_care`, `cosmetics_makeup`, `cosmetics_skin_care`, `cosmetics_body_care`) with 2 L3 children each.
+- Validated each new Cosmetics edge with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py --batch`; all 10 edges were GOOD/EXCELLENT (NLIV ≥ 0.8359).
+- Re-ran `tools/validate.py` after edits (`116` nodes, `115` edges, max depth `3`, no warnings).

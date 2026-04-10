@@ -68,7 +68,7 @@
       "id": 11,
       "title": "Expand L3: Tools",
       "acceptanceCriteria": "Each Tools L2 has 2-3 L3 children. NLIV > 0.40. >=195 nodes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 12,

@@ -443,7 +443,136 @@
     {
       "id": "tools",
       "name": "Tools",
-      "description": "Hand and power tools, hardware, and repair equipment."
+      "description": "Hand and power tools, hardware, and repair equipment.",
+      "children": [
+        {
+          "id": "tools_power_tools",
+          "name": "Power Tools",
+          "description": "Electric and battery-powered tools for repair and projects",
+          "children": [
+            {
+              "id": "tools_power_tools_power_drills",
+              "name": "Power Drills",
+              "description": "Electric drills for creating holes and pilot points."
+            },
+            {
+              "id": "tools_power_tools_impact_wrenches",
+              "name": "Impact Wrenches",
+              "description": "Impact-powered wrenches for driving and loosening fasteners."
+            }
+          ]
+        },
+        {
+          "id": "tools_hand_tools",
+          "name": "Hand Tools",
+          "description": "Manual tools for repair and workshop work.",
+          "children": [
+            {
+              "id": "tools_hand_tools_wrenches",
+              "name": "Wrenches",
+              "description": "Tools for turning nuts and bolts"
+            },
+            {
+              "id": "tools_hand_tools_pliers",
+              "name": "Pliers",
+              "description": "Hand tools for grasping, bending, and gripping wire or materials."
+            },
+            {
+              "id": "tools_hand_tools_screwdrivers",
+              "name": "Screwdrivers",
+              "description": "Hand tools for driving and removing screws."
+            }
+          ]
+        },
+        {
+          "id": "tools_workshop_supplies",
+          "name": "Workshop Supplies",
+          "description": "Tool maintenance consumables and shop essentials",
+          "children": [
+            {
+              "id": "tools_workshop_supplies_workshop_consumables",
+              "name": "Workshop Consumables",
+              "description": "Consumables used during workshop work and upkeep."
+            },
+            {
+              "id": "tools_workshop_supplies_workshop_safety",
+              "name": "Workshop Safety",
+              "description": "Protective items and supplies to keep workshop work safe."
+            },
+            {
+              "id": "tools_workshop_supplies_tool_storage",
+              "name": "Tool Storage",
+              "description": "Organizers and containers for storing tools."
+            }
+          ]
+        },
+        {
+          "id": "tools_measuring_tools",
+          "name": "Measuring Tools",
+          "description": "Measurement and layout tools for accurate work",
+          "children": [
+            {
+              "id": "tools_measuring_tools_measuring_tapes",
+              "name": "Measuring Tapes",
+              "description": "Flexible tapes used to measure length and dimensions."
+            },
+            {
+              "id": "tools_measuring_tools_caliper_gauges",
+              "name": "Caliper Gauges",
+              "description": "Precision gauges for measuring small distances and diameters."
+            },
+            {
+              "id": "tools_measuring_tools_measuring_squares",
+              "name": "Measuring Squares",
+              "description": "Tools for checking right angles and layout accuracy."
+            }
+          ]
+        },
+        {
+          "id": "tools_tool_kits",
+          "name": "Tool Kits",
+          "description": "Curated sets and kits for tooling and repairs",
+          "children": [
+            {
+              "id": "tools_tool_kits_tool_box",
+              "name": "Tool Box",
+              "description": "Portable containers for storing and organizing tools."
+            },
+            {
+              "id": "tools_tool_kits_repair_kits",
+              "name": "Repair Kits",
+              "description": "Collections of tools and parts for common fixes."
+            },
+            {
+              "id": "tools_tool_kits_wrench_sets",
+              "name": "Wrench Sets",
+              "description": "Grouped wrench tools for fastening and assembly tasks."
+            }
+          ]
+        },
+        {
+          "id": "tools_welding_tools",
+          "name": "Welding Tools",
+          "description": "Welding and brazing tools for repairs",
+          "children": [
+            {
+              "id": "tools_welding_tools_welding_gloves",
+              "name": "Welding Gloves",
+              "description": "Protective gloves for heat-intensive welding work."
+            },
+            {
+              "id": "tools_welding_tools_welding_masks",
+              "name": "Welding Masks",
+              "description": "Protective masks for eye and facial safety during welding."
+            },
+            {
+              "id": "tools_welding_tools_welding_torches",
+              "name": "Welding Torches",
+              "description": "Torch hardware used to deliver heat for welding and brazing."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "pet_products",

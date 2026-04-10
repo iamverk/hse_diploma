@@ -22,6 +22,16 @@
               "id": "electronics_accessories_cables",
               "name": "Cables",
               "description": "Cables for connecting and charging electronic devices"
+            },
+            {
+              "id": "electronics_accessories_power_adapters",
+              "name": "Power Adapters",
+              "description": "Power adapters for charging and converting device voltages"
+            },
+            {
+              "id": "electronics_accessories_power_strips",
+              "name": "Power Strips",
+              "description": "Power strips and surge-protected outlets for multiple devices"
             }
           ]
         },
@@ -39,33 +49,103 @@
               "id": "electronics_audio_speakers",
               "name": "Speakers",
               "description": "Loudspeakers and sound systems"
+            },
+            {
+              "id": "electronics_audio_microphones",
+              "name": "Microphones",
+              "description": "Microphones and voice-capture hardware"
+            },
+            {
+              "id": "electronics_audio_amplifiers",
+              "name": "Amplifiers",
+              "description": "Audio amplifiers for signal and power enhancement"
             }
           ]
         },
         {
           "id": "electronics_computers",
           "name": "Computers",
-          "description": "Products and items in the Computers category"
+          "description": "Products and items in the Computers category",
+          "children": [
+            {
+              "id": "electronics_computers_laptops",
+              "name": "Laptops",
+              "description": "Portable laptop computers"
+            },
+            {
+              "id": "electronics_computers_desktops",
+              "name": "Desktops",
+              "description": "Desktop and tower computers"
+            }
+          ]
         },
         {
           "id": "electronics_components",
           "name": "Components",
-          "description": "Products and items in the Components category"
+          "description": "Products and items in the Components category",
+          "children": [
+            {
+              "id": "electronics_components_semiconductors",
+              "name": "Semiconductors",
+              "description": "Semiconductors for signal control and computation"
+            },
+            {
+              "id": "electronics_components_circuit_boards",
+              "name": "Circuit Boards",
+              "description": "Printed circuit boards used in electronic devices"
+            }
+          ]
         },
         {
           "id": "electronics_communications",
           "name": "Communications",
-          "description": "Products and items in the Communications category"
+          "description": "Products and items in the Communications category",
+          "children": [
+            {
+              "id": "electronics_communications_mobile_phones",
+              "name": "Mobile Phones",
+              "description": "Mobile handsets and smartphone-style telephony devices"
+            },
+            {
+              "id": "electronics_communications_two_way_radios",
+              "name": "Two-way Radios",
+              "description": "Two-way communication radios"
+            }
+          ]
         },
         {
           "id": "electronics_networking",
           "name": "Networking",
-          "description": "Products and items in the Networking category"
+          "description": "Products and items in the Networking category",
+          "children": [
+            {
+              "id": "electronics_networking_routers",
+              "name": "Routers",
+              "description": "Networking routers and packet routing devices"
+            },
+            {
+              "id": "electronics_networking_switches",
+              "name": "Switches",
+              "description": "Network switches for local area network traffic"
+            }
+          ]
         },
         {
           "id": "electronics_video",
           "name": "Video",
-          "description": "Products and items in the Video category"
+          "description": "Products and items in the Video category",
+          "children": [
+            {
+              "id": "electronics_video_televisions",
+              "name": "Televisions",
+              "description": "Televisions and display screens"
+            },
+            {
+              "id": "electronics_video_video_cameras",
+              "name": "Video Cameras",
+              "description": "Video cameras and camcorders"
+            }
+          ]
         }
       ]
     },
@@ -77,27 +157,112 @@
         {
           "id": "clothing_accessories",
           "name": "Clothing Accessories",
-          "description": "Products and items in the Clothing Accessories category"
+          "description": "Products and items in the Clothing Accessories category",
+          "children": [
+            {
+              "id": "clothing_accessories_belts",
+              "name": "Belts",
+              "description": "Belts and waist belts"
+            },
+            {
+              "id": "clothing_accessories_hats",
+              "name": "Hats",
+              "description": "Hats and headwear"
+            },
+            {
+              "id": "clothing_accessories_scarves",
+              "name": "Scarves",
+              "description": "Scarves and shawls"
+            }
+          ]
         },
         {
           "id": "clothing_costumes_and_accessories",
           "name": "Costumes & Accessories",
-          "description": "Products and items in the Costumes & Accessories category"
+          "description": "Products and items in the Costumes & Accessories category",
+          "children": [
+            {
+              "id": "clothing_costumes_and_accessories_theatrical_costumes",
+              "name": "Theatrical Costumes",
+              "description": "Costumes for plays and performances"
+            },
+            {
+              "id": "clothing_costumes_and_accessories_party_costumes",
+              "name": "Party Costumes",
+              "description": "Costumes for parties and events"
+            },
+            {
+              "id": "clothing_costumes_and_accessories_costume_accessories",
+              "name": "Costume Accessories",
+              "description": "Accessories for costumes and dress-up"
+            }
+          ]
         },
         {
           "id": "clothing_handbags_wallets_and_cases",
           "name": "Handbags, Wallets & Cases",
-          "description": "Products and items in the Handbags, Wallets & Cases category"
+          "description": "Products and items in the Handbags, Wallets & Cases category",
+          "children": [
+            {
+              "id": "clothing_handbags_wallets_and_cases_handbags",
+              "name": "Handbags",
+              "description": "Handbags and designer handbags"
+            },
+            {
+              "id": "clothing_handbags_wallets_and_cases_wallets",
+              "name": "Wallets",
+              "description": "Wallets and money holders"
+            },
+            {
+              "id": "clothing_handbags_wallets_and_cases_clutches",
+              "name": "Clutches",
+              "description": "Small evening and party clutches"
+            }
+          ]
         },
         {
           "id": "clothing_jewelry",
           "name": "Jewelry",
-          "description": "Products and items in the Jewelry category"
+          "description": "Products and items in the Jewelry category",
+          "children": [
+            {
+              "id": "clothing_jewelry_necklaces",
+              "name": "Necklaces",
+              "description": "Necklaces and chains"
+            },
+            {
+              "id": "clothing_jewelry_rings",
+              "name": "Rings",
+              "description": "Finger rings and signet rings"
+            },
+            {
+              "id": "clothing_jewelry_earrings",
+              "name": "Earrings",
+              "description": "Earrings and drop earrings"
+            }
+          ]
         },
         {
           "id": "clothing_shoe_accessories",
           "name": "Shoe Accessories",
-          "description": "Products and items in the Shoe Accessories category"
+          "description": "Products and items in the Shoe Accessories category",
+          "children": [
+            {
+              "id": "clothing_shoe_accessories_insoles",
+              "name": "Insoles",
+              "description": "Shoe insoles and footbeds"
+            },
+            {
+              "id": "clothing_shoe_accessories_laces",
+              "name": "Shoelaces",
+              "description": "Shoelaces and lace ties"
+            },
+            {
+              "id": "clothing_shoe_accessories_shoe_care",
+              "name": "Shoe Care",
+              "description": "Products for cleaning and maintaining shoes"
+            }
+          ]
         },
         {
           "id": "clothing_shoes",
@@ -119,7 +284,24 @@
         {
           "id": "clothing_clothing",
           "name": "Clothing",
-          "description": "Products and items in the Clothing category"
+          "description": "Products and items in the Clothing category",
+          "children": [
+            {
+              "id": "clothing_clothing_dresses",
+              "name": "Dresses",
+              "description": "Dresses and outfits"
+            },
+            {
+              "id": "clothing_clothing_shirts",
+              "name": "Shirts",
+              "description": "Shirts and tops"
+            },
+            {
+              "id": "clothing_clothing_pants",
+              "name": "Pants",
+              "description": "Pants, jeans, and slacks"
+            }
+          ]
         }
       ]
     },

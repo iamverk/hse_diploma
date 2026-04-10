@@ -2,10 +2,11 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Story 8 status: passes true
-- Validation: NLIV/CSC/Composite values not recomputed this iteration; validate.py passed, nodes=160
+- Story 9 status: passes true
+- Validation: validate.py passed, nodes=175, weak edges: none
 - Weak edges: none
 
 ## Decisions This Iteration
-- Added 10 Book nodes under `books` while preserving existing taxonomy patterns: expanded Non-Fiction, Textbooks, and Cookbooks with one child each and added new `books_reference` and `books_travel` L2 branches.
-- Validated all new and modified Books edges with `tools/check_edge.py` (all `EXCELLENT`) and verified structure with `validate.py` (160 nodes, passes).
+- Expanded all `toys` L2 branches with 2-3 new L3 children each and added a third `Board Games` child to satisfy node target.
+- Validated every new Toys edge with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py` before adding; all checks were `GOOD` or `EXCELLENT`.
+- Re-ran `tools/validate.py` (175 nodes, passed with no warnings) and confirmed no issues with `tools/taxonomy_cli.py lint`.

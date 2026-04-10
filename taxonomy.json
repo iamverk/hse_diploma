@@ -674,37 +674,126 @@
         {
           "id": "toys_action_figure_toys",
           "name": "Action Figure Toys",
-          "description": "Collectible character figures and hero toy products"
+          "description": "Collectible character figures and hero toy products",
+          "children": [
+            {
+              "id": "toys_action_figure_toys_hero_figures",
+              "name": "Hero Figures",
+              "description": "Action figures based on hero and adventure characters"
+            },
+            {
+              "id": "toys_action_figure_toys_anime_figures",
+              "name": "Anime Figures",
+              "description": "Figure toys inspired by anime and manga characters"
+            }
+          ]
         },
         {
           "id": "toys_board_games",
           "name": "Board Games",
-          "description": "Tabletop board and strategy games for all ages"
+          "description": "Tabletop board and strategy games for all ages",
+          "children": [
+            {
+              "id": "toys_board_games_strategy_games",
+              "name": "Strategy Games",
+              "description": "Board games focused on strategy and planning"
+            },
+            {
+              "id": "toys_board_games_party_games",
+              "name": "Party Games",
+              "description": "Board games designed for group social play"
+            },
+            {
+              "id": "toys_board_games_card_games",
+              "name": "Card Games",
+              "description": "Board-style and card-driven tabletop games"
+            }
+          ]
         },
         {
           "id": "toys_building_toys",
           "name": "Building Toys",
-          "description": "Construction and modular toy sets for hands-on play"
+          "description": "Construction and modular toy sets for hands-on play",
+          "children": [
+            {
+              "id": "toys_building_toys_lego_bricks",
+              "name": "Lego Bricks",
+              "description": "Interlocking brick systems for creative builds"
+            },
+            {
+              "id": "toys_building_toys_construction_sets",
+              "name": "Construction Sets",
+              "description": "Modular parts for structured toy building projects"
+            }
+          ]
         },
         {
           "id": "toys_collectible_toys",
           "name": "Collectible Toys",
-          "description": "Collectible figurines, action-based models, and special-edition toys"
+          "description": "Collectible figurines, action-based models, and special-edition toys",
+          "children": [
+            {
+              "id": "toys_collectible_toys_pop_figurines",
+              "name": "Pop Figurines",
+              "description": "Stylized collectible figurines and vinyl-style toys"
+            },
+            {
+              "id": "toys_collectible_toys_miniature_figurines",
+              "name": "Miniature Figurines",
+              "description": "Small-scale collectible figures and model pieces"
+            }
+          ]
         },
         {
           "id": "toys_dolls_and_stuffed_toys",
           "name": "Dolls and Stuffed Toys",
-          "description": "Dolls, plush toys, and plush play companions"
+          "description": "Dolls, plush toys, and plush play companions",
+          "children": [
+            {
+              "id": "toys_dolls_and_stuffed_toys_dolls",
+              "name": "Dolls",
+              "description": "Play dolls in fashion, character, and toy styles"
+            },
+            {
+              "id": "toys_dolls_and_stuffed_toys_plush_toys",
+              "name": "Plush Toys",
+              "description": "Soft stuffed companions and plush toy favorites"
+            }
+          ]
         },
         {
           "id": "toys_puzzles",
           "name": "Puzzles",
-          "description": "Puzzle and brainteaser products for children and adults"
+          "description": "Puzzle and brainteaser products for children and adults",
+          "children": [
+            {
+              "id": "toys_puzzles_jigsaw_puzzles",
+              "name": "Jigsaw Puzzles",
+              "description": "Interlocking-piece picture and themed puzzles"
+            },
+            {
+              "id": "toys_puzzles_logic_puzzles",
+              "name": "Logic Puzzles",
+              "description": "Brain games and logic-based puzzle challenges"
+            }
+          ]
         },
         {
           "id": "toys_outdoor_toys",
           "name": "Outdoor Toys",
-          "description": "Active and outdoor play toys for children"
+          "description": "Active and outdoor play toys for children",
+          "children": [
+            {
+              "id": "toys_outdoor_toys_ride_on_toys",
+              "name": "Ride-On Toys",
+              "description": "Push and ride toys for outdoor active play"
+            },
+            {
+              "id": "toys_outdoor_toys_sand_and_water_toys",
+              "name": "Sand and Water Toys",
+              "description": "Toys for outdoor digging, pouring, and water play"
+            }
+          ]
         }
       ]
     },

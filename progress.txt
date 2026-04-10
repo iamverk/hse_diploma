@@ -3,10 +3,12 @@
 
 ## Current State
 - Story 9 status: passes true
-- Validation: validate.py passed, nodes=175, weak edges: none
+- Story 10 status: passes true
+- Validation: validate.py passed (nodes=84, edges=83, max depth=3). Edge-level NLIV checks for new Sporting Goods edges were all GOOD/EXCELLENT. `tools/metrics.py taxonomy.json` reported predicted nodes=84 and node coverage=0.0048.
 - Weak edges: none
 
 ## Decisions This Iteration
-- Expanded all `toys` L2 branches with 2-3 new L3 children each and added a third `Board Games` child to satisfy node target.
-- Validated every new Toys edge with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py` before adding; all checks were `GOOD` or `EXCELLENT`.
-- Re-ran `tools/validate.py` (175 nodes, passed with no warnings) and confirmed no issues with `tools/taxonomy_cli.py lint`.
+- Added Sporting Goods expansion with 3 L2 nodes: `Fitness & Exercise`, `Outdoor Recreation`, and `Field & Court Sports`.
+- Added 3 L3 children under each new Sporting Goods L2, with 12 total nodes added so far.
+- Validated every new Sporting Goods edge with `/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python tools/check_edge.py` before adding; all checks returned `GOOD` or `EXCELLENT`.
+- Re-ran `tools/validate.py` (84 nodes, passed with no warnings).

@@ -1,8 +1,11 @@
 ## Discovered Patterns
+- No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Fresh start: Experiment 8 (hooks + rules + skills)
-- Taxonomy: 1 node (seed)
+- Story 2 status: passes true
+- Validation: validate.py passed (31 nodes, 30 edges, max depth 3, 0 warnings)
+- Weak edges: none
 
 ## Decisions This Iteration
-- N/A (initial state)
+- Added 7 L2 children under `electronics` and 7 L2 children under `clothing_and_accessories`, with 2 additional L3 leaves for each of: `electronics_accessories`, `electronics_audio`, `clothing_shoes` to satisfy Story 2 node-count target while keeping each non-leaf at fanout >=2.
+- Expanded via start-domain priors with descriptions aligned to domain groupings; updated `taxonomy.json`, set Story 2 `passes` to true in `prd.json`.

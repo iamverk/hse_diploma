@@ -8,13 +8,13 @@
       "id": 1,
       "title": "Initialize L1 skeleton from product corpus",
       "acceptanceCriteria": "Root has 8+ L1 children covering all major product domains. validate.py passes. >=10 nodes total.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,
       "title": "Expand L2 for Electronics and Clothing",
       "acceptanceCriteria": "Electronics and Clothing each have 3-7 L2 children. NLIV > 0.35. >=30 nodes total.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,

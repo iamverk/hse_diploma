@@ -1,0 +1,6 @@
+{
+  "id": "root",
+  "name": "Merchandise",
+  "description": "Root node of the product category hierarchy",
+  "children": []
+}

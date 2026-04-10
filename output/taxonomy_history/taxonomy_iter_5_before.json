@@ -1,0 +1,167 @@
+{
+  "id": "root",
+  "name": "Merchandise",
+  "description": "Root node of the product category hierarchy",
+  "children": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices, components, and accessories.",
+      "children": [
+        {
+          "id": "electronics_accessories",
+          "name": "Accessories",
+          "description": "Products and items in the Electronics Accessories category",
+          "children": [
+            {
+              "id": "electronics_accessories_adapters",
+              "name": "Adapters",
+              "description": "Adapters for power, audio, and data connectors"
+            },
+            {
+              "id": "electronics_accessories_cables",
+              "name": "Cables",
+              "description": "Cables for connecting and charging electronic devices"
+            }
+          ]
+        },
+        {
+          "id": "electronics_audio",
+          "name": "Audio",
+          "description": "Products and items in the Audio category",
+          "children": [
+            {
+              "id": "electronics_audio_headphones",
+              "name": "Headphones",
+              "description": "Headphones and earbuds"
+            },
+            {
+              "id": "electronics_audio_speakers",
+              "name": "Speakers",
+              "description": "Loudspeakers and sound systems"
+            }
+          ]
+        },
+        {
+          "id": "electronics_computers",
+          "name": "Computers",
+          "description": "Products and items in the Computers category"
+        },
+        {
+          "id": "electronics_components",
+          "name": "Components",
+          "description": "Products and items in the Components category"
+        },
+        {
+          "id": "electronics_communications",
+          "name": "Communications",
+          "description": "Products and items in the Communications category"
+        },
+        {
+          "id": "electronics_networking",
+          "name": "Networking",
+          "description": "Products and items in the Networking category"
+        },
+        {
+          "id": "electronics_video",
+          "name": "Video",
+          "description": "Products and items in the Video category"
+        }
+      ]
+    },
+    {
+      "id": "clothing_and_accessories",
+      "name": "Clothing & Accessories",
+      "description": "Apparel, fashion, and related accessories.",
+      "children": [
+        {
+          "id": "clothing_accessories",
+          "name": "Clothing Accessories",
+          "description": "Products and items in the Clothing Accessories category"
+        },
+        {
+          "id": "clothing_costumes_and_accessories",
+          "name": "Costumes & Accessories",
+          "description": "Products and items in the Costumes & Accessories category"
+        },
+        {
+          "id": "clothing_handbags_wallets_and_cases",
+          "name": "Handbags, Wallets & Cases",
+          "description": "Products and items in the Handbags, Wallets & Cases category"
+        },
+        {
+          "id": "clothing_jewelry",
+          "name": "Jewelry",
+          "description": "Products and items in the Jewelry category"
+        },
+        {
+          "id": "clothing_shoe_accessories",
+          "name": "Shoe Accessories",
+          "description": "Products and items in the Shoe Accessories category"
+        },
+        {
+          "id": "clothing_shoes",
+          "name": "Shoes",
+          "description": "Products and items in the Shoes category",
+          "children": [
+            {
+              "id": "clothing_shoes_athletic",
+              "name": "Athletic Shoes",
+              "description": "Athletic and training shoes"
+            },
+            {
+              "id": "clothing_shoes_formal",
+              "name": "Formal Shoes",
+              "description": "Formal and dress shoes"
+            }
+          ]
+        },
+        {
+          "id": "clothing_clothing",
+          "name": "Clothing",
+          "description": "Products and items in the Clothing category"
+        }
+      ]
+    },
+    {
+      "id": "home_goods",
+      "name": "Home Goods",
+      "description": "Household items, home decor, and everyday home products."
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "description": "Printed and digital books across genres."
+    },
+    {
+      "id": "toys",
+      "name": "Toys",
+      "description": "Children’s toys, games, and play products."
+    },
+    {
+      "id": "sporting_goods",
+      "name": "Sporting Goods",
+      "description": "Sports, fitness, and outdoor recreational products."
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hand and power tools, hardware, and repair equipment."
+    },
+    {
+      "id": "pet_products",
+      "name": "Pet Products",
+      "description": "Products for pet care, feeding, and wellness."
+    },
+    {
+      "id": "cosmetics",
+      "name": "Cosmetics",
+      "description": "Beauty, personal care, and cosmetic products."
+    },
+    {
+      "id": "auto_parts",
+      "name": "Auto Parts",
+      "description": "Vehicle parts, fluids, and automotive maintenance items."
+    }
+  ]
+}

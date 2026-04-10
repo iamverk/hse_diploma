@@ -1,0 +1,11 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,1,"Initialize L1 skeleton from product corpus",false,crash,N/A,N/A,N/A,N/A,N/A,1503
+2,1,"Initialize L1 skeleton from product corpus",true,crash,N/A,N/A,N/A,N/A,N/A,3721
+3,2,"Expand L2 for Electronics and Clothing",false,crash,N/A,N/A,N/A,N/A,N/A,1503
+4,2,"Expand L2 for Electronics and Clothing",true,keep,N/A,N/A,N/A,N/A,N/A,1322
+5,3,"Expand L2 for Home Goods and Books",false,crash,0.6029823707862639,0.45690085038088835,0.6452188967312782,N/A,72,1503
+6,3,"Expand L2 for Home Goods and Books",true,keep,0.6029823791812843,0.45690085038088835,0.6452189000892864,N/A,72,690
+7,4,"Expand L2 for remaining L1 domains",true,crash,0.614436188309463,0.29137221081132225,0.6049281828216138,N/A,98,1503
+8,5,"Expand L3: Electronics subtree",false,discard,0.595048919861967,0.38571228522777296,0.6248396041207935,N/A,111,631
+9,4,"Expand L2 for remaining L1 domains",false,discard,0.6144361898456652,0.29137221081132225,0.6049281834360947,N/A,98,670
+10,4,"Expand L2 for remaining L1 domains",true,keep,0.6104286389691489,0.3847341484856896,0.6313709956193876,N/A,106,2404

@@ -2,10 +2,10 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Story 7 status: passes true
-- Validation: NLIV>=0.60 on all new Home Goods L3 edges, CSC=n/a, Composite=0.0035, nodes=150
+- Story 8 status: passes true
+- Validation: NLIV/CSC/Composite values not recomputed this iteration; validate.py passed, nodes=160
 - Weak edges: none
 
 ## Decisions This Iteration
-- Rebalanced Home Goods L3 so each original L2 node has 3 children and introduced 4 new Home Goods L2 branches with NLIV-validated children.
-- Added 12 nodes to reach 150 while preserving `validate.py` constraints and preserving sibling MECE coverage.
+- Added 10 Book nodes under `books` while preserving existing taxonomy patterns: expanded Non-Fiction, Textbooks, and Cookbooks with one child each and added new `books_reference` and `books_travel` L2 branches.
+- Validated all new and modified Books edges with `tools/check_edge.py` (all `EXCELLENT`) and verified structure with `validate.py` (160 nodes, passes).

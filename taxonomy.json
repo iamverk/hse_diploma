@@ -529,6 +529,11 @@
               "id": "books_non_fiction_memoir",
               "name": "Memoir",
               "description": "Personal account and reflective works"
+            },
+            {
+              "id": "books_non_fiction_essays",
+              "name": "Essays",
+              "description": "Essay collections and literary non-fiction"
             }
           ]
         },
@@ -590,6 +595,11 @@
               "id": "books_textbooks_college_textbooks",
               "name": "College Textbooks",
               "description": "Academic textbooks for college-level courses"
+            },
+            {
+              "id": "books_textbooks_professional_textbooks",
+              "name": "Professional Textbooks",
+              "description": "Textbooks for advanced and vocational study"
             }
           ]
         },
@@ -607,6 +617,50 @@
               "id": "books_cookbooks_recipes",
               "name": "Recipe Collections",
               "description": "Everyday recipe collections and meal guides"
+            },
+            {
+              "id": "books_cookbooks_specialty_cooking",
+              "name": "Specialty Cooking",
+              "description": "Cookbooks for regional, diet, or technique-specific cooking"
+            }
+          ]
+        },
+        {
+          "id": "books_reference",
+          "name": "Reference",
+          "description": "Reference books and lookup-oriented resources",
+          "children": [
+            {
+              "id": "books_reference_style_guides",
+              "name": "Style Guides",
+              "description": "Authoritative style manuals and writing references"
+            },
+            {
+              "id": "books_reference_dictionaries",
+              "name": "Dictionaries",
+              "description": "Dictionaries and language reference works"
+            }
+          ]
+        },
+        {
+          "id": "books_travel",
+          "name": "Travel",
+          "description": "Travel books and destination-focused guides",
+          "children": [
+            {
+              "id": "books_travel_guidebooks",
+              "name": "Travel Guidebooks",
+              "description": "Destination guidebooks for planning trips"
+            },
+            {
+              "id": "books_travel_atlases",
+              "name": "Travel Atlases",
+              "description": "Maps, maps collections, and travel atlases"
+            },
+            {
+              "id": "books_travel_city_guides",
+              "name": "City Guides",
+              "description": "Detailed guides for specific cities and regions"
             }
           ]
         }

@@ -2,8 +2,8 @@
 - No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
 
 ## Current State
-- Story 15 status: passes true
-- Validation: validate.py passed (nodes=237, edges=236, max depth=3, 0 warnings). NLIV mean=0.6262, weak edges=0 via nliv threshold 0.3.
+- Story 16 status: passes true
+- Validation: validate.py passed (nodes=239, edges=238, max depth=4, 0 warnings). NLIV mean=0.6252, CSC=0.4098, Branching CV=0.4851, chains=0.
 - Story 14 status: passes true
 - Story 9 status: passes true
 - Story 10 status: passes true
@@ -12,6 +12,6 @@
 - Story 13 status: passes true
 
 ## Decisions This Iteration
-- Completed Story 15 in-place because current taxonomy already had zero weak edges and NLIV mean above threshold.
-- Ran `tools/metrics_v2.py taxonomy.json --json` to verify weak-edge condition and `tools/validate.py` to confirm structural validity.
+- Completed Story 16 as already-passing after the last taxonomy state review: CSC is above 0.35, chain count is zero, and branching CV is below 0.8.
+- Ran `tools/validate.py` and `tools/metrics_v2.py taxonomy.json --json` to confirm Story 16 criteria before closing.
 - No taxonomy edges were added in this iteration, so no new `check_edge` calls were required.

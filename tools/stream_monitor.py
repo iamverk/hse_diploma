@@ -104,27 +104,34 @@ def process_stream_file(filepath: str):
 
             event_type = event.get("type", "")
 
-            # Tool call detection
-            if event_type in ("tool_use", "tool_call", "tool_result"):
+            # Tool call detection — cursor-agent stream-json format:
+            # {"type": "tool_call", "tool_call": {"editToolCall": {"args": {"path": "..."}}}}
+            if event_type == "tool_call":
                 tool_calls += 1
-                tool_name = event.get("name", event.get("tool", ""))
+                tc = event.get("tool_call", {})
+
+                # Extract path from any tool call type
+                file_path = ""
+                tool_kind = ""
+                for key in tc:
+                    if key.endswith("ToolCall"):
+                        tool_kind = key.replace("ToolCall", "")
+                        args = tc[key].get("args", {})
+                        file_path = args.get("path", args.get("file_path", ""))
+                        break
 
                 # Detect taxonomy.json edits
-                if tool_name in ("Write", "Edit", "edit", "write"):
-                    file_path = event.get("input", {}).get("file_path", "")
-                    if not file_path:
-                        file_path = event.get("input", {}).get("path", "")
+                if tool_kind in ("edit", "write"):
                     if "taxonomy.json" in str(file_path):
                         taxonomy_edited = True
                         file_edits += 1
 
                 # Detect shell calls
-                if tool_name in ("Shell", "Bash", "bash", "shell", "terminal"):
+                if tool_kind == "shell":
                     shell_calls += 1
 
                 # Detect taxonomy reads
-                if tool_name in ("Read", "read", "Cat", "cat"):
-                    file_path = event.get("input", {}).get("file_path", "")
+                if tool_kind == "read":
                     if "taxonomy.json" in str(file_path):
                         taxonomy_reads += 1
 

@@ -215,11 +215,11 @@ for i in $(seq 1 $MAX_ITERATIONS); do
         AGENT_PID=$(pgrep -f "cursor-agent.*stream-json" 2>/dev/null | head -1)
         echo "  [watchdog] cursor-agent PID=$AGENT_PID, tee PID=$PIPE_PID"
         echo "  [watchdog] Stream file: $STREAM_FILE"
-        echo "  [watchdog] Silence timeout: ${WATCHDOG_TIMEOUT}s, Hard timeout: 1500s"
+        echo "  [watchdog] Silence timeout: ${WATCHDOG_TIMEOUT}s, Hard timeout: 2700s (45 min)"
 
         # ── Watchdog loop: mtime-based silence detection ────────────────
         WAIT_SECS=0
-        HARD_TIMEOUT=1500
+        HARD_TIMEOUT=2700  # 45 min — real guard is silence watchdog
         LAST_SIZE=0
         SILENCE_START=$SECONDS
 

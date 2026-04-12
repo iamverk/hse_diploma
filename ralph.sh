@@ -20,7 +20,7 @@ export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 # ── Defaults ────────────────────────────────────────────────────────────────
 MAX_ITERATIONS=40
 TOOL="cursor"
-MODEL="gpt-5.3-codex-spark-preview-high"
+MODEL="gpt-5.3-codex-spark-preview-xhigh"
 WATCHDOG_TIMEOUT=90  # 90s silence → kill (lightweight model)
 
 # ── Parse arguments ──────────────────────────────────────────────────────────

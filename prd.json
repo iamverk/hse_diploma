@@ -32,7 +32,7 @@
       "id": 5,
       "title": "Expand L2: Books (3-5 subcategories)",
       "acceptanceCriteria": "Books has 3-5 L2 children. NLIV > 0.35.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 6,

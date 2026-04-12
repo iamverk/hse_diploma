@@ -1,0 +1,3 @@
+{"ts": "2026-04-12T19:39:31.112587", "type": "stream_processed", "file": "output/cursor_stream_iter1.jsonl", "lines": 76, "tool_calls": 66, "file_edits": 0, "shell_calls": 0, "taxonomy_edited": false, "taxonomy_reads": 0}
+{"ts": "2026-04-12T19:54:59.736308", "type": "stream_processed", "file": "output/cursor_stream_iter1.jsonl", "lines": 76, "tool_calls": 66, "file_edits": 2, "shell_calls": 32, "taxonomy_edited": true, "taxonomy_reads": 2}
+{"ts": "2026-04-12T20:04:53.830664", "type": "stream_processed", "file": "output/cursor_stream_iter2.jsonl", "lines": 75, "tool_calls": 73, "file_edits": 0, "shell_calls": 63, "taxonomy_edited": false, "taxonomy_reads": 2}

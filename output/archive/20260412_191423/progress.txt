@@ -1,0 +1,13 @@
+## Discovered Patterns
+- No local products.jsonl; use data/experiments/*/start_taxonomy.json as domain priors
+- Atomic stories (1 domain, 1 level) prevent timeouts
+- check_edge.py --batch is faster than individual calls
+- Wu-Palmer CSC has ceiling for domains with poor WordNet coverage (Pet Products, Cosmetics)
+
+## Current State
+- Story 1 status: not started
+- Validation: fresh taxonomy, 1 node (root only)
+- This is Experiment 9: stream monitor + watchdog
+
+## Decisions This Iteration
+- Fresh start from empty taxonomy

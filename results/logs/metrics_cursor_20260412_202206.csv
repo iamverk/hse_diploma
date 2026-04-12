@@ -1,0 +1,5 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,2,"Expand L2: Electronics (3-5 subcategories)",true,keep,0.5075710435708364,0.43325834669376573,0.6130059214364643,N/A,16,1375
+2,3,"Expand L2: Clothing (3-5 subcategories)",true,keep,0.5532862409949303,0.48189153154653275,0.6446687524263355,N/A,21,1285
+3,4,"Expand L2: Home Goods (3-5 subcategories)",true,keep,0.5495042514801025,0.4380228791301853,0.6304239546402701,N/A,26,1185
+4,5,"Expand L2: Books (3-5 subcategories)",true,keep,0.577836940685908,0.49957196243669216,0.6610063650053708,N/A,31,1655

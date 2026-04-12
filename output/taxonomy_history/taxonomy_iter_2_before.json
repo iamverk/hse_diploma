@@ -1,57 +1,93 @@
 {
   "id": "root",
-  "name": "Merchandise",
-  "description": "Root node of the product category hierarchy",
+  "name": "Products",
+  "description": "Root node of the product category taxonomy",
   "children": [
     {
       "id": "electronics",
       "name": "Electronics",
-      "description": "Electronic devices, components, and accessories."
+      "description": "Electronic devices, components, and accessories",
+      "children": [
+        {
+          "id": "computers",
+          "name": "Computers",
+          "description": "Laptops, desktops, and workstations"
+        },
+        {
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital still and video cameras, webcams, and imaging accessories"
+        },
+        {
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Smartphones, cellular devices, and mobile communication hardware"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, smart displays, streaming receivers, and video playback screens"
+        },
+        {
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
+        }
+      ]
     },
     {
-      "id": "clothing_and_accessories",
-      "name": "Clothing & Accessories",
-      "description": "Apparel, fashion, and related accessories."
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Apparel, footwear, and accessories",
+      "children": []
     },
     {
       "id": "home_goods",
       "name": "Home Goods",
-      "description": "Household items, home decor, and everyday home products."
+      "description": "Household essentials, decor, and home maintenance items",
+      "children": []
     },
     {
       "id": "books",
       "name": "Books",
-      "description": "Printed and digital books across genres."
+      "description": "Printed and digital books, magazines, and related reading media",
+      "children": []
     },
     {
       "id": "toys",
       "name": "Toys",
-      "description": "Children’s toys, games, and play products."
-    },
-    {
-      "id": "sporting_goods",
-      "name": "Sporting Goods",
-      "description": "Sports, fitness, and outdoor recreational products."
-    },
-    {
-      "id": "tools",
-      "name": "Tools",
-      "description": "Hand and power tools, hardware, and repair equipment."
+      "description": "Children's toys, games, and play accessories",
+      "children": []
     },
     {
       "id": "pet_products",
       "name": "Pet Products",
-      "description": "Products for pet care, feeding, and wellness."
+      "description": "Products for pet care, feeding, accessories, and health",
+      "children": []
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hardware, DIY tools, and shop equipment",
+      "children": []
+    },
+    {
+      "id": "automotive_parts",
+      "name": "Automotive Parts",
+      "description": "Automotive components, accessories, and maintenance supplies",
+      "children": []
     },
     {
       "id": "cosmetics",
       "name": "Cosmetics",
-      "description": "Beauty, personal care, and cosmetic products."
+      "description": "Skincare, beauty, and personal care products",
+      "children": []
     },
     {
-      "id": "auto_parts",
-      "name": "Auto Parts",
-      "description": "Vehicle parts, fluids, and automotive maintenance items."
+      "id": "outdoor_goods",
+      "name": "Outdoor Goods",
+      "description": "Camping, lighting, and outdoor living products",
+      "children": []
     }
   ]
 }

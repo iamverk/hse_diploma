@@ -1,7 +1,4 @@
-{"ts": "2026-04-12T18:49:20.892375", "type": "monitor_start", "pid": 0, "silence_timeout": 5}
-{"ts": "2026-04-12T18:49:20.892806", "type": "taxonomy_edit", "tool": "Edit", "edit_num": 1}
-{"ts": "2026-04-12T18:49:21.196674", "type": "shell_call", "command": "echo hello"}
-{"ts": "2026-04-12T18:49:21.197057", "type": "message_complete", "tool_calls": 2, "file_edits": 1, "shell_calls": 1, "taxonomy_edited": true}
-{"ts": "2026-04-12T18:49:21.197163", "type": "monitor_stop", "tool_calls": 2, "file_edits": 1, "shell_calls": 1, "taxonomy_edited": true}
-{"ts": "2026-04-12T18:51:14.194849", "type": "monitor_start", "pid": 99999, "silence_timeout": 3}
-{"ts": "2026-04-12T18:51:14.195750", "type": "monitor_stop", "tool_calls": 0, "file_edits": 0, "shell_calls": 0, "taxonomy_edited": false}
+{"ts": "2026-04-12T20:45:01.813627", "type": "stream_processed", "file": "output/cursor_stream_iter1.jsonl", "lines": 64, "tool_calls": 54, "file_edits": 0, "shell_calls": 30, "taxonomy_edited": false, "taxonomy_reads": 2}
+{"ts": "2026-04-12T21:06:36.876568", "type": "stream_processed", "file": "output/cursor_stream_iter2.jsonl", "lines": 83, "tool_calls": 72, "file_edits": 0, "shell_calls": 38, "taxonomy_edited": false, "taxonomy_reads": 2}
+{"ts": "2026-04-12T21:26:34.537362", "type": "stream_processed", "file": "output/cursor_stream_iter3.jsonl", "lines": 55, "tool_calls": 46, "file_edits": 0, "shell_calls": 34, "taxonomy_edited": false, "taxonomy_reads": 0}
+{"ts": "2026-04-12T21:54:21.795162", "type": "stream_processed", "file": "output/cursor_stream_iter4.jsonl", "lines": 61, "tool_calls": 52, "file_edits": 0, "shell_calls": 38, "taxonomy_edited": false, "taxonomy_reads": 2}

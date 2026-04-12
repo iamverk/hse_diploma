@@ -39,7 +39,33 @@
       "id": "clothing",
       "name": "Clothing",
       "description": "Apparel, footwear, and accessories",
-      "children": []
+      "children": [
+        {
+          "id": "mens_clothing",
+          "name": "Men's Clothing",
+          "description": "Clothing designed for adult men including shirts, pants, and outerwear"
+        },
+        {
+          "id": "womens_clothing",
+          "name": "Women's Clothing",
+          "description": "Clothing designed for adult women including tops, bottoms, and dresses"
+        },
+        {
+          "id": "kids_clothing",
+          "name": "Kids Clothing",
+          "description": "Clothing for babies, children, and teens"
+        },
+        {
+          "id": "footwear",
+          "name": "Footwear",
+          "description": "Shoes, sandals, boots, socks, and related foot wear"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "description": "Headwear, belts, jewelry, watches, and other apparel accessories"
+        }
+      ]
     },
     {
       "id": "home_goods",

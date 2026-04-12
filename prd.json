@@ -26,7 +26,7 @@
       "id": 4,
       "title": "Expand L2: Home Goods (3-5 subcategories)",
       "acceptanceCriteria": "Home Goods has 3-5 L2 children. NLIV > 0.35.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 5,

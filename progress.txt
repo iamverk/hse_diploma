@@ -6,6 +6,7 @@
 - Wu-Palmer CSC has ceiling for domains with poor WordNet coverage (Pet Products, Cosmetics)
 - Using a root label that matches corpus vocabulary (e.g., "Products") improves root-level NLIV
 - Smartphones, laptops, phones, TVs, cameras, and headphones all show strong Electronics partitionability in corpus text
+- Home Goods text clusters into clear groups for decor, storage, furniture, improvement, and cleaning products.
 
 ## Current State
 - Story 1 status: passes true
@@ -16,9 +17,12 @@
 - This is Experiment 9: stream monitor + watchdog
 - Story 3 status: passes true
 - Validation: Nodes=21, max depth=2, valid=True; edge_precision=0.0500, edge_recall=0.0024, edge_f1=0.0046
+- Story 4 status: passes true
+- Validation: Nodes=26, max depth=2, valid=True; Home Goods now has 5 L2 children
 
 ## Decisions This Iteration
 - Root label updated to "Products"
 - Added 10 L1 children from product corpus to initialize domain skeleton: electronics, clothing, home_goods, books, toys, pet_products, tools, automotive_parts, cosmetics, outdoor_goods
 - Reworked Electronics L2: final split is smartphones, computers, televisions, cameras, headphones (all check_edge-good)
 - Expanded Clothing to five L2 nodes (mens_clothing, womens_clothing, kids_clothing, footwear, accessories) after batch edge check and CLI add-node updates.
+- Expanded Home Goods L2 to five nodes (home_decor, home_storage, home_improvement, cleaning_supplies, furniture) after batched check_edge and CLI add-node updates.

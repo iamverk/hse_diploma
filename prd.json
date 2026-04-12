@@ -8,7 +8,7 @@
       "id": 1,
       "title": "Initialize L1 skeleton from product corpus",
       "acceptanceCriteria": "Root has 8+ L1 children. >=10 nodes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,

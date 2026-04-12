@@ -7,7 +7,33 @@
       "id": "electronics",
       "name": "Electronics",
       "description": "Electronic devices, components, and accessories",
-      "children": []
+      "children": [
+        {
+          "id": "computers",
+          "name": "Computers",
+          "description": "Laptops, desktops, and workstations"
+        },
+        {
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital still and video cameras, webcams, and imaging accessories"
+        },
+        {
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Smartphones, cellular devices, and mobile communication hardware"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, smart displays, streaming receivers, and video playback screens"
+        },
+        {
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
+        }
+      ]
     },
     {
       "id": "clothing",

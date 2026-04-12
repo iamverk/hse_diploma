@@ -14,7 +14,7 @@
       "id": 2,
       "title": "Expand L2: Electronics (3-5 subcategories)",
       "acceptanceCriteria": "Electronics has 3-5 L2 children. NLIV > 0.35.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 3,

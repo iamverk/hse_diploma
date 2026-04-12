@@ -1,0 +1,12 @@
+## Discovered Patterns
+- No `data/products.jsonl` file is present in this workspace snapshot; `data/experiments/*/start_taxonomy.json` and prior `output/taxonomy_history/*` files can be used as domain priors when needed.
+
+## Current State
+- Story 17 status: passes true
+- Validation: validate.py passed (nodes=239, edges=238, max depth=4, 0 warnings). NLIV mean=0.6252, CSC=0.4098, Branching CV=0.4851, chains=0.
+- Composite score=0.6439, NTED=1.0, weak edges=0
+
+## Decisions This Iteration
+- Ran `tools/validate.py` and `tools/metrics_v2.py taxonomy.json reference/gold_standard.json --json` to confirm Story 17 acceptance.
+- Story 17 criteria are satisfied (composite 0.6439, NLIV 0.6252, CSC 0.4098, 239 nodes), so status was set to `passes: true` in `prd.json`.
+- No taxonomy edits were required for final optimization, so no edge additions and therefore no `check_edge` calls were required.

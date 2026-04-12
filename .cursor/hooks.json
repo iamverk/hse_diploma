@@ -15,16 +15,6 @@
             {
                 "command": "./.cursor/hooks/rollback-counter.sh"
             }
-        ],
-        "beforeReadFile": [
-            {
-                "command": "./.cursor/hooks/budget-reader.py"
-            }
-        ],
-        "stop": [
-            {
-                "command": "./.cursor/hooks/stop-snapshot.sh"
-            }
         ]
     }
 }

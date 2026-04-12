@@ -1,12 +1,13 @@
 #!/bin/bash
 #
-# ralph.sh — Autonomous taxonomy builder loop v5 (with rollback + keep/discard).
+# ralph.sh — Autonomous taxonomy builder loop v9 (stream-monitor + watchdog).
 #
-# Improvements over v3:
-#   - Git rollback: if composite score drops after an iteration → git reset
-#   - Keep/discard logging: each iteration logged as keep|discard|crash
-#   - Auto-archive: backs up previous experiment before starting
-#   - One-story-per-iteration enforced in prompt
+# Improvements over v8:
+#   - Stream-JSON monitor: parses cursor-agent output in real-time
+#   - Watchdog: kills agent if no output for 5 minutes (fixes 17h hang)
+#   - Only CLI-working hooks kept (beforeShellExecution, afterFileEdit)
+#   - Removed broken hooks (beforeReadFile, stop)
+#   - Auto-validate via stream monitor (not dependent on afterFileEdit hook)
 #
 # Usage:
 #   ./ralph.sh [max_iterations] [--tool claude|amp|cursor] [--model MODEL]
@@ -20,6 +21,7 @@ export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 MAX_ITERATIONS=40
 TOOL="cursor"
 MODEL="gpt-5.3-codex-spark-preview-high"
+WATCHDOG_TIMEOUT=300  # 5 minutes silence → kill
 
 # ── Parse arguments ──────────────────────────────────────────────────────────
 while [[ $# -gt 0 ]]; do
@@ -32,11 +34,13 @@ while [[ $# -gt 0 ]]; do
             MODEL="$2"; shift 2 ;;
         --model=*)
             MODEL="${1#*=}"; shift ;;
+        --watchdog)
+            WATCHDOG_TIMEOUT="$2"; shift 2 ;;
         [0-9]*)
             MAX_ITERATIONS="$1"; shift ;;
         *)
             echo "Unknown argument: $1"
-            echo "Usage: ./ralph.sh [max_iterations] [--tool claude|amp|cursor] [--model MODEL]"
+            echo "Usage: ./ralph.sh [max_iterations] [--tool claude|amp|cursor] [--model MODEL] [--watchdog SECS]"
             exit 1 ;;
     esac
 done
@@ -46,18 +50,21 @@ PRD_FILE="prd.json"
 PROGRESS_FILE="progress.txt"
 TAXONOMY_FILE="taxonomy.json"
 PYTHON="/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python"
+export PYTHON  # stream_monitor.py uses this
 LOG_DIR="results/logs"
 HISTORY_DIR="output/taxonomy_history"
+STREAM_MONITOR="tools/stream_monitor.py"
 
 STUCK_FILE="output/stuck_domains.txt"
 ROLLBACK_COUNTS="output/rollback_counts.json"
 
 echo "==========================================="
-echo "  TAXONOMY RALPH LOOP (v8 — hooks+rules+skills)"
-echo "  Tool:           $TOOL"
-echo "  Max iterations: $MAX_ITERATIONS"
+echo "  TAXONOMY RALPH LOOP (v9 — stream-monitor+watchdog)"
+echo "  Tool:              $TOOL"
+echo "  Max iterations:    $MAX_ITERATIONS"
+echo "  Watchdog timeout:  ${WATCHDOG_TIMEOUT}s"
 if [ "$TOOL" = "cursor" ]; then
-    echo "  Model:          $MODEL"
+    echo "  Model:             $MODEL"
 fi
 echo "==========================================="
 
@@ -114,14 +121,18 @@ if [ -f "output/iteration_log.jsonl" ]; then
     cp "$PROGRESS_FILE" "$ARCHIVE_DIR/" 2>/dev/null || true
     cp "$TAXONOMY_FILE" "$ARCHIVE_DIR/" 2>/dev/null || true
     cp "output/iteration_log.jsonl" "$ARCHIVE_DIR/" 2>/dev/null || true
+    cp "output/stream_events.jsonl" "$ARCHIVE_DIR/" 2>/dev/null || true
+    cp "output/hook_metrics.jsonl" "$ARCHIVE_DIR/" 2>/dev/null || true
     echo "Archived previous run to $ARCHIVE_DIR/"
 fi
 
 # ── Create output directories ────────────────────────────────────────────────
 mkdir -p "$LOG_DIR" "$HISTORY_DIR" "output"
 
-# ── Clear iteration log for fresh run ────────────────────────────────────────
+# ── Clear logs for fresh run ────────────────────────────────────────────────
 > "output/iteration_log.jsonl"
+> "output/stream_events.jsonl"
+> "output/hook_metrics.jsonl"
 
 # ── Init per-run CSV log ─────────────────────────────────────────────────────
 METRICS_CSV="$LOG_DIR/metrics_${TOOL}_$(date +%Y%m%d_%H%M%S).csv"
@@ -155,7 +166,6 @@ for i in $(seq 1 $MAX_ITERATIONS); do
         DOMAIN_NAME=$(echo "$CURRENT_STORY" | grep -oP '(?:Expand|Refine|Fix).*?:\s*\K\S+' 2>/dev/null || echo "")
         if [ -n "$DOMAIN_NAME" ] && grep -qw "$DOMAIN_NAME" "$STUCK_FILE" 2>/dev/null; then
             echo "⏭ SKIP: Domain '$DOMAIN_NAME' is in stuck_domains.txt (3+ consecutive rollbacks)"
-            # Auto-mark story as passed with skip note
             jq "(.userStories[] | select(.id == $CURRENT_ID)) .passes = true | (.userStories[] | select(.id == $CURRENT_ID)) .notes = \"skipped — CSC metric ceiling\"" "$PRD_FILE" > "${PRD_FILE}.tmp" && mv "${PRD_FILE}.tmp" "$PRD_FILE"
             git add -A && git commit -m "story $CURRENT_ID: skip $DOMAIN_NAME — CSC metric ceiling" 2>/dev/null || true
             echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",true,skip,N/A,N/A,N/A,N/A,N/A,0" >> "$METRICS_CSV"
@@ -184,37 +194,63 @@ for i in $(seq 1 $MAX_ITERATIONS); do
         AGENT_EXIT=$?
 
     elif [ "$TOOL" = "cursor" ]; then
-        AGENT_PID=""
+        # ── Stream-JSON mode with watchdog ──────────────────────────────
+        # Launch cursor-agent with stream-json output piped to monitor
         cursor-agent \
             --print \
+            --output-format stream-json \
+            --stream-partial-output \
             --model "$MODEL" \
             --yolo \
             --trust \
             --workspace . \
-            "$PROMPT" &
-        AGENT_PID=$!
-        # Wait up to 45 min, then kill if stuck
+            "$PROMPT" 2>"output/cursor_stderr_iter${i}.log" | \
+        $PYTHON "$STREAM_MONITOR" --pid 0 --timeout "$WATCHDOG_TIMEOUT" &
+        PIPE_PID=$!
+
+        # Get the actual cursor-agent PID (first process in the pipe)
+        sleep 2
+        AGENT_PID=$(pgrep -P $$ -f "cursor-agent" 2>/dev/null | head -1)
+        if [ -z "$AGENT_PID" ]; then
+            # Fallback: find by name
+            AGENT_PID=$(pgrep -f "cursor-agent.*stream-json" 2>/dev/null | head -1)
+        fi
+
+        echo "  [monitor] cursor-agent PID=$AGENT_PID, monitor PID=$PIPE_PID"
+
+        # Wait for the pipeline to finish (hard timeout at 25 min)
         WAIT_SECS=0
-        while kill -0 $AGENT_PID 2>/dev/null; do
+        HARD_TIMEOUT=1500
+        while kill -0 $PIPE_PID 2>/dev/null; do
             sleep 10
             WAIT_SECS=$((WAIT_SECS + 10))
-            if [ $WAIT_SECS -ge 1500 ]; then
-                echo "TIMEOUT: cursor-agent exceeded 25 minutes — killing PID $AGENT_PID"
-                kill $AGENT_PID 2>/dev/null
+            if [ $WAIT_SECS -ge $HARD_TIMEOUT ]; then
+                echo "HARD TIMEOUT: pipeline exceeded $((HARD_TIMEOUT/60)) minutes"
+                # Kill both cursor-agent and monitor
+                [ -n "$AGENT_PID" ] && kill $AGENT_PID 2>/dev/null
+                kill $PIPE_PID 2>/dev/null
                 sleep 2
-                kill -9 $AGENT_PID 2>/dev/null
+                [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
+                kill -9 $PIPE_PID 2>/dev/null
                 ITER_STATUS="crash"
                 break
             fi
         done
-        wait $AGENT_PID 2>/dev/null
+        wait $PIPE_PID 2>/dev/null
         AGENT_EXIT=$?
+
+        # Check if watchdog killed the agent (look for watchdog_kill in stream events)
+        if grep -q '"watchdog_kill"' "output/stream_events.jsonl" 2>/dev/null; then
+            echo "⚠ Watchdog killed cursor-agent (${WATCHDOG_TIMEOUT}s silence)"
+            ITER_STATUS="crash"
+            # Clean up the actual cursor-agent if still running
+            [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
+        fi
     fi
 
     # Check if agent crashed
     if [ "${AGENT_EXIT:-0}" -ne 0 ] && [ "$ITER_STATUS" != "crash" ]; then
         echo "⚠ Agent exited with code $AGENT_EXIT"
-        # Don't mark as crash if taxonomy was modified (agent may have just had exit code issues)
         if ! git diff --quiet "$TAXONOMY_FILE" 2>/dev/null; then
             echo "  (taxonomy was modified, treating as partial success)"
         else
@@ -244,7 +280,6 @@ for i in $(seq 1 $MAX_ITERATIONS); do
 
     # ── ROLLBACK CHECK: did composite score degrade? ─────────────────────────
     if [ "$ITER_STATUS" != "crash" ] && [ -n "$PREV_COMPOSITE" ] && [ "$COMPOSITE" != "N/A" ]; then
-        # Compare composites using Python (bash can't do float comparison)
         SHOULD_ROLLBACK=$($PYTHON -c "
 prev = $PREV_COMPOSITE
 curr = $COMPOSITE
@@ -258,12 +293,9 @@ print('yes' if curr < prev - 0.02 else 'no')
             HEAD_AFTER=$(git rev-parse HEAD 2>/dev/null || echo "")
             if [ -n "$HEAD_BEFORE" ] && [ "$HEAD_BEFORE" != "$HEAD_AFTER" ]; then
                 git reset --hard "$HEAD_BEFORE"
-                # Restore taxonomy from before snapshot
                 cp "$HISTORY_DIR/taxonomy_iter_${i}_before.json" "$TAXONOMY_FILE"
                 ITER_STATUS="discard"
                 echo "  ✓ Rolled back to $HEAD_BEFORE"
-                # Also revert the story pass status if agent set it
-                # (prd.json was rolled back by git reset)
             else
                 echo "  (no new commits to roll back — agent may not have committed)"
                 ITER_STATUS="discard"
@@ -309,6 +341,10 @@ print('yes' if curr < prev - 0.02 else 'no')
     # ── Log to CSV (with status column) ──────────────────────────────────────
     echo "$i,$CURRENT_ID,\"$CURRENT_STORY\",$STORY_PASS,$ITER_STATUS,$NLIV_MEAN,$CSC_SCORE,$COMPOSITE,$SEM_F1,$NODE_COUNT,$ELAPSED" >> "$METRICS_CSV"
 
+    # ── Log stream monitor stats ─────────────────────────────────────────────
+    STREAM_STATS=$(tail -1 "output/stream_events.jsonl" 2>/dev/null || echo "{}")
+    echo "  [stream] $STREAM_STATS"
+
     # ── Check convergence ────────────────────────────────────────────────────
     CONV_OUTPUT=$($PYTHON tools/convergence.py 2>/dev/null || echo '{"stop": false}')
     CONV_STOP=$(echo "$CONV_OUTPUT" | jq -r '.stop' 2>/dev/null || echo "false")
@@ -322,7 +358,7 @@ print('yes' if curr < prev - 0.02 else 'no')
     # Progress summary
     DONE=$(jq '[.userStories[] | select(.passes == true)] | length' "$PRD_FILE")
     TOTAL=$(jq '.userStories | length' "$PRD_FILE")
-    echo "Progress: $DONE/$TOTAL stories | NLIV=$NLIV_MEAN CSC=$CSC_SCORE Comp=$COMPOSITE | Status=$ITER_STATUS"
+    echo "Progress: $DONE/$TOTAL stories | NLIV=$NLIV_MEAN CSC=$CSC_SCORE Comp=$COMPOSITE | Status=$ITER_STATUS | Elapsed=${ELAPSED}s"
 done
 
 # ── Final summary ─────────────────────────────────────────────────────────────
@@ -345,7 +381,18 @@ echo "--- Iteration Stats ---"
 KEEP_COUNT=$(grep -c ",keep," "$METRICS_CSV" 2>/dev/null || echo "0")
 DISCARD_COUNT=$(grep -c ",discard," "$METRICS_CSV" 2>/dev/null || echo "0")
 CRASH_COUNT=$(grep -c ",crash," "$METRICS_CSV" 2>/dev/null || echo "0")
-echo "Keep: $KEEP_COUNT | Discard: $DISCARD_COUNT | Crash: $CRASH_COUNT"
+SKIP_COUNT=$(grep -c ",skip," "$METRICS_CSV" 2>/dev/null || echo "0")
+echo "Keep: $KEEP_COUNT | Discard: $DISCARD_COUNT | Crash: $CRASH_COUNT | Skip: $SKIP_COUNT"
+
+# ── Stream monitor summary ───────────────────────────────────────────────────
+echo ""
+echo "--- Stream Monitor Stats ---"
+if [ -f "output/stream_events.jsonl" ]; then
+    TOTAL_EVENTS=$(wc -l < "output/stream_events.jsonl" 2>/dev/null || echo "0")
+    WATCHDOG_KILLS=$(grep -c '"watchdog_kill"' "output/stream_events.jsonl" 2>/dev/null || echo "0")
+    TAX_EDITS=$(grep -c '"taxonomy_edit"' "output/stream_events.jsonl" 2>/dev/null || echo "0")
+    echo "Events: $TOTAL_EVENTS | Watchdog kills: $WATCHDOG_KILLS | Taxonomy edits: $TAX_EDITS"
+fi
 
 # ── Save experiment log ──────────────────────────────────────────────────────
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
@@ -359,6 +406,8 @@ git log --oneline > "$RUN_DIR/git_log.txt" 2>/dev/null || true
 $PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" > "$RUN_DIR/final_metrics.txt" 2>/dev/null || true
 $PYTHON tools/metrics_v2.py "$TAXONOMY_FILE" > "$RUN_DIR/final_metrics_v2.txt" 2>/dev/null || true
 cp output/iteration_log.jsonl "$RUN_DIR/iteration_log.jsonl" 2>/dev/null || true
+cp output/stream_events.jsonl "$RUN_DIR/stream_events.jsonl" 2>/dev/null || true
+cp output/hook_metrics.jsonl "$RUN_DIR/hook_metrics.jsonl" 2>/dev/null || true
 
 cat > "$RUN_DIR/config.json" <<CFGEOF
 {
@@ -367,8 +416,9 @@ cat > "$RUN_DIR/config.json" <<CFGEOF
   "domain": "$DOMAIN",
   "max_iterations": $MAX_ITERATIONS,
   "actual_iterations": $i,
+  "watchdog_timeout": $WATCHDOG_TIMEOUT,
   "timestamp": "$TIMESTAMP",
-  "experiment": "v8-hooks-rules-skills"
+  "experiment": "v9-stream-watchdog"
 }
 CFGEOF
 

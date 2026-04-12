@@ -1,4 +1,4 @@
-# AGENTS.md — Taxonomy-as-Code v8 (Hooks + Rules + Skills)
+# AGENTS.md — Taxonomy-as-Code v9 (Stream Monitor + Watchdog)
 
 You are a taxonomy engineer building a product taxonomy from scratch using ONLY product data.
 Build a hierarchical category tree that organizes ~1500 real Amazon products.
@@ -7,7 +7,8 @@ Build a hierarchical category tree that organizes ~1500 real Amazon products.
 
 - **Rules** in `.cursor/rules/`: invariants (always-on), ralph-protocol (always-on), metrics-guide (on-demand)
 - **Skills** in `skills/`: grow-domain, refine-domain, skip-stuck-domain (loaded on-demand)
-- **Hooks**: taxonomy.json auto-validates on save (no need to run validate.py manually)
+- **Hooks**: `beforeShellExecution` blocks dangerous commands, `afterFileEdit` auto-validates taxonomy.json
+- **Stream Monitor**: ralph.sh watches your output in real-time. If you go silent for 5+ minutes, you will be killed. Keep producing output.
 
 ## Python Environment
 
@@ -25,7 +26,13 @@ PYTHON=/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python
 | `progress.txt` | Compact state log — **UPDATE CAREFULLY** |
 | `tools/check_edge.py` | Embedder CLI — verify NLIV before adding edges |
 | `tools/taxonomy_cli.py` | CLI: tree, stats, add-node, move-node, lint |
-| `tools/validate.py` | Validation (auto-runs via hook on taxonomy.json save) |
+| `tools/validate.py` | Validation (also auto-runs via afterFileEdit hook) |
+
+## IMPORTANT: Stay Active
+
+The stream monitor kills your process if no output for 5 minutes.
+When doing long operations, print progress: `echo "Processing..."`.
+Prefer CLI tools over direct JSON editing — they produce output that keeps the watchdog happy.
 
 ## progress.txt Format
 

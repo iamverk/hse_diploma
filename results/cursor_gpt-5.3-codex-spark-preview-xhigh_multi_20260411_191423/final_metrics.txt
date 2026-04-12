@@ -1,0 +1,13 @@
+============================================================
+TAXONOMY QUALITY METRICS
+============================================================
+Predicted nodes: 239
+Gold nodes:      1694
+Common nodes:    11
+
+Edge Precision:  0.0126
+Edge Recall:     0.0018
+Edge F1:         0.0031
+
+Node Coverage:   0.0065
+Ancestor F1:     0.8099

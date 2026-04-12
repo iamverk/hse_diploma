@@ -1,1475 +1,1229 @@
 {
   "id": "root",
-  "name": "Product Taxonomy",
+  "name": "Merchandise",
   "description": "Root node of the product category hierarchy",
   "children": [
     {
-      "id": "electronics_products",
-      "name": "Electronics Products",
-      "description": "Electronics and electronic accessory products",
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices, components, and accessories",
       "children": [
         {
-          "id": "electronics_audio_equipment",
-          "name": "Audio Equipment",
-          "description": "Devices for listening, speakers, headphones, and sound playback.",
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Handheld mobile phones and smartphones",
           "children": [
             {
-              "id": "audio_headphones",
-              "name": "Headphones",
-              "description": "Audio output devices worn on the ears"
+              "id": "android_phones",
+              "name": "Android Phones",
+              "description": "Android-based smartphones."
             },
             {
-              "id": "audio_speakers",
-              "name": "Speakers",
-              "description": "Loudspeakers and sound output hardware"
+              "id": "i_phones",
+              "name": "iPhones",
+              "description": "Apple iPhones and related models."
             },
             {
-              "id": "audio_microphones",
-              "name": "Microphones",
-              "description": "Devices for capturing or transmitting audio"
+              "id": "flip_phones",
+              "name": "Flip Phones",
+              "description": "Foldable and flip-style smartphones."
             },
             {
-              "id": "audio_turntables",
-              "name": "Turntables",
-              "description": "Vinyl playback and record player devices"
+              "id": "five_g_smartphones",
+              "name": "5G Smartphones",
+              "description": "Smartphones with 5G cellular connectivity."
             },
             {
-              "id": "audio_dj_gear",
-              "name": "DJ Gear",
-              "description": "Audio hardware for DJs and live mixing"
+              "id": "gaming_smartphones",
+              "name": "Gaming Smartphones",
+              "description": "Smartphones optimized for gaming use cases."
             },
             {
-              "id": "audio_home_theater_systems",
-              "name": "Home Theater Systems",
-              "description": "Integrated systems for home AV playback"
+              "id": "rugged_smartphones",
+              "name": "Rugged Smartphones",
+              "description": "Ruggedized and durable smartphones."
             },
             {
-              "id": "audio_studio_audio",
-              "name": "Studio Audio",
-              "description": "Professional recording and studio monitoring equipment"
+              "id": "premium_smartphones",
+              "name": "Premium Smartphones",
+              "description": "High-end flagship smartphones."
             },
             {
-              "id": "audio_accessories",
-              "name": "Audio Accessories",
-              "description": "Cables and accessories for audio devices"
-            },
-            {
-              "id": "audio_wireless_audio",
-              "name": "Wireless Audio",
-              "description": "Bluetooth and wireless audio playback systems"
-            },
-            {
-              "id": "audio_soundbars",
-              "name": "Soundbars",
-              "description": "Soundbar speakers for TV and media setups"
-            },
-            {
-              "id": "audio_audio_receivers",
-              "name": "Audio Receivers",
-              "description": "Amplification and receiver audio components"
-            },
-            {
-              "id": "audio_audio_systems",
-              "name": "Audio Systems",
-              "description": "Complete home and professional audio systems"
+              "id": "budget_smartphones",
+              "name": "Budget Smartphones",
+              "description": "Budget-focused smartphones."
             }
           ]
         },
         {
-          "id": "electronics_computers",
+          "id": "computers",
           "name": "Computers",
-          "description": "Personal computers and computing devices.",
+          "description": "L2 category for Electronics.",
           "children": [
             {
-              "id": "computers_laptops",
-              "name": "Laptops",
-              "description": "Portable personal computers"
+              "id": "desktop_pcs",
+              "name": "Desktop PCs",
+              "description": "Desktop personal computers."
             },
             {
-              "id": "computers_desktops",
-              "name": "Desktops",
-              "description": "Stationary desktop computers"
+              "id": "all_in_one_pcs",
+              "name": "All-in-One PCs",
+              "description": "Integrated desktop all-in-one computers."
             },
             {
-              "id": "computers_components",
-              "name": "Computer Components",
-              "description": "Internal hardware components for computers"
+              "id": "server_computers",
+              "name": "Server Computers",
+              "description": "Server-oriented computer systems."
             },
             {
-              "id": "computers_peripherals",
-              "name": "Computer Peripherals",
-              "description": "External devices connected to computers"
+              "id": "workstations",
+              "name": "Workstations",
+              "description": "High-performance computing workstations."
             },
             {
-              "id": "computers_storage_devices",
-              "name": "Storage Devices",
-              "description": "Internal and external data storage hardware"
+              "id": "gaming_pcs",
+              "name": "Gaming PCs",
+              "description": "Gaming-focused personal computers."
             },
             {
-              "id": "computers_displays",
-              "name": "Computer Displays",
-              "description": "Monitors and display components for computing"
+              "id": "mini_pcs",
+              "name": "Mini PCs",
+              "description": "Compact small-form-factor desktop PCs."
             },
             {
-              "id": "computers_memory_and_storage",
-              "name": "Memory and Storage",
-              "description": "RAM, flash, and system storage materials"
+              "id": "barebone_pcs",
+              "name": "Barebone PCs",
+              "description": "Barebone desktop kits and systems."
             },
             {
-              "id": "computers_graphics_cards",
-              "name": "Graphics Cards",
-              "description": "Dedicated GPUs and graphics hardware"
-            },
-            {
-              "id": "computers_input_devices",
-              "name": "Input Devices",
-              "description": "Input peripherals like keyboards and mice"
-            },
-            {
-              "id": "computers_networking",
-              "name": "Networking",
-              "description": "Network interfaces and connectivity hardware"
-            },
-            {
-              "id": "computers_motherboards",
-              "name": "Motherboards",
-              "description": "Motherboards and baseboards for PCs"
-            },
-            {
-              "id": "computers_cases",
-              "name": "Computer Cases",
-              "description": "Chassis and enclosures for desktop systems"
-            },
-            {
-              "id": "computers_cooling_hardware",
-              "name": "Cooling Hardware",
-              "description": "Cooling and thermal management components"
-            },
-            {
-              "id": "computers_storage_hardware",
-              "name": "Storage Hardware",
-              "description": "Physical media and storage hardware accessories"
+              "id": "computer_laptops",
+              "name": "Computer Laptops",
+              "description": "Laptop products as a computer subclass."
             }
           ]
         },
         {
-          "id": "electronics_mobile_phones",
-          "name": "Mobile Phones",
-          "description": "Cellphones and related communication devices.",
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Wired and wireless audio headphones and earbuds",
           "children": [
             {
-              "id": "mobile_smartphones",
-              "name": "Smartphones",
-              "description": "Consumer smartphones and mobile handsets"
+              "id": "wireless_headphones",
+              "name": "Wireless Headphones",
+              "description": "Wireless headphone products."
             },
             {
-              "id": "mobile_cases",
-              "name": "Mobile Phone Cases",
-              "description": "Protective cases for mobile phones"
+              "id": "wired_headphones",
+              "name": "Wired Headphones",
+              "description": "Wired headphone products."
             },
             {
-              "id": "mobile_screen_protectors",
-              "name": "Screen Protectors",
-              "description": "Protective films and glass for mobile screens"
+              "id": "bluetooth_earbuds",
+              "name": "Bluetooth Earbuds",
+              "description": "Bluetooth-based in-ear earbud sets."
             },
             {
-              "id": "mobile_phone_chargers",
-              "name": "Phone Chargers",
-              "description": "Charging cables and adapters for phones"
+              "id": "over_ear_headphones",
+              "name": "Over-Ear Headphones",
+              "description": "Over-ear headphone types."
             },
             {
-              "id": "mobile_accessories",
-              "name": "Phone Accessories",
-              "description": "General accessories for mobile phones"
+              "id": "in_ear_earbuds",
+              "name": "In-Ear Earbuds",
+              "description": "In-ear earbuds and similar."
             },
             {
-              "id": "mobile_sim_cards",
-              "name": "SIM Cards",
-              "description": "Subscriber identity modules for mobile plans"
+              "id": "noise_cancelling_headphones",
+              "name": "Noise-Cancelling Headphones",
+              "description": "Noise-cancelling headphone models."
             },
             {
-              "id": "mobile_phone_mounts",
-              "name": "Phone Mounts",
-              "description": "Vehicle and desk mounts for phones"
+              "id": "gaming_headsets",
+              "name": "Gaming Headsets",
+              "description": "Gaming-focused headsets with chat audio."
             },
             {
-              "id": "mobile_phone_stands",
-              "name": "Phone Stands",
-              "description": "Tripods and stands for mobile phone use"
+              "id": "studio_headphones",
+              "name": "Studio Headphones",
+              "description": "Studio and recording headphones."
             },
             {
-              "id": "mobile_phone_repairs",
-              "name": "Phone Repairs",
-              "description": "Repair parts and restoration items for mobile phones"
+              "id": "true_wireless_earbuds",
+              "name": "True Wireless Earbuds",
+              "description": "Earbuds without cable connection."
             }
           ]
         },
         {
-          "id": "electronics_cameras",
+          "id": "laptops",
+          "name": "Laptops",
+          "description": "Portable notebook and laptop computers",
+          "children": [
+            {
+              "id": "gaming_laptops",
+              "name": "Gaming Laptops",
+              "description": "Laptop models focused on gaming performance."
+            },
+            {
+              "id": "ultrabooks",
+              "name": "Ultrabooks",
+              "description": "Ultra-portable lightweight laptops."
+            },
+            {
+              "id": "business_laptops",
+              "name": "Business Laptops",
+              "description": "Business- and office-oriented laptops."
+            },
+            {
+              "id": "two_in_one_laptops",
+              "name": "2-in-1 Laptops",
+              "description": "Convertible tablet-laptop hybrids."
+            },
+            {
+              "id": "chromebooks",
+              "name": "Chromebooks",
+              "description": "Chromebook laptop platforms."
+            },
+            {
+              "id": "workstation_laptops",
+              "name": "Workstation Laptops",
+              "description": "Powerful laptops for heavy workloads."
+            },
+            {
+              "id": "netbooks",
+              "name": "Netbooks",
+              "description": "Small lightweight laptop-style netbooks."
+            },
+            {
+              "id": "convertible_laptops",
+              "name": "Convertible Laptops",
+              "description": "Convertible laptop devices."
+            }
+          ]
+        },
+        {
+          "id": "cameras",
           "name": "Cameras",
-          "description": "Photo and video capture devices.",
+          "description": "Image-capturing and photography cameras",
           "children": [
             {
-              "id": "cameras_digital",
-              "name": "Digital Cameras",
-              "description": "Compact and mirrorless digital camera devices"
+              "id": "dslr_cameras",
+              "name": "DSLR Cameras",
+              "description": "Digital single-lens reflex cameras."
             },
             {
-              "id": "cameras_mirrorless",
+              "id": "mirrorless_cameras",
               "name": "Mirrorless Cameras",
-              "description": "Interchangeable-lens mirrorless photography"
+              "description": "Mirrorless interchangeable lens cameras."
             },
             {
-              "id": "cameras_lenses",
-              "name": "Camera Lenses",
-              "description": "Optics for photo and video capture"
-            },
-            {
-              "id": "cameras_tripods",
-              "name": "Tripods",
-              "description": "Tripods and stabilizing support for cameras"
-            },
-            {
-              "id": "cameras_bags",
-              "name": "Camera Bags",
-              "description": "Bags and cases for cameras and gear"
-            },
-            {
-              "id": "cameras_lighting",
-              "name": "Camera Lighting",
-              "description": "Lighting and studio flash for photography"
-            },
-            {
-              "id": "cameras_action",
+              "id": "action_cameras",
               "name": "Action Cameras",
-              "description": "Compact action and adventure cameras"
+              "description": "Portable action and sports cameras."
             },
             {
-              "id": "cameras_security",
+              "id": "security_cameras",
               "name": "Security Cameras",
-              "description": "Cameras for home and office security systems"
+              "description": "Security and surveillance cameras."
             },
             {
-              "id": "cameras_camcorders",
+              "id": "dash_cameras",
+              "name": "Dash Cameras",
+              "description": "In-vehicle dash camera systems."
+            },
+            {
+              "id": "webcams",
+              "name": "Webcams",
+              "description": "Web camera devices."
+            },
+            {
+              "id": "camcorders",
               "name": "Camcorders",
-              "description": "Video camcorders and dedicated recording cameras"
+              "description": "Video-focused consumer camcorders."
             },
             {
-              "id": "cameras_batteries",
-              "name": "Camera Batteries",
-              "description": "Dedicated batteries and chargers for cameras"
+              "id": "instant_cameras",
+              "name": "Instant Cameras",
+              "description": "Instant film and print cameras."
             },
             {
-              "id": "cameras_photo_printers",
-              "name": "Photo Printers",
-              "description": "Printers made for photographic output"
-            },
-            {
-              "id": "cameras_camcorder_accessories",
-              "name": "Camcorder Accessories",
-              "description": "Tripod heads and accessories for camcorders"
+              "id": "camera_phones",
+              "name": "Camera Phones",
+              "description": "Phones marketed primarily as camera phones."
             }
           ]
         },
         {
-          "id": "electronics_smart_devices",
-          "name": "Smart Devices",
-          "description": "Connected smart devices and voice assistants.",
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TV sets and displays for home entertainment",
           "children": [
             {
-              "id": "smart_devices_smart_watches",
+              "id": "smart_tvs",
+              "name": "Smart TVs",
+              "description": "Connected smart televisions."
+            },
+            {
+              "id": "led_tvs",
+              "name": "LED TVs",
+              "description": "LED television displays."
+            },
+            {
+              "id": "oled_tvs",
+              "name": "OLED TVs",
+              "description": "OLED display television models."
+            },
+            {
+              "id": "qled_tvs",
+              "name": "QLED TVs",
+              "description": "QLED television models."
+            },
+            {
+              "id": "four_k_tvs",
+              "name": "4K TVs",
+              "description": "4K-resolution television displays."
+            },
+            {
+              "id": "curved_tvs",
+              "name": "Curved TVs",
+              "description": "Curved-screen televisions."
+            },
+            {
+              "id": "gaming_tvs",
+              "name": "Gaming TVs",
+              "description": "Televisions oriented for gaming."
+            },
+            {
+              "id": "home_theater_tvs",
+              "name": "Home Theater TVs",
+              "description": "Home theater television formats."
+            }
+          ]
+        },
+        {
+          "id": "wearables",
+          "name": "Wearables",
+          "description": "Smartphones, smartwatches, fitness bands, and other connected wearable devices",
+          "children": [
+            {
+              "id": "smart_watches",
               "name": "Smart Watches",
-              "description": "Smart and connected wristwatches"
+              "description": "Smartwatch devices."
             },
             {
-              "id": "smart_devices_activity_trackers",
+              "id": "fitness_trackers",
+              "name": "Fitness Trackers",
+              "description": "Activity and fitness wearable trackers."
+            },
+            {
+              "id": "smart_watch_bands",
+              "name": "Smart Watch Bands",
+              "description": "Replacement and style bands for smartwatches."
+            },
+            {
+              "id": "health_monitors",
+              "name": "Health Monitors",
+              "description": "Wearable health monitoring devices."
+            },
+            {
+              "id": "smart_glasses",
+              "name": "Smart Glasses",
+              "description": "Smart wearable display glasses."
+            },
+            {
+              "id": "activity_trackers",
               "name": "Activity Trackers",
-              "description": "Wearable fitness and activity trackers"
-            },
-            {
-              "id": "smart_devices_tablets",
-              "name": "Tablets",
-              "description": "Portable tablet computers"
-            },
-            {
-              "id": "smart_devices_streaming",
-              "name": "Streaming Devices",
-              "description": "Streaming sticks and media players"
-            },
-            {
-              "id": "smart_devices_smart_home",
-              "name": "Smart Home",
-              "description": "Connected home control and automation devices"
-            },
-            {
-              "id": "smart_devices_home_automation",
-              "name": "Home Automation",
-              "description": "Automation hubs and scheduling devices"
-            },
-            {
-              "id": "smart_devices_smart_lighting",
-              "name": "Smart Lighting",
-              "description": "Connected bulbs, switches, and lighting control"
-            },
-            {
-              "id": "smart_devices_smart_thermostats",
-              "name": "Smart Thermostats",
-              "description": "Programmable connected thermostats"
-            },
-            {
-              "id": "smart_devices_smart_locks",
-              "name": "Smart Locks",
-              "description": "Connected locking mechanisms and smart locks"
-            },
-            {
-              "id": "smart_devices_wearables",
-              "name": "Wearables",
-              "description": "General wearable electronic devices"
-            },
-            {
-              "id": "smart_devices_cameras",
-              "name": "Smart Cameras",
-              "description": "Connected camera devices and smart video devices"
-            }
-          ]
-        },
-        {
-          "id": "electronics_accessories",
-          "name": "Accessories",
-          "description": "General electronics accessory categories",
-          "children": [
-            {
-              "id": "electronics_accessories_cables",
-              "name": "Cables",
-              "description": "Cable products and cable types",
-              "children": [
-                {
-                  "id": "electronics_accessories_cables_usb_cables",
-                  "name": "USB Cables",
-                  "description": "USB cable and connector accessories"
-                },
-                {
-                  "id": "electronics_accessories_cables_hdmi_cables",
-                  "name": "HDMI Cables",
-                  "description": "HDMI and audio/video cable accessories"
-                }
-              ]
-            },
-            {
-              "id": "electronics_accessories_adapters",
-              "name": "Adapters",
-              "description": "Adapter and converter products",
-              "children": [
-                {
-                  "id": "electronics_accessories_adapters_power_adapters",
-                  "name": "Power Adapters",
-                  "description": "Power adapters and wall-plug converters"
-                },
-                {
-                  "id": "electronics_accessories_adapters_wireless_adapters",
-                  "name": "Wireless Adapters",
-                  "description": "Wireless and receiver adapter devices"
-                },
-                {
-                  "id": "electronics_accessories_adapters_electrical_adapters",
-                  "name": "Electrical Adapters",
-                  "description": "Electrical power and plug adapters"
-                },
-                {
-                  "id": "electronics_accessories_adapters_fuel_adapters",
-                  "name": "Fuel Adapters",
-                  "description": "Fuel and gas-related adapters"
-                },
-                {
-                  "id": "electronics_accessories_adapters_connector_adapters",
-                  "name": "Connector Adapters",
-                  "description": "Connector and cable interface adapters"
-                },
-                {
-                  "id": "electronics_accessories_adapters_travel_adapters",
-                  "name": "Travel Adapters",
-                  "description": "Travel power plug and travel adapters"
-                }
-              ]
-            },
-            {
-              "id": "electronics_accessories_charging_products",
-              "name": "Charging Products",
-              "description": "Battery chargers and charging accessories",
-              "children": [
-                {
-                  "id": "electronics_accessories_charging_products_usb_chargers",
-                  "name": "USB Chargers",
-                  "description": "USB-based charging devices"
-                },
-                {
-                  "id": "electronics_accessories_charging_products_car_chargers",
-                  "name": "Car Chargers",
-                  "description": "Automotive charging accessories"
-                },
-                {
-                  "id": "electronics_accessories_charging_products_wireless_chargers",
-                  "name": "Wireless Chargers",
-                  "description": "Qi and wireless charging products"
-                }
-              ]
-            },
-            {
-              "id": "electronics_accessories_game_controllers",
-              "name": "Game Controllers",
-              "description": "Game console controllers and peripherals"
+              "description": "General activity-tracking wearables."
             }
           ]
         }
       ]
     },
     {
-      "id": "clothing_and_accessories_products",
-      "name": "Clothing & Accessories Products",
-      "description": "Apparel and personal accessories products",
+      "id": "clothing_and_accessories",
+      "name": "Clothing & Accessories",
+      "description": "Apparel, footwear, and fashion accessories",
       "children": [
         {
-          "id": "clothing_womens_apparel",
-          "name": "Women's Apparel",
-          "description": "Clothing and outfits for women.",
+          "id": "shirts",
+          "name": "Shirts",
+          "description": "Shirts, tops, and t-shirts for daily wear",
           "children": [
             {
-              "id": "clothing_women_tops",
-              "name": "Women's Tops",
-              "description": "Women's tops and shirts",
-              "children": [
-                {
-                  "id": "clothing_women_tshirts",
-                  "name": "Women's T-Shirts",
-                  "description": "Casual and performance tops for women"
-                },
-                {
-                  "id": "clothing_women_blouses",
-                  "name": "Women's Blouses",
-                  "description": "Lightweight upperwear and blouses for women"
-                }
-              ]
+              "id": "shirts_tshirts",
+              "name": "T-Shirts",
+              "description": "Short-sleeve and casual shirts"
             },
             {
-              "id": "clothing_women_dresses",
-              "name": "Women's Dresses",
-              "description": "Dress styles for women's apparel",
-              "children": [
-                {
-                  "id": "clothing_women_casual_dresses",
-                  "name": "Women's Casual Dresses",
-                  "description": "Everyday and casual dress styles"
-                },
-                {
-                  "id": "clothing_women_formal_dresses",
-                  "name": "Women's Formal Dresses",
-                  "description": "Dressy and occasion-focused women's dresses"
-                }
-              ]
+              "id": "shirts_blouses",
+              "name": "Blouses",
+              "description": "Blouses and lightweight shirt-like tops"
             },
             {
-              "id": "clothing_women_bottoms",
-              "name": "Women's Bottoms",
-              "description": "Bottom garments for women's outfits",
-              "children": [
-                {
-                  "id": "clothing_women_pants",
-                  "name": "Women's Pants",
-                  "description": "Pant styles for women"
-                },
-                {
-                  "id": "clothing_women_leggings",
-                  "name": "Women's Leggings",
-                  "description": "Legwear and stretchy athletic or casual garments"
-                }
-              ]
+              "id": "shirts_hoodies",
+              "name": "Hoodies",
+              "description": "Hooded casual pullovers and sweatshirts"
             },
             {
-              "id": "clothing_women_outerwear",
-              "name": "Women's Outerwear",
-              "description": "Outer layers for women"
-            },
-            {
-              "id": "clothing_women_activewear",
-              "name": "Women's Activewear",
-              "description": "Performance wear for women's activities"
-            },
-            {
-              "id": "clothing_women_sleepwear",
-              "name": "Women's Sleepwear",
-              "description": "Nightwear and sleep garments for women"
+              "id": "shirts_button_down",
+              "name": "Button-Down Shirts",
+              "description": "Collared shirts with button-front closure"
             }
           ]
         },
         {
-          "id": "clothing_mens_apparel",
-          "name": "Men's Apparel",
-          "description": "Clothing and outfits for men.",
+          "id": "pants",
+          "name": "Pants",
+          "description": "Pants, jeans, and similar lower-body apparel",
           "children": [
             {
-              "id": "clothing_men_tops",
-              "name": "Men's Tops",
-              "description": "Shirts and tops for men",
-              "children": [
-                {
-                  "id": "clothing_men_tshirts",
-                  "name": "Men's T-Shirts",
-                  "description": "Crew and performance tees for men"
-                },
-                {
-                  "id": "clothing_men_polos",
-                  "name": "Men's Polos",
-                  "description": "Polo shirts and collared casual tops for men"
-                }
-              ]
+              "id": "pants_jeans",
+              "name": "Jeans",
+              "description": "Denim trousers and jeans"
             },
             {
-              "id": "clothing_men_bottoms",
-              "name": "Men's Bottoms",
-              "description": "Pants and lower garments for men",
-              "children": [
-                {
-                  "id": "clothing_men_jeans",
-                  "name": "Men's Jeans",
-                  "description": "Denim bottoms for men"
-                },
-                {
-                  "id": "clothing_men_shorts",
-                  "name": "Men's Shorts",
-                  "description": "Short trousers and casual shorts for men"
-                }
-              ]
+              "id": "pants_shorts",
+              "name": "Shorts",
+              "description": "Short-length pants and casual shorts"
             },
             {
-              "id": "clothing_men_outerwear",
-              "name": "Men's Outerwear",
-              "description": "Outer layers for men"
+              "id": "pants_leggings",
+              "name": "Leggings",
+              "description": "Leggings and stretch-fit pants"
             },
             {
-              "id": "clothing_men_formalwear",
-              "name": "Men's Formalwear",
-              "description": "Formal outfits for men"
-            },
-            {
-              "id": "clothing_men_activewear",
-              "name": "Men's Activewear",
-              "description": "Performance wear for men"
-            },
-            {
-              "id": "clothing_men_sleepwear",
-              "name": "Men's Sleepwear",
-              "description": "Nightwear and loungewear for men"
+              "id": "pants_dress",
+              "name": "Dress Pants",
+              "description": "Formal and business trousers"
             }
           ]
         },
         {
-          "id": "clothing_footwear",
+          "id": "footwear",
           "name": "Footwear",
-          "description": "Shoes, sneakers, and boots.",
+          "description": "Shoes, sandals, and other footwear",
           "children": [
             {
-              "id": "clothing_footwear_athletic_shoes",
-              "name": "Athletic Shoes",
-              "description": "Sports and training footwear",
-              "children": [
-                {
-                  "id": "clothing_running_shoes",
-                  "name": "Running Shoes",
-                  "description": "Performance running and training shoes"
-                },
-                {
-                  "id": "clothing_basketball_shoes",
-                  "name": "Basketball Shoes",
-                  "description": "Basketball performance sneakers"
-                }
-              ]
+              "id": "footwear_sneakers",
+              "name": "Sneakers",
+              "description": "Sporty casual shoes and athletic sneakers"
             },
             {
-              "id": "clothing_footwear_casual_shoes",
-              "name": "Casual Shoes",
-              "description": "Everyday casual footwear"
-            },
-            {
-              "id": "clothing_footwear_formal_shoes",
-              "name": "Formal Shoes",
-              "description": "Dress and formal footwear"
-            },
-            {
-              "id": "clothing_footwear_boots",
+              "id": "footwear_boots",
               "name": "Boots",
-              "description": "Boot styles for all contexts",
-              "children": [
-                {
-                  "id": "clothing_hiking_boots",
-                  "name": "Hiking Boots",
-                  "description": "Durable boots for outdoor activities"
-                },
-                {
-                  "id": "clothing_work_boots",
-                  "name": "Work Boots",
-                  "description": "Protective and durable work footwear"
-                }
-              ]
+              "description": "Boots for fashion and outdoor use"
             },
             {
-              "id": "clothing_footwear_sandals",
+              "id": "footwear_sandals",
               "name": "Sandals",
-              "description": "Open footwear and sandal styles"
+              "description": "Open-toe casual and beach sandals"
+            },
+            {
+              "id": "footwear_socks",
+              "name": "Socks",
+              "description": "Foot socks and ankle socks"
             }
           ]
         },
         {
-          "id": "clothing_bags_and_accessories",
-          "name": "Bags and Accessories",
-          "description": "Handbags, purses, and fashion accessories.",
+          "id": "dresses",
+          "name": "Dresses",
+          "description": "Dresses and dress-like apparel",
           "children": [
             {
-              "id": "clothing_handbags",
-              "name": "Handbags",
-              "description": "Hand-carry bags for women and women"
+              "id": "dresses_sundress",
+              "name": "Sundresses",
+              "description": "Light, casual summer dresses"
             },
             {
-              "id": "clothing_backpacks",
-              "name": "Backpacks",
-              "description": "Day packs and backpack styles",
-              "children": [
-                {
-                  "id": "bags_travel_backpacks",
-                  "name": "Travel Backpacks",
-                  "description": "Backpacks for travel and commuting"
-                },
-                {
-                  "id": "bags_daypack_backpacks",
-                  "name": "Daypack Backpacks",
-                  "description": "Small day-use backpacks"
-                }
-              ]
+              "id": "dresses_evening",
+              "name": "Evening Dresses",
+              "description": "Formal and party dresses"
             },
             {
-              "id": "clothing_wallets",
-              "name": "Wallets",
-              "description": "Pocket cards and cash organizers"
+              "id": "dresses_casual",
+              "name": "Casual Dresses",
+              "description": "Everyday and relaxed dresses"
             },
             {
-              "id": "clothing_belts",
-              "name": "Belts",
-              "description": "Belts for clothing fastening and style"
-            }
-          ]
-        },
-        {
-          "id": "clothing_jewelry",
-          "name": "Jewelry",
-          "description": "Jewelry and adornment products.",
-          "children": [
-            {
-              "id": "clothing_necklaces",
-              "name": "Necklaces",
-              "description": "Neck accessories in jewelry"
-            },
-            {
-              "id": "clothing_earrings",
-              "name": "Earrings",
-              "description": "Pierced ear jewelry"
-            },
-            {
-              "id": "clothing_rings",
-              "name": "Rings",
-              "description": "Finger jewelry",
-              "children": [
-                {
-                  "id": "clothing_engagement_rings",
-                  "name": "Engagement Rings",
-                  "description": "Rings for engagement and weddings"
-                },
-                {
-                  "id": "clothing_fashion_rings",
-                  "name": "Fashion Rings",
-                  "description": "Style-focused ring categories"
-                }
-              ]
-            },
-            {
-              "id": "clothing_wrist_accessories",
-              "name": "Wrist Accessories",
-              "description": "Wrist-worn accessories such as watches",
-              "children": [
-                {
-                  "id": "clothing_smart_watches",
-                  "name": "Smart Watches",
-                  "description": "Connected smart wrist watches"
-                },
-                {
-                  "id": "clothing_analog_watches",
-                  "name": "Analog Watches",
-                  "description": "Traditional analog wrist watches"
-                }
-              ]
-            },
-            {
-              "id": "clothing_bracelets",
-              "name": "Bracelets",
-              "description": "Wrist and arm bracelets"
+              "id": "dresses_children",
+              "name": "Children's Dresses",
+              "description": "Dresses designed for children"
             }
           ]
         }
       ]
     },
     {
-      "id": "home_products",
-      "name": "Home Products",
-      "description": "Household and home-related products",
+      "id": "home_and_kitchen",
+      "name": "Home Goods",
+      "description": "Household, decor, and home maintenance products",
       "children": [
         {
-          "id": "home_kitchen_appliances",
-          "name": "Kitchen Appliances",
-          "description": "Appliances and electrical tools for home kitchens.",
+          "id": "kitchenware",
+          "name": "Kitchenware",
+          "description": "Kitchen utensils, tools, cookware, and food prep products",
           "children": [
             {
-              "id": "home_cooking_appliances",
-              "name": "Cooking Appliances",
-              "description": "Appliances for cooking tasks",
-              "children": [
-                {
-                  "id": "cooking_air_fryers",
-                  "name": "Air Fryers",
-                  "description": "Air-fryer style cooking appliances"
-                },
-                {
-                  "id": "cooking_rice_cookers",
-                  "name": "Rice Cookers",
-                  "description": "Rice cooking electric appliances"
-                }
-              ]
+              "id": "kitchenware_cookware",
+              "name": "Cookware",
+              "description": "Pots, pans, and cooking vessels"
             },
             {
-              "id": "home_coffee_makers",
-              "name": "Coffee Makers",
-              "description": "Coffee and espresso brewing appliances",
-              "children": [
-                {
-                  "id": "coffee_drip_coffee_makers",
-                  "name": "Drip Coffee Makers",
-                  "description": "Conventional drip coffee brewers"
-                },
-                {
-                  "id": "coffee_espresso_machines",
-                  "name": "Espresso Machines",
-                  "description": "Machine-powered espresso brewing"
-                }
-              ]
+              "id": "kitchenware_bakeware",
+              "name": "Bakeware",
+              "description": "Baking pans, trays, and molds"
             },
             {
-              "id": "home_refrigerators",
-              "name": "Refrigerators",
-              "description": "Refrigeration appliances for food storage"
+              "id": "kitchenware_utensils",
+              "name": "Utensils",
+              "description": "Kitchen tools and utensils"
             },
             {
-              "id": "home_microwave_and_ovens",
-              "name": "Microwave and Ovens",
-              "description": "Microwave and oven appliances"
-            },
-            {
-              "id": "home_blenders",
-              "name": "Blenders",
-              "description": "Blend and mixer style kitchen appliances"
-            },
-            {
-              "id": "home_dishwashers",
-              "name": "Dishwashers",
-              "description": "Automatic dish cleaning appliances"
+              "id": "kitchenware_food_storage",
+              "name": "Food Storage",
+              "description": "Containers and wraps for keeping food"
             }
           ]
         },
         {
-          "id": "home_furniture",
-          "name": "Home Furniture",
-          "description": "Furniture for kitchens, bedrooms, and living spaces.",
+          "id": "furniture",
+          "name": "Furniture",
+          "description": "Household furniture for home and office",
           "children": [
             {
-              "id": "home_living_room_furniture",
-              "name": "Living Room Furniture",
-              "description": "Furniture for living spaces",
-              "children": [
-                {
-                  "id": "furniture_living_room_sofas",
-                  "name": "Sofas",
-                  "description": "Seating for living rooms"
-                },
-                {
-                  "id": "furniture_coffee_tables",
-                  "name": "Coffee Tables",
-                  "description": "Low tables for seating areas"
-                }
-              ]
-            },
-            {
-              "id": "home_bedroom_furniture",
+              "id": "furniture_bedroom",
               "name": "Bedroom Furniture",
-              "description": "Furniture for bedrooms",
-              "children": [
-                {
-                  "id": "furniture_beds",
-                  "name": "Beds",
-                  "description": "Sleep surfaces for bedrooms"
-                },
-                {
-                  "id": "furniture_nightstands",
-                  "name": "Nightstands",
-                  "description": "Bedside side tables"
-                }
-              ]
+              "description": "Beds, nightstands, and bedroom storage"
             },
             {
-              "id": "home_dining_furniture",
+              "id": "furniture_living_room",
+              "name": "Living Room Furniture",
+              "description": "Sofas, chairs, and living room comfort pieces"
+            },
+            {
+              "id": "furniture_dining_room",
               "name": "Dining Room Furniture",
-              "description": "Dining and kitchen dining furniture",
-              "children": [
-                {
-                  "id": "furniture_dining_tables",
-                  "name": "Dining Tables",
-                  "description": "Dining tables for mealtime spaces"
-                },
-                {
-                  "id": "furniture_dining_chairs",
-                  "name": "Dining Chairs",
-                  "description": "Seating for dining rooms"
-                }
-              ]
+              "description": "Dining tables and chairs"
             },
             {
-              "id": "home_home_office_furniture",
-              "name": "Home Office Furniture",
-              "description": "Furniture for home offices",
-              "children": [
-                {
-                  "id": "home_office_chairs",
-                  "name": "Home Office Chairs",
-                  "description": "Chairs for home office workspaces"
-                },
-                {
-                  "id": "home_office_desks",
-                  "name": "Home Office Desks",
-                  "description": "Desks for home office use"
-                }
-              ]
-            },
-            {
-              "id": "home_kitchen_furniture",
-              "name": "Kitchen Furniture",
-              "description": "Built-in and movable kitchen furniture",
-              "children": [
-                {
-                  "id": "furniture_kitchen_islands",
-                  "name": "Kitchen Islands",
-                  "description": "Kitchen work and prep islands"
-                },
-                {
-                  "id": "furniture_kitchen_carts",
-                  "name": "Kitchen Carts",
-                  "description": "Mobile carts for kitchen storage and prep"
-                }
-              ]
-            },
-            {
-              "id": "home_bathroom_furniture",
-              "name": "Bathroom Furniture",
-              "description": "Furniture and vanity units for bathrooms",
-              "children": [
-                {
-                  "id": "furniture_bathroom_vanities",
-                  "name": "Bathroom Vanities",
-                  "description": "Vanity units for bathroom prep"
-                },
-                {
-                  "id": "home_bathroom_cabinets",
-                  "name": "Bathroom Cabinets",
-                  "description": "Storage cabinets for bathrooms"
-                }
-              ]
+              "id": "furniture_patio",
+              "name": "Patio Furniture",
+              "description": "Outdoor patios, decks, and garden furniture"
             }
           ]
         },
         {
           "id": "home_decor",
           "name": "Home Decor",
-          "description": "Decorative items and aesthetic home accents.",
+          "description": "Decorative items and home styling products",
           "children": [
             {
-              "id": "home_wall_decor",
+              "id": "home_decor_wall",
               "name": "Wall Decor",
-              "description": "Wall art and decor elements",
-              "children": [
-                {
-                  "id": "decor_paintings",
-                  "name": "Paintings",
-                  "description": "Decorative framed paintings"
-                },
-                {
-                  "id": "decor_framed_art",
-                  "name": "Framed Art",
-                  "description": "Framed prints and artwork"
-                }
-              ]
+              "description": "Wall art, posters, and mounted decor"
             },
             {
-              "id": "home_rug_decor",
-              "name": "Rug Decor",
-              "description": "Decorative rugs and floor displays"
+              "id": "home_decor_lighting",
+              "name": "Lighting",
+              "description": "Decorative table and floor lighting"
             },
             {
-              "id": "home_decorative_pillows",
-              "name": "Decorative Pillows",
-              "description": "Decorative and accent pillows"
+              "id": "home_decor_rugs",
+              "name": "Home Rugs",
+              "description": "Decorative area rugs and floor coverings"
             },
             {
-              "id": "home_flower_vases",
-              "name": "Flower Vases",
-              "description": "Display vases for floral arrangements"
-            },
-            {
-              "id": "home_wall_decor_accessories",
-              "name": "Wall Decor Accessories",
-              "description": "Accessories for decorating walls",
-              "children": [
-                {
-                  "id": "home_wall_decor_accessories_wall_hardware",
-                  "name": "Wall Hardware",
-                  "description": "Wall-mounted hardware and fixtures"
-                },
-                {
-                  "id": "home_wall_decor_accessories_wall_decor_frames",
-                  "name": "Wall Decor Frames",
-                  "description": "Frames and frame accessories for wall displays"
-                }
-              ]
-            },
-            {
-              "id": "home_fragrances",
-              "name": "Home Fragrances",
-              "description": "Candles and scent items for home atmosphere"
+              "id": "home_decor_curtains",
+              "name": "Curtains",
+              "description": "Window curtains and room drapes"
             }
           ]
         },
         {
           "id": "home_storage",
           "name": "Home Storage",
-          "description": "Organization, containers, and storage solutions.",
+          "description": "Storage and organization products for home and living spaces",
           "children": [
             {
-              "id": "home_closet_storage",
+              "id": "home_storage_bins",
+              "name": "Storage Bins",
+              "description": "Organizing bins, totes, and bins for home"
+            },
+            {
+              "id": "home_storage_closet",
               "name": "Closet Storage",
-              "description": "Clothing and garment storage systems"
+              "description": "Shelving and compartments for closets"
             },
             {
-              "id": "home_pantry_storage",
-              "name": "Pantry Storage",
-              "description": "Food storage and pantry organization"
+              "id": "home_storage_shelves",
+              "name": "Storage Shelves",
+              "description": "Shelf systems and wall storage units"
             },
             {
-              "id": "home_garage_storage",
-              "name": "Garage Storage",
-              "description": "Storage for tools and utility items",
-              "children": [
-                {
-                  "id": "home_sporting_goods_storage",
-                  "name": "Sporting Goods Storage",
-                  "description": "Storage systems for sporting gear"
-                },
-                {
-                  "id": "home_lawn_care_storage",
-                  "name": "Lawn Care Storage",
-                  "description": "Storage for lawn and garden tools"
-                }
-              ]
-            },
-            {
-              "id": "home_toy_storage",
-              "name": "Toy Storage",
-              "description": "Children's toy organization systems"
+              "id": "home_storage_laundry",
+              "name": "Laundry Storage",
+              "description": "Bins and tools for laundry organization"
             }
           ]
-        },
-        {
-          "id": "home_lighting",
-          "name": "Home Lighting",
-          "description": "Lamps, bulbs, and ambient lighting products.",
-          "children": [
-            {
-              "id": "home_ceiling_lights",
-              "name": "Ceiling Lights",
-              "description": "Ceiling-mounted illumination products"
-            },
-            {
-              "id": "home_table_lamps",
-              "name": "Table Lamps",
-              "description": "Lamp designs for table surfaces",
-              "children": [
-                {
-                  "id": "table_desk_lamps",
-                  "name": "Desk Lamps",
-                  "description": "Task lighting for desks"
-                },
-                {
-                  "id": "table_bedside_lamps",
-                  "name": "Bedside Lamps",
-                  "description": "Bedside lighting options"
-                }
-              ]
-            },
-            {
-              "id": "home_outdoor_lighting",
-              "name": "Outdoor Lighting",
-              "description": "Lighting for gardens and exterior spaces"
-            },
-            {
-              "id": "home_bulbs",
-              "name": "Bulbs",
-              "description": "Light bulbs and replacement elements"
-            },
-            {
-              "id": "home_smart_lighting",
-              "name": "Smart Lighting",
-              "description": "Connected and app-enabled lights"
-            },
-            {
-              "id": "home_ambient_lighting",
-              "name": "Ambient Lighting",
-              "description": "Atmospheric room and mood lighting"
-            },
-            {
-              "id": "home_garden_lighting",
-              "name": "Garden Lighting",
-              "description": "Lighting for outdoor garden areas"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "beauty_products",
-      "name": "Beauty Products",
-      "description": "Beauty and cosmetic products",
-      "children": [
-        {
-          "id": "beauty_skin_care",
-          "name": "Skin Care",
-          "description": "Products for skin treatment and maintenance."
-        },
-        {
-          "id": "beauty_makeup",
-          "name": "Makeup",
-          "description": "Cosmetics and face coverage products."
-        },
-        {
-          "id": "beauty_hair_care",
-          "name": "Hair Care",
-          "description": "Shampoos, conditioners, and hair styling products."
-        },
-        {
-          "id": "beauty_fragrances",
-          "name": "Fragrances",
-          "description": "Perfumes and body scents."
-        }
-      ]
-    },
-    {
-      "id": "toys_and_games_products",
-      "name": "Toys & Games Products",
-      "description": "Toys and game products for children and families",
-      "children": [
-        {
-          "id": "toys_action_figure_toys",
-          "name": "Action Figure Toys",
-          "description": "Collectible figurines and hero characters."
-        },
-        {
-          "id": "toys_dolls_and_stuffed_toys",
-          "name": "Dolls and Stuffed Toys",
-          "description": "Doll and plush toy products."
-        },
-        {
-          "id": "toys_building_toys",
-          "name": "Building Toys",
-          "description": "Construction and modular toy sets."
-        },
-        {
-          "id": "toys_board_games",
-          "name": "Board Games",
-          "description": "Traditional tabletop game sets."
-        },
-        {
-          "id": "toys_collectible_toys",
-          "name": "Collectible Toys",
-          "description": "Collectible figurines, models, and limited-edition toys."
-        }
-      ]
-    },
-    {
-      "id": "automotive_products",
-      "name": "Automotive Products",
-      "description": "Automotive-related products and parts",
-      "children": [
-        {
-          "id": "automotive_car_accessories",
-          "name": "Car Accessories",
-          "description": "Interior and exterior add-ons for vehicles.",
-          "children": [
-            {
-              "id": "automotive_car_accessories_steering_accessories",
-              "name": "Steering Accessories",
-              "description": "Steering wheel and steering system accessories"
-            },
-            {
-              "id": "automotive_car_accessories_exterior_accessories",
-              "name": "Exterior Accessories",
-              "description": "Exterior decorative and protective vehicle accessories"
-            },
-            {
-              "id": "automotive_car_accessories_vehicle_seating",
-              "name": "Vehicle Seating",
-              "description": "Vehicle seating cushions and seat-related accessories"
-            }
-          ]
-        },
-        {
-          "id": "automotive_car_electronics",
-          "name": "Car Electronics",
-          "description": "In-car audio, sensors, and electronic modules."
-        },
-        {
-          "id": "automotive_car_parts",
-          "name": "Car Parts",
-          "description": "Vehicle components and replacement parts.",
-          "children": [
-            {
-              "id": "automotive_car_parts_vehicle_wheels",
-              "name": "Vehicle Wheels",
-              "description": "Wheel, hub, and wheel-related replacement parts"
-            },
-            {
-              "id": "automotive_car_parts_engine_components",
-              "name": "Engine Components",
-              "description": "Engine-related replacement components"
-            },
-            {
-              "id": "automotive_car_parts_cooling_components",
-              "name": "Cooling Components",
-              "description": "Cooling and thermal system replacement parts"
-            },
-            {
-              "id": "automotive_car_parts_vehicle_electrical_components",
-              "name": "Vehicle Electrical Components",
-              "description": "Vehicle electrical and electronic component parts"
-            },
-            {
-              "id": "automotive_car_parts_vehicle_filters",
-              "name": "Vehicle Filters",
-              "description": "Vehicle fluid and air filter replacements"
-            }
-          ]
-        },
-        {
-          "id": "automotive_car_care",
-          "name": "Car Care",
-          "description": "Products and supplies for vehicle maintenance and care."
-        }
-      ]
-    },
-    {
-      "id": "pet_products",
-      "name": "Pet Products",
-      "description": "Products for pet care, food, and accessories",
-      "children": [
-        {
-          "id": "pet_food",
-          "name": "Pet Food",
-          "description": "Nutrition and food for pet animals.",
-          "children": [
-            {
-              "id": "pet_food_pet_supplements",
-              "name": "Pet Supplements",
-              "description": "Pet vitamin and supplement products"
-            },
-            {
-              "id": "pet_food_pet_treats",
-              "name": "Pet Treats",
-              "description": "Pet treats and snack products"
-            }
-          ]
-        },
-        {
-          "id": "pet_toys",
-          "name": "Pet Toys",
-          "description": "Play items for pets."
-        },
-        {
-          "id": "pet_health_care",
-          "name": "Pet Health Care",
-          "description": "Supplements and health products for pets."
-        },
-        {
-          "id": "pet_beds_and_accessories",
-          "name": "Pet Beds and Accessories",
-          "description": "Beds, carriers, leashes, and pet essentials.",
-          "children": [
-            {
-              "id": "pet_beds_and_accessories_pet_collars",
-              "name": "Pet Collars",
-              "description": "Pet collar products"
-            },
-            {
-              "id": "pet_beds_and_accessories_pet_leashes",
-              "name": "Pet Leashes",
-              "description": "Pet leash products"
-            }
-          ]
-        },
-        {
-          "id": "pet_supplies",
-          "name": "Pet Supplies",
-          "description": "General pet accessory products"
-        },
-        {
-          "id": "pet_nutrition",
-          "name": "Pet Nutrition",
-          "description": "Pet nutrition and care support products"
-        }
-      ]
-    },
-    {
-      "id": "baby_products",
-      "name": "Baby Products",
-      "description": "Baby and infant products",
-      "children": [
-        {
-          "id": "baby_clothing",
-          "name": "Baby Clothing",
-          "description": "Apparel and garments for infants and toddlers."
-        },
-        {
-          "id": "baby_diapers_and_wipes",
-          "name": "Diapers and Wipes",
-          "description": "Changing products for babies."
-        },
-        {
-          "id": "baby_feeding",
-          "name": "Baby Feeding",
-          "description": "Baby foods, bottles, and feeding accessories."
-        },
-        {
-          "id": "baby_gear",
-          "name": "Baby Gear",
-          "description": "Travel, stroller, and stroller-adjacent baby products."
-        }
-      ]
-    },
-    {
-      "id": "sports_products",
-      "name": "Sports Products",
-      "description": "Fitness, outdoor and sports-related products",
-      "children": [
-        {
-          "id": "sports_outdoor_sports",
-          "name": "Outdoor Sports",
-          "description": "Sports and recreation products used outdoors."
-        },
-        {
-          "id": "sports_team_sports",
-          "name": "Team Sports",
-          "description": "Products for team-based athletics and leagues."
-        },
-        {
-          "id": "sports_sportswear_and_footwear",
-          "name": "Sportswear and Footwear",
-          "description": "Clothing and shoes for sports activities."
-        },
-        {
-          "id": "sports_fitness_equipment",
-          "name": "Fitness Equipment",
-          "description": "Tools and machines for workouts and training."
-        }
-      ]
-    },
-    {
-      "id": "food_products",
-      "name": "Food Products",
-      "description": "Food products and consumables",
-      "children": [
-        {
-          "id": "food_packaged_snacks",
-          "name": "Packaged Snacks",
-          "description": "Ready-to-eat snack and confectionery products."
-        },
-        {
-          "id": "food_beverages",
-          "name": "Beverages",
-          "description": "Drinks, drinks, and beverage concentrates."
-        },
-        {
-          "id": "food_pantry_and_canned_goods",
-          "name": "Pantry and Canned Goods",
-          "description": "Shelf-stable pantry items and canned foods."
-        },
-        {
-          "id": "food_baking_and_cooking_supplies",
-          "name": "Baking and Cooking Supplies",
-          "description": "Ingredients and tools used in cooking and baking."
-        }
-      ]
-    },
-    {
-      "id": "garden_products",
-      "name": "Garden Products",
-      "description": "Garden and outdoor yard products",
-      "children": [
-        {
-          "id": "garden_tools",
-          "name": "Garden Tools",
-          "description": "Hand tools and implements for gardening.",
-          "children": [
-            {
-              "id": "garden_tools_garden_power_tools",
-              "name": "Garden Power Tools",
-              "description": "Power-powered gardening and yard tools"
-            },
-            {
-              "id": "garden_tools_garden_hand_tools",
-              "name": "Garden Hand Tools",
-              "description": "Manual hand tools for gardening and outdoor tasks"
-            },
-            {
-              "id": "garden_tools_planters_and_soil",
-              "name": "Planters and Soil",
-              "description": "Planters, pots, and soil-related garden setup"
-            }
-          ]
-        },
-        {
-          "id": "garden_plants_and_soil",
-          "name": "Plants and Soil",
-          "description": "Plant materials and soil care products."
-        },
-        {
-          "id": "garden_garden_decor",
-          "name": "Garden Décor",
-          "description": "Decorative outdoor garden ornaments and accessories."
-        },
-        {
-          "id": "garden_outdoor_gardening",
-          "name": "Outdoor Gardening",
-          "description": "Yard and landscape gardening products."
         }
       ]
     },
     {
       "id": "books",
       "name": "Books",
-      "description": "Printed and digital reading media",
+      "description": "Printed and digital books, educational publications, and related reading products",
       "children": [
         {
-          "id": "books_fiction",
+          "id": "fiction",
           "name": "Fiction",
-          "description": "Fictional books and novels"
+          "description": "Narrative fiction and novels",
+          "children": [
+            {
+              "id": "books_fiction_mystery",
+              "name": "Mystery",
+              "description": "Mystery and detective narrative fiction"
+            },
+            {
+              "id": "books_fiction_romance",
+              "name": "Romance",
+              "description": "Love-themed narrative fiction"
+            },
+            {
+              "id": "books_fiction_fantasy",
+              "name": "Fantasy",
+              "description": "Speculative and magical narrative fiction"
+            }
+          ]
         },
         {
-          "id": "books_non_fiction",
+          "id": "non_fiction",
           "name": "Non-Fiction",
-          "description": "Non-fiction books and reference titles"
+          "description": "Educational, informative, and factual books",
+          "children": [
+            {
+              "id": "books_non_fiction_biography",
+              "name": "Biography",
+              "description": "Biographical and life-story non-fiction"
+            },
+            {
+              "id": "books_non_fiction_memoir",
+              "name": "Memoir",
+              "description": "Personal account non-fiction"
+            }
+          ]
         },
         {
-          "id": "books_novels",
-          "name": "Novels",
-          "description": "Long-form fiction books"
+          "id": "children_books",
+          "name": "Children Books",
+          "description": "Children's and kids' books",
+          "children": [
+            {
+              "id": "books_children_picture_books",
+              "name": "Picture Books",
+              "description": "Illustrated books for early readers"
+            },
+            {
+              "id": "books_children_chapter_books",
+              "name": "Chapter Books",
+              "description": "Shorter books for young independent readers"
+            },
+            {
+              "id": "books_children_activity_books",
+              "name": "Activity Books",
+              "description": "Interactive books with coloring and puzzles"
+            }
+          ]
         },
         {
-          "id": "books_reference_books",
-          "name": "Reference Books",
-          "description": "Reference and educational books"
+          "id": "comics",
+          "name": "Comics",
+          "description": "Comic books and graphic novels",
+          "children": [
+            {
+              "id": "books_comics_graphic_novels",
+              "name": "Graphic Novels",
+              "description": "Narrative comics with long-form storytelling"
+            },
+            {
+              "id": "books_comics_manga",
+              "name": "Manga",
+              "description": "Japanese-style panel comics"
+            },
+            {
+              "id": "books_comics_superhero_comics",
+              "name": "Superhero Comics",
+              "description": "Comics centered on superhero characters and series"
+            }
+          ]
         },
         {
-          "id": "books_textbooks",
+          "id": "textbooks",
           "name": "Textbooks",
-          "description": "Curricula and textbook publications"
+          "description": "School and academic reference books",
+          "children": [
+            {
+              "id": "books_textbooks_school_textbooks",
+              "name": "School Textbooks",
+              "description": "Textbooks for primary and secondary education"
+            },
+            {
+              "id": "books_textbooks_college_textbooks",
+              "name": "College Textbooks",
+              "description": "Academic course books for postsecondary study"
+            }
+          ]
         },
         {
-          "id": "books_children_books",
-          "name": "Children's Books",
-          "description": "Children-oriented books"
-        },
-        {
-          "id": "books_journals",
-          "name": "Journals",
-          "description": "Printed journals and serial publications"
-        },
-        {
-          "id": "books_notebooks",
-          "name": "Notebooks",
-          "description": "Writing, planning, and notebook products"
+          "id": "cookbooks",
+          "name": "Cookbooks",
+          "description": "Books focused on recipes and cooking",
+          "children": [
+            {
+              "id": "books_cookbooks_baking",
+              "name": "Baking",
+              "description": "Baked goods and pastry recipe books"
+            },
+            {
+              "id": "books_cookbooks_recipes",
+              "name": "Recipes",
+              "description": "General recipe-oriented cookbooks"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "health_products",
-      "name": "Health Products",
-      "description": "Health and wellness products",
+      "id": "toys",
+      "name": "Toys",
+      "description": "Play, educational, and collectible toy products",
       "children": [
         {
-          "id": "health_products_supplements",
-          "name": "Supplements",
-          "description": "General supplement products"
+          "id": "action_figures",
+          "name": "Action Figures",
+          "description": "Collectible or play action figures and dolls",
+          "children": [
+            {
+              "id": "superhero_figures",
+              "name": "Superhero Figures",
+              "description": "Character-focused action figures portraying famous comic and movie heroes"
+            },
+            {
+              "id": "collectible_figures",
+              "name": "Collectible Figures",
+              "description": "Action figures sold as collectible character items"
+            },
+            {
+              "id": "character_figures",
+              "name": "Character Figures",
+              "description": "Action figures based on animated, movie, and game characters"
+            }
+          ]
         },
         {
-          "id": "health_products_vitamins",
-          "name": "Vitamins",
-          "description": "Vitamins and mineral products"
+          "id": "building_toys",
+          "name": "Building Toys",
+          "description": "Blocks, construction sets, and building games",
+          "children": [
+            {
+              "id": "lego_sets",
+              "name": "Lego Sets",
+              "description": "Lego-compatible or branded building sets"
+            },
+            {
+              "id": "construction_vehicles",
+              "name": "Construction Vehicles",
+              "description": "Building toys shaped as excavators, cranes, mixers and dump trucks"
+            },
+            {
+              "id": "model_building_kits",
+              "name": "Model Building Kits",
+              "description": "Kits for assembling cars, ships, robots, and structures"
+            }
+          ]
         },
         {
-          "id": "health_products_dietary_supplements",
-          "name": "Dietary Supplements",
-          "description": "Dietary and nutrient supplement products"
+          "id": "board_games",
+          "name": "Board Games",
+          "description": "Tabletop board and strategy games",
+          "children": [
+            {
+              "id": "strategy_games",
+              "name": "Strategy Games",
+              "description": "Board games focused on tactical planning and strategy"
+            },
+            {
+              "id": "family_games",
+              "name": "Family Games",
+              "description": "Board games designed for family play sessions"
+            },
+            {
+              "id": "card_games",
+              "name": "Card Games",
+              "description": "Board game variants driven by card-based play"
+            }
+          ]
         },
         {
-          "id": "health_products_wellness_supplements",
-          "name": "Wellness Supplements",
-          "description": "Wellness-focused supplement products"
+          "id": "puzzles",
+          "name": "Puzzles",
+          "description": "Jigsaw and logic puzzles",
+          "children": [
+            {
+              "id": "jigsaw_puzzles",
+              "name": "Jigsaw Puzzles",
+              "description": "Interlocking-piece puzzles for visual assembly"
+            },
+            {
+              "id": "brain_puzzles",
+              "name": "Brain Puzzles",
+              "description": "Puzzle games emphasizing mental challenges"
+            },
+            {
+              "id": "logic_puzzles",
+              "name": "Logic Puzzles",
+              "description": "Puzzle products focused on logic and deduction"
+            }
+          ]
         },
         {
-          "id": "health_products_weight_loss_supplements",
-          "name": "Weight Loss Supplements",
-          "description": "Weight management supplement products"
+          "id": "dolls",
+          "name": "Dolls",
+          "description": "Pretend-play figures and dolls",
+          "children": [
+            {
+              "id": "fashion_dolls",
+              "name": "Fashion Dolls",
+              "description": "Play dolls emphasizing apparel, styling, and characters"
+            },
+            {
+              "id": "miniature_dolls",
+              "name": "Miniature Dolls",
+              "description": "Small collectible or figurine-style doll products"
+            },
+            {
+              "id": "dollhouses",
+              "name": "Dollhouses",
+              "description": "Furniture, props, and mini-play environments for dolls"
+            }
+          ]
         },
         {
-          "id": "health_products_detox_products",
-          "name": "Detox Products",
-          "description": "Detox and cleanse products"
-        },
-        {
-          "id": "health_products_medical_test_kits",
-          "name": "Medical Test Kits",
-          "description": "Home health test and diagnostic kits"
-        },
-        {
-          "id": "health_products_probiotics",
-          "name": "Probiotics",
-          "description": "Probiotic supplement products"
+          "id": "plush_toys",
+          "name": "Plush Toys",
+          "description": "Soft plush stuffed play toys",
+          "children": [
+            {
+              "id": "stuffed_animals",
+              "name": "Stuffed Animals",
+              "description": "Soft plush animals and animal-themed toy characters"
+            },
+            {
+              "id": "soft_toys",
+              "name": "Soft Toys",
+              "description": "Cuddly stuffed soft toys and plush accessories"
+            },
+            {
+              "id": "teddy_bears",
+              "name": "Teddy Bears",
+              "description": "Stuffed teddy bear toy products"
+            }
+          ]
         }
       ]
     },
     {
-      "id": "tools_and_equipment",
-      "name": "Tools & Equipment",
-      "description": "Hardware, maintenance, and equipment categories",
+      "id": "sporting_goods",
+      "name": "Sporting Goods",
+      "description": "Sports equipment, fitness, and outdoor recreation products",
       "children": [
         {
-          "id": "tools_and_equipment_power_tools",
+          "id": "team_sports",
+          "name": "Team Sports",
+          "description": "Sports played in organized teams",
+          "children": [
+            {
+              "id": "team_sports_basketball",
+              "name": "Basketball",
+              "description": "Team sport focused on basketball gear and apparel"
+            },
+            {
+              "id": "team_sports_soccer",
+              "name": "Soccer",
+              "description": "Team sport focused on soccer gear and apparel"
+            },
+            {
+              "id": "team_sports_baseball",
+              "name": "Baseball",
+              "description": "Team sport focused on baseball gear and accessories"
+            },
+            {
+              "id": "team_sports_softball",
+              "name": "Softball",
+              "description": "Team sport focused on softball gear and accessories"
+            }
+          ]
+        },
+        {
+          "id": "outdoor_sports",
+          "name": "Outdoor Sports",
+          "description": "Outdoor athletic activities and field sports",
+          "children": [
+            {
+              "id": "outdoor_sports_golf",
+              "name": "Golf",
+              "description": "Outdoor recreational sport category for golf"
+            },
+            {
+              "id": "outdoor_sports_tennis",
+              "name": "Tennis",
+              "description": "Outdoor recreational sport category for tennis"
+            },
+            {
+              "id": "outdoor_sports_cycling",
+              "name": "Cycling",
+              "description": "Outdoor recreational sport category for cycling"
+            },
+            {
+              "id": "outdoor_sports_skiing",
+              "name": "Skiing",
+              "description": "Outdoor snow sport category for skiing"
+            }
+          ]
+        },
+        {
+          "id": "outdoor_recreation",
+          "name": "Outdoor Recreation",
+          "description": "Recreational outdoor and adventure products",
+          "children": [
+            {
+              "id": "outdoor_recreation_hiking",
+              "name": "Hiking",
+              "description": "Non-competitive outdoor recreation for hiking"
+            },
+            {
+              "id": "outdoor_recreation_boating",
+              "name": "Boating",
+              "description": "Recreation category for boating and water sports"
+            },
+            {
+              "id": "outdoor_recreation_trail_running",
+              "name": "Trail Running",
+              "description": "Running-focused outdoor recreation category"
+            }
+          ]
+        },
+        {
+          "id": "camping_gear",
+          "name": "Camping Gear",
+          "description": "Camping and outdoor excursion equipment",
+          "children": [
+            {
+              "id": "camping_gear_tents",
+              "name": "Tents",
+              "description": "Shelter equipment for camping"
+            },
+            {
+              "id": "camping_gear_sleeping_bags",
+              "name": "Sleeping Bags",
+              "description": "Camping insulation and sleep gear"
+            },
+            {
+              "id": "camping_gear_camp_chairs",
+              "name": "Camp Chairs",
+              "description": "Seating and comfort gear for camps"
+            }
+          ]
+        },
+        {
+          "id": "fitness_equipment",
+          "name": "Fitness Equipment",
+          "description": "Workout and strength training equipment",
+          "children": [
+            {
+              "id": "fitness_equipment_cardio_equipment",
+              "name": "Cardio Equipment",
+              "description": "Machine-based cardio training equipment"
+            },
+            {
+              "id": "fitness_equipment_weight_training",
+              "name": "Weight Training",
+              "description": "Strength equipment for weight-based workouts"
+            },
+            {
+              "id": "fitness_equipment_yoga_equipment",
+              "name": "Yoga Equipment",
+              "description": "Mats and props for yoga practice"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hand and power tools, hardware, and workshop accessories",
+      "children": [
+        {
+          "id": "hand_tools",
+          "name": "Hand Tools",
+          "description": "Manual tools for repair and home projects",
+          "children": [
+            {
+              "id": "hand_tools_wrenches",
+              "name": "Wrenches",
+              "description": "Hand-held tools used to tighten and loosen bolts, nuts, and fasteners"
+            },
+            {
+              "id": "hand_tools_pliers",
+              "name": "Pliers",
+              "description": "Hand tools for gripping, bending, and cutting wire or metal components"
+            },
+            {
+              "id": "hand_tools_screwdrivers",
+              "name": "Screwdrivers",
+              "description": "Hand tools for driving and removing screws"
+            }
+          ]
+        },
+        {
+          "id": "power_tools",
           "name": "Power Tools",
-          "description": "Power-driven tools for home and workshop use"
+          "description": "Electric and battery-powered hand-held tools",
+          "children": [
+            {
+              "id": "power_tools_power_drills",
+              "name": "Power Drills",
+              "description": "Electric or cordless drills for drilling holes and creating driven fastener points"
+            },
+            {
+              "id": "power_tools_drill_drivers",
+              "name": "Drill Drivers",
+              "description": "Cordless impact-style tools for fastening and driving screws"
+            }
+          ]
         },
         {
-          "id": "tools_and_equipment_workshop_supplies",
-          "name": "Workshop Supplies",
-          "description": "General workshop tools and consumable supplies"
+          "id": "measuring_tools",
+          "name": "Measuring Tools",
+          "description": "Tools for measurement and layout",
+          "children": [
+            {
+              "id": "measuring_tools_scales",
+              "name": "Scales",
+              "description": "Instruments for measuring weight and mass"
+            },
+            {
+              "id": "measuring_tools_multimeters",
+              "name": "Multimeters",
+              "description": "Electronic instruments for measuring electrical voltage and resistance"
+            },
+            {
+              "id": "measuring_tools_measuring_tapes",
+              "name": "Measuring Tapes",
+              "description": "Flexible tape measures for dimensions and lengths"
+            }
+          ]
+        },
+        {
+          "id": "hardware",
+          "name": "Hardware",
+          "description": "Fasteners, fixtures, and small hardware supplies",
+          "children": [
+            {
+              "id": "hardware_fastening_hardware",
+              "name": "Fastening Hardware",
+              "description": "Bolts, nuts, screws, washers, and other fastening components"
+            },
+            {
+              "id": "hardware_door_hardware",
+              "name": "Door Hardware",
+              "description": "Hardware components for doors, including handles, hinges, and closers"
+            },
+            {
+              "id": "hardware_hardware_latches",
+              "name": "Hardware Latches",
+              "description": "Latch and retaining hardware for locking and quick-release mechanisms"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pet_products",
+      "name": "Pet Products",
+      "description": "Products for pet care, feeding, and comfort",
+      "children": [
+        {
+          "id": "dog_supplies",
+          "name": "Dog Supplies",
+          "description": "Products for dog care and comfort",
+          "children": [
+            {
+              "id": "dog_collars",
+              "name": "Dog Collars",
+              "description": "Collars designed for dog safety, identity, and handling"
+            },
+            {
+              "id": "dog_harnesses",
+              "name": "Dog Harnesses",
+              "description": "Harnesses and vests for dog walking, training, and safety"
+            }
+          ]
+        },
+        {
+          "id": "cat_supplies",
+          "name": "Cat Supplies",
+          "description": "Products for cat care and comfort",
+          "children": [
+            {
+              "id": "cat_collars",
+              "name": "Cat Collars",
+              "description": "Collars and ID accessories for cats"
+            },
+            {
+              "id": "cat_litter_boxes",
+              "name": "Cat Litter Boxes",
+              "description": "Litter box products and accessories for cats"
+            }
+          ]
+        },
+        {
+          "id": "pet_food",
+          "name": "Pet Food",
+          "description": "Food and nutrition for pets",
+          "children": [
+            {
+              "id": "dog_food",
+              "name": "Dog Food",
+              "description": "Dry, wet, and specialty diets for dogs"
+            },
+            {
+              "id": "cat_food",
+              "name": "Cat Food",
+              "description": "Dry, wet, and specialty diets for cats"
+            },
+            {
+              "id": "pet_treats",
+              "name": "Pet Treats",
+              "description": "Snack items and treats for pets."
+            }
+          ]
+        },
+        {
+          "id": "pet_toys",
+          "name": "Pet Toys",
+          "description": "Toys and play products for pets",
+          "children": [
+            {
+              "id": "cat_toys",
+              "name": "Cat Toys",
+              "description": "Interactive and play toys for cats"
+            },
+            {
+              "id": "dog_toys",
+              "name": "Dog Toys",
+              "description": "Fetch, chew, and interactive toys for dogs"
+            }
+          ]
+        },
+        {
+          "id": "pet_beds",
+          "name": "Pet Beds",
+          "description": "Beds, cribs, and sleeping surfaces for pets",
+          "children": [
+            {
+              "id": "cat_beds",
+              "name": "Cat Beds",
+              "description": "Sleeping and resting surfaces for cats"
+            },
+            {
+              "id": "dog_beds",
+              "name": "Dog Beds",
+              "description": "Beds, crates, and sleeping mats for dogs"
+            }
+          ]
+        },
+        {
+          "id": "pet_accessories",
+          "name": "Pet Accessories",
+          "description": "Grooming, collars, and daily-use pet accessories",
+          "children": [
+            {
+              "id": "pet_grooming",
+              "name": "Pet Grooming",
+              "description": "Grooming tools, shampoos, and care supplies for pets"
+            },
+            {
+              "id": "pet_carriers",
+              "name": "Pet Carriers",
+              "description": "Travel carriers, crates, and pet transport solutions"
+            },
+            {
+              "id": "pet_collars",
+              "name": "Pet Collars",
+              "description": "Collars and identification items for pets."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cosmetics",
+      "name": "Cosmetics",
+      "description": "Skincare, makeup, and beauty-related personal care products",
+      "children": [
+        {
+          "id": "skincare",
+          "name": "Skincare",
+          "description": "Facial and body skincare products"
+        },
+        {
+          "id": "makeup",
+          "name": "Makeup",
+          "description": "Facial cosmetics and color cosmetics"
+        },
+        {
+          "id": "haircare",
+          "name": "Haircare",
+          "description": "Shampoo, conditioner, and hair styling products"
+        },
+        {
+          "id": "fragrance",
+          "name": "Fragrance",
+          "description": "Perfumes, colognes, and scents"
+        },
+        {
+          "id": "makeup_brushes",
+          "name": "Makeup Brushes",
+          "description": "Cosmetic makeup brush tools and applicators"
+        }
+      ]
+    },
+    {
+      "id": "auto_parts",
+      "name": "Auto Parts",
+      "description": "Vehicle parts, accessories, and maintenance products",
+      "children": [
+        {
+          "id": "engine_parts",
+          "name": "Engine Parts",
+          "description": "Engine and drivetrain mechanical components"
+        },
+        {
+          "id": "brake_components",
+          "name": "Brake Components",
+          "description": "Brake pads, discs, and related brake system parts"
+        },
+        {
+          "id": "tires",
+          "name": "Tires",
+          "description": "Vehicle tires and tire-related products"
+        },
+        {
+          "id": "auto_batteries",
+          "name": "Auto Batteries",
+          "description": "Vehicle batteries and battery replacement systems"
         }
       ]
     }

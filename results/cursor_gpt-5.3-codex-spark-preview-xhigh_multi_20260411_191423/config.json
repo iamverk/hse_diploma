@@ -1,0 +1,9 @@
+{
+  "tool": "cursor",
+  "model": "gpt-5.3-codex-spark-preview-xhigh",
+  "domain": "multi",
+  "max_iterations": 40,
+  "actual_iterations": 21,
+  "timestamp": "20260411_191423",
+  "experiment": "v8-hooks-rules-skills"
+}

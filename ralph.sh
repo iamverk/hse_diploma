@@ -194,8 +194,11 @@ for i in $(seq 1 $MAX_ITERATIONS); do
         AGENT_EXIT=$?
 
     elif [ "$TOOL" = "cursor" ]; then
-        # ── Stream-JSON mode with watchdog ──────────────────────────────
-        # Launch cursor-agent with stream-json output piped to monitor
+        # ── Stream-JSON + mtime watchdog ────────────────────────────────
+        STREAM_FILE="output/cursor_stream_iter${i}.jsonl"
+        > "$STREAM_FILE"  # clear
+
+        # Launch cursor-agent, tee output to stream file
         cursor-agent \
             --print \
             --output-format stream-json \
@@ -205,46 +208,76 @@ for i in $(seq 1 $MAX_ITERATIONS); do
             --trust \
             --workspace . \
             "$PROMPT" 2>"output/cursor_stderr_iter${i}.log" | \
-        $PYTHON "$STREAM_MONITOR" --pid 0 --timeout "$WATCHDOG_TIMEOUT" &
+        tee "$STREAM_FILE" > /dev/null &
         PIPE_PID=$!
 
-        # Get the actual cursor-agent PID (first process in the pipe)
-        sleep 2
-        AGENT_PID=$(pgrep -P $$ -f "cursor-agent" 2>/dev/null | head -1)
-        if [ -z "$AGENT_PID" ]; then
-            # Fallback: find by name
-            AGENT_PID=$(pgrep -f "cursor-agent.*stream-json" 2>/dev/null | head -1)
-        fi
+        sleep 3
+        AGENT_PID=$(pgrep -f "cursor-agent.*stream-json" 2>/dev/null | head -1)
+        echo "  [watchdog] cursor-agent PID=$AGENT_PID, tee PID=$PIPE_PID"
+        echo "  [watchdog] Stream file: $STREAM_FILE"
+        echo "  [watchdog] Silence timeout: ${WATCHDOG_TIMEOUT}s, Hard timeout: 1500s"
 
-        echo "  [monitor] cursor-agent PID=$AGENT_PID, monitor PID=$PIPE_PID"
-
-        # Wait for the pipeline to finish (hard timeout at 25 min)
+        # ── Watchdog loop: mtime-based silence detection ────────────────
         WAIT_SECS=0
         HARD_TIMEOUT=1500
+        LAST_SIZE=0
+        SILENCE_START=$SECONDS
+
         while kill -0 $PIPE_PID 2>/dev/null; do
             sleep 10
             WAIT_SECS=$((WAIT_SECS + 10))
+
+            # Hard timeout (25 min absolute)
             if [ $WAIT_SECS -ge $HARD_TIMEOUT ]; then
-                echo "HARD TIMEOUT: pipeline exceeded $((HARD_TIMEOUT/60)) minutes"
-                # Kill both cursor-agent and monitor
-                [ -n "$AGENT_PID" ] && kill $AGENT_PID 2>/dev/null
-                kill $PIPE_PID 2>/dev/null
-                sleep 2
-                [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
-                kill -9 $PIPE_PID 2>/dev/null
+                echo "  [watchdog] HARD TIMEOUT: ${HARD_TIMEOUT}s exceeded"
                 ITER_STATUS="crash"
                 break
             fi
+
+            # Check if stream file grew (silence detection)
+            CURR_SIZE=$(wc -c < "$STREAM_FILE" 2>/dev/null || echo "0")
+            if [ "$CURR_SIZE" -gt "$LAST_SIZE" ]; then
+                LAST_SIZE=$CURR_SIZE
+                SILENCE_START=$SECONDS
+                # Print activity indicator every 60s
+                if [ $((WAIT_SECS % 60)) -eq 0 ]; then
+                    LINES=$(wc -l < "$STREAM_FILE" 2>/dev/null || echo "0")
+                    echo "  [watchdog] Active: ${LINES} stream events, ${CURR_SIZE} bytes (${WAIT_SECS}s elapsed)"
+                fi
+            else
+                SILENCE_SECS=$((SECONDS - SILENCE_START))
+                if [ "$SILENCE_SECS" -ge "$WATCHDOG_TIMEOUT" ]; then
+                    echo "  [watchdog] SILENCE KILL: no output for ${SILENCE_SECS}s (limit: ${WATCHDOG_TIMEOUT}s)"
+                    ITER_STATUS="crash"
+                    break
+                fi
+                # Warn at 50% silence threshold
+                HALF_TIMEOUT=$((WATCHDOG_TIMEOUT / 2))
+                if [ "$SILENCE_SECS" -ge "$HALF_TIMEOUT" ] && [ $((SILENCE_SECS % 30)) -lt 10 ]; then
+                    echo "  [watchdog] WARNING: silent for ${SILENCE_SECS}s / ${WATCHDOG_TIMEOUT}s"
+                fi
+            fi
         done
+
+        # Kill cursor-agent if watchdog triggered
+        if [ "$ITER_STATUS" = "crash" ]; then
+            [ -n "$AGENT_PID" ] && kill $AGENT_PID 2>/dev/null
+            kill $PIPE_PID 2>/dev/null
+            sleep 2
+            [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
+            kill -9 $PIPE_PID 2>/dev/null
+        fi
+
         wait $PIPE_PID 2>/dev/null
         AGENT_EXIT=$?
 
-        # Check if watchdog killed the agent (look for watchdog_kill in stream events)
-        if grep -q '"watchdog_kill"' "output/stream_events.jsonl" 2>/dev/null; then
-            echo "⚠ Watchdog killed cursor-agent (${WATCHDOG_TIMEOUT}s silence)"
-            ITER_STATUS="crash"
-            # Clean up the actual cursor-agent if still running
-            [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
+        # Post-process stream file
+        STREAM_SIZE=$(wc -c < "$STREAM_FILE" 2>/dev/null || echo "0")
+        STREAM_LINES=$(wc -l < "$STREAM_FILE" 2>/dev/null || echo "0")
+        echo "  [stream] File: ${STREAM_LINES} lines, ${STREAM_SIZE} bytes"
+
+        if [ "$STREAM_SIZE" -gt 0 ]; then
+            $PYTHON "$STREAM_MONITOR" "$STREAM_FILE" 2>/dev/null || true
         fi
     fi
 

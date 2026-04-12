@@ -21,7 +21,7 @@ export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 MAX_ITERATIONS=40
 TOOL="cursor"
 MODEL="gpt-5.3-codex-spark-preview-high"
-WATCHDOG_TIMEOUT=300  # 5 minutes silence → kill
+WATCHDOG_TIMEOUT=90  # 90s silence → kill (lightweight model)
 
 # ── Parse arguments ──────────────────────────────────────────────────────────
 while [[ $# -gt 0 ]]; do
@@ -180,7 +180,17 @@ for i in $(seq 1 $MAX_ITERATIONS); do
     HEAD_BEFORE=$(git rev-parse HEAD 2>/dev/null || echo "")
 
     # ── Build agent prompt ───────────────────────────────────────────────────
-    PROMPT="Read AGENTS.md for instructions. Read progress.txt for context and discovered patterns. Your current task from prd.json is: [Story $CURRENT_ID] $CURRENT_STORY. IMPORTANT: Work on THIS ONE STORY ONLY. You have an embedder: $PYTHON tools/check_edge.py 'parent' 'child' — use it to verify NLIV BEFORE adding edges. Use grep for product discovery, embedder for validation. Complete this task, run validate.py to check quality, fix any issues, and if acceptance criteria are met, mark the story as passes:true in prd.json. Update progress.txt: overwrite the ## Current State section but PRESERVE the ## Discovered Patterns section at the top — only add new patterns if you discover something reusable. Then commit with message 'story $CURRENT_ID: <description>'."
+    PROMPT="Read AGENTS.md, progress.txt, prd.json. Your task: [Story $CURRENT_ID] $CURRENT_STORY.
+
+SPEED RULES — you have 90 seconds of silence before being killed:
+1. Do MAX 3-5 quick greps to discover product patterns, then STOP grepping
+2. Use check_edge.py --batch to verify ALL edges at once (not one-by-one)
+3. Add nodes via taxonomy_cli.py add-node (produces visible output = keeps watchdog happy)
+4. Run validate.py ONCE at the end
+5. Mark story passes:true, update progress.txt, commit
+
+Embedder: $PYTHON tools/check_edge.py --batch '[{\"parent\":\"X\",\"child\":\"Y\"}]'
+ONE story only. Commit: 'story $CURRENT_ID: <description>'"
 
     # ── Run the agent ────────────────────────────────────────────────────────
     ITER_STATUS="keep"  # default; changed to discard/crash below

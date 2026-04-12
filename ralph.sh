@@ -21,7 +21,7 @@ export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 MAX_ITERATIONS=40
 TOOL="cursor"
 MODEL="gpt-5.3-codex-spark-preview-xhigh"
-WATCHDOG_TIMEOUT=90  # 90s silence → kill (lightweight model)
+WATCHDOG_TIMEOUT=180  # 3 min silence → kill (xhigh thinks longer)
 
 # ── Parse arguments ──────────────────────────────────────────────────────────
 while [[ $# -gt 0 ]]; do

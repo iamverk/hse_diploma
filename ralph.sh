@@ -95,7 +95,7 @@ case "$TOOL" in
             echo "ERROR: cursor-agent not found"
             exit 1
         fi
-        VALID_MODELS="gpt-5.3-codex-spark-preview-high gpt-5.3-codex-spark-preview-xhigh"
+        VALID_MODELS="gpt-5.3-codex-spark-preview-xhigh"
         if [[ ! " $VALID_MODELS " =~ " $MODEL " ]]; then
             echo "ERROR: unsupported model '$MODEL'"
             exit 1

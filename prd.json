@@ -38,7 +38,7 @@
       "id": 6,
       "title": "Expand L2: Toys + Sporting Goods (3-5 each)",
       "acceptanceCriteria": "Toys and Sporting Goods each have 3-5 L2 children. NLIV > 0.35.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 7,

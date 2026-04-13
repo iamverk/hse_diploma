@@ -22,6 +22,8 @@
 - Story 5 status: passes true
 - Validation: Story 5 expansion passed with 5 Books L2 children; Nodes=31, max depth=2, valid=True
 - Weak edges: none
+- Story 6 status: passes true
+- Validation: Nodes=42, max depth=2, valid=True; Story 6 edges check passed 10/10 good (min NLIV=0.4143), weak edges none
 
 ## Decisions This Iteration
 - Root label updated to "Products"
@@ -30,3 +32,4 @@
 - Expanded Clothing to five L2 nodes (mens_clothing, womens_clothing, kids_clothing, footwear, accessories) after batch edge check and CLI add-node updates.
 - Expanded Home Goods L2 to five nodes (home_decor, home_storage, home_improvement, cleaning_supplies, furniture) after batched check_edge and CLI add-node updates.
 - Added 5 Books L2 children under Books (fiction_books, non_fiction_books, textbooks, cookbooks, digital_books) after one-shot check_edge validation.
+- Story 6 confirmed Toys and Sporting Goods already had 5 L2 children each; validated all 10 story edges with check_edge batch (all GOOD, min NLIV=0.4143).

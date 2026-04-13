@@ -337,27 +337,87 @@
         {
           "id": "fiction_books",
           "name": "Fiction Books",
-          "description": "Novels, literary fiction, and narrative story titles"
+          "description": "Novels, literary fiction, and narrative story titles",
+          "children": [
+            {
+              "id": "mystery_novels",
+              "name": "Mystery Novels",
+              "description": "Mystery novels and detective fiction"
+            },
+            {
+              "id": "fantasy_books",
+              "name": "Fantasy Books",
+              "description": "Fantasy fiction and magical world stories"
+            }
+          ]
         },
         {
           "id": "non_fiction_books",
           "name": "Non-Fiction Books",
-          "description": "Narrative nonfiction, biographies, and informational reading books"
+          "description": "Narrative nonfiction, biographies, and informational reading books",
+          "children": [
+            {
+              "id": "biographies",
+              "name": "Biographies",
+              "description": "Personal life stories and memoirs"
+            },
+            {
+              "id": "self_help_books",
+              "name": "Self-Help Books",
+              "description": "Personal development and motivation books"
+            }
+          ]
         },
         {
           "id": "textbooks",
           "name": "Textbooks",
-          "description": "Educational textbooks, workbooks, and course materials"
+          "description": "Educational textbooks, workbooks, and course materials",
+          "children": [
+            {
+              "id": "school_textbooks",
+              "name": "School Textbooks",
+              "description": "Educational textbooks for primary and secondary studies"
+            },
+            {
+              "id": "language_textbooks",
+              "name": "Language Textbooks",
+              "description": "Books focused on language learning and language skills"
+            }
+          ]
         },
         {
           "id": "cookbooks",
           "name": "Cookbooks",
-          "description": "Recipe books and practical cooking guides"
+          "description": "Recipe books and practical cooking guides",
+          "children": [
+            {
+              "id": "baking_cookbooks",
+              "name": "Baking Cookbooks",
+              "description": "Cooking guides and cookbooks focused on baking"
+            },
+            {
+              "id": "regional_cookbooks",
+              "name": "Regional Cookbooks",
+              "description": "Cookbooks featuring regional and traditional cuisines"
+            }
+          ]
         },
         {
           "id": "digital_books",
           "name": "Digital Books",
-          "description": "Ebooks, digital editions, and electronic reading books"
+          "description": "Ebooks, digital editions, and electronic reading books",
+          "children": [
+            {
+              "id": "ebooks",
+              "name": "E-Books",
+              "description": "Digital downloadable books in electronic format"
+            },
+            {
+              "id": "audiobooks",
+              "name": "Audiobooks",
+              "description": "Audio narrated book editions for listening"
+            }
+          ]
         }
       ]
     },
@@ -369,27 +429,87 @@
         {
           "id": "educational_toys",
           "name": "Educational Toys",
-          "description": "STEM and educational play items that support learning"
+          "description": "STEM and educational play items that support learning",
+          "children": [
+            {
+              "id": "science_kits",
+              "name": "Science Kits",
+              "description": "Hands-on educational science experiment toy kits"
+            },
+            {
+              "id": "art_and_craft_toys",
+              "name": "Art and Craft Toys",
+              "description": "Creative arts and craft play sets for children"
+            }
+          ]
         },
         {
           "id": "building_toys",
           "name": "Building Toys",
-          "description": "Vehicle, construction, and assembling toy sets for hands-on play"
+          "description": "Vehicle, construction, and assembling toy sets for hands-on play",
+          "children": [
+            {
+              "id": "building_blocks",
+              "name": "Building Blocks",
+              "description": "Block-based construction toys for creative building"
+            },
+            {
+              "id": "construction_sets",
+              "name": "Construction Sets",
+              "description": "Interlocking construction kits for model play"
+            }
+          ]
         },
         {
           "id": "dolls_and_figures",
           "name": "Dolls and Figures",
-          "description": "Dolls, plush toys, action figures, and figurines for imaginative play"
+          "description": "Dolls, plush toys, action figures, and figurines for imaginative play",
+          "children": [
+            {
+              "id": "action_figures",
+              "name": "Action Figures",
+              "description": "Poseable collectible characters and action figures"
+            },
+            {
+              "id": "plush_toys",
+              "name": "Plush Toys",
+              "description": "Soft stuffed toys and plush figurines"
+            }
+          ]
         },
         {
           "id": "remote_control_toys",
           "name": "Remote Control Toys",
-          "description": "Remote-controlled and battery-powered toys for active indoor play"
+          "description": "Remote-controlled and battery-powered toys for active indoor play",
+          "children": [
+            {
+              "id": "rc_cars",
+              "name": "Remote-Control Cars",
+              "description": "Remote-controlled car toys for racing and off-road play"
+            },
+            {
+              "id": "rc_vehicles",
+              "name": "Remote-Control Vehicles",
+              "description": "Remote-control planes, boats, and vehicles for active play"
+            }
+          ]
         },
         {
           "id": "puzzles_and_games",
           "name": "Puzzles and Games",
-          "description": "Board games, puzzles, and table games for children"
+          "description": "Board games, puzzles, and table games for children",
+          "children": [
+            {
+              "id": "board_games",
+              "name": "Board Games",
+              "description": "Board-based strategy and family games"
+            },
+            {
+              "id": "jigsaw_puzzles",
+              "name": "Jigsaw Puzzles",
+              "description": "Interlocking-piece jigsaw and picture puzzles"
+            }
+          ]
         }
       ]
     },

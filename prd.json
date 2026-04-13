@@ -74,7 +74,7 @@
       "id": 12,
       "title": "Expand L3: Books + Toys subcategories (2-3 each)",
       "acceptanceCriteria": "Each Books and Toys L2 has 2-3 L3 children. NLIV > 0.40.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 13,

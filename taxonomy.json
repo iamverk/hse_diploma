@@ -38,7 +38,29 @@
     {
       "id": "clothing",
       "name": "Clothing",
-      "description": "Apparel and fashion items"
+      "description": "Apparel and fashion items",
+      "children": [
+        {
+          "id": "bottoms",
+          "name": "Bottoms",
+          "description": "Lower-body apparel including pants, shorts, skirts, and leggings"
+        },
+        {
+          "id": "footwear",
+          "name": "Footwear",
+          "description": "Footwear, socks, and other items worn on the feet"
+        },
+        {
+          "id": "outerwear",
+          "name": "Outerwear",
+          "description": "Jackets, coats, and other garments worn over other clothing"
+        },
+        {
+          "id": "dresses",
+          "name": "Dresses",
+          "description": "Dress garments and related one-piece apparel"
+        }
+      ]
     },
     {
       "id": "home",

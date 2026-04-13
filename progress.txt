@@ -12,12 +12,10 @@
 ## Current State
 - Story 1 status: passes true
 - Story 2 status: passes true
+- Story 3 status: passes true
 - Validation: 16 nodes, max depth 2, valid taxonomy structure
 - This is Experiment 10: best of all
-- Metrics: NLIV=0.46, CSC=not computed, Composite=not computed, nodes=16
+- Metrics: NLIV=0.46, CSC=not computed, Composite=not computed, nodes=20
 
 ## Decisions This Iteration
-- Fresh start from empty taxonomy
-- Renamed root to "Products" to satisfy L1 edge semantics during checker validation.
-- Added 10 flat L1 domains under root: electronics, clothing, home, books, toys, sports, tools, automotive, pet_products, cosmetics.
-- Added 5 Electronics L2 subcategories after batch NLIV validation: Mobile Devices, Computers, Cameras, Audio, Televisions.
+- Added 4 L2 Clothing subcategories after batch NLIV validation: Bottoms, Footwear, Outerwear, Dresses.

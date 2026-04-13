@@ -16,27 +16,87 @@
             {
               "id": "cookbooks",
               "name": "Cookbooks",
-              "description": "Recipe books and practical cooking guides"
+              "description": "Recipe books and practical cooking guides",
+              "children": [
+                {
+                  "id": "healthy_cookbooks",
+                  "name": "Healthy Cookbooks",
+                  "description": "Recipes focused on healthy meals, nutrition, and wellness diets."
+                },
+                {
+                  "id": "dessert_cookbooks",
+                  "name": "Dessert Cookbooks",
+                  "description": "Baking and pastry collections focused on cakes, pastries, and sweets."
+                }
+              ]
             },
             {
               "id": "digital_books",
               "name": "Digital Books",
-              "description": "Ebooks, digital editions, and electronic reading books"
+              "description": "Ebooks, digital editions, and electronic reading books",
+              "children": [
+                {
+                  "id": "ebooks",
+                  "name": "Ebooks",
+                  "description": "Digital text editions and downloadable e-book formats."
+                },
+                {
+                  "id": "audiobooks",
+                  "name": "Audiobooks",
+                  "description": "Narrated and voice-driven digital book media."
+                }
+              ]
             },
             {
               "id": "fiction_books",
               "name": "Fiction Books",
-              "description": "Novels, literary fiction, and narrative story titles"
+              "description": "Novels, literary fiction, and narrative story titles",
+              "children": [
+                {
+                  "id": "mystery_fiction",
+                  "name": "Mystery Fiction",
+                  "description": "Narrative books centered on mystery and investigative plots."
+                },
+                {
+                  "id": "romance_fiction",
+                  "name": "Romance Fiction",
+                  "description": "Love stories and character-driven romance fiction titles."
+                }
+              ]
             },
             {
               "id": "non_fiction_books",
               "name": "Non-Fiction Books",
-              "description": "Narrative nonfiction, biographies, and informational reading books"
+              "description": "Narrative nonfiction, biographies, and informational reading books",
+              "children": [
+                {
+                  "id": "biography_books",
+                  "name": "Biography Books",
+                  "description": "Non-fiction books about people, lives, and historical figures."
+                },
+                {
+                  "id": "business_books",
+                  "name": "Business Books",
+                  "description": "Professional and management-focused non-fiction titles."
+                }
+              ]
             },
             {
               "id": "textbooks",
               "name": "Textbooks",
-              "description": "Educational textbooks, workbooks, and course materials"
+              "description": "Educational textbooks, workbooks, and course materials",
+              "children": [
+                {
+                  "id": "college_textbooks",
+                  "name": "College Textbooks",
+                  "description": "Academic textbooks used for university and college study."
+                },
+                {
+                  "id": "professional_textbooks",
+                  "name": "Professional Textbooks",
+                  "description": "Technical textbooks for certifications and professional learning."
+                }
+              ]
             }
           ]
         },
@@ -53,17 +113,53 @@
                 {
                   "id": "fashion_bags",
                   "name": "Bags",
-                  "description": "Handbags, shoulder bags, crossbody bags, and totes."
+                  "description": "Handbags, shoulder bags, crossbody bags, and totes.",
+                  "children": [
+                    {
+                      "id": "handbags",
+                      "name": "Handbags",
+                      "description": "General and fashion handbags for daily use and occasions."
+                    },
+                    {
+                      "id": "backpacks",
+                      "name": "Backpacks",
+                      "description": "Backpack styles for travel, school, and commuting."
+                    }
+                  ]
                 },
                 {
                   "id": "fashion_jewelry",
                   "name": "Jewelry",
-                  "description": "Earrings, necklaces, rings, and other fashion jewelry."
+                  "description": "Earrings, necklaces, rings, and other fashion jewelry.",
+                  "children": [
+                    {
+                      "id": "necklaces",
+                      "name": "Necklaces",
+                      "description": "Necklace styles and designs for fashion and gifting."
+                    },
+                    {
+                      "id": "bracelets",
+                      "name": "Bracelets",
+                      "description": "Bracelet jewelry and bangles for all ages."
+                    }
+                  ]
                 },
                 {
                   "id": "wristwatches",
                   "name": "Wristwatches",
-                  "description": "Analog and digital wristwatches for everyday wear."
+                  "description": "Analog and digital wristwatches for everyday wear.",
+                  "children": [
+                    {
+                      "id": "analog_watches",
+                      "name": "Analog Watches",
+                      "description": "Classic analog wristwatches with hour and minute hands."
+                    },
+                    {
+                      "id": "digital_watches",
+                      "name": "Digital Watches",
+                      "description": "Digital display wristwatches and smart timepieces."
+                    }
+                  ]
                 }
               ]
             },
@@ -75,17 +171,53 @@
                 {
                   "id": "footwear_boots",
                   "name": "Boots",
-                  "description": "Boots and high-coverage footwear for all conditions."
+                  "description": "Boots and high-coverage footwear for all conditions.",
+                  "children": [
+                    {
+                      "id": "ankle_boots",
+                      "name": "Ankle Boots",
+                      "description": "Ankle-height boot styles for casual and daily wear."
+                    },
+                    {
+                      "id": "winter_boots",
+                      "name": "Winter Boots",
+                      "description": "Insulated boots for cold and wet weather conditions."
+                    }
+                  ]
                 },
                 {
                   "id": "footwear_shoes",
                   "name": "Shoes",
-                  "description": "Sneakers, casual shoes, and formal shoes."
+                  "description": "Sneakers, casual shoes, and formal shoes.",
+                  "children": [
+                    {
+                      "id": "sneakers",
+                      "name": "Sneakers",
+                      "description": "Athletic and lifestyle sneakers in many styles."
+                    },
+                    {
+                      "id": "sandals",
+                      "name": "Sandals",
+                      "description": "Open-toed sandals and thong-style footwear."
+                    }
+                  ]
                 },
                 {
                   "id": "footwear_socks",
                   "name": "Socks",
-                  "description": "Socks, tights, and hosiery for comfort and fit."
+                  "description": "Socks, tights, and hosiery for comfort and fit.",
+                  "children": [
+                    {
+                      "id": "athletic_socks",
+                      "name": "Athletic Socks",
+                      "description": "Performance socks for workouts and sports."
+                    },
+                    {
+                      "id": "dress_socks",
+                      "name": "Dress Socks",
+                      "description": "Formal and everyday low-profile socks."
+                    }
+                  ]
                 }
               ]
             },
@@ -97,17 +229,53 @@
                 {
                   "id": "baby_clothing",
                   "name": "Baby Clothing",
-                  "description": "One-piece and layered apparel for babies and toddlers."
+                  "description": "One-piece and layered apparel for babies and toddlers.",
+                  "children": [
+                    {
+                      "id": "baby_rompers",
+                      "name": "Baby Rompers",
+                      "description": "One-piece baby outfits and romper styles."
+                    },
+                    {
+                      "id": "baby_shirts",
+                      "name": "Baby Shirts",
+                      "description": "Comfort-fit shirts and tops for babies."
+                    }
+                  ]
                 },
                 {
                   "id": "boys_clothing",
                   "name": "Boys' Clothing",
-                  "description": "Everyday and casual wear for boys."
+                  "description": "Everyday and casual wear for boys.",
+                  "children": [
+                    {
+                      "id": "boys_tshirts",
+                      "name": "Boys' T-Shirts",
+                      "description": "Basic t-shirts and casual tops for boys."
+                    },
+                    {
+                      "id": "boys_bottoms",
+                      "name": "Boys' Bottoms",
+                      "description": "Bottoms like pants, shorts, and chinos for boys."
+                    }
+                  ]
                 },
                 {
                   "id": "girls_clothing",
                   "name": "Girls' Clothing",
-                  "description": "Everyday, active, and casual styles for girls."
+                  "description": "Everyday, active, and casual styles for girls.",
+                  "children": [
+                    {
+                      "id": "girls_tops",
+                      "name": "Girls' Tops",
+                      "description": "Tops and blouses designed for girls."
+                    },
+                    {
+                      "id": "girls_bottoms",
+                      "name": "Girls' Bottoms",
+                      "description": "Bottom garments for girls, including jeans and leggings."
+                    }
+                  ]
                 }
               ]
             },
@@ -119,17 +287,53 @@
                 {
                   "id": "mens_bottoms",
                   "name": "Men's Bottoms",
-                  "description": "Pants, shorts, jeans, and other lower garments for men."
+                  "description": "Pants, shorts, jeans, and other lower garments for men.",
+                  "children": [
+                    {
+                      "id": "mens_jeans",
+                      "name": "Men's Jeans",
+                      "description": "Casual and casual-to-business jeans for men."
+                    },
+                    {
+                      "id": "mens_shorts",
+                      "name": "Men's Shorts",
+                      "description": "Short-length bottomwear for warm-weather and sports."
+                    }
+                  ]
                 },
                 {
                   "id": "mens_outerwear",
                   "name": "Men's Outerwear",
-                  "description": "Jackets, coats, and other outer layers for men."
+                  "description": "Jackets, coats, and other outer layers for men.",
+                  "children": [
+                    {
+                      "id": "mens_jackets",
+                      "name": "Men's Jackets",
+                      "description": "Outerwear jackets for seasonal men's dressing."
+                    },
+                    {
+                      "id": "mens_coats",
+                      "name": "Men's Coats",
+                      "description": "Winter coats and heavy outer layers for men."
+                    }
+                  ]
                 },
                 {
                   "id": "mens_tops",
                   "name": "Men's Tops",
-                  "description": "Shirts, polos, tees, and other upper-garment styles for men."
+                  "description": "Shirts, polos, tees, and other upper-garment styles for men.",
+                  "children": [
+                    {
+                      "id": "mens_shirts",
+                      "name": "Men's Shirts",
+                      "description": "Formal and casual shirts for men."
+                    },
+                    {
+                      "id": "mens_tshirts",
+                      "name": "Men's T-Shirts",
+                      "description": "T-shirts and short-sleeve tops for men."
+                    }
+                  ]
                 }
               ]
             },
@@ -141,17 +345,53 @@
                 {
                   "id": "womens_bottoms",
                   "name": "Women's Bottoms",
-                  "description": "Skirts, pants, jeans, and similar lower garments for women."
+                  "description": "Skirts, pants, jeans, and similar lower garments for women.",
+                  "children": [
+                    {
+                      "id": "womens_jeans",
+                      "name": "Women's Jeans",
+                      "description": "Everyday jeans and denim bottoms for women."
+                    },
+                    {
+                      "id": "womens_pants",
+                      "name": "Women's Pants",
+                      "description": "Trousers and pants designed for women."
+                    }
+                  ]
                 },
                 {
                   "id": "womens_dresses",
                   "name": "Women's Dresses",
-                  "description": "One-piece dress styles for a wide range of women's occasions."
+                  "description": "One-piece dress styles for a wide range of women's occasions.",
+                  "children": [
+                    {
+                      "id": "casual_dresses",
+                      "name": "Casual Dresses",
+                      "description": "Relaxed everyday and work-ready women's dresses."
+                    },
+                    {
+                      "id": "formal_dresses",
+                      "name": "Formal Dresses",
+                      "description": "Evening and event-focused women's dresses."
+                    }
+                  ]
                 },
                 {
                   "id": "womens_tops",
                   "name": "Women's Tops",
-                  "description": "Tops, blouses, tees, and similar upper garments for women."
+                  "description": "Tops, blouses, tees, and similar upper garments for women.",
+                  "children": [
+                    {
+                      "id": "womens_blouses",
+                      "name": "Women's Blouses",
+                      "description": "Lightweight blouses and blouse-like tops."
+                    },
+                    {
+                      "id": "womens_tops_tshirts",
+                      "name": "Women's T-Shirts",
+                      "description": "Everyday t-shirts and crew or crop tops."
+                    }
+                  ]
                 }
               ]
             }
@@ -165,22 +405,70 @@
             {
               "id": "beauty_tools",
               "name": "Beauty Tools",
-              "description": "Makeup brushes, mirrors, and tools used for applying cosmetics."
+              "description": "Makeup brushes, mirrors, and tools used for applying cosmetics.",
+              "children": [
+                {
+                  "id": "nail_tools",
+                  "name": "Nail Tools",
+                  "description": "Tools for nail care and manicure application."
+                },
+                {
+                  "id": "facial_rollers",
+                  "name": "Facial Rollers",
+                  "description": "Devices used for facial massage and skincare routines."
+                }
+              ]
             },
             {
               "id": "fragrances",
               "name": "Fragrances",
-              "description": "Perfumes, body mists, and scent products used for body fragrance."
+              "description": "Perfumes, body mists, and scent products used for body fragrance.",
+              "children": [
+                {
+                  "id": "perfumes",
+                  "name": "Perfumes",
+                  "description": "Alcohol-based perfumes and eau de parfum scents."
+                },
+                {
+                  "id": "body_sprays",
+                  "name": "Body Sprays",
+                  "description": "Body and clothing sprays for quick scent application."
+                }
+              ]
             },
             {
               "id": "makeup",
               "name": "Makeup",
-              "description": "Products for facial, eye, lip, and color cosmetics."
+              "description": "Products for facial, eye, lip, and color cosmetics.",
+              "children": [
+                {
+                  "id": "lip_makeup",
+                  "name": "Lip Makeup",
+                  "description": "Lips-focused products like lipstick and gloss."
+                },
+                {
+                  "id": "eye_makeup",
+                  "name": "Eye Makeup",
+                  "description": "Eyeshadow, eyeliner, and mascara categories."
+                }
+              ]
             },
             {
               "id": "skincare",
               "name": "Skincare",
-              "description": "Skin cleansers, serums, creams, and treatments for care routines."
+              "description": "Skin cleansers, serums, creams, and treatments for care routines.",
+              "children": [
+                {
+                  "id": "moisturizers",
+                  "name": "Moisturizers",
+                  "description": "Hydrating creams and lotions for skin care."
+                },
+                {
+                  "id": "facial_masks",
+                  "name": "Facial Masks",
+                  "description": "Face masks and mask-like skincare treatments."
+                }
+              ]
             }
           ]
         },
@@ -197,12 +485,36 @@
                 {
                   "id": "action_cameras",
                   "name": "Action Cameras",
-                  "description": "Compact rugged cameras for recording in motion and outdoors."
+                  "description": "Compact rugged cameras for recording in motion and outdoors.",
+                  "children": [
+                    {
+                      "id": "action_camera_mounts",
+                      "name": "Action Camera Mounts",
+                      "description": "Mounting and stabilizing accessories for action cams."
+                    },
+                    {
+                      "id": "action_camera_gimbals",
+                      "name": "Action Camera Gimbals",
+                      "description": "Gimbal and motion-stabilization kits for action filming."
+                    }
+                  ]
                 },
                 {
                   "id": "dslr_cameras",
                   "name": "DSLR Cameras",
-                  "description": "Single-lens-reflex digital cameras with interchangeable lenses."
+                  "description": "Single-lens-reflex digital cameras with interchangeable lenses.",
+                  "children": [
+                    {
+                      "id": "camera_lenses",
+                      "name": "Camera Lenses",
+                      "description": "Interchangeable lenses for DSLR shooting."
+                    },
+                    {
+                      "id": "camera_tripods",
+                      "name": "Camera Tripods",
+                      "description": "Tripods and stands for DSLRs and still cameras."
+                    }
+                  ]
                 }
               ]
             },
@@ -214,12 +526,36 @@
                 {
                   "id": "desktops",
                   "name": "Desktops",
-                  "description": "Non-portable desktop computer systems for home or office."
+                  "description": "Non-portable desktop computer systems for home or office.",
+                  "children": [
+                    {
+                      "id": "gaming_desktops",
+                      "name": "Gaming Desktops",
+                      "description": "High-performance desktop PCs tuned for gaming."
+                    },
+                    {
+                      "id": "office_desktops",
+                      "name": "Office Desktops",
+                      "description": "Office-friendly and productivity-focused desktop PCs."
+                    }
+                  ]
                 },
                 {
                   "id": "laptops",
                   "name": "Laptops",
-                  "description": "Portable computers with integrated displays and keyboards."
+                  "description": "Portable computers with integrated displays and keyboards.",
+                  "children": [
+                    {
+                      "id": "ultrabooks",
+                      "name": "Ultrabooks",
+                      "description": "Thin and lightweight laptops with long battery life."
+                    },
+                    {
+                      "id": "gaming_laptops",
+                      "name": "Gaming Laptops",
+                      "description": "High-performance laptops built for games."
+                    }
+                  ]
                 }
               ]
             },
@@ -231,12 +567,36 @@
                 {
                   "id": "in_ear_headphones",
                   "name": "In-Ear Headphones",
-                  "description": "Compact ear-insert headphones that route sound directly into the ear."
+                  "description": "Compact ear-insert headphones that route sound directly into the ear.",
+                  "children": [
+                    {
+                      "id": "wireless_earbuds",
+                      "name": "Wireless Earbuds",
+                      "description": "Compact in-ear wireless audio buds."
+                    },
+                    {
+                      "id": "wired_earbuds",
+                      "name": "Wired Earbuds",
+                      "description": "Corded in-ear earbuds for simple connectivity."
+                    }
+                  ]
                 },
                 {
                   "id": "over_ear_headphones",
                   "name": "Over-Ear Headphones",
-                  "description": "Headphones that rest over the outer ear for full-seal audio."
+                  "description": "Headphones that rest over the outer ear for full-seal audio.",
+                  "children": [
+                    {
+                      "id": "studio_headphones",
+                      "name": "Studio Headphones",
+                      "description": "Closed-back headphones for studio and mixing use."
+                    },
+                    {
+                      "id": "noise_cancelling_headphones",
+                      "name": "Noise Cancelling Headphones",
+                      "description": "Over-ear headphones with active noise reduction."
+                    }
+                  ]
                 }
               ]
             },
@@ -248,12 +608,36 @@
                 {
                   "id": "android_phones",
                   "name": "Android Phones",
-                  "description": "Smartphones running the Android operating system from many manufacturers."
+                  "description": "Smartphones running the Android operating system from many manufacturers.",
+                  "children": [
+                    {
+                      "id": "budget_android",
+                      "name": "Budget Android Phones",
+                      "description": "Affordable Android devices with core features."
+                    },
+                    {
+                      "id": "premium_android",
+                      "name": "Premium Android Phones",
+                      "description": "Flagship Android smartphones and high-end models."
+                    }
+                  ]
                 },
                 {
                   "id": "iphones",
                   "name": "iPhones",
-                  "description": "Apple-branded smartphones sold under the iPhone line."
+                  "description": "Apple-branded smartphones sold under the iPhone line.",
+                  "children": [
+                    {
+                      "id": "iphone_cases",
+                      "name": "iPhone Cases",
+                      "description": "Protective and fashion-focused cases for iPhones."
+                    },
+                    {
+                      "id": "iphone_accessories",
+                      "name": "iPhone Accessories",
+                      "description": "Chargers, stands, and accessories for iPhones."
+                    }
+                  ]
                 }
               ]
             },
@@ -265,12 +649,36 @@
                 {
                   "id": "oled_tvs",
                   "name": "OLED TVs",
-                  "description": "Televisions using OLED display technology for high-contrast visuals."
+                  "description": "Televisions using OLED display technology for high-contrast visuals.",
+                  "children": [
+                    {
+                      "id": "oled_home_theaters",
+                      "name": "OLED Home Theaters",
+                      "description": "Media setups designed around OLED televisions."
+                    },
+                    {
+                      "id": "oled_streaming_tvs",
+                      "name": "OLED Smart TVs",
+                      "description": "Streaming-focused OLED televisions and services."
+                    }
+                  ]
                 },
                 {
                   "id": "smart_tvs",
                   "name": "Smart TVs",
-                  "description": "Internet-connected televisions with streaming and app platforms."
+                  "description": "Internet-connected televisions with streaming and app platforms.",
+                  "children": [
+                    {
+                      "id": "smart_tv_sticks",
+                      "name": "Smart TV Sticks",
+                      "description": "Streaming dongles for smart television setups."
+                    },
+                    {
+                      "id": "smart_tv_accessories",
+                      "name": "Smart TV Accessories",
+                      "description": "Remotes and mounts for smart television systems."
+                    }
+                  ]
                 }
               ]
             }
@@ -284,27 +692,87 @@
             {
               "id": "cleaning_supplies",
               "name": "Cleaning Supplies",
-              "description": "Household cleaning, sanitation, and upkeep products"
+              "description": "Household cleaning, sanitation, and upkeep products",
+              "children": [
+                {
+                  "id": "vacuum_cleaners",
+                  "name": "Vacuum Cleaners",
+                  "description": "Vacuum devices and attachments for home cleaning."
+                },
+                {
+                  "id": "cleaning_tools",
+                  "name": "Cleaning Tools",
+                  "description": "Cleaning tools and brush-based home cleaning accessories."
+                }
+              ]
             },
             {
               "id": "furniture",
               "name": "Furniture",
-              "description": "Major household furniture pieces and seating for living spaces"
+              "description": "Major household furniture pieces and seating for living spaces",
+              "children": [
+                {
+                  "id": "sofas",
+                  "name": "Sofas",
+                  "description": "Sofas and sectional seating for home living spaces."
+                },
+                {
+                  "id": "beds",
+                  "name": "Beds",
+                  "description": "Bed frames, frames, and bedroom bed systems."
+                }
+              ]
             },
             {
               "id": "home_decor",
               "name": "Home Decor",
-              "description": "Decorative accents, artwork, and styling products for rooms"
+              "description": "Decorative accents, artwork, and styling products for rooms",
+              "children": [
+                {
+                  "id": "wall_art",
+                  "name": "Wall Art",
+                  "description": "Wall decor including paintings and posters."
+                },
+                {
+                  "id": "wall_decor",
+                  "name": "Wall Decor",
+                  "description": "Decorative pieces for walls and room styling."
+                }
+              ]
             },
             {
               "id": "home_improvement",
               "name": "Home Improvement",
-              "description": "Repair, maintenance, and fixture-related home products"
+              "description": "Repair, maintenance, and fixture-related home products",
+              "children": [
+                {
+                  "id": "home_repair",
+                  "name": "Home Repair",
+                  "description": "Products for repairing and repairing-related home projects."
+                },
+                {
+                  "id": "home_renovation",
+                  "name": "Home Renovation",
+                  "description": "Products for modernizing and renovating living spaces."
+                }
+              ]
             },
             {
               "id": "home_storage",
               "name": "Home Storage",
-              "description": "Storage systems, organizers, racks, and containers for the home"
+              "description": "Storage systems, organizers, racks, and containers for the home",
+              "children": [
+                {
+                  "id": "storage_bins",
+                  "name": "Storage Bins",
+                  "description": "Stacking bins and containers for home organization."
+                },
+                {
+                  "id": "storage_racks",
+                  "name": "Storage Racks",
+                  "description": "Shelving and rack systems for organization and home storage."
+                }
+              ]
             }
           ]
         },
@@ -321,12 +789,36 @@
                 {
                   "id": "camping_tents",
                   "name": "Camping Tents",
-                  "description": "Tents and shelter structures for camping"
+                  "description": "Tents and shelter structures for camping",
+                  "children": [
+                    {
+                      "id": "dome_tents",
+                      "name": "Dome Tents",
+                      "description": "Quick-setup dome tents for camping."
+                    },
+                    {
+                      "id": "backpacking_tents",
+                      "name": "Backpacking Tents",
+                      "description": "Lightweight tents for hiking and backpacking trips."
+                    }
+                  ]
                 },
                 {
                   "id": "sleeping_bags",
                   "name": "Sleeping Bags",
-                  "description": "Insulated sleeping bags for camping and hiking"
+                  "description": "Insulated sleeping bags for camping and hiking",
+                  "children": [
+                    {
+                      "id": "down_sleeping_bags",
+                      "name": "Down Sleeping Bags",
+                      "description": "Sleeping bags insulated with down-fill."
+                    },
+                    {
+                      "id": "synthetic_sleeping_bags",
+                      "name": "Synthetic Sleeping Bags",
+                      "description": "Durable synthetic insulated sleeping bags."
+                    }
+                  ]
                 }
               ]
             },
@@ -338,12 +830,36 @@
                 {
                   "id": "hiking_backpacks",
                   "name": "Hiking Backpacks",
-                  "description": "Daypacks and carry bags for trail hiking"
+                  "description": "Daypacks and carry bags for trail hiking",
+                  "children": [
+                    {
+                      "id": "day_packs",
+                      "name": "Daypacks",
+                      "description": "Compact packs for short hikes and day trips."
+                    },
+                    {
+                      "id": "multi_day_packs",
+                      "name": "Multi-Day Packs",
+                      "description": "Larger hiking packs for extended trips."
+                    }
+                  ]
                 },
                 {
                   "id": "hiking_boots",
                   "name": "Hiking Boots",
-                  "description": "Durable boots for hiking and trail use"
+                  "description": "Durable boots for hiking and trail use",
+                  "children": [
+                    {
+                      "id": "trail_boots",
+                      "name": "Trail Boots",
+                      "description": "Boots designed for rugged trail hiking."
+                    },
+                    {
+                      "id": "waterproof_boots",
+                      "name": "Waterproof Boots",
+                      "description": "Water-resistant boots for wet terrain."
+                    }
+                  ]
                 }
               ]
             },
@@ -355,7 +871,19 @@
                 {
                   "id": "patio_lights",
                   "name": "Patio Lights",
-                  "description": "Decorative lighting for patios and decks"
+                  "description": "Decorative lighting for patios and decks",
+                  "children": [
+                    {
+                      "id": "string_lights",
+                      "name": "String Lights",
+                      "description": "Decorative and warm string lighting for patios."
+                    },
+                    {
+                      "id": "solar_lights",
+                      "name": "Solar Lights",
+                      "description": "Solar-powered outdoor lighting for patios."
+                    }
+                  ]
                 },
                 {
                   "id": "yard_decor",
@@ -391,17 +919,53 @@
             {
               "id": "pet_beds_and_crates",
               "name": "Pet Beds and Crates",
-              "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel."
+              "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel.",
+              "children": [
+                {
+                  "id": "dog_beds",
+                  "name": "Dog Beds",
+                  "description": "Indoor and outdoor bedding made for dogs."
+                },
+                {
+                  "id": "pet_carriers",
+                  "name": "Pet Crates and Carriers",
+                  "description": "Portable crates and carriers for pets."
+                }
+              ]
             },
             {
               "id": "pet_food",
               "name": "Pet Food",
-              "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets."
+              "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets.",
+              "children": [
+                {
+                  "id": "dry_pet_food",
+                  "name": "Dry Pet Food",
+                  "description": "Kibble and dry nutritional food for pets."
+                },
+                {
+                  "id": "wet_pet_food",
+                  "name": "Wet Pet Food",
+                  "description": "Canned and pouch-style pet nutrition."
+                }
+              ]
             },
             {
               "id": "pet_toys",
               "name": "Pet Toys",
-              "description": "Interactive and playful items for pet enrichment and exercise."
+              "description": "Interactive and playful items for pet enrichment and exercise.",
+              "children": [
+                {
+                  "id": "chew_toys",
+                  "name": "Chew Toys",
+                  "description": "Durable pet chew products for teeth and play."
+                },
+                {
+                  "id": "interactive_pet_toys",
+                  "name": "Interactive Pet Toys",
+                  "description": "Automotive? no, playful interactive pet devices."
+                }
+              ]
             }
           ]
         },
@@ -413,17 +977,53 @@
             {
               "id": "ball_sports",
               "name": "Ball Sports",
-              "description": "Bat-and-ball and goal sports driven by bouncing balls and targets"
+              "description": "Bat-and-ball and goal sports driven by bouncing balls and targets",
+              "children": [
+                {
+                  "id": "basketballs",
+                  "name": "Basketballs",
+                  "description": "Basketball equipment and balls for games."
+                },
+                {
+                  "id": "soccer_balls",
+                  "name": "Soccer Balls",
+                  "description": "Soccer balls and training balls for field sports."
+                }
+              ]
             },
             {
               "id": "outdoor_recreation",
               "name": "Outdoor Recreation",
-              "description": "Camping, hiking, and general outdoor play and recreation"
+              "description": "Camping, hiking, and general outdoor play and recreation",
+              "children": [
+                {
+                  "id": "hiking_recreation_gear",
+                  "name": "Hiking Recreation Gear",
+                  "description": "Specialized gear sets for outdoor recreation activities."
+                },
+                {
+                  "id": "boating_gear",
+                  "name": "Boating Gear",
+                  "description": "Life vests, paddles, and boating accessories."
+                }
+              ]
             },
             {
               "id": "racket_sports",
               "name": "Racket Sports",
-              "description": "Tennis, badminton, table tennis, and similar racket activities"
+              "description": "Tennis, badminton, table tennis, and similar racket activities",
+              "children": [
+                {
+                  "id": "tennis_rackets",
+                  "name": "Tennis Rackets",
+                  "description": "Tennis rackets and ball machine accessories."
+                },
+                {
+                  "id": "badminton_rackets",
+                  "name": "Badminton Rackets",
+                  "description": "Rackets and shuttlecock accessories for badminton."
+                }
+              ]
             },
             {
               "id": "team_sports",

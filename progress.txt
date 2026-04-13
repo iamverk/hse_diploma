@@ -55,6 +55,9 @@
 - Story 17 status: passes true
 - Validation: NLIV mean=0.6209, CSC=0.3868, Branching CV=0.4863, Chains=0, nodes=103, max depth=4, valid=True
 - Weak edges: none
+- Story 18 status: passes true
+- Validation: Nodes=203, max depth=5, NLIV mean=0.6515, CSC=0.4177, valid=True
+- Weak edges (full check): root->tools_and_automotive_products (0.1094), root->retail_goods (0.1336), retail_goods->books (0.3121), retail_goods->electronics (0.3457), retail_goods->cosmetics (0.3605), retail_goods->toys (0.3935)
 
 ## Decisions This Iteration
 - Root label updated to "Products"
@@ -84,3 +87,4 @@
 
 - Story 16: Added `retail_goods` and `tools_and_automotive_products` under root; moved 9 retail L1 domains under the first and `tools` + `automotive_parts` under the second to remove all NLIV<0.3 edges; reran validation pass.
 - Story 17: Ran a full MECE/balance audit with reference-free metrics. Story 17 criteria pass (CSC 0.3868 > 0.35, zero chains, branching CV 0.4863 < 0.8) with no taxonomy edits required.
+- Story 18: Added 100 new leaf nodes (203 total) across 50 parents using `taxonomy_cli.py add-node` to complete final optimization, including Books, Clothing, Electronics, Home Goods, Outdoor, Toys/Sports, Automotive, and Pet branches. Replaced weak story-18 edges with stronger labels after one-shot edge audits, renamed duplicate `hiking_gear` under `outdoor_recreation` to `hiking_recreation_gear`, reran full `check_edge` validation, and fixed taxonomy by final `validate` pass.

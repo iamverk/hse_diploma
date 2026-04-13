@@ -71,13 +71,65 @@
       "id": "home_goods",
       "name": "Home Goods",
       "description": "Household essentials, decor, and home maintenance items",
-      "children": []
+      "children": [
+        {
+          "id": "home_decor",
+          "name": "Home Decor",
+          "description": "Decorative accents, artwork, and styling products for rooms"
+        },
+        {
+          "id": "home_storage",
+          "name": "Home Storage",
+          "description": "Storage systems, organizers, racks, and containers for the home"
+        },
+        {
+          "id": "home_improvement",
+          "name": "Home Improvement",
+          "description": "Repair, maintenance, and fixture-related home products"
+        },
+        {
+          "id": "cleaning_supplies",
+          "name": "Cleaning Supplies",
+          "description": "Household cleaning, sanitation, and upkeep products"
+        },
+        {
+          "id": "furniture",
+          "name": "Furniture",
+          "description": "Major household furniture pieces and seating for living spaces"
+        }
+      ]
     },
     {
       "id": "books",
       "name": "Books",
       "description": "Printed and digital books, magazines, and related reading media",
-      "children": []
+      "children": [
+        {
+          "id": "fiction_books",
+          "name": "Fiction Books",
+          "description": "Novels, literary fiction, and narrative story titles"
+        },
+        {
+          "id": "non_fiction_books",
+          "name": "Non-Fiction Books",
+          "description": "Narrative nonfiction, biographies, and informational reading books"
+        },
+        {
+          "id": "textbooks",
+          "name": "Textbooks",
+          "description": "Educational textbooks, workbooks, and course materials"
+        },
+        {
+          "id": "cookbooks",
+          "name": "Cookbooks",
+          "description": "Recipe books and practical cooking guides"
+        },
+        {
+          "id": "digital_books",
+          "name": "Digital Books",
+          "description": "Ebooks, digital editions, and electronic reading books"
+        }
+      ]
     },
     {
       "id": "toys",

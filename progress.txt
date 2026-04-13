@@ -52,6 +52,9 @@
 - Story 16 status: passes true
 - Validation: NLIV mean=0.6209, edges=102, nodes=103, max depth=4, valid=True; weak edges (<0.3)=0
 - Weak edges: Steering Wheel Covers (0.3448), Seat Covers (0.3467), Wheels and Tires->Tires and rims chain split (0.3797), Engine Parts->Fuel Filters (0.3803)
+- Story 17 status: passes true
+- Validation: NLIV mean=0.6209, CSC=0.3868, Branching CV=0.4863, Chains=0, nodes=103, max depth=4, valid=True
+- Weak edges: none
 
 ## Decisions This Iteration
 - Root label updated to "Products"
@@ -80,3 +83,4 @@
   - `camping_gear` -> `camping_tents`, `sleeping_bags`
 
 - Story 16: Added `retail_goods` and `tools_and_automotive_products` under root; moved 9 retail L1 domains under the first and `tools` + `automotive_parts` under the second to remove all NLIV<0.3 edges; reran validation pass.
+- Story 17: Ran a full MECE/balance audit with reference-free metrics. Story 17 criteria pass (CSC 0.3868 > 0.35, zero chains, branching CV 0.4863 < 0.8) with no taxonomy edits required.

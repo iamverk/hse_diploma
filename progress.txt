@@ -34,6 +34,8 @@
 - Story 10 status: passes true
 - Validation: Nodes=85, max depth=3, valid=True; Story 10 edges check passed 15/15 good (min NLIV=0.4046)
 - Weak edges: none
+- Story 11 status: passes true
+- Validation: Nodes=100, max depth=3, valid=True
 
 
 ## Decisions This Iteration
@@ -48,3 +50,4 @@
 - Story 8 expansion: Added 4 Cosmetics L2 children (makeup, skincare, fragrances, beauty_tools); 4 Automotive Parts L2 children (engine_parts, wheels_and_tires, electrical_parts, automotive_accessories); 4 Outdoor Goods L2 children (camping_gear, outdoor_decor, outdoor_furniture, outdoor_recreation). All Story 8 edges passed check_edge batch (12/12).
 - Story 9 expansion: Added 2 L3 nodes to each Electronics L2 branch using one-shot edge validation and CLI adds. Added `laptops` and `desktops` under `computers`, `iphones` and `android_phones` under `smartphones`, `dslr_cameras` and `action_cameras` under `cameras`, `smart_tvs` and `oled_tvs` under `televisions`, and `in_ear_headphones` plus `over_ear_headphones` under `headphones`.
 - Story 10 expansion: Added 3 L3 nodes each under all Clothing L2 branches. `mens_clothing` -> `mens_tops`, `mens_bottoms`, `mens_outerwear`; `womens_clothing` -> `womens_tops`, `womens_bottoms`, `womens_dresses`; `kids_clothing` -> `boys_clothing`, `girls_clothing`, `baby_clothing`; `footwear` -> `footwear_shoes`, `footwear_boots`, `footwear_socks`; `accessories` -> `fashion_bags`, `wristwatches`, `fashion_jewelry`. Added in one command and checked all 15 edges with `check_edge.py --batch` (all GOOD; min NLIV=0.4046).
+- Story 11 expansion: Home Goods retained its 5 L2 children and added 3 L3 each across all branches. Added `wall_decor`, `lighting_and_fixtures`, `decorative_textiles` under `home_decor`; `pantry_storage`, `storage_containers`, `home_organization` under `home_storage`; `home_repair`, `home_maintenance`, `home_renovation` under `home_improvement`; `cleaning_equipment`, `cleaning_chemicals`, `laundry_supplies` under `cleaning_supplies`; `living_room_furniture`, `bedroom_furniture`, `kitchen_dining_furniture` under `furniture`.

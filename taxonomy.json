@@ -220,27 +220,112 @@
         {
           "id": "home_decor",
           "name": "Home Decor",
-          "description": "Decorative accents, artwork, and styling products for rooms"
+          "description": "Decorative accents, artwork, and styling products for rooms",
+          "children": [
+            {
+              "id": "wall_decor",
+              "name": "Wall Decor",
+              "description": "Decorative items designed for walls and interiors"
+            },
+            {
+              "id": "lighting_and_fixtures",
+              "name": "Lighting and Fixtures",
+              "description": "Ambient and accent lighting for home interiors"
+            },
+            {
+              "id": "decorative_textiles",
+              "name": "Decorative Textiles",
+              "description": "Textile accents for home style, warmth, and comfort"
+            }
+          ]
         },
         {
           "id": "home_storage",
           "name": "Home Storage",
-          "description": "Storage systems, organizers, racks, and containers for the home"
+          "description": "Storage systems, organizers, racks, and containers for the home",
+          "children": [
+            {
+              "id": "pantry_storage",
+              "name": "Pantry Storage",
+              "description": "Food and pantry storage organizers"
+            },
+            {
+              "id": "storage_containers",
+              "name": "Storage Containers",
+              "description": "Portable containers and bins for home organization"
+            },
+            {
+              "id": "home_organization",
+              "name": "Home Organization",
+              "description": "Systems and tools for tidying and organizing rooms"
+            }
+          ]
         },
         {
           "id": "home_improvement",
           "name": "Home Improvement",
-          "description": "Repair, maintenance, and fixture-related home products"
+          "description": "Repair, maintenance, and fixture-related home products",
+          "children": [
+            {
+              "id": "home_repair",
+              "name": "Home Repair",
+              "description": "Products for fixing and maintaining home systems"
+            },
+            {
+              "id": "home_maintenance",
+              "name": "Home Maintenance",
+              "description": "Supplies for routine house upkeep"
+            },
+            {
+              "id": "home_renovation",
+              "name": "Home Renovation",
+              "description": "Materials for remodeling and home upgrades"
+            }
+          ]
         },
         {
           "id": "cleaning_supplies",
           "name": "Cleaning Supplies",
-          "description": "Household cleaning, sanitation, and upkeep products"
+          "description": "Household cleaning, sanitation, and upkeep products",
+          "children": [
+            {
+              "id": "cleaning_equipment",
+              "name": "Cleaning Equipment",
+              "description": "Tools and tools kits for cleaning"
+            },
+            {
+              "id": "cleaning_chemicals",
+              "name": "Cleaning Chemicals",
+              "description": "Detergents, sprays, and cleaners for home cleaning"
+            },
+            {
+              "id": "laundry_supplies",
+              "name": "Laundry Supplies",
+              "description": "Products and agents for washing and fabric care"
+            }
+          ]
         },
         {
           "id": "furniture",
           "name": "Furniture",
-          "description": "Major household furniture pieces and seating for living spaces"
+          "description": "Major household furniture pieces and seating for living spaces",
+          "children": [
+            {
+              "id": "living_room_furniture",
+              "name": "Living Room Furniture",
+              "description": "Furniture pieces for relaxation and entertaining spaces"
+            },
+            {
+              "id": "bedroom_furniture",
+              "name": "Bedroom Furniture",
+              "description": "Beds, dressers, and other bedroom essentials"
+            },
+            {
+              "id": "kitchen_dining_furniture",
+              "name": "Kitchen and Dining Furniture",
+              "description": "Furniture for kitchens and dining areas"
+            }
+          ]
         }
       ]
     },

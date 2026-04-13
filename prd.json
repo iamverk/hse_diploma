@@ -44,7 +44,7 @@
       "id": 7,
       "title": "Expand L2: Tools + Pet Products (3-5 each)",
       "acceptanceCriteria": "Tools and Pet Products each have 3-5 L2 children. NLIV > 0.35.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 8,

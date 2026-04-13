@@ -7,6 +7,7 @@
 - Using a root label that matches corpus vocabulary (e.g., "Products") improves root-level NLIV
 - Smartphones, laptops, phones, TVs, cameras, and headphones all show strong Electronics partitionability in corpus text
 - Home Goods text clusters into clear groups for decor, storage, furniture, improvement, and cleaning products.
+- Explicit species/function labels improve weak edges in cosmetics and pet branches (e.g., `facial_cleansers` over generic `cleansers`).
 
 ## Current State
 - Story 1 status: passes true
@@ -43,6 +44,9 @@
 - Story 13 status: passes true
 - Validation: Nodes=136, max depth=3, valid=True; Story 13 edges check passed 16/16 good (min NLIV=0.4202)
 - Weak edges: none
+- Story 14 status: passes true
+- Validation: Nodes=152, max depth=3, valid=True; Story 14 edges check passed 16/16 good (min NLIV=0.4563)
+- Weak edges: none
 
 
 ## Decisions This Iteration
@@ -61,3 +65,11 @@
 
 - Story 12 expanded Books and Toys to full L3 depth with 2 children each under every L2 node (`mystery_novels`, `fantasy_books`, `biographies`, `self_help_books`, `school_textbooks`, `language_textbooks`, `baking_cookbooks`, `regional_cookbooks`, `ebooks`, `audiobooks`, `science_kits`, `art_and_craft_toys`, `building_blocks`, `construction_sets`, `action_figures`, `plush_toys`, `rc_cars`, `rc_vehicles`, `board_games`, `jigsaw_puzzles`) and updated story status to pass after one full validate.
 - Story 13 expanded Sporting Goods and Tools to L3 with 2 children per L2 parent (`camping`, `hiking`, `swimming`, `kayaking`, `tennis`, `badminton`, `basketball`, `soccer`, `american_football`, `volleyball`, `power_drills`, `impact_drivers`, `hammers`, `screwdrivers`, `tool_boxes`, `tool_racks`) after one-shot batch `check_edge` verification (16/16 good) and taxonomy_cli adds.
+- Story 14 expanded Pet Products and Cosmetics to 2-3 L3 per L2:
+- `pet_food` -> `dog_food`, `cat_food`, `pet_treats`
+- `pet_toys` -> `chew_toys`, `interactive_toys`
+- `pet_beds_and_crates` -> `pet_beds`, `pet_crates`
+- `beauty_tools` -> `makeup_tools`, `beauty_mirrors`
+- `makeup` -> `face_makeup`, `eye_makeup`, `lip_makeup`
+- `fragrances` -> `perfumes`, `deodorants`
+- `skincare` -> `facial_cleansers`, `moisturizers`

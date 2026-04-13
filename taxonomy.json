@@ -521,17 +521,58 @@
         {
           "id": "pet_food",
           "name": "Pet Food",
-          "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets."
+          "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets.",
+          "children": [
+            {
+              "id": "dog_food",
+              "name": "Dog Food",
+              "description": "Dry, wet, and dry kibble products formulated specifically for dogs."
+            },
+            {
+              "id": "cat_food",
+              "name": "Cat Food",
+              "description": "Dry, wet, and gourmet nutrition products for cats."
+            },
+            {
+              "id": "pet_treats",
+              "name": "Pet Treats",
+              "description": "Treats, chew treats, and snack products designed for pets."
+            }
+          ]
         },
         {
           "id": "pet_toys",
           "name": "Pet Toys",
-          "description": "Interactive and playful items for pet enrichment and exercise."
+          "description": "Interactive and playful items for pet enrichment and exercise.",
+          "children": [
+            {
+              "id": "chew_toys",
+              "name": "Chew Toys",
+              "description": "Durable chew and teether toys for dogs and strong-jaw pets."
+            },
+            {
+              "id": "interactive_toys",
+              "name": "Interactive Toys",
+              "description": "Puzzle, motion, and engagement toys for active play."
+            }
+          ]
         },
         {
           "id": "pet_beds_and_crates",
           "name": "Pet Beds and Crates",
-          "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel."
+          "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel.",
+          "children": [
+            {
+              "id": "pet_beds",
+              "name": "Pet Beds",
+              "description": "Bedding products including beds, pads, and sleeping mats for pets."
+            },
+            {
+              "id": "pet_crates",
+              "name": "Pet Crates",
+              "description": "Crates, kennels, and travel enclosures for transporting pets."
+            }
+          ]
         }
       ]
     },
@@ -628,22 +669,75 @@
         {
           "id": "beauty_tools",
           "name": "Beauty Tools",
-          "description": "Makeup brushes, mirrors, and tools used for applying cosmetics."
+          "description": "Makeup brushes, mirrors, and tools used for applying cosmetics.",
+          "children": [
+            {
+              "id": "makeup_tools",
+              "name": "Makeup Tools",
+              "description": "Brushes, applicators, sponges, and puffy tools for makeup application."
+            },
+            {
+              "id": "beauty_mirrors",
+              "name": "Beauty Mirrors",
+              "description": "Makeup mirrors with lighting and positioning features."
+            }
+          ]
         },
         {
           "id": "makeup",
           "name": "Makeup",
-          "description": "Products for facial, eye, lip, and color cosmetics."
+          "description": "Products for facial, eye, lip, and color cosmetics.",
+          "children": [
+            {
+              "id": "face_makeup",
+              "name": "Face Makeup",
+              "description": "Foundations, concealers, powders, and blush for face coverage."
+            },
+            {
+              "id": "eye_makeup",
+              "name": "Eye Makeup",
+              "description": "Mascara, eyeliners, eyeshadow, and brow products."
+            },
+            {
+              "id": "lip_makeup",
+              "name": "Lip Makeup",
+              "description": "Lipsticks, lip glosses, liners, and lip stain products."
+            }
+          ]
         },
         {
           "id": "fragrances",
           "name": "Fragrances",
-          "description": "Perfumes, body mists, and scent products used for body fragrance."
+          "description": "Perfumes, body mists, and scent products used for body fragrance.",
+          "children": [
+            {
+              "id": "perfumes",
+              "name": "Perfumes",
+              "description": "Fine and body perfumes, colognes, and scented sprays."
+            },
+            {
+              "id": "deodorants",
+              "name": "Deodorants",
+              "description": "Deodorants, body sprays, and scent mists for personal freshness."
+            }
+          ]
         },
         {
           "id": "skincare",
           "name": "Skincare",
-          "description": "Skin cleansers, serums, creams, and treatments for care routines."
+          "description": "Skin cleansers, serums, creams, and treatments for care routines.",
+          "children": [
+            {
+              "id": "facial_cleansers",
+              "name": "Facial Cleansers",
+              "description": "Face wash, cleansing gels, and toners for skincare routines."
+            },
+            {
+              "id": "moisturizers",
+              "name": "Moisturizers",
+              "description": "Hydrating creams, lotions, and skin-moisture products."
+            }
+          ]
         }
       ]
     },

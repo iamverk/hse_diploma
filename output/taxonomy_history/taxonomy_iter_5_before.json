@@ -71,254 +71,49 @@
       "id": "home_goods",
       "name": "Home Goods",
       "description": "Household essentials, decor, and home maintenance items",
-      "children": [
-        {
-          "id": "home_decor",
-          "name": "Home Decor",
-          "description": "Decorative accents, artwork, and styling products for rooms"
-        },
-        {
-          "id": "home_storage",
-          "name": "Home Storage",
-          "description": "Storage systems, organizers, racks, and containers for the home"
-        },
-        {
-          "id": "home_improvement",
-          "name": "Home Improvement",
-          "description": "Repair, maintenance, and fixture-related home products"
-        },
-        {
-          "id": "cleaning_supplies",
-          "name": "Cleaning Supplies",
-          "description": "Household cleaning, sanitation, and upkeep products"
-        },
-        {
-          "id": "furniture",
-          "name": "Furniture",
-          "description": "Major household furniture pieces and seating for living spaces"
-        }
-      ]
+      "children": []
     },
     {
       "id": "books",
       "name": "Books",
       "description": "Printed and digital books, magazines, and related reading media",
-      "children": [
-        {
-          "id": "fiction_books",
-          "name": "Fiction Books",
-          "description": "Novels, literary fiction, and narrative story titles"
-        },
-        {
-          "id": "non_fiction_books",
-          "name": "Non-Fiction Books",
-          "description": "Narrative nonfiction, biographies, and informational reading books"
-        },
-        {
-          "id": "textbooks",
-          "name": "Textbooks",
-          "description": "Educational textbooks, workbooks, and course materials"
-        },
-        {
-          "id": "cookbooks",
-          "name": "Cookbooks",
-          "description": "Recipe books and practical cooking guides"
-        },
-        {
-          "id": "digital_books",
-          "name": "Digital Books",
-          "description": "Ebooks, digital editions, and electronic reading books"
-        }
-      ]
+      "children": []
     },
     {
       "id": "toys",
       "name": "Toys",
       "description": "Children's toys, games, and play accessories",
-      "children": [
-        {
-          "id": "educational_toys",
-          "name": "Educational Toys",
-          "description": "STEM and educational play items that support learning"
-        },
-        {
-          "id": "building_toys",
-          "name": "Building Toys",
-          "description": "Vehicle, construction, and assembling toy sets for hands-on play"
-        },
-        {
-          "id": "dolls_and_figures",
-          "name": "Dolls and Figures",
-          "description": "Dolls, plush toys, action figures, and figurines for imaginative play"
-        },
-        {
-          "id": "remote_control_toys",
-          "name": "Remote Control Toys",
-          "description": "Remote-controlled and battery-powered toys for active indoor play"
-        },
-        {
-          "id": "puzzles_and_games",
-          "name": "Puzzles and Games",
-          "description": "Board games, puzzles, and table games for children"
-        }
-      ]
+      "children": []
     },
     {
       "id": "pet_products",
       "name": "Pet Products",
       "description": "Products for pet care, feeding, accessories, and health",
-      "children": [
-        {
-          "id": "pet_food",
-          "name": "Pet Food",
-          "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets."
-        },
-        {
-          "id": "pet_toys",
-          "name": "Pet Toys",
-          "description": "Interactive and playful items for pet enrichment and exercise."
-        },
-        {
-          "id": "pet_beds_and_crates",
-          "name": "Pet Beds and Crates",
-          "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel."
-        }
-      ]
+      "children": []
     },
     {
       "id": "tools",
       "name": "Tools",
       "description": "Hardware, DIY tools, and shop equipment",
-      "children": [
-        {
-          "id": "power_tools",
-          "name": "Power Tools",
-          "description": "Battery- and corded-powered tools used for drilling, cutting, sanding, and other powered tasks."
-        },
-        {
-          "id": "hand_tools",
-          "name": "Hand Tools",
-          "description": "Manual tools for fastening, measuring, cutting, gripping, and basic repairs."
-        },
-        {
-          "id": "tool_storage",
-          "name": "Tool Storage",
-          "description": "Tool cabinets, chests, and organization systems for storing tools."
-        }
-      ]
+      "children": []
     },
     {
       "id": "automotive_parts",
       "name": "Automotive Parts",
       "description": "Automotive components, accessories, and maintenance supplies",
-      "children": [
-        {
-          "id": "engine_parts",
-          "name": "Engine Parts",
-          "description": "Engine, ignition, and drivetrain replacement components for vehicles."
-        },
-        {
-          "id": "wheels_and_tires",
-          "name": "Wheels and Tires",
-          "description": "Vehicle wheels, tires, and related balancing and fitment components."
-        },
-        {
-          "id": "automotive_accessories",
-          "name": "Automotive Accessories",
-          "description": "Interior and exterior add-on accessories for cars, trucks, and motorcycles."
-        },
-        {
-          "id": "electrical_parts",
-          "name": "Electrical Parts",
-          "description": "Vehicle electrical, battery, and charging components and related circuitry."
-        }
-      ]
+      "children": []
     },
     {
       "id": "cosmetics",
       "name": "Cosmetics",
       "description": "Skincare, beauty, and personal care products",
-      "children": [
-        {
-          "id": "beauty_tools",
-          "name": "Beauty Tools",
-          "description": "Makeup brushes, mirrors, and tools used for applying cosmetics."
-        },
-        {
-          "id": "makeup",
-          "name": "Makeup",
-          "description": "Products for facial, eye, lip, and color cosmetics."
-        },
-        {
-          "id": "fragrances",
-          "name": "Fragrances",
-          "description": "Perfumes, body mists, and scent products used for body fragrance."
-        },
-        {
-          "id": "skincare",
-          "name": "Skincare",
-          "description": "Skin cleansers, serums, creams, and treatments for care routines."
-        }
-      ]
+      "children": []
     },
     {
       "id": "outdoor_goods",
       "name": "Outdoor Goods",
       "description": "Camping, lighting, and outdoor living products",
-      "children": [
-        {
-          "id": "outdoor_furniture",
-          "name": "Outdoor Furniture",
-          "description": "Patio chairs, tables, cushions, and weather-ready furniture items."
-        },
-        {
-          "id": "hiking_gear",
-          "name": "Hiking Gear",
-          "description": "Backpacks, trekking poles, and support gear for trails and hikes."
-        },
-        {
-          "id": "outdoor_decor",
-          "name": "Outdoor Decor",
-          "description": "Decorative and ambient items for patios, decks, and gardens."
-        },
-        {
-          "id": "camping_gear",
-          "name": "Camping Gear",
-          "description": "Backpacks, tents, sleeping bags, and camping-ready outdoor equipment."
-        }
-      ]
-    },
-    {
-      "id": "sporting_goods",
-      "name": "Sporting Goods",
-      "description": "Sports and athletic equipment, recreation, and outdoor sport activities",
-      "children": [
-        {
-          "id": "outdoor_recreation",
-          "name": "Outdoor Recreation",
-          "description": "Camping, hiking, and general outdoor play and recreation"
-        },
-        {
-          "id": "water_sports",
-          "name": "Water Sports",
-          "description": "Swimming, paddle, and other water-based sporting activities"
-        },
-        {
-          "id": "racket_sports",
-          "name": "Racket Sports",
-          "description": "Tennis, badminton, table tennis, and similar racket activities"
-        },
-        {
-          "id": "ball_sports",
-          "name": "Ball Sports",
-          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets"
-        },
-        {
-          "id": "team_sports",
-          "name": "Team Sports",
-          "description": "Multi-player team sports gear such as football and soccer"
-        }
-      ]
+      "children": []
     }
   ]
 }

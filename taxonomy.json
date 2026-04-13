@@ -11,27 +11,87 @@
         {
           "id": "computers",
           "name": "Computers",
-          "description": "Laptops, desktops, and workstations"
+          "description": "Laptops, desktops, and workstations",
+          "children": [
+            {
+              "id": "laptops",
+              "name": "Laptops",
+              "description": "Portable computers with integrated displays and keyboards."
+            },
+            {
+              "id": "desktops",
+              "name": "Desktops",
+              "description": "Non-portable desktop computer systems for home or office."
+            }
+          ]
         },
         {
           "id": "cameras",
           "name": "Cameras",
-          "description": "Digital still and video cameras, webcams, and imaging accessories"
+          "description": "Digital still and video cameras, webcams, and imaging accessories",
+          "children": [
+            {
+              "id": "dslr_cameras",
+              "name": "DSLR Cameras",
+              "description": "Single-lens-reflex digital cameras with interchangeable lenses."
+            },
+            {
+              "id": "action_cameras",
+              "name": "Action Cameras",
+              "description": "Compact rugged cameras for recording in motion and outdoors."
+            }
+          ]
         },
         {
           "id": "smartphones",
           "name": "Smartphones",
-          "description": "Smartphones, cellular devices, and mobile communication hardware"
+          "description": "Smartphones, cellular devices, and mobile communication hardware",
+          "children": [
+            {
+              "id": "iphones",
+              "name": "iPhones",
+              "description": "Apple-branded smartphones sold under the iPhone line."
+            },
+            {
+              "id": "android_phones",
+              "name": "Android Phones",
+              "description": "Smartphones running the Android operating system from many manufacturers."
+            }
+          ]
         },
         {
           "id": "televisions",
           "name": "Televisions",
-          "description": "TVs, smart displays, streaming receivers, and video playback screens"
+          "description": "TVs, smart displays, streaming receivers, and video playback screens",
+          "children": [
+            {
+              "id": "smart_tvs",
+              "name": "Smart TVs",
+              "description": "Internet-connected televisions with streaming and app platforms."
+            },
+            {
+              "id": "oled_tvs",
+              "name": "OLED TVs",
+              "description": "Televisions using OLED display technology for high-contrast visuals."
+            }
+          ]
         },
         {
           "id": "headphones",
           "name": "Headphones",
-          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices",
+          "children": [
+            {
+              "id": "in_ear_headphones",
+              "name": "In-Ear Headphones",
+              "description": "Compact ear-insert headphones that route sound directly into the ear."
+            },
+            {
+              "id": "over_ear_headphones",
+              "name": "Over-Ear Headphones",
+              "description": "Headphones that rest over the outer ear for full-seal audio."
+            }
+          ]
         }
       ]
     },

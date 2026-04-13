@@ -28,6 +28,8 @@
 - Validation: Nodes=48, max depth=2, valid=True; Story 7 edges check passed 6/6 good
 - Story 8 status: passes true
 - Validation: Nodes=60, max depth=2, valid=True; Story 8 edges check passed 12/12 good
+- Story 9 status: passes true
+- Validation: Nodes=70, max depth=3, valid=True; Story 9 edges check passed 10/10 good (min NLIV=0.6282)
 - Weak edges: none
 
 
@@ -41,3 +43,4 @@
 - Story 6 confirmed Toys and Sporting Goods already had 5 L2 children each; validated all 10 story edges with check_edge batch (all GOOD, min NLIV=0.4143).
 - Expanded Story 7 L2 domains: Tools -> hand_tools, power_tools, tool_storage; Pet Products -> pet_food, pet_toys, pet_beds_and_crates (all 6 edges EXCELLENT by check_edge).
 - Story 8 expansion: Added 4 Cosmetics L2 children (makeup, skincare, fragrances, beauty_tools); 4 Automotive Parts L2 children (engine_parts, wheels_and_tires, electrical_parts, automotive_accessories); 4 Outdoor Goods L2 children (camping_gear, outdoor_decor, outdoor_furniture, outdoor_recreation). All Story 8 edges passed check_edge batch (12/12).
+- Story 9 expansion: Added 2 L3 nodes to each Electronics L2 branch using one-shot edge validation and CLI adds. Added `laptops` and `desktops` under `computers`, `iphones` and `android_phones` under `smartphones`, `dslr_cameras` and `action_cameras` under `cameras`, `smart_tvs` and `oled_tvs` under `televisions`, and `in_ear_headphones` plus `over_ear_headphones` under `headphones`.

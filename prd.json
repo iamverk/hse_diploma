@@ -62,7 +62,7 @@
       "id": 10,
       "title": "Expand L3: Clothing subcategories (2-3 each)",
       "acceptanceCriteria": "Each Clothing L2 has 2-3 L3 children. NLIV > 0.40.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 11,

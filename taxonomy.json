@@ -103,27 +103,112 @@
         {
           "id": "mens_clothing",
           "name": "Men's Clothing",
-          "description": "Clothing designed for adult men including shirts, pants, and outerwear"
+          "description": "Clothing designed for adult men including shirts, pants, and outerwear",
+          "children": [
+            {
+              "id": "mens_tops",
+              "name": "Men's Tops",
+              "description": "Shirts, polos, tees, and other upper-garment styles for men."
+            },
+            {
+              "id": "mens_bottoms",
+              "name": "Men's Bottoms",
+              "description": "Pants, shorts, jeans, and other lower garments for men."
+            },
+            {
+              "id": "mens_outerwear",
+              "name": "Men's Outerwear",
+              "description": "Jackets, coats, and other outer layers for men."
+            }
+          ]
         },
         {
           "id": "womens_clothing",
           "name": "Women's Clothing",
-          "description": "Clothing designed for adult women including tops, bottoms, and dresses"
+          "description": "Clothing designed for adult women including tops, bottoms, and dresses",
+          "children": [
+            {
+              "id": "womens_tops",
+              "name": "Women's Tops",
+              "description": "Tops, blouses, tees, and similar upper garments for women."
+            },
+            {
+              "id": "womens_bottoms",
+              "name": "Women's Bottoms",
+              "description": "Skirts, pants, jeans, and similar lower garments for women."
+            },
+            {
+              "id": "womens_dresses",
+              "name": "Women's Dresses",
+              "description": "One-piece dress styles for a wide range of women's occasions."
+            }
+          ]
         },
         {
           "id": "kids_clothing",
           "name": "Kids Clothing",
-          "description": "Clothing for babies, children, and teens"
+          "description": "Clothing for babies, children, and teens",
+          "children": [
+            {
+              "id": "boys_clothing",
+              "name": "Boys' Clothing",
+              "description": "Everyday and casual wear for boys."
+            },
+            {
+              "id": "girls_clothing",
+              "name": "Girls' Clothing",
+              "description": "Everyday, active, and casual styles for girls."
+            },
+            {
+              "id": "baby_clothing",
+              "name": "Baby Clothing",
+              "description": "One-piece and layered apparel for babies and toddlers."
+            }
+          ]
         },
         {
           "id": "footwear",
           "name": "Footwear",
-          "description": "Shoes, sandals, boots, socks, and related foot wear"
+          "description": "Shoes, sandals, boots, socks, and related foot wear",
+          "children": [
+            {
+              "id": "footwear_shoes",
+              "name": "Shoes",
+              "description": "Sneakers, casual shoes, and formal shoes."
+            },
+            {
+              "id": "footwear_boots",
+              "name": "Boots",
+              "description": "Boots and high-coverage footwear for all conditions."
+            },
+            {
+              "id": "footwear_socks",
+              "name": "Socks",
+              "description": "Socks, tights, and hosiery for comfort and fit."
+            }
+          ]
         },
         {
           "id": "accessories",
           "name": "Accessories",
-          "description": "Headwear, belts, jewelry, watches, and other apparel accessories"
+          "description": "Headwear, belts, jewelry, watches, and other apparel accessories",
+          "children": [
+            {
+              "id": "fashion_bags",
+              "name": "Bags",
+              "description": "Handbags, shoulder bags, crossbody bags, and totes."
+            },
+            {
+              "id": "wristwatches",
+              "name": "Wristwatches",
+              "description": "Analog and digital wristwatches for everyday wear."
+            },
+            {
+              "id": "fashion_jewelry",
+              "name": "Jewelry",
+              "description": "Earrings, necklaces, rings, and other fashion jewelry."
+            }
+          ]
         }
       ]
     },

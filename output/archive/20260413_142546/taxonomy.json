@@ -360,70 +360,22 @@
         {
           "id": "engine_parts",
           "name": "Engine Parts",
-          "description": "Engine, ignition, and drivetrain replacement components for vehicles.",
-          "children": [
-            {
-              "id": "fuel_filters",
-              "name": "Fuel Filters",
-              "description": "Fuel filtration components for gasoline and diesel engines"
-            },
-            {
-              "id": "ignition_coils",
-              "name": "Ignition Coils",
-              "description": "Ignition coil components for electronic spark generation"
-            }
-          ]
+          "description": "Engine, ignition, and drivetrain replacement components for vehicles."
         },
         {
           "id": "wheels_and_tires",
           "name": "Wheels and Tires",
-          "description": "Vehicle wheels, tires, and related balancing and fitment components.",
-          "children": [
-            {
-              "id": "tires",
-              "name": "Tires",
-              "description": "Vehicle tires, tread, and replacement tire products"
-            },
-            {
-              "id": "wheel_rims",
-              "name": "Wheel Rims",
-              "description": "Rims, rims alloys, and wheel assemblies"
-            }
-          ]
+          "description": "Vehicle wheels, tires, and related balancing and fitment components."
         },
         {
           "id": "automotive_accessories",
           "name": "Automotive Accessories",
-          "description": "Interior and exterior add-on accessories for cars, trucks, and motorcycles.",
-          "children": [
-            {
-              "id": "steering_wheel_covers",
-              "name": "Steering Wheel Covers",
-              "description": "Grip covers and wraps for vehicle steering wheels"
-            },
-            {
-              "id": "car_seat_covers",
-              "name": "Seat Covers",
-              "description": "Interior seat covers and protective seat sets"
-            }
-          ]
+          "description": "Interior and exterior add-on accessories for cars, trucks, and motorcycles."
         },
         {
           "id": "electrical_parts",
           "name": "Electrical Parts",
-          "description": "Vehicle electrical, battery, and charging components and related circuitry.",
-          "children": [
-            {
-              "id": "car_batteries",
-              "name": "Car Batteries",
-              "description": "Lead-acid, lithium, and rechargeable batteries for vehicles"
-            },
-            {
-              "id": "alternators",
-              "name": "Alternators",
-              "description": "Alternators and charging systems for vehicles"
-            }
-          ]
+          "description": "Vehicle electrical, battery, and charging components and related circuitry."
         }
       ]
     },
@@ -462,70 +414,22 @@
         {
           "id": "outdoor_furniture",
           "name": "Outdoor Furniture",
-          "description": "Patio chairs, tables, cushions, and weather-ready furniture items.",
-          "children": [
-            {
-              "id": "patio_chairs",
-              "name": "Patio Chairs",
-              "description": "Outdoor seating chairs for patios and gardens"
-            },
-            {
-              "id": "patio_tables",
-              "name": "Patio Tables",
-              "description": "Patio-side tables and outdoor dining surfaces"
-            }
-          ]
+          "description": "Patio chairs, tables, cushions, and weather-ready furniture items."
         },
         {
           "id": "hiking_gear",
           "name": "Hiking Gear",
-          "description": "Backpacks, trekking poles, and support gear for trails and hikes.",
-          "children": [
-            {
-              "id": "hiking_backpacks",
-              "name": "Hiking Backpacks",
-              "description": "Daypacks and carry bags for trail hiking"
-            },
-            {
-              "id": "hiking_boots",
-              "name": "Hiking Boots",
-              "description": "Durable boots for hiking and trail use"
-            }
-          ]
+          "description": "Backpacks, trekking poles, and support gear for trails and hikes."
         },
         {
           "id": "outdoor_decor",
           "name": "Outdoor Decor",
-          "description": "Decorative and ambient items for patios, decks, and gardens.",
-          "children": [
-            {
-              "id": "patio_lights",
-              "name": "Patio Lights",
-              "description": "Decorative lighting for patios and decks"
-            },
-            {
-              "id": "yard_decor",
-              "name": "Yard Decor",
-              "description": "Decorative outdoor items for yards and gardens"
-            }
-          ]
+          "description": "Decorative and ambient items for patios, decks, and gardens."
         },
         {
           "id": "camping_gear",
           "name": "Camping Gear",
-          "description": "Backpacks, tents, sleeping bags, and camping-ready outdoor equipment.",
-          "children": [
-            {
-              "id": "camping_tents",
-              "name": "Camping Tents",
-              "description": "Tents and shelter structures for camping"
-            },
-            {
-              "id": "sleeping_bags",
-              "name": "Sleeping Bags",
-              "description": "Insulated sleeping bags for camping and hiking"
-            }
-          ]
+          "description": "Backpacks, tents, sleeping bags, and camping-ready outdoor equipment."
         }
       ]
     },

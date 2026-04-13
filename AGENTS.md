@@ -1,14 +1,13 @@
-# AGENTS.md — Taxonomy-as-Code v9 (Stream Monitor + Watchdog)
+# AGENTS.md — Taxonomy-as-Code v10 (Best of All)
 
-You are a taxonomy engineer building a product taxonomy from scratch using ONLY product data.
-Build a hierarchical category tree that organizes ~1500 real Amazon products.
+You are a taxonomy engineer building a product taxonomy from scratch.
 
-## Constraints & Skills
+## HARD CONSTRAINTS (violating these = instant rollback)
 
-- **Rules** in `.cursor/rules/`: invariants (always-on), ralph-protocol (always-on), metrics-guide (on-demand)
-- **Skills** in `skills/`: grow-domain, refine-domain, skip-stuck-domain (loaded on-demand)
-- **Hooks**: `beforeShellExecution` blocks dangerous commands, `afterFileEdit` auto-validates taxonomy.json
-- **Stream Monitor**: ralph.sh watches your output in real-time. If you go silent for 5+ minutes, you will be killed. Keep producing output.
+1. **NO WRAPPER NODES** — NEVER create grouping nodes like "Retail Goods", "Consumer Products", "Home & Living". L1 domains stay flat under root.
+2. **Max depth 4** — root → L1 → L2 → L3. Go to L4 ONLY if L3 has >10 children.
+3. **L1 = 8-12 direct children of root** — each is a real product domain (Electronics, Clothing, etc.), NOT a wrapper.
+4. **Fix weak edges by RENAMING, not by adding parent wrappers** — if edge "root→Tools" is weak, rename to "Hardware Tools", don't create "Equipment→Tools".
 
 ## Python Environment
 
@@ -20,49 +19,47 @@ PYTHON=/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python
 
 | File | Role |
 |------|------|
-| `data/products.jsonl` | Product corpus — your primary data source |
+| `data/products.jsonl` | Product corpus — primary data source |
 | `taxonomy.json` | Working taxonomy — **YOU EDIT THIS** |
 | `prd.json` | Task list — find your current story |
-| `progress.txt` | Compact state log — **UPDATE CAREFULLY** |
-| `tools/check_edge.py` | Embedder CLI — verify NLIV before adding edges |
+| `progress.txt` | State log — **UPDATE CAREFULLY** |
+| `tools/check_edge.py` | Embedder: verify NLIV before adding edges |
 | `tools/taxonomy_cli.py` | CLI: tree, stats, add-node, move-node, lint |
-| `tools/validate.py` | Validation (also auto-runs via afterFileEdit hook) |
+| `tools/validate.py` | Validation |
 
-## IMPORTANT: Stay Active
+## STAY ACTIVE — watchdog kills after 3 min idle
 
-The stream monitor kills your process if no output for 5 minutes.
-When doing long operations, print progress: `echo "Processing..."`.
-Prefer CLI tools over direct JSON editing — they produce output that keeps the watchdog happy.
+Use CLI tools (add-node, tree, stats) — they produce output.
+Print progress: `echo "Adding nodes..."`.
 
 ## progress.txt Format
 
 ```
 ## Discovered Patterns
-- [APPEND-ONLY — never delete existing patterns, only add new ones]
+- [APPEND-ONLY]
 
 ## Current State
-- Story N status: passes true/false
-- Validation: NLIV=X.XX, CSC=X.XX, Composite=X.XX, nodes=N
-- Weak edges: [list any remaining]
+- Story N: passes true/false
+- Metrics: NLIV=X.XX, CSC=X.XX, Composite=X.XX, nodes=N
 
 ## Decisions This Iteration
 - [what you changed and why]
 ```
 
-Total file must stay under 3000 characters.
+Keep under 3000 chars.
 
 ## CLI Quick Reference
 
 ```bash
-$PYTHON tools/taxonomy_cli.py tree                    # show tree
-$PYTHON tools/taxonomy_cli.py stats                   # counts and depth
+$PYTHON tools/taxonomy_cli.py tree
+$PYTHON tools/taxonomy_cli.py stats
 $PYTHON tools/taxonomy_cli.py add-node --parent <id> --id <new_id> --name "Name" --description "Desc"
 $PYTHON tools/taxonomy_cli.py delete-node --id <id>
 $PYTHON tools/taxonomy_cli.py move-node --id <id> --new-parent <parent_id>
-$PYTHON tools/taxonomy_cli.py lint                    # anomaly detector
-$PYTHON tools/check_edge.py --batch '[{"parent":"A","child":"B"}]'   # batch NLIV check
+$PYTHON tools/check_edge.py --batch '[{"parent":"A","child":"B"}]'
+$PYTHON tools/validate.py
 ```
 
 ## Completion Signal
 
-When done with your ONE story: `<promise>COMPLETE</promise>`
+When done with ONE story: `<promise>COMPLETE</promise>`

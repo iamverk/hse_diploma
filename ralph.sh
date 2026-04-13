@@ -59,7 +59,7 @@ STUCK_FILE="output/stuck_domains.txt"
 ROLLBACK_COUNTS="output/rollback_counts.json"
 
 echo "==========================================="
-echo "  TAXONOMY RALPH LOOP (v9 — stream-monitor+watchdog)"
+echo "  TAXONOMY RALPH LOOP (v10 — best-of-all)"
 echo "  Tool:              $TOOL"
 echo "  Max iterations:    $MAX_ITERATIONS"
 echo "  Watchdog timeout:  ${WATCHDOG_TIMEOUT}s"
@@ -182,12 +182,15 @@ for i in $(seq 1 $MAX_ITERATIONS); do
     # ── Build agent prompt ───────────────────────────────────────────────────
     PROMPT="Read AGENTS.md, progress.txt, prd.json. Your task: [Story $CURRENT_ID] $CURRENT_STORY.
 
-SPEED RULES — you have 90 seconds of silence before being killed:
-1. Do MAX 3-5 quick greps to discover product patterns, then STOP grepping
-2. Use check_edge.py --batch to verify ALL edges at once (not one-by-one)
-3. Add nodes via taxonomy_cli.py add-node (produces visible output = keeps watchdog happy)
-4. Run validate.py ONCE at the end
-5. Mark story passes:true, update progress.txt, commit
+CRITICAL RULES:
+1. NEVER create wrapper/grouping nodes (Retail Goods, Consumer Products, etc.) — keep L1 flat under root
+2. Max depth 4 (root→L1→L2→L3). Do NOT go deeper unless absolutely necessary
+3. Max 3-5 greps for product discovery, then add nodes
+4. Use check_edge.py --batch for ALL edges at once
+5. Use taxonomy_cli.py add-node (produces output = keeps watchdog happy)
+6. Run validate.py ONCE at the end
+7. If fixing weak edges: rename/replace the node, do NOT add wrapper parents
+8. Mark story passes:true, update progress.txt, commit
 
 Embedder: $PYTHON tools/check_edge.py --batch '[{\"parent\":\"X\",\"child\":\"Y\"}]'
 ONE story only. Commit: 'story $CURRENT_ID: <description>'"
@@ -487,7 +490,7 @@ cat > "$RUN_DIR/config.json" <<CFGEOF
   "actual_iterations": $i,
   "watchdog_timeout": $WATCHDOG_TIMEOUT,
   "timestamp": "$TIMESTAMP",
-  "experiment": "v9-stream-watchdog"
+  "experiment": "v10-best-of-all"
 }
 CFGEOF
 

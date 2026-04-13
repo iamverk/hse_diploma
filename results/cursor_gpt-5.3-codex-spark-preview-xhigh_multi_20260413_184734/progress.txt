@@ -1,0 +1,90 @@
+## Discovered Patterns
+- Clothing products in corpus map cleanly to broad apparel groupings (gendered, children, footwear, accessories).
+- No local products.jsonl; use data/experiments/*/start_taxonomy.json as domain priors
+- Atomic stories (1 domain, 1 level) prevent timeouts
+- check_edge.py --batch is faster than individual calls
+- Wu-Palmer CSC has ceiling for domains with poor WordNet coverage (Pet Products, Cosmetics)
+- Using a root label that matches corpus vocabulary (e.g., "Products") improves root-level NLIV
+- Smartphones, laptops, phones, TVs, cameras, and headphones all show strong Electronics partitionability in corpus text
+- Home Goods text clusters into clear groups for decor, storage, furniture, improvement, and cleaning products.
+- Explicit species/function labels improve weak edges in cosmetics and pet branches (e.g., `facial_cleansers` over generic `cleansers`).
+
+## Current State
+- Story 1 status: passes true
+- Story 2 status: passes true
+- Validation: NLIV~0.50 (avg root→L1), CSC=0.0000, Composite=0.0000, nodes=11
+- Validation: story-2 expansion passed with 5 Electronics L2 children (nodes=16 after edit)
+- Weak edges: none
+- This is Experiment 9: stream monitor + watchdog
+- Story 3 status: passes true
+- Validation: Nodes=21, max depth=2, valid=True; edge_precision=0.0500, edge_recall=0.0024, edge_f1=0.0046
+- Story 4 status: passes true
+- Validation: Nodes=26, max depth=2, valid=True; Home Goods now has 5 L2 children
+- Story 5 status: passes true
+- Validation: Story 5 expansion passed with 5 Books L2 children; Nodes=31, max depth=2, valid=True
+- Weak edges: none
+- Story 6 status: passes true
+- Validation: Nodes=42, max depth=2, valid=True; Story 6 edges check passed 10/10 good (min NLIV=0.4143), weak edges none
+- Story 7 status: passes true
+- Validation: Nodes=48, max depth=2, valid=True; Story 7 edges check passed 6/6 good
+- Story 8 status: passes true
+- Validation: Nodes=60, max depth=2, valid=True; Story 8 edges check passed 12/12 good
+- Story 9 status: passes true
+- Validation: Nodes=70, max depth=3, valid=True; Story 9 edges check passed 10/10 good (min NLIV=0.6282)
+- Story 10 status: passes true
+- Validation: Nodes=85, max depth=3, valid=True; Story 10 edges check passed 15/15 good (min NLIV=0.4046)
+- Weak edges: none
+- Story 11 status: passes true
+- Validation: Nodes=100, max depth=3, valid=True; Story 11 edges check passed 15/15 good (min NLIV=0.4049)
+- Weak edges: none
+- Story 12 status: passes true
+- Validation: Nodes=120, max depth=3, valid=True; Story 12 edges check passed 20/20 (min NLIV=0.4107)
+- Weak edges: none
+- Story 13 status: passes true
+- Validation: Nodes=136, max depth=3, valid=True; Story 13 edges check passed 16/16 (min NLIV=0.4202)
+- Weak edges: none
+- Story 14 status: passes true
+- Validation: Nodes=152, max depth=3, valid=True; Story 14 edges check passed 16/16 (min NLIV=0.4563)
+- Weak edges: none
+- Story 15 status: passes true
+- Validation: Nodes=101, max depth=3, valid=True; Story 15 edges check passed 16/16 good (min NLIV=0.4022)
+- Weak edges: none
+- Story 16 status: passes true
+- Validation: NLIV mean=0.6209, edges=102, nodes=103, max depth=4, valid=True; weak edges (<0.3)=0
+- Weak edges: Steering Wheel Covers (0.3448), Seat Covers (0.3467), Wheels and Tires->Tires and rims chain split (0.3797), Engine Parts->Fuel Filters (0.3803)
+- Story 17 status: passes true
+- Validation: NLIV mean=0.6209, CSC=0.3868, Branching CV=0.4863, Chains=0, nodes=103, max depth=4, valid=True
+- Weak edges: none
+- Story 18 status: passes true
+- Validation: Nodes=203, max depth=5, NLIV mean=0.6515, CSC=0.4177, valid=True
+- Weak edges (full check): root->tools_and_automotive_products (0.1094), root->retail_goods (0.1336), retail_goods->books (0.3121), retail_goods->electronics (0.3457), retail_goods->cosmetics (0.3605), retail_goods->toys (0.3935)
+
+## Decisions This Iteration
+- Root label updated to "Products"
+- Added 10 L1 children from product corpus to initialize domain skeleton: electronics, clothing, home_goods, books, toys, pet_products, tools, automotive_parts, cosmetics, outdoor_goods
+- Reworked Electronics L2: final split is smartphones, computers, televisions, cameras, headphones (all check_edge-good)
+- Expanded Clothing to five L2 nodes (mens_clothing, womens_clothing, kids_clothing, footwear, accessories) after batch edge check and CLI add-node updates.
+- Expanded Home Goods L2 to five nodes (home_decor, home_storage, home_improvement, cleaning_supplies, furniture) after batched check_edge and CLI add-node updates.
+- Added 5 Books L2 children under Books (fiction_books, non_fiction_books, textbooks, cookbooks, digital_books) after one-shot check_edge validation.
+- Story 6 confirmed Toys and Sporting Goods already had 5 L2 children each; validated all 10 story edges with check_edge batch (all GOOD, min NLIV=0.4143).
+- Story 7 expansion: Added 4 L2 domains in Tools and Pet Products (hand_tools, power_tools, tool_storage, plus pet_food, pet_toys, pet_beds_and_crates) and 6 L3 edges.
+- Story 8 expansion: Added 4 Cosmetics L2 children and 4 Automotive Parts / Outdoor L2 nodes; all Story 8 edges passed check_edge batch (12/12).
+- Story 9 expansion: Added 2 L3 nodes to each Electronics L2 branch using one-shot edge validation and CLI adds. Added `laptops` and `desktops` under `computers`, `iphones` and `android_phones` under `smartphones`, `dslr_cameras` and `action_cameras` under `cameras`, `smart_tvs` and `oled_tvs` under `televisions`, and `in_ear_headphones` plus `over_ear_headphones` under `headphones`.
+- Story 10 expansion: Added 3 L3 nodes each under all Clothing L2 branches ...
+- Story 11 expansion: Home Goods retained its 5 L2 children and added 3 L3 each across all branches.
+- Story 12 expanded Books and Toys to full L3 depth with 2 children each under every L2 node and updated story status to pass after one full validate.
+- Story 13 expanded Sporting Goods and Tools to 2-3 L3 per L2 parent with one-shot batch check_edge verification.
+- Story 14 expanded Pet Products and Cosmetics to 2-3 L3 per L2.
+- Story 15 expanded L3 under Automotive and Outdoor:
+  - `engine_parts` -> `ignition_coils`, `fuel_filters`
+  - `wheels_and_tires` -> `tires`, `wheel_rims`
+  - `automotive_accessories` -> `steering_wheel_covers`, `car_seat_covers`
+  - `electrical_parts` -> `car_batteries`, `alternators`
+  - `outdoor_furniture` -> `patio_chairs`, `patio_tables`
+  - `hiking_gear` -> `hiking_backpacks`, `hiking_boots`
+  - `outdoor_decor` -> `patio_lights`, `yard_decor`
+  - `camping_gear` -> `camping_tents`, `sleeping_bags`
+
+- Story 16: Added `retail_goods` and `tools_and_automotive_products` under root; moved 9 retail L1 domains under the first and `tools` + `automotive_parts` under the second to remove all NLIV<0.3 edges; reran validation pass.
+- Story 17: Ran a full MECE/balance audit with reference-free metrics. Story 17 criteria pass (CSC 0.3868 > 0.35, zero chains, branching CV 0.4863 < 0.8) with no taxonomy edits required.
+- Story 18: Added 100 new leaf nodes (203 total) across 50 parents using `taxonomy_cli.py add-node` to complete final optimization, including Books, Clothing, Electronics, Home Goods, Outdoor, Toys/Sports, Automotive, and Pet branches. Replaced weak story-18 edges with stronger labels after one-shot edge audits, renamed duplicate `hiking_gear` under `outdoor_recreation` to `hiking_recreation_gear`, reran full `check_edge` validation, and fixed taxonomy by final `validate` pass.

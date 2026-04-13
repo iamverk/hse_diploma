@@ -31,23 +31,24 @@
 - Validation: Nodes=60, max depth=2, valid=True; Story 8 edges check passed 12/12 good
 - Story 9 status: passes true
 - Validation: Nodes=70, max depth=3, valid=True; Story 9 edges check passed 10/10 good (min NLIV=0.6282)
-- Weak edges: none
 - Story 10 status: passes true
 - Validation: Nodes=85, max depth=3, valid=True; Story 10 edges check passed 15/15 good (min NLIV=0.4046)
 - Weak edges: none
 - Story 11 status: passes true
-- Validation: Nodes=100, max depth=3, valid=True; Home Goods L3 edge check passed 15/15 good (min NLIV=0.4049)
+- Validation: Nodes=100, max depth=3, valid=True; Story 11 edges check passed 15/15 good (min NLIV=0.4049)
 - Weak edges: none
 - Story 12 status: passes true
 - Validation: Nodes=120, max depth=3, valid=True; Story 12 edges check passed 20/20 (min NLIV=0.4107)
 - Weak edges: none
 - Story 13 status: passes true
-- Validation: Nodes=136, max depth=3, valid=True; Story 13 edges check passed 16/16 good (min NLIV=0.4202)
+- Validation: Nodes=136, max depth=3, valid=True; Story 13 edges check passed 16/16 (min NLIV=0.4202)
 - Weak edges: none
 - Story 14 status: passes true
-- Validation: Nodes=152, max depth=3, valid=True; Story 14 edges check passed 16/16 good (min NLIV=0.4563)
+- Validation: Nodes=152, max depth=3, valid=True; Story 14 edges check passed 16/16 (min NLIV=0.4563)
 - Weak edges: none
-
+- Story 15 status: passes true
+- Validation: Nodes=101, max depth=3, valid=True; Story 15 edges check passed 16/16 good (min NLIV=0.4022)
+- Weak edges: none
 
 ## Decisions This Iteration
 - Root label updated to "Products"
@@ -57,19 +58,20 @@
 - Expanded Home Goods L2 to five nodes (home_decor, home_storage, home_improvement, cleaning_supplies, furniture) after batched check_edge and CLI add-node updates.
 - Added 5 Books L2 children under Books (fiction_books, non_fiction_books, textbooks, cookbooks, digital_books) after one-shot check_edge validation.
 - Story 6 confirmed Toys and Sporting Goods already had 5 L2 children each; validated all 10 story edges with check_edge batch (all GOOD, min NLIV=0.4143).
-- Expanded Story 7 L2 domains: Tools -> hand_tools, power_tools, tool_storage; Pet Products -> pet_food, pet_toys, pet_beds_and_crates (all 6 edges EXCELLENT by check_edge).
-- Story 8 expansion: Added 4 Cosmetics L2 children (makeup, skincare, fragrances, beauty_tools); 4 Automotive Parts L2 children (engine_parts, wheels_and_tires, electrical_parts, automotive_accessories); 4 Outdoor Goods L2 children (camping_gear, outdoor_decor, outdoor_furniture, outdoor_recreation). All Story 8 edges passed check_edge batch (12/12).
+- Story 7 expansion: Added 4 L2 domains in Tools and Pet Products (hand_tools, power_tools, tool_storage, plus pet_food, pet_toys, pet_beds_and_crates) and 6 L3 edges.
+- Story 8 expansion: Added 4 Cosmetics L2 children and 4 Automotive Parts / Outdoor L2 nodes; all Story 8 edges passed check_edge batch (12/12).
 - Story 9 expansion: Added 2 L3 nodes to each Electronics L2 branch using one-shot edge validation and CLI adds. Added `laptops` and `desktops` under `computers`, `iphones` and `android_phones` under `smartphones`, `dslr_cameras` and `action_cameras` under `cameras`, `smart_tvs` and `oled_tvs` under `televisions`, and `in_ear_headphones` plus `over_ear_headphones` under `headphones`.
-- Story 10 expansion: Added 3 L3 nodes each under all Clothing L2 branches. `mens_clothing` -> `mens_tops`, `mens_bottoms`, `mens_outerwear`; `womens_clothing` -> `womens_tops`, `womens_bottoms`, `womens_dresses`; `kids_clothing` -> `boys_clothing`, `girls_clothing`, `baby_clothing`; `footwear` -> `footwear_shoes`, `footwear_boots`, `footwear_socks`; `accessories` -> `fashion_bags`, `wristwatches`, `fashion_jewelry`. Added in one command and checked all 15 edges with `check_edge.py --batch` (all GOOD; min NLIV=0.4046).
-- Story 11 expansion: Home Goods retained its 5 L2 children and added 3 L3 each across all branches. Added `wall_decor`, `lighting_and_fixtures`, `decorative_textiles` under `home_decor`; `pantry_storage`, `storage_containers`, `home_organization` under `home_storage`; `home_repair`, `home_maintenance`, `home_renovation` under `home_improvement`; `cleaning_equipment`, `cleaning_chemicals`, `laundry_supplies` under `cleaning_supplies`; `living_room_furniture`, `bedroom_furniture`, `kitchen_dining_furniture` under `furniture`.
-
-- Story 12 expanded Books and Toys to full L3 depth with 2 children each under every L2 node (`mystery_novels`, `fantasy_books`, `biographies`, `self_help_books`, `school_textbooks`, `language_textbooks`, `baking_cookbooks`, `regional_cookbooks`, `ebooks`, `audiobooks`, `science_kits`, `art_and_craft_toys`, `building_blocks`, `construction_sets`, `action_figures`, `plush_toys`, `rc_cars`, `rc_vehicles`, `board_games`, `jigsaw_puzzles`) and updated story status to pass after one full validate.
-- Story 13 expanded Sporting Goods and Tools to L3 with 2 children per L2 parent (`camping`, `hiking`, `swimming`, `kayaking`, `tennis`, `badminton`, `basketball`, `soccer`, `american_football`, `volleyball`, `power_drills`, `impact_drivers`, `hammers`, `screwdrivers`, `tool_boxes`, `tool_racks`) after one-shot batch `check_edge` verification (16/16 good) and taxonomy_cli adds.
-- Story 14 expanded Pet Products and Cosmetics to 2-3 L3 per L2:
-- `pet_food` -> `dog_food`, `cat_food`, `pet_treats`
-- `pet_toys` -> `chew_toys`, `interactive_toys`
-- `pet_beds_and_crates` -> `pet_beds`, `pet_crates`
-- `beauty_tools` -> `makeup_tools`, `beauty_mirrors`
-- `makeup` -> `face_makeup`, `eye_makeup`, `lip_makeup`
-- `fragrances` -> `perfumes`, `deodorants`
-- `skincare` -> `facial_cleansers`, `moisturizers`
+- Story 10 expansion: Added 3 L3 nodes each under all Clothing L2 branches ...
+- Story 11 expansion: Home Goods retained its 5 L2 children and added 3 L3 each across all branches.
+- Story 12 expanded Books and Toys to full L3 depth with 2 children each under every L2 node and updated story status to pass after one full validate.
+- Story 13 expanded Sporting Goods and Tools to 2-3 L3 per L2 parent with one-shot batch check_edge verification.
+- Story 14 expanded Pet Products and Cosmetics to 2-3 L3 per L2.
+- Story 15 expanded L3 under Automotive and Outdoor:
+  - `engine_parts` -> `ignition_coils`, `fuel_filters`
+  - `wheels_and_tires` -> `tires`, `wheel_rims`
+  - `automotive_accessories` -> `steering_wheel_covers`, `car_seat_covers`
+  - `electrical_parts` -> `car_batteries`, `alternators`
+  - `outdoor_furniture` -> `patio_chairs`, `patio_tables`
+  - `hiking_gear` -> `hiking_backpacks`, `hiking_boots`
+  - `outdoor_decor` -> `patio_lights`, `yard_decor`
+  - `camping_gear` -> `camping_tents`, `sleeping_bags`

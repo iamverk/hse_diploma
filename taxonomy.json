@@ -220,112 +220,27 @@
         {
           "id": "home_decor",
           "name": "Home Decor",
-          "description": "Decorative accents, artwork, and styling products for rooms",
-          "children": [
-            {
-              "id": "wall_decor",
-              "name": "Wall Decor",
-              "description": "Decorative items designed for walls and interiors"
-            },
-            {
-              "id": "lighting_and_fixtures",
-              "name": "Lighting and Fixtures",
-              "description": "Ambient and accent lighting for home interiors"
-            },
-            {
-              "id": "decorative_textiles",
-              "name": "Decorative Textiles",
-              "description": "Textile accents for home style, warmth, and comfort"
-            }
-          ]
+          "description": "Decorative accents, artwork, and styling products for rooms"
         },
         {
           "id": "home_storage",
           "name": "Home Storage",
-          "description": "Storage systems, organizers, racks, and containers for the home",
-          "children": [
-            {
-              "id": "pantry_storage",
-              "name": "Pantry Storage",
-              "description": "Food and pantry storage organizers"
-            },
-            {
-              "id": "storage_containers",
-              "name": "Storage Containers",
-              "description": "Portable containers and bins for home organization"
-            },
-            {
-              "id": "home_organization",
-              "name": "Home Organization",
-              "description": "Systems and tools for tidying and organizing rooms"
-            }
-          ]
+          "description": "Storage systems, organizers, racks, and containers for the home"
         },
         {
           "id": "home_improvement",
           "name": "Home Improvement",
-          "description": "Repair, maintenance, and fixture-related home products",
-          "children": [
-            {
-              "id": "home_repair",
-              "name": "Home Repair",
-              "description": "Products for fixing and maintaining home systems"
-            },
-            {
-              "id": "home_maintenance",
-              "name": "Home Maintenance",
-              "description": "Supplies for routine house upkeep"
-            },
-            {
-              "id": "home_renovation",
-              "name": "Home Renovation",
-              "description": "Materials for remodeling and home upgrades"
-            }
-          ]
+          "description": "Repair, maintenance, and fixture-related home products"
         },
         {
           "id": "cleaning_supplies",
           "name": "Cleaning Supplies",
-          "description": "Household cleaning, sanitation, and upkeep products",
-          "children": [
-            {
-              "id": "cleaning_equipment",
-              "name": "Cleaning Equipment",
-              "description": "Tools and tools kits for cleaning"
-            },
-            {
-              "id": "cleaning_chemicals",
-              "name": "Cleaning Chemicals",
-              "description": "Detergents, sprays, and cleaners for home cleaning"
-            },
-            {
-              "id": "laundry_supplies",
-              "name": "Laundry Supplies",
-              "description": "Products and agents for washing and fabric care"
-            }
-          ]
+          "description": "Household cleaning, sanitation, and upkeep products"
         },
         {
           "id": "furniture",
           "name": "Furniture",
-          "description": "Major household furniture pieces and seating for living spaces",
-          "children": [
-            {
-              "id": "living_room_furniture",
-              "name": "Living Room Furniture",
-              "description": "Furniture pieces for relaxation and entertaining spaces"
-            },
-            {
-              "id": "bedroom_furniture",
-              "name": "Bedroom Furniture",
-              "description": "Beds, dressers, and other bedroom essentials"
-            },
-            {
-              "id": "kitchen_dining_furniture",
-              "name": "Kitchen and Dining Furniture",
-              "description": "Furniture for kitchens and dining areas"
-            }
-          ]
+          "description": "Major household furniture pieces and seating for living spaces"
         }
       ]
     },
@@ -337,87 +252,27 @@
         {
           "id": "fiction_books",
           "name": "Fiction Books",
-          "description": "Novels, literary fiction, and narrative story titles",
-          "children": [
-            {
-              "id": "mystery_novels",
-              "name": "Mystery Novels",
-              "description": "Mystery novels and detective fiction"
-            },
-            {
-              "id": "fantasy_books",
-              "name": "Fantasy Books",
-              "description": "Fantasy fiction and magical world stories"
-            }
-          ]
+          "description": "Novels, literary fiction, and narrative story titles"
         },
         {
           "id": "non_fiction_books",
           "name": "Non-Fiction Books",
-          "description": "Narrative nonfiction, biographies, and informational reading books",
-          "children": [
-            {
-              "id": "biographies",
-              "name": "Biographies",
-              "description": "Personal life stories and memoirs"
-            },
-            {
-              "id": "self_help_books",
-              "name": "Self-Help Books",
-              "description": "Personal development and motivation books"
-            }
-          ]
+          "description": "Narrative nonfiction, biographies, and informational reading books"
         },
         {
           "id": "textbooks",
           "name": "Textbooks",
-          "description": "Educational textbooks, workbooks, and course materials",
-          "children": [
-            {
-              "id": "school_textbooks",
-              "name": "School Textbooks",
-              "description": "Educational textbooks for primary and secondary studies"
-            },
-            {
-              "id": "language_textbooks",
-              "name": "Language Textbooks",
-              "description": "Books focused on language learning and language skills"
-            }
-          ]
+          "description": "Educational textbooks, workbooks, and course materials"
         },
         {
           "id": "cookbooks",
           "name": "Cookbooks",
-          "description": "Recipe books and practical cooking guides",
-          "children": [
-            {
-              "id": "baking_cookbooks",
-              "name": "Baking Cookbooks",
-              "description": "Cooking guides and cookbooks focused on baking"
-            },
-            {
-              "id": "regional_cookbooks",
-              "name": "Regional Cookbooks",
-              "description": "Cookbooks featuring regional and traditional cuisines"
-            }
-          ]
+          "description": "Recipe books and practical cooking guides"
         },
         {
           "id": "digital_books",
           "name": "Digital Books",
-          "description": "Ebooks, digital editions, and electronic reading books",
-          "children": [
-            {
-              "id": "ebooks",
-              "name": "E-Books",
-              "description": "Digital downloadable books in electronic format"
-            },
-            {
-              "id": "audiobooks",
-              "name": "Audiobooks",
-              "description": "Audio narrated book editions for listening"
-            }
-          ]
+          "description": "Ebooks, digital editions, and electronic reading books"
         }
       ]
     },
@@ -429,87 +284,27 @@
         {
           "id": "educational_toys",
           "name": "Educational Toys",
-          "description": "STEM and educational play items that support learning",
-          "children": [
-            {
-              "id": "science_kits",
-              "name": "Science Kits",
-              "description": "Hands-on educational science experiment toy kits"
-            },
-            {
-              "id": "art_and_craft_toys",
-              "name": "Art and Craft Toys",
-              "description": "Creative arts and craft play sets for children"
-            }
-          ]
+          "description": "STEM and educational play items that support learning"
         },
         {
           "id": "building_toys",
           "name": "Building Toys",
-          "description": "Vehicle, construction, and assembling toy sets for hands-on play",
-          "children": [
-            {
-              "id": "building_blocks",
-              "name": "Building Blocks",
-              "description": "Block-based construction toys for creative building"
-            },
-            {
-              "id": "construction_sets",
-              "name": "Construction Sets",
-              "description": "Interlocking construction kits for model play"
-            }
-          ]
+          "description": "Vehicle, construction, and assembling toy sets for hands-on play"
         },
         {
           "id": "dolls_and_figures",
           "name": "Dolls and Figures",
-          "description": "Dolls, plush toys, action figures, and figurines for imaginative play",
-          "children": [
-            {
-              "id": "action_figures",
-              "name": "Action Figures",
-              "description": "Poseable collectible characters and action figures"
-            },
-            {
-              "id": "plush_toys",
-              "name": "Plush Toys",
-              "description": "Soft stuffed toys and plush figurines"
-            }
-          ]
+          "description": "Dolls, plush toys, action figures, and figurines for imaginative play"
         },
         {
           "id": "remote_control_toys",
           "name": "Remote Control Toys",
-          "description": "Remote-controlled and battery-powered toys for active indoor play",
-          "children": [
-            {
-              "id": "rc_cars",
-              "name": "Remote-Control Cars",
-              "description": "Remote-controlled car toys for racing and off-road play"
-            },
-            {
-              "id": "rc_vehicles",
-              "name": "Remote-Control Vehicles",
-              "description": "Remote-control planes, boats, and vehicles for active play"
-            }
-          ]
+          "description": "Remote-controlled and battery-powered toys for active indoor play"
         },
         {
           "id": "puzzles_and_games",
           "name": "Puzzles and Games",
-          "description": "Board games, puzzles, and table games for children",
-          "children": [
-            {
-              "id": "board_games",
-              "name": "Board Games",
-              "description": "Board-based strategy and family games"
-            },
-            {
-              "id": "jigsaw_puzzles",
-              "name": "Jigsaw Puzzles",
-              "description": "Interlocking-piece jigsaw and picture puzzles"
-            }
-          ]
+          "description": "Board games, puzzles, and table games for children"
         }
       ]
     },
@@ -521,58 +316,17 @@
         {
           "id": "pet_food",
           "name": "Pet Food",
-          "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets.",
-          "children": [
-            {
-              "id": "dog_food",
-              "name": "Dog Food",
-              "description": "Dry, wet, and dry kibble products formulated specifically for dogs."
-            },
-            {
-              "id": "cat_food",
-              "name": "Cat Food",
-              "description": "Dry, wet, and gourmet nutrition products for cats."
-            },
-            {
-              "id": "pet_treats",
-              "name": "Pet Treats",
-              "description": "Treats, chew treats, and snack products designed for pets."
-            }
-          ]
+          "description": "Pet food, treats, and nutrition supplements for cats, dogs, and other household pets."
         },
         {
           "id": "pet_toys",
           "name": "Pet Toys",
-          "description": "Interactive and playful items for pet enrichment and exercise.",
-          "children": [
-            {
-              "id": "chew_toys",
-              "name": "Chew Toys",
-              "description": "Durable chew and teether toys for dogs and strong-jaw pets."
-            },
-            {
-              "id": "interactive_toys",
-              "name": "Interactive Toys",
-              "description": "Puzzle, motion, and engagement toys for active play."
-            }
-          ]
+          "description": "Interactive and playful items for pet enrichment and exercise."
         },
         {
           "id": "pet_beds_and_crates",
           "name": "Pet Beds and Crates",
-          "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel.",
-          "children": [
-            {
-              "id": "pet_beds",
-              "name": "Pet Beds",
-              "description": "Bedding products including beds, pads, and sleeping mats for pets."
-            },
-            {
-              "id": "pet_crates",
-              "name": "Pet Crates",
-              "description": "Crates, kennels, and travel enclosures for transporting pets."
-            }
-          ]
+          "description": "Bedding, beds, crates, kennels, and carriers for pet comfort and travel."
         }
       ]
     },
@@ -584,53 +338,17 @@
         {
           "id": "power_tools",
           "name": "Power Tools",
-          "description": "Battery- and corded-powered tools used for drilling, cutting, sanding, and other powered tasks.",
-          "children": [
-            {
-              "id": "power_drills",
-              "name": "Power Drills",
-              "description": "Cordless and corded drills, drivers, and drill-related accessories"
-            },
-            {
-              "id": "impact_drivers",
-              "name": "Impact Drivers",
-              "description": "High-torque impact drivers and driver bits for fastening and assembly"
-            }
-          ]
+          "description": "Battery- and corded-powered tools used for drilling, cutting, sanding, and other powered tasks."
         },
         {
           "id": "hand_tools",
           "name": "Hand Tools",
-          "description": "Manual tools for fastening, measuring, cutting, gripping, and basic repairs.",
-          "children": [
-            {
-              "id": "hammers",
-              "name": "Hammers",
-              "description": "Claw, ball-peen, and specialty hammers for manual fastening"
-            },
-            {
-              "id": "screwdrivers",
-              "name": "Screwdrivers",
-              "description": "Flat, Phillips, and torque screwdrivers for precision fastening"
-            }
-          ]
+          "description": "Manual tools for fastening, measuring, cutting, gripping, and basic repairs."
         },
         {
           "id": "tool_storage",
           "name": "Tool Storage",
-          "description": "Tool cabinets, chests, and organization systems for storing tools.",
-          "children": [
-            {
-              "id": "tool_boxes",
-              "name": "Tool Boxes",
-              "description": "Portable and rolling containers for organizing tool sets"
-            },
-            {
-              "id": "tool_racks",
-              "name": "Tool Racks",
-              "description": "Wall, bench, and garage racks for efficient tool storage"
-            }
-          ]
+          "description": "Tool cabinets, chests, and organization systems for storing tools."
         }
       ]
     },
@@ -642,22 +360,70 @@
         {
           "id": "engine_parts",
           "name": "Engine Parts",
-          "description": "Engine, ignition, and drivetrain replacement components for vehicles."
+          "description": "Engine, ignition, and drivetrain replacement components for vehicles.",
+          "children": [
+            {
+              "id": "fuel_filters",
+              "name": "Fuel Filters",
+              "description": "Fuel filtration components for gasoline and diesel engines"
+            },
+            {
+              "id": "ignition_coils",
+              "name": "Ignition Coils",
+              "description": "Ignition coil components for electronic spark generation"
+            }
+          ]
         },
         {
           "id": "wheels_and_tires",
           "name": "Wheels and Tires",
-          "description": "Vehicle wheels, tires, and related balancing and fitment components."
+          "description": "Vehicle wheels, tires, and related balancing and fitment components.",
+          "children": [
+            {
+              "id": "tires",
+              "name": "Tires",
+              "description": "Vehicle tires, tread, and replacement tire products"
+            },
+            {
+              "id": "wheel_rims",
+              "name": "Wheel Rims",
+              "description": "Rims, rims alloys, and wheel assemblies"
+            }
+          ]
         },
         {
           "id": "automotive_accessories",
           "name": "Automotive Accessories",
-          "description": "Interior and exterior add-on accessories for cars, trucks, and motorcycles."
+          "description": "Interior and exterior add-on accessories for cars, trucks, and motorcycles.",
+          "children": [
+            {
+              "id": "steering_wheel_covers",
+              "name": "Steering Wheel Covers",
+              "description": "Grip covers and wraps for vehicle steering wheels"
+            },
+            {
+              "id": "car_seat_covers",
+              "name": "Seat Covers",
+              "description": "Interior seat covers and protective seat sets"
+            }
+          ]
         },
         {
           "id": "electrical_parts",
           "name": "Electrical Parts",
-          "description": "Vehicle electrical, battery, and charging components and related circuitry."
+          "description": "Vehicle electrical, battery, and charging components and related circuitry.",
+          "children": [
+            {
+              "id": "car_batteries",
+              "name": "Car Batteries",
+              "description": "Lead-acid, lithium, and rechargeable batteries for vehicles"
+            },
+            {
+              "id": "alternators",
+              "name": "Alternators",
+              "description": "Alternators and charging systems for vehicles"
+            }
+          ]
         }
       ]
     },
@@ -669,75 +435,22 @@
         {
           "id": "beauty_tools",
           "name": "Beauty Tools",
-          "description": "Makeup brushes, mirrors, and tools used for applying cosmetics.",
-          "children": [
-            {
-              "id": "makeup_tools",
-              "name": "Makeup Tools",
-              "description": "Brushes, applicators, sponges, and puffy tools for makeup application."
-            },
-            {
-              "id": "beauty_mirrors",
-              "name": "Beauty Mirrors",
-              "description": "Makeup mirrors with lighting and positioning features."
-            }
-          ]
+          "description": "Makeup brushes, mirrors, and tools used for applying cosmetics."
         },
         {
           "id": "makeup",
           "name": "Makeup",
-          "description": "Products for facial, eye, lip, and color cosmetics.",
-          "children": [
-            {
-              "id": "face_makeup",
-              "name": "Face Makeup",
-              "description": "Foundations, concealers, powders, and blush for face coverage."
-            },
-            {
-              "id": "eye_makeup",
-              "name": "Eye Makeup",
-              "description": "Mascara, eyeliners, eyeshadow, and brow products."
-            },
-            {
-              "id": "lip_makeup",
-              "name": "Lip Makeup",
-              "description": "Lipsticks, lip glosses, liners, and lip stain products."
-            }
-          ]
+          "description": "Products for facial, eye, lip, and color cosmetics."
         },
         {
           "id": "fragrances",
           "name": "Fragrances",
-          "description": "Perfumes, body mists, and scent products used for body fragrance.",
-          "children": [
-            {
-              "id": "perfumes",
-              "name": "Perfumes",
-              "description": "Fine and body perfumes, colognes, and scented sprays."
-            },
-            {
-              "id": "deodorants",
-              "name": "Deodorants",
-              "description": "Deodorants, body sprays, and scent mists for personal freshness."
-            }
-          ]
+          "description": "Perfumes, body mists, and scent products used for body fragrance."
         },
         {
           "id": "skincare",
           "name": "Skincare",
-          "description": "Skin cleansers, serums, creams, and treatments for care routines.",
-          "children": [
-            {
-              "id": "facial_cleansers",
-              "name": "Facial Cleansers",
-              "description": "Face wash, cleansing gels, and toners for skincare routines."
-            },
-            {
-              "id": "moisturizers",
-              "name": "Moisturizers",
-              "description": "Hydrating creams, lotions, and skin-moisture products."
-            }
-          ]
+          "description": "Skin cleansers, serums, creams, and treatments for care routines."
         }
       ]
     },
@@ -749,22 +462,70 @@
         {
           "id": "outdoor_furniture",
           "name": "Outdoor Furniture",
-          "description": "Patio chairs, tables, cushions, and weather-ready furniture items."
+          "description": "Patio chairs, tables, cushions, and weather-ready furniture items.",
+          "children": [
+            {
+              "id": "patio_chairs",
+              "name": "Patio Chairs",
+              "description": "Outdoor seating chairs for patios and gardens"
+            },
+            {
+              "id": "patio_tables",
+              "name": "Patio Tables",
+              "description": "Patio-side tables and outdoor dining surfaces"
+            }
+          ]
         },
         {
           "id": "hiking_gear",
           "name": "Hiking Gear",
-          "description": "Backpacks, trekking poles, and support gear for trails and hikes."
+          "description": "Backpacks, trekking poles, and support gear for trails and hikes.",
+          "children": [
+            {
+              "id": "hiking_backpacks",
+              "name": "Hiking Backpacks",
+              "description": "Daypacks and carry bags for trail hiking"
+            },
+            {
+              "id": "hiking_boots",
+              "name": "Hiking Boots",
+              "description": "Durable boots for hiking and trail use"
+            }
+          ]
         },
         {
           "id": "outdoor_decor",
           "name": "Outdoor Decor",
-          "description": "Decorative and ambient items for patios, decks, and gardens."
+          "description": "Decorative and ambient items for patios, decks, and gardens.",
+          "children": [
+            {
+              "id": "patio_lights",
+              "name": "Patio Lights",
+              "description": "Decorative lighting for patios and decks"
+            },
+            {
+              "id": "yard_decor",
+              "name": "Yard Decor",
+              "description": "Decorative outdoor items for yards and gardens"
+            }
+          ]
         },
         {
           "id": "camping_gear",
           "name": "Camping Gear",
-          "description": "Backpacks, tents, sleeping bags, and camping-ready outdoor equipment."
+          "description": "Backpacks, tents, sleeping bags, and camping-ready outdoor equipment.",
+          "children": [
+            {
+              "id": "camping_tents",
+              "name": "Camping Tents",
+              "description": "Tents and shelter structures for camping"
+            },
+            {
+              "id": "sleeping_bags",
+              "name": "Sleeping Bags",
+              "description": "Insulated sleeping bags for camping and hiking"
+            }
+          ]
         }
       ]
     },
@@ -776,87 +537,27 @@
         {
           "id": "outdoor_recreation",
           "name": "Outdoor Recreation",
-          "description": "Camping, hiking, and general outdoor play and recreation",
-          "children": [
-            {
-              "id": "camping",
-              "name": "Camping",
-              "description": "Camping tents, sleeping bags, lanterns, and campsite gear"
-            },
-            {
-              "id": "hiking",
-              "name": "Hiking",
-              "description": "Backpacks, trail gear, and hiking essentials for outdoor terrain"
-            }
-          ]
+          "description": "Camping, hiking, and general outdoor play and recreation"
         },
         {
           "id": "water_sports",
           "name": "Water Sports",
-          "description": "Swimming, paddle, and other water-based sporting activities",
-          "children": [
-            {
-              "id": "swimming",
-              "name": "Swimming",
-              "description": "Swimsuits, swim equipment, and lane accessories for aquatic sports"
-            },
-            {
-              "id": "kayaking",
-              "name": "Kayaking",
-              "description": "Kayaks, paddles, and gear for powered or manual paddling"
-            }
-          ]
+          "description": "Swimming, paddle, and other water-based sporting activities"
         },
         {
           "id": "racket_sports",
           "name": "Racket Sports",
-          "description": "Tennis, badminton, table tennis, and similar racket activities",
-          "children": [
-            {
-              "id": "tennis",
-              "name": "Tennis",
-              "description": "Tennis rackets, balls, nets, and court training accessories"
-            },
-            {
-              "id": "badminton",
-              "name": "Badminton",
-              "description": "Badminton rackets, shuttlecocks, and indoor court equipment"
-            }
-          ]
+          "description": "Tennis, badminton, table tennis, and similar racket activities"
         },
         {
           "id": "ball_sports",
           "name": "Ball Sports",
-          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets",
-          "children": [
-            {
-              "id": "basketball",
-              "name": "Basketball",
-              "description": "Basketballs, hoops, and training gear for basketball gameplay"
-            },
-            {
-              "id": "soccer",
-              "name": "Soccer",
-              "description": "Soccer balls, cleats, goals, and training equipment"
-            }
-          ]
+          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets"
         },
         {
           "id": "team_sports",
           "name": "Team Sports",
-          "description": "Multi-player team sports gear such as football and soccer",
-          "children": [
-            {
-              "id": "american_football",
-              "name": "American Football",
-              "description": "Helmets, protective gear, footballs, and training items for tackle football"
-            },
-            {
-              "id": "volleyball",
-              "name": "Volleyball",
-              "description": "Volleyballs, nets, court kits, and practice tools for team play"
-            }
-          ]
+          "description": "Multi-player team sports gear such as football and soccer"
         }
       ]
     }

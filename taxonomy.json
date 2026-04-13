@@ -543,17 +543,53 @@
         {
           "id": "power_tools",
           "name": "Power Tools",
-          "description": "Battery- and corded-powered tools used for drilling, cutting, sanding, and other powered tasks."
+          "description": "Battery- and corded-powered tools used for drilling, cutting, sanding, and other powered tasks.",
+          "children": [
+            {
+              "id": "power_drills",
+              "name": "Power Drills",
+              "description": "Cordless and corded drills, drivers, and drill-related accessories"
+            },
+            {
+              "id": "impact_drivers",
+              "name": "Impact Drivers",
+              "description": "High-torque impact drivers and driver bits for fastening and assembly"
+            }
+          ]
         },
         {
           "id": "hand_tools",
           "name": "Hand Tools",
-          "description": "Manual tools for fastening, measuring, cutting, gripping, and basic repairs."
+          "description": "Manual tools for fastening, measuring, cutting, gripping, and basic repairs.",
+          "children": [
+            {
+              "id": "hammers",
+              "name": "Hammers",
+              "description": "Claw, ball-peen, and specialty hammers for manual fastening"
+            },
+            {
+              "id": "screwdrivers",
+              "name": "Screwdrivers",
+              "description": "Flat, Phillips, and torque screwdrivers for precision fastening"
+            }
+          ]
         },
         {
           "id": "tool_storage",
           "name": "Tool Storage",
-          "description": "Tool cabinets, chests, and organization systems for storing tools."
+          "description": "Tool cabinets, chests, and organization systems for storing tools.",
+          "children": [
+            {
+              "id": "tool_boxes",
+              "name": "Tool Boxes",
+              "description": "Portable and rolling containers for organizing tool sets"
+            },
+            {
+              "id": "tool_racks",
+              "name": "Tool Racks",
+              "description": "Wall, bench, and garage racks for efficient tool storage"
+            }
+          ]
         }
       ]
     },
@@ -646,27 +682,87 @@
         {
           "id": "outdoor_recreation",
           "name": "Outdoor Recreation",
-          "description": "Camping, hiking, and general outdoor play and recreation"
+          "description": "Camping, hiking, and general outdoor play and recreation",
+          "children": [
+            {
+              "id": "camping",
+              "name": "Camping",
+              "description": "Camping tents, sleeping bags, lanterns, and campsite gear"
+            },
+            {
+              "id": "hiking",
+              "name": "Hiking",
+              "description": "Backpacks, trail gear, and hiking essentials for outdoor terrain"
+            }
+          ]
         },
         {
           "id": "water_sports",
           "name": "Water Sports",
-          "description": "Swimming, paddle, and other water-based sporting activities"
+          "description": "Swimming, paddle, and other water-based sporting activities",
+          "children": [
+            {
+              "id": "swimming",
+              "name": "Swimming",
+              "description": "Swimsuits, swim equipment, and lane accessories for aquatic sports"
+            },
+            {
+              "id": "kayaking",
+              "name": "Kayaking",
+              "description": "Kayaks, paddles, and gear for powered or manual paddling"
+            }
+          ]
         },
         {
           "id": "racket_sports",
           "name": "Racket Sports",
-          "description": "Tennis, badminton, table tennis, and similar racket activities"
+          "description": "Tennis, badminton, table tennis, and similar racket activities",
+          "children": [
+            {
+              "id": "tennis",
+              "name": "Tennis",
+              "description": "Tennis rackets, balls, nets, and court training accessories"
+            },
+            {
+              "id": "badminton",
+              "name": "Badminton",
+              "description": "Badminton rackets, shuttlecocks, and indoor court equipment"
+            }
+          ]
         },
         {
           "id": "ball_sports",
           "name": "Ball Sports",
-          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets"
+          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets",
+          "children": [
+            {
+              "id": "basketball",
+              "name": "Basketball",
+              "description": "Basketballs, hoops, and training gear for basketball gameplay"
+            },
+            {
+              "id": "soccer",
+              "name": "Soccer",
+              "description": "Soccer balls, cleats, goals, and training equipment"
+            }
+          ]
         },
         {
           "id": "team_sports",
           "name": "Team Sports",
-          "description": "Multi-player team sports gear such as football and soccer"
+          "description": "Multi-player team sports gear such as football and soccer",
+          "children": [
+            {
+              "id": "american_football",
+              "name": "American Football",
+              "description": "Helmets, protective gear, footballs, and training items for tackle football"
+            },
+            {
+              "id": "volleyball",
+              "name": "Volleyball",
+              "description": "Volleyballs, nets, court kits, and practice tools for team play"
+            }
+          ]
         }
       ]
     }

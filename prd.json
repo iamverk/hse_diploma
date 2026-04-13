@@ -80,7 +80,7 @@
       "id": 13,
       "title": "Expand L3: Sporting Goods + Tools subcategories (2-3 each)",
       "acceptanceCriteria": "Each Sporting Goods and Tools L2 has 2-3 L3 children. NLIV > 0.40.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 14,

@@ -37,6 +37,12 @@
 - Story 11 status: passes true
 - Validation: Nodes=100, max depth=3, valid=True; Home Goods L3 edge check passed 15/15 good (min NLIV=0.4049)
 - Weak edges: none
+- Story 12 status: passes true
+- Validation: Nodes=120, max depth=3, valid=True; Story 12 edges check passed 20/20 (min NLIV=0.4107)
+- Weak edges: none
+- Story 13 status: passes true
+- Validation: Nodes=136, max depth=3, valid=True; Story 13 edges check passed 16/16 good (min NLIV=0.4202)
+- Weak edges: none
 
 
 ## Decisions This Iteration
@@ -53,7 +59,5 @@
 - Story 10 expansion: Added 3 L3 nodes each under all Clothing L2 branches. `mens_clothing` -> `mens_tops`, `mens_bottoms`, `mens_outerwear`; `womens_clothing` -> `womens_tops`, `womens_bottoms`, `womens_dresses`; `kids_clothing` -> `boys_clothing`, `girls_clothing`, `baby_clothing`; `footwear` -> `footwear_shoes`, `footwear_boots`, `footwear_socks`; `accessories` -> `fashion_bags`, `wristwatches`, `fashion_jewelry`. Added in one command and checked all 15 edges with `check_edge.py --batch` (all GOOD; min NLIV=0.4046).
 - Story 11 expansion: Home Goods retained its 5 L2 children and added 3 L3 each across all branches. Added `wall_decor`, `lighting_and_fixtures`, `decorative_textiles` under `home_decor`; `pantry_storage`, `storage_containers`, `home_organization` under `home_storage`; `home_repair`, `home_maintenance`, `home_renovation` under `home_improvement`; `cleaning_equipment`, `cleaning_chemicals`, `laundry_supplies` under `cleaning_supplies`; `living_room_furniture`, `bedroom_furniture`, `kitchen_dining_furniture` under `furniture`.
 
-- Story 12 status: passes true
-- Validation: Nodes=120, max depth=3, valid=True; Story 12 edges check passed 20/20 (min NLIV=0.4107)
-- Weak edges: none
 - Story 12 expanded Books and Toys to full L3 depth with 2 children each under every L2 node (`mystery_novels`, `fantasy_books`, `biographies`, `self_help_books`, `school_textbooks`, `language_textbooks`, `baking_cookbooks`, `regional_cookbooks`, `ebooks`, `audiobooks`, `science_kits`, `art_and_craft_toys`, `building_blocks`, `construction_sets`, `action_figures`, `plush_toys`, `rc_cars`, `rc_vehicles`, `board_games`, `jigsaw_puzzles`) and updated story status to pass after one full validate.
+- Story 13 expanded Sporting Goods and Tools to L3 with 2 children per L2 parent (`camping`, `hiking`, `swimming`, `kayaking`, `tennis`, `badminton`, `basketball`, `soccer`, `american_football`, `volleyball`, `power_drills`, `impact_drivers`, `hammers`, `screwdrivers`, `tool_boxes`, `tool_racks`) after one-shot batch `check_edge` verification (16/16 good) and taxonomy_cli adds.

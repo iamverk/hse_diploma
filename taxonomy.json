@@ -6,7 +6,34 @@
     {
       "id": "electronics",
       "name": "Electronics",
-      "description": "Consumer electronics and digital devices"
+      "description": "Consumer electronics and digital devices",
+      "children": [
+        {
+          "id": "mobile_devices",
+          "name": "Mobile Devices",
+          "description": "Portable communication and smart devices"
+        },
+        {
+          "id": "computers",
+          "name": "Computers",
+          "description": "Personal computers and connected computer devices"
+        },
+        {
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital cameras, camcorders, and imaging systems"
+        },
+        {
+          "id": "audio",
+          "name": "Audio",
+          "description": "Sound devices for playback, capture, and listening"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, projectors, and video display systems"
+        }
+      ]
     },
     {
       "id": "clothing",

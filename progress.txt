@@ -35,7 +35,8 @@
 - Validation: Nodes=85, max depth=3, valid=True; Story 10 edges check passed 15/15 good (min NLIV=0.4046)
 - Weak edges: none
 - Story 11 status: passes true
-- Validation: Nodes=100, max depth=3, valid=True
+- Validation: Nodes=100, max depth=3, valid=True; Home Goods L3 edge check passed 15/15 good (min NLIV=0.4049)
+- Weak edges: none
 
 
 ## Decisions This Iteration

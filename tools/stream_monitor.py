@@ -126,9 +126,16 @@ def process_stream_file(filepath: str):
                         taxonomy_edited = True
                         file_edits += 1
 
-                # Detect shell calls
+                # Detect shell calls — including taxonomy edits via CLI
                 if tool_kind == "shell":
                     shell_calls += 1
+                    # Check if shell command modifies taxonomy
+                    cmd = tc.get("shellToolCall", {}).get("args", {}).get("command", "")
+                    result = tc.get("shellToolCall", {}).get("result", {})
+                    result_text = str(result.get("stdout", "") or result.get("success", ""))
+                    if "taxonomy" in cmd and ("add-node" in cmd or "delete-node" in cmd or "move-node" in cmd):
+                        taxonomy_edited = True
+                        file_edits += 1
 
                 # Detect taxonomy reads
                 if tool_kind == "read":

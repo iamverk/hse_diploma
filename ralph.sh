@@ -204,7 +204,7 @@ ONE story only. Commit: 'story $CURRENT_ID: <description>'"
         AGENT_EXIT=$?
 
     elif [ "$TOOL" = "cursor" ]; then
-        # ── Stream-JSON + mtime watchdog ────────────────────────────────
+        # ── Stream-JSON + CPU watchdog ──────────────────────────────────
         STREAM_FILE="output/cursor_stream_iter${i}.jsonl"
         > "$STREAM_FILE"  # clear
 
@@ -217,74 +217,100 @@ ONE story only. Commit: 'story $CURRENT_ID: <description>'"
             --yolo \
             --trust \
             --workspace . \
-            "$PROMPT" 2>"output/cursor_stderr_iter${i}.log" | \
-        tee "$STREAM_FILE" > /dev/null &
-        PIPE_PID=$!
+            "$PROMPT" > "$STREAM_FILE" 2>"output/cursor_stderr_iter${i}.log" &
+        AGENT_PID=$!
 
-        sleep 3
-        AGENT_PID=$(pgrep -f "cursor-agent.*stream-json" 2>/dev/null | head -1)
-        echo "  [watchdog] cursor-agent PID=$AGENT_PID, tee PID=$PIPE_PID"
-        echo "  [watchdog] Stream file: $STREAM_FILE"
-        echo "  [watchdog] Silence timeout: ${WATCHDOG_TIMEOUT}s, Hard timeout: 2700s (45 min)"
+        echo "  [watchdog] cursor-agent PID=$AGENT_PID"
+        echo "  [watchdog] Stream: $STREAM_FILE"
+        echo "  [watchdog] Idle timeout: ${WATCHDOG_TIMEOUT}s (file+CPU check)"
 
-        # ── Watchdog loop: mtime-based silence detection ────────────────
+        # ── Watchdog: file growth + CPU activity ────────────────────────
         WAIT_SECS=0
-        HARD_TIMEOUT=2700  # 45 min — real guard is silence watchdog
+        HARD_TIMEOUT=2700
         LAST_SIZE=0
-        SILENCE_START=$SECONDS
+        LAST_TAX_HASH=""
+        LAST_ACTIVE=$SECONDS
 
-        while kill -0 $PIPE_PID 2>/dev/null; do
+        while kill -0 $AGENT_PID 2>/dev/null; do
             sleep 10
             WAIT_SECS=$((WAIT_SECS + 10))
 
-            # Hard timeout (25 min absolute)
+            # Hard timeout (45 min)
             if [ $WAIT_SECS -ge $HARD_TIMEOUT ]; then
-                echo "  [watchdog] HARD TIMEOUT: ${HARD_TIMEOUT}s exceeded"
+                echo "  [watchdog] HARD TIMEOUT: ${HARD_TIMEOUT}s"
                 ITER_STATUS="crash"
                 break
             fi
 
-            # Check if stream file grew (silence detection)
+            # ── Check activity signals ──────────────────────────────────
+            ACTIVE=false
+
+            # Signal 1: stream file grew
             CURR_SIZE=$(wc -c < "$STREAM_FILE" 2>/dev/null || echo "0")
             if [ "$CURR_SIZE" -gt "$LAST_SIZE" ]; then
+                ACTIVE=true
                 LAST_SIZE=$CURR_SIZE
-                SILENCE_START=$SECONDS
-                # Print activity indicator every 60s
-                if [ $((WAIT_SECS % 60)) -eq 0 ]; then
+            fi
+
+            # Signal 2: cursor-agent child processes have CPU > 0
+            for cpid in $(pgrep -P $AGENT_PID 2>/dev/null) $(pgrep -g $AGENT_PID 2>/dev/null); do
+                CPU=$(ps -p "$cpid" -o %cpu= 2>/dev/null | tr -d ' ' || echo "0")
+                if [ -n "$CPU" ] && (( $(echo "$CPU > 1.0" | bc 2>/dev/null || echo 0) )); then
+                    ACTIVE=true
+                    break
+                fi
+            done
+
+            # Signal 3: taxonomy.json changed (agent edits via shell/CLI)
+            if [ -f taxonomy.json ]; then
+                TAX_HASH=$(md5 -q taxonomy.json 2>/dev/null || md5sum taxonomy.json 2>/dev/null | cut -d' ' -f1)
+                if [ -n "$LAST_TAX_HASH" ] && [ "$TAX_HASH" != "$LAST_TAX_HASH" ]; then
+                    ACTIVE=true
+                    echo "  [watchdog] taxonomy.json changed!"
+                fi
+                LAST_TAX_HASH=$TAX_HASH
+            fi
+
+            # Signal 4: new git commits
+            CURR_HEAD=$(git rev-parse HEAD 2>/dev/null || echo "none")
+
+            # ── Update idle timer ───────────────────────────────────────
+            if [ "$ACTIVE" = true ]; then
+                LAST_ACTIVE=$SECONDS
+                if [ $((WAIT_SECS % 120)) -eq 0 ]; then
                     LINES=$(wc -l < "$STREAM_FILE" 2>/dev/null || echo "0")
-                    echo "  [watchdog] Active: ${LINES} stream events, ${CURR_SIZE} bytes (${WAIT_SECS}s elapsed)"
+                    NODES=$(python3 -c "import json; t=json.load(open('taxonomy.json')); c=lambda n:1+sum(c(x) for x in n.get('children',[])); print(c(t))" 2>/dev/null || echo "?")
+                    echo "  [watchdog] Active: ${LINES} events, ${NODES} nodes (${WAIT_SECS}s)"
                 fi
             else
-                SILENCE_SECS=$((SECONDS - SILENCE_START))
-                if [ "$SILENCE_SECS" -ge "$WATCHDOG_TIMEOUT" ]; then
-                    echo "  [watchdog] SILENCE KILL: no output for ${SILENCE_SECS}s (limit: ${WATCHDOG_TIMEOUT}s)"
+                IDLE=$((SECONDS - LAST_ACTIVE))
+                if [ "$IDLE" -ge "$WATCHDOG_TIMEOUT" ]; then
+                    echo "  [watchdog] IDLE KILL: ${IDLE}s no activity (file/CPU/taxonomy all static)"
                     ITER_STATUS="crash"
                     break
                 fi
-                # Warn at 50% silence threshold
-                HALF_TIMEOUT=$((WATCHDOG_TIMEOUT / 2))
-                if [ "$SILENCE_SECS" -ge "$HALF_TIMEOUT" ] && [ $((SILENCE_SECS % 30)) -lt 10 ]; then
-                    echo "  [watchdog] WARNING: silent for ${SILENCE_SECS}s / ${WATCHDOG_TIMEOUT}s"
+                if [ "$IDLE" -ge $((WATCHDOG_TIMEOUT / 2)) ] && [ $((IDLE % 30)) -lt 10 ]; then
+                    echo "  [watchdog] idle ${IDLE}s / ${WATCHDOG_TIMEOUT}s"
                 fi
             fi
         done
 
-        # Kill cursor-agent if watchdog triggered
+        # Kill if watchdog triggered
         if [ "$ITER_STATUS" = "crash" ]; then
-            [ -n "$AGENT_PID" ] && kill $AGENT_PID 2>/dev/null
-            kill $PIPE_PID 2>/dev/null
+            kill $AGENT_PID 2>/dev/null
             sleep 2
-            [ -n "$AGENT_PID" ] && kill -9 $AGENT_PID 2>/dev/null
-            kill -9 $PIPE_PID 2>/dev/null
+            kill -9 $AGENT_PID 2>/dev/null
+            # Kill children too
+            pkill -9 -P $AGENT_PID 2>/dev/null
         fi
 
-        wait $PIPE_PID 2>/dev/null
+        wait $AGENT_PID 2>/dev/null
         AGENT_EXIT=$?
 
         # Post-process stream file
         STREAM_SIZE=$(wc -c < "$STREAM_FILE" 2>/dev/null || echo "0")
         STREAM_LINES=$(wc -l < "$STREAM_FILE" 2>/dev/null || echo "0")
-        echo "  [stream] File: ${STREAM_LINES} lines, ${STREAM_SIZE} bytes"
+        echo "  [stream] ${STREAM_LINES} lines, ${STREAM_SIZE} bytes"
 
         if [ "$STREAM_SIZE" -gt 0 ]; then
             $PYTHON "$STREAM_MONITOR" "$STREAM_FILE" 2>/dev/null || true

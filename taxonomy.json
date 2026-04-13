@@ -109,17 +109,68 @@
     {
       "id": "toys",
       "name": "Toys",
-      "description": "Play, game, and novelty products for children and hobbyists"
+      "description": "Play, game, and novelty products for children and hobbyists",
+      "children": [
+        {
+          "id": "dolls_and_action_figures",
+          "name": "Dolls and Action Figures",
+          "description": "Doll figures, action figurines, and collectible miniatures for play"
+        },
+        {
+          "id": "remote_control_toys",
+          "name": "Remote Control Toys",
+          "description": "Radio-controlled cars, drones, and other remote-operated play devices"
+        },
+        {
+          "id": "toy_building_sets",
+          "name": "Toy Building Sets",
+          "description": "Interlocking toy sets and construction kits designed for building"
+        }
+      ]
     },
     {
       "id": "sports",
       "name": "Sports",
-      "description": "Sporting goods and recreation gear"
+      "description": "Sporting goods and recreation gear",
+      "children": [
+        {
+          "id": "team_sports",
+          "name": "Team Sports",
+          "description": "Sports gear and equipment for team-based games"
+        },
+        {
+          "id": "outdoor_sports",
+          "name": "Outdoor Sports",
+          "description": "Recreation gear for outdoor field and trail sports"
+        },
+        {
+          "id": "fitness_gear",
+          "name": "Fitness Gear",
+          "description": "Tools and accessories used for workouts, fitness, and training"
+        }
+      ]
     },
     {
       "id": "tools",
       "name": "Tools",
-      "description": "Hand tools, hardware, and workshop supplies"
+      "description": "Hand tools, hardware, and workshop supplies",
+      "children": [
+        {
+          "id": "hand_tools",
+          "name": "Hand Tools",
+          "description": "Manual tools for household and workshop use"
+        },
+        {
+          "id": "power_tools",
+          "name": "Power Tools",
+          "description": "Battery and corded powered tools for construction and repair"
+        },
+        {
+          "id": "tool_storage_and_organization",
+          "name": "Tool Storage and Organization",
+          "description": "Containers, systems, and organizers for keeping tools in order"
+        }
+      ]
     },
     {
       "id": "automotive",

@@ -8,16 +8,19 @@
 - Max depth 4: root → L1 → L2 → L3 (L4 only if needed)
 - CLI add-node produces output that keeps watchdog happy
 - Batch edge checks help catch weak names early (e.g., “Home Entertainment” under Electronics)
+- [APPEND-ONLY]
 
 ## Current State
 - Story 1 status: passes true
 - Story 2 status: passes true
 - Story 3 status: passes true
 - Story 4 status: passes true
-- Validation: 26 nodes, max depth 2, valid taxonomy structure
+- Story 5 status: passes true
+- Validation: 35 nodes, max depth 2, valid taxonomy structure
 - This is Experiment 10: best of all
-- Metrics: NLIV=not computed (edge-only), CSC=not computed, Composite=not computed, nodes=26
+- Metrics: NLIV=not computed (edge-only), CSC=not computed, Composite=not computed, nodes=35
 
 ## Decisions This Iteration
 - Added 3 Home L2 subcategories after batch NLIV validation: Furniture, Kitchen, Home Decor.
 - Added 3 Books L2 subcategories after batch NLIV validation: Fiction, Non-Fiction, Children’s Books.
+- Completed Story 5 by adding 3 Toys, 3 Sports, and 3 Tools L2 children validated with batch check_edge (all GOOD), and verified taxonomy with validate.py.

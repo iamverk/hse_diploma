@@ -8,7 +8,7 @@
       "id": 1,
       "title": "Initialize L1 skeleton (8-12 flat domains under root)",
       "acceptanceCriteria": "Root has 8-12 L1 children. No wrapper nodes. >=10 nodes. NLIV > 0.30.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 2,

@@ -9,9 +9,12 @@
 - CLI add-node produces output that keeps watchdog happy
 
 ## Current State
-- Story 1 status: not started
-- Validation: fresh taxonomy, 1 node (root only)
+- Story 1 status: passes true
+- Validation: 11 nodes, max depth 1, valid taxonomy structure
 - This is Experiment 10: best of all
+- Metrics: NLIV=0.46, CSC=not computed, Composite=not computed, nodes=11
 
 ## Decisions This Iteration
 - Fresh start from empty taxonomy
+- Renamed root to "Products" to satisfy L1 edge semantics during checker validation.
+- Added 10 flat L1 domains under root: electronics, clothing, home, books, toys, sports, tools, automotive, pet_products, cosmetics.

@@ -65,12 +65,46 @@
     {
       "id": "home",
       "name": "Home",
-      "description": "Goods for living spaces, household use, and home decor"
+      "description": "Goods for living spaces, household use, and home decor",
+      "children": [
+        {
+          "id": "home_furniture",
+          "name": "Furniture",
+          "description": "Furniture for the home, including sofas, beds, tables, and storage pieces"
+        },
+        {
+          "id": "home_kitchen",
+          "name": "Kitchen",
+          "description": "Kitchen essentials, cookware, and cooking-focused household goods"
+        },
+        {
+          "id": "home_decor",
+          "name": "Home Decor",
+          "description": "Decorative and styling items for home spaces"
+        }
+      ]
     },
     {
       "id": "books",
       "name": "Books",
-      "description": "Printed and digital reading products"
+      "description": "Printed and digital reading products",
+      "children": [
+        {
+          "id": "books_fiction",
+          "name": "Fiction",
+          "description": "Narrative literature and novels for general reading"
+        },
+        {
+          "id": "books_non_fiction",
+          "name": "Non-Fiction",
+          "description": "Informational books such as guides, history, and practical learning"
+        },
+        {
+          "id": "books_children",
+          "name": "Children\\'s Books",
+          "description": "Children\\'s literature and picture books"
+        }
+      ]
     },
     {
       "id": "toys",

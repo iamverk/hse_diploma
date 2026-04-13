@@ -13,9 +13,11 @@
 - Story 1 status: passes true
 - Story 2 status: passes true
 - Story 3 status: passes true
-- Validation: 16 nodes, max depth 2, valid taxonomy structure
+- Story 4 status: passes true
+- Validation: 26 nodes, max depth 2, valid taxonomy structure
 - This is Experiment 10: best of all
-- Metrics: NLIV=0.46, CSC=not computed, Composite=not computed, nodes=20
+- Metrics: NLIV=not computed (edge-only), CSC=not computed, Composite=not computed, nodes=26
 
 ## Decisions This Iteration
-- Added 4 L2 Clothing subcategories after batch NLIV validation: Bottoms, Footwear, Outerwear, Dresses.
+- Added 3 Home L2 subcategories after batch NLIV validation: Furniture, Kitchen, Home Decor.
+- Added 3 Books L2 subcategories after batch NLIV validation: Fiction, Non-Fiction, Children’s Books.

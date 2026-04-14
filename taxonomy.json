@@ -1,5 +1,5 @@
 {
-  "id": "root",
+  "id": "products",
   "name": "Products",
   "description": "Root node of the product category taxonomy",
   "children": [
@@ -304,8 +304,8 @@
       ]
     },
     {
-      "id": "automotive_parts",
-      "name": "Automotive Parts",
+      "id": "automotive_products",
+      "name": "Automotive Products",
       "description": "Automotive components, accessories, and maintenance supplies",
       "children": [
         {

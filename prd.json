@@ -68,7 +68,7 @@
       "id": 11,
       "title": "Refine: Fix all weak edges (NLIV < 0.3)",
       "acceptanceCriteria": "Zero weak edges. NLIV mean > 0.55. DO NOT add wrapper/grouping nodes.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 12,

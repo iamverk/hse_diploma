@@ -45,27 +45,87 @@
         {
           "id": "electronics_computers",
           "name": "Computers",
-          "description": "Products and items in the Computers category"
+          "description": "Products and items in the Computers category",
+          "children": [
+            {
+              "id": "electronics_computers_laptops",
+              "name": "Laptops",
+              "description": "Portable laptop and notebook computers"
+            },
+            {
+              "id": "electronics_computers_desktops",
+              "name": "Desktops",
+              "description": "Desktop PCs and workstations"
+            }
+          ]
         },
         {
           "id": "electronics_components",
           "name": "Components",
-          "description": "Products and items in the Components category"
+          "description": "Products and items in the Components category",
+          "children": [
+            {
+              "id": "electronics_components_motherboards",
+              "name": "Motherboards",
+              "description": "Main circuit boards for computing hardware"
+            },
+            {
+              "id": "electronics_components_power_supplies",
+              "name": "Power Supplies",
+              "description": "Power supply units and related components"
+            }
+          ]
         },
         {
           "id": "electronics_communications",
           "name": "Communications",
-          "description": "Products and items in the Communications category"
+          "description": "Products and items in the Communications category",
+          "children": [
+            {
+              "id": "electronics_communications_mobile_phones",
+              "name": "Mobile Phones",
+              "description": "Smartphones and mobile communication devices"
+            },
+            {
+              "id": "electronics_communications_telephones",
+              "name": "Telephones",
+              "description": "Landline and cordless telephone devices"
+            }
+          ]
         },
         {
           "id": "electronics_networking",
           "name": "Networking",
-          "description": "Products and items in the Networking category"
+          "description": "Products and items in the Networking category",
+          "children": [
+            {
+              "id": "electronics_networking_routers",
+              "name": "Routers",
+              "description": "Network routers and routing appliances"
+            },
+            {
+              "id": "electronics_networking_switches",
+              "name": "Switches",
+              "description": "Network switches and switching hardware"
+            }
+          ]
         },
         {
           "id": "electronics_video",
           "name": "Video",
-          "description": "Products and items in the Video category"
+          "description": "Products and items in the Video category",
+          "children": [
+            {
+              "id": "electronics_video_televisions",
+              "name": "Televisions",
+              "description": "Flat-screen and connected televisions"
+            },
+            {
+              "id": "electronics_video_players",
+              "name": "Video Players",
+              "description": "Standalone and streaming video playback devices"
+            }
+          ]
         }
       ]
     },

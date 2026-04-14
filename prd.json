@@ -44,7 +44,7 @@
       "id": 7,
       "title": "Expand L3: Electronics (2-3 per L2)",
       "acceptanceCriteria": "Each Electronics L2 has 2-3 L3 children. NLIV > 0.42.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 8,

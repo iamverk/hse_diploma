@@ -17,12 +17,14 @@
 - Story 4 status: passes true
 - Story 5 status: passes true
 - Story 6 status: passes true
-- Validation: 87 nodes, max depth 3, valid taxonomy structure
+- Story 7 status: passes true
+- Validation: 97 nodes, max depth 3, valid taxonomy structure
 - This is Experiment 10: best of all
-- Metrics: NLIV=not computed (edge-only), CSC=not computed, Composite=not computed, nodes=87
+- Metrics: NLIV=not computed (edge-only), CSC=not computed, Composite=not computed, nodes=97
 
 ## Decisions This Iteration
 - Added 3 Home L2 subcategories after batch NLIV validation: Furniture, Kitchen, Home Decor.
 - Added 3 Books L2 subcategories after batch NLIV validation: Fiction, Non-Fiction, Children’s Books.
 - Completed Story 5 by adding 3 Toys, 3 Sports, and 3 Tools L2 children validated with batch check_edge (all GOOD), and verified taxonomy with validate.py.
 - Completed Story 6 by adding 2 L2 nodes each to Pet Products, Cosmetics, and Auto Parts: Pet Accessories, Pet Health, Haircare, Nail Care, Tires and Wheels, Auto Electrical. All 6 edges passed check_edge.py, and final taxonomy validated with validate.py.
+- Completed Story 7 by adding 10 Electronics L3 nodes (Computers, Components, Communications, Networking, Video) with batch check_edge.py validation (all good), then validated taxonomy with validate.py.

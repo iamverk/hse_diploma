@@ -74,7 +74,7 @@
       "id": 12,
       "title": "Refine: MECE audit and structural balance",
       "acceptanceCriteria": "CSC > 0.40. Zero chains. Branching CV < 0.7. Max depth <= 4.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 13,

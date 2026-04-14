@@ -22,6 +22,7 @@
 - Story 9 status: passes true
 - Story 10 status: passes true
 - Story 11 status: passes true
+- Story 12 status: passes true
 - Validation: 67 nodes, max depth 3, valid taxonomy structure
 - This is Experiment 10: best of all
 - Metrics: NLIV=0.70, CSC=not computed (edge-only), Composite=not computed (edge-only), nodes=67
@@ -43,3 +44,4 @@
 - Completed Story 10 by expanding Automotive Parts with `engine_parts`, `wheels_and_tires`, and `vehicle_electronics`.
 - All Story 10 edges were validated in one `check_edge.py --batch` run and taxonomy validated with a single `validate.py` pass.
 - Completed Story 11 by renaming weak L1 and edge IDs: `root` -> `products`, and `automotive_parts` -> `automotive_products`; then verified all edges with one `check_edge.py --batch` run and one final `validate.py` pass.
+- Completed Story 12 by removing the Outdoor Goods single-child chain: moved `Camping Gear` to be an `Outdoor Goods` child, added one-level balance with `Sports` retained as a separate branch, validated all affected edges in one batch (`outdoor_goods→sports_equipment`, `outdoor_goods→camping_gear`, `sports_equipment→team_sports`, `sports_equipment→outdoor_sports`), and passed final validation.

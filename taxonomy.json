@@ -137,27 +137,87 @@
         {
           "id": "clothing_accessories",
           "name": "Clothing Accessories",
-          "description": "Products and items in the Clothing Accessories category"
+          "description": "Products and items in the Clothing Accessories category",
+          "children": [
+            {
+              "id": "clothing_accessories_belts",
+              "name": "Belts",
+              "description": "Products and items in the Belts category"
+            },
+            {
+              "id": "clothing_accessories_hats",
+              "name": "Hats",
+              "description": "Products and items in the Hats category"
+            }
+          ]
         },
         {
           "id": "clothing_costumes_and_accessories",
           "name": "Costumes & Accessories",
-          "description": "Products and items in the Costumes & Accessories category"
+          "description": "Products and items in the Costumes & Accessories category",
+          "children": [
+            {
+              "id": "clothing_costumes_and_accessories_costumes",
+              "name": "Costumes",
+              "description": "Products and items in the Costumes category"
+            },
+            {
+              "id": "clothing_costumes_and_accessories_masks",
+              "name": "Masks",
+              "description": "Products and items in the Masks category"
+            }
+          ]
         },
         {
           "id": "clothing_handbags_wallets_and_cases",
           "name": "Handbags, Wallets & Cases",
-          "description": "Products and items in the Handbags, Wallets & Cases category"
+          "description": "Products and items in the Handbags, Wallets & Cases category",
+          "children": [
+            {
+              "id": "clothing_handbags_wallets_and_cases_handbags",
+              "name": "Handbags",
+              "description": "Products and items in the Handbags category"
+            },
+            {
+              "id": "clothing_handbags_wallets_and_cases_wallets",
+              "name": "Wallets",
+              "description": "Products and items in the Wallets category"
+            }
+          ]
         },
         {
           "id": "clothing_jewelry",
           "name": "Jewelry",
-          "description": "Products and items in the Jewelry category"
+          "description": "Products and items in the Jewelry category",
+          "children": [
+            {
+              "id": "clothing_jewelry_earrings",
+              "name": "Earrings",
+              "description": "Products and items in the Earrings category"
+            },
+            {
+              "id": "clothing_jewelry_necklaces",
+              "name": "Necklaces",
+              "description": "Products and items in the Necklaces category"
+            }
+          ]
         },
         {
           "id": "clothing_shoe_accessories",
           "name": "Shoe Accessories",
-          "description": "Products and items in the Shoe Accessories category"
+          "description": "Products and items in the Shoe Accessories category",
+          "children": [
+            {
+              "id": "clothing_shoe_accessories_insoles",
+              "name": "Insoles",
+              "description": "Products and items in the Insoles category"
+            },
+            {
+              "id": "clothing_shoe_accessories_laces",
+              "name": "Shoe Laces",
+              "description": "Products and items in the Shoe Laces category"
+            }
+          ]
         },
         {
           "id": "clothing_shoes",
@@ -179,7 +239,19 @@
         {
           "id": "clothing_clothing",
           "name": "Clothing",
-          "description": "Products and items in the Clothing category"
+          "description": "Products and items in the Clothing category",
+          "children": [
+            {
+              "id": "clothing_clothing_tops",
+              "name": "Tops",
+              "description": "Products and items in the Tops category"
+            },
+            {
+              "id": "clothing_clothing_bottoms",
+              "name": "Bottoms",
+              "description": "Products and items in the Bottoms category"
+            }
+          ]
         }
       ]
     },

@@ -1,296 +1,103 @@
 {
   "id": "root",
-  "name": "Merchandise",
-  "description": "Root node of the product category hierarchy",
+  "name": "Products",
+  "description": "Root node of the product category taxonomy",
   "children": [
     {
       "id": "electronics",
       "name": "Electronics",
-      "description": "Electronic devices, components, and accessories.",
+      "description": "Electronic devices, components, and accessories",
       "children": [
         {
-          "id": "electronics_accessories",
-          "name": "Accessories",
-          "description": "Products and items in the Electronics Accessories category",
-          "children": [
-            {
-              "id": "electronics_accessories_adapters",
-              "name": "Adapters",
-              "description": "Adapters for power, audio, and data connectors"
-            },
-            {
-              "id": "electronics_accessories_cables",
-              "name": "Cables",
-              "description": "Cables for connecting and charging electronic devices"
-            }
-          ]
-        },
-        {
-          "id": "electronics_audio",
-          "name": "Audio",
-          "description": "Products and items in the Audio category",
-          "children": [
-            {
-              "id": "electronics_audio_headphones",
-              "name": "Headphones",
-              "description": "Headphones and earbuds"
-            },
-            {
-              "id": "electronics_audio_speakers",
-              "name": "Speakers",
-              "description": "Loudspeakers and sound systems"
-            }
-          ]
-        },
-        {
-          "id": "electronics_computers",
+          "id": "computers",
           "name": "Computers",
-          "description": "Products and items in the Computers category",
-          "children": [
-            {
-              "id": "electronics_computers_laptops",
-              "name": "Laptops",
-              "description": "Portable laptop and notebook computers"
-            },
-            {
-              "id": "electronics_computers_desktops",
-              "name": "Desktops",
-              "description": "Desktop PCs and workstations"
-            }
-          ]
+          "description": "Laptops, desktops, and workstations"
         },
         {
-          "id": "electronics_components",
-          "name": "Components",
-          "description": "Products and items in the Components category",
-          "children": [
-            {
-              "id": "electronics_components_motherboards",
-              "name": "Motherboards",
-              "description": "Main circuit boards for computing hardware"
-            },
-            {
-              "id": "electronics_components_power_supplies",
-              "name": "Power Supplies",
-              "description": "Power supply units and related components"
-            }
-          ]
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital still and video cameras, webcams, and imaging accessories"
         },
         {
-          "id": "electronics_communications",
-          "name": "Communications",
-          "description": "Products and items in the Communications category",
-          "children": [
-            {
-              "id": "electronics_communications_mobile_phones",
-              "name": "Mobile Phones",
-              "description": "Smartphones and mobile communication devices"
-            },
-            {
-              "id": "electronics_communications_telephones",
-              "name": "Telephones",
-              "description": "Landline and cordless telephone devices"
-            }
-          ]
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Smartphones, cellular devices, and mobile communication hardware"
         },
         {
-          "id": "electronics_networking",
-          "name": "Networking",
-          "description": "Products and items in the Networking category",
-          "children": [
-            {
-              "id": "electronics_networking_routers",
-              "name": "Routers",
-              "description": "Network routers and routing appliances"
-            },
-            {
-              "id": "electronics_networking_switches",
-              "name": "Switches",
-              "description": "Network switches and switching hardware"
-            }
-          ]
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, smart displays, streaming receivers, and video playback screens"
         },
         {
-          "id": "electronics_video",
-          "name": "Video",
-          "description": "Products and items in the Video category",
-          "children": [
-            {
-              "id": "electronics_video_televisions",
-              "name": "Televisions",
-              "description": "Flat-screen and connected televisions"
-            },
-            {
-              "id": "electronics_video_players",
-              "name": "Video Players",
-              "description": "Standalone and streaming video playback devices"
-            }
-          ]
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
         }
       ]
     },
     {
-      "id": "clothing_and_accessories",
-      "name": "Clothing & Accessories",
-      "description": "Apparel, fashion, and related accessories.",
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Apparel, footwear, and accessories",
       "children": [
         {
-          "id": "clothing_accessories",
-          "name": "Clothing Accessories",
-          "description": "Products and items in the Clothing Accessories category",
-          "children": [
-            {
-              "id": "clothing_accessories_belts",
-              "name": "Belts",
-              "description": "Products and items in the Belts category"
-            },
-            {
-              "id": "clothing_accessories_hats",
-              "name": "Hats",
-              "description": "Products and items in the Hats category"
-            }
-          ]
+          "id": "mens_clothing",
+          "name": "Men's Clothing",
+          "description": "Clothing designed for adult men including shirts, pants, and outerwear"
         },
         {
-          "id": "clothing_costumes_and_accessories",
-          "name": "Costumes & Accessories",
-          "description": "Products and items in the Costumes & Accessories category",
-          "children": [
-            {
-              "id": "clothing_costumes_and_accessories_costumes",
-              "name": "Costumes",
-              "description": "Products and items in the Costumes category"
-            },
-            {
-              "id": "clothing_costumes_and_accessories_masks",
-              "name": "Masks",
-              "description": "Products and items in the Masks category"
-            }
-          ]
+          "id": "womens_clothing",
+          "name": "Women's Clothing",
+          "description": "Clothing designed for adult women including tops, bottoms, and dresses"
         },
         {
-          "id": "clothing_handbags_wallets_and_cases",
-          "name": "Handbags, Wallets & Cases",
-          "description": "Products and items in the Handbags, Wallets & Cases category",
-          "children": [
-            {
-              "id": "clothing_handbags_wallets_and_cases_handbags",
-              "name": "Handbags",
-              "description": "Products and items in the Handbags category"
-            },
-            {
-              "id": "clothing_handbags_wallets_and_cases_wallets",
-              "name": "Wallets",
-              "description": "Products and items in the Wallets category"
-            }
-          ]
+          "id": "kids_clothing",
+          "name": "Kids Clothing",
+          "description": "Clothing for babies, children, and teens"
         },
         {
-          "id": "clothing_jewelry",
-          "name": "Jewelry",
-          "description": "Products and items in the Jewelry category",
-          "children": [
-            {
-              "id": "clothing_jewelry_earrings",
-              "name": "Earrings",
-              "description": "Products and items in the Earrings category"
-            },
-            {
-              "id": "clothing_jewelry_necklaces",
-              "name": "Necklaces",
-              "description": "Products and items in the Necklaces category"
-            }
-          ]
+          "id": "footwear",
+          "name": "Footwear",
+          "description": "Shoes, sandals, boots, socks, and related foot wear"
         },
         {
-          "id": "clothing_shoe_accessories",
-          "name": "Shoe Accessories",
-          "description": "Products and items in the Shoe Accessories category",
-          "children": [
-            {
-              "id": "clothing_shoe_accessories_insoles",
-              "name": "Insoles",
-              "description": "Products and items in the Insoles category"
-            },
-            {
-              "id": "clothing_shoe_accessories_laces",
-              "name": "Shoe Laces",
-              "description": "Products and items in the Shoe Laces category"
-            }
-          ]
-        },
-        {
-          "id": "clothing_shoes",
-          "name": "Shoes",
-          "description": "Products and items in the Shoes category",
-          "children": [
-            {
-              "id": "clothing_shoes_athletic",
-              "name": "Athletic Shoes",
-              "description": "Athletic and training shoes"
-            },
-            {
-              "id": "clothing_shoes_formal",
-              "name": "Formal Shoes",
-              "description": "Formal and dress shoes"
-            }
-          ]
-        },
-        {
-          "id": "clothing_clothing",
-          "name": "Clothing",
-          "description": "Products and items in the Clothing category",
-          "children": [
-            {
-              "id": "clothing_clothing_tops",
-              "name": "Tops",
-              "description": "Products and items in the Tops category"
-            },
-            {
-              "id": "clothing_clothing_bottoms",
-              "name": "Bottoms",
-              "description": "Products and items in the Bottoms category"
-            }
-          ]
+          "id": "accessories",
+          "name": "Accessories",
+          "description": "Headwear, belts, jewelry, watches, and other apparel accessories"
         }
       ]
     },
     {
       "id": "home_goods",
       "name": "Home Goods",
-      "description": "Household items, home decor, and everyday home products.",
+      "description": "Household essentials, decor, and home maintenance items",
       "children": [
         {
           "id": "home_goods_kitchenware",
           "name": "Kitchenware",
-          "description": "Kitchen utensils, cookware, food prep, and storage tools",
+          "description": "Kitchen utensils, cookware, and food prep essentials",
           "children": [
             {
               "id": "home_goods_kitchenware_cookware",
               "name": "Cookware",
-              "description": "Pots, pans, and cooking vessels for the kitchen"
+              "description": "Pots, pans, and cooking vessels for household kitchens"
             },
             {
               "id": "home_goods_kitchenware_bakeware",
               "name": "Bakeware",
-              "description": "Baking pans, trays, molds, and related tools"
+              "description": "Baking pans, trays, and molds for cooking"
             },
             {
               "id": "home_goods_kitchenware_utensils",
               "name": "Utensils",
-              "description": "Kitchen utensils and food prep hand tools"
-            },
-            {
-              "id": "home_goods_kitchenware_food_storage",
-              "name": "Food Storage",
-              "description": "Containers and wraps for storing ingredients and meals"
+              "description": "Kitchen utensils and everyday food preparation tools"
             }
           ]
         },
         {
           "id": "home_goods_furniture",
           "name": "Furniture",
-          "description": "Furniture items for all rooms and living spaces",
+          "description": "Living space furniture and room-specific furnishings",
           "children": [
             {
               "id": "home_goods_furniture_bedroom",
@@ -306,18 +113,13 @@
               "id": "home_goods_furniture_dining_room",
               "name": "Dining Room Furniture",
               "description": "Dining tables and dining room seating"
-            },
-            {
-              "id": "home_goods_furniture_patio",
-              "name": "Patio Furniture",
-              "description": "Outdoor and garden seating and lounge furniture"
             }
           ]
         },
         {
           "id": "home_goods_decor",
           "name": "Home Decor",
-          "description": "Decorative objects and styling products for interior spaces",
+          "description": "Decorative objects and styling products for interiors",
           "children": [
             {
               "id": "home_goods_decor_wall",
@@ -327,44 +129,12 @@
             {
               "id": "home_goods_decor_lighting",
               "name": "Decorative Lighting",
-              "description": "Accent lighting and style-focused luminaires"
+              "description": "Accent and mood lighting for home environments"
             },
             {
               "id": "home_goods_decor_rugs",
               "name": "Home Rugs",
               "description": "Area rugs and floor coverings"
-            },
-            {
-              "id": "home_goods_decor_curtains",
-              "name": "Curtains",
-              "description": "Window coverings and drape treatments"
-            }
-          ]
-        },
-        {
-          "id": "home_goods_storage",
-          "name": "Home Storage",
-          "description": "Home organization and storage products",
-          "children": [
-            {
-              "id": "home_goods_storage_bins",
-              "name": "Storage Bins",
-              "description": "Bins, totes, and containers for organizing spaces"
-            },
-            {
-              "id": "home_goods_storage_closet",
-              "name": "Closet Storage",
-              "description": "Closet organizers and shelving systems"
-            },
-            {
-              "id": "home_goods_storage_shelves",
-              "name": "Shelving",
-              "description": "Shelves and shelving systems for indoor storage"
-            },
-            {
-              "id": "home_goods_storage_laundry",
-              "name": "Laundry Storage",
-              "description": "Laundry storage, baskets, and organizational tools"
             }
           ]
         }
@@ -373,12 +143,12 @@
     {
       "id": "books",
       "name": "Books",
-      "description": "Printed and digital books across genres.",
+      "description": "Printed and digital books, magazines, and related reading media",
       "children": [
         {
           "id": "books_fiction",
           "name": "Fiction",
-          "description": "Fictional books and novels by genre",
+          "description": "Fictional books and novels",
           "children": [
             {
               "id": "books_fiction_mystery",
@@ -435,175 +205,89 @@
               "description": "Interactive and activity-based children books"
             }
           ]
-        },
-        {
-          "id": "books_comics",
-          "name": "Comics",
-          "description": "Comic books and sequential art publications",
-          "children": [
-            {
-              "id": "books_comics_graphic_novels",
-              "name": "Graphic Novels",
-              "description": "Serialized and long-form comic storytelling"
-            },
-            {
-              "id": "books_comics_manga",
-              "name": "Manga",
-              "description": "Japanese-style illustrated comics"
-            },
-            {
-              "id": "books_comics_superhero",
-              "name": "Superhero Comics",
-              "description": "Comic books featuring superhero stories"
-            }
-          ]
-        },
-        {
-          "id": "books_textbooks",
-          "name": "Textbooks",
-          "description": "School, college, and professional textbooks",
-          "children": [
-            {
-              "id": "books_textbooks_school_textbooks",
-              "name": "School Textbooks",
-              "description": "Textbooks for primary and secondary education"
-            },
-            {
-              "id": "books_textbooks_college_textbooks",
-              "name": "College Textbooks",
-              "description": "Academic textbooks for college-level courses"
-            }
-          ]
-        },
-        {
-          "id": "books_cookbooks",
-          "name": "Cookbooks",
-          "description": "Cookbooks and practical culinary guides",
-          "children": [
-            {
-              "id": "books_cookbooks_baking",
-              "name": "Baking Cookbooks",
-              "description": "Recipe books for baking desserts and pastries"
-            },
-            {
-              "id": "books_cookbooks_recipes",
-              "name": "Recipe Collections",
-              "description": "Everyday recipe collections and meal guides"
-            }
-          ]
         }
       ]
     },
     {
       "id": "toys",
       "name": "Toys",
-      "description": "Children’s toys, games, and play products."
-    },
-    {
-      "id": "sporting_goods",
-      "name": "Sporting Goods",
-      "description": "Sports, fitness, and outdoor recreational products."
-    },
-    {
-      "id": "tools",
-      "name": "Tools",
-      "description": "Hand and power tools, hardware, and repair equipment."
+      "description": "Children's toys, games, and play accessories",
+      "children": [
+        {
+          "id": "toys_action_figure_toys",
+          "name": "Action Figure Toys",
+          "description": "Collectible character figures and hero toy products",
+          "children": [
+            {
+              "id": "toys_action_figure_toys_superheroes",
+              "name": "Superhero Figures",
+              "description": "Collectible figures based on superhero franchises"
+            },
+            {
+              "id": "toys_action_figure_toys_anime",
+              "name": "Anime Figures",
+              "description": "Anime and manga character figurines"
+            },
+            {
+              "id": "toys_action_figure_toys_movie_figures",
+              "name": "Movie Figures",
+              "description": "Action figures from popular film franchises"
+            }
+          ]
+        },
+        {
+          "id": "toys_board_games",
+          "name": "Board Games",
+          "description": "Tabletop board and strategy games",
+          "children": [
+            {
+              "id": "toys_board_games_strategy",
+              "name": "Strategy Games",
+              "description": "Strategy and tactical board games"
+            },
+            {
+              "id": "toys_board_games_family",
+              "name": "Family Games",
+              "description": "Family-friendly board games for social play"
+            },
+            {
+              "id": "toys_board_games_party_games",
+              "name": "Party Games",
+              "description": "Social party and gathering board games"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "pet_products",
       "name": "Pet Products",
-      "description": "Products for pet care, feeding, and wellness.",
-      "children": [
-        {
-          "id": "pet_food",
-          "name": "Pet Food",
-          "description": "Food, treats, and supplements for pet animals."
-        },
-        {
-          "id": "pet_toys",
-          "name": "Pet Toys",
-          "description": "Interactive play and chew products for pets."
-        },
-        {
-          "id": "pet_grooming",
-          "name": "Pet Grooming",
-          "description": "Pet care products for cleaning, grooming, and hygiene."
-        },
-        {
-          "id": "pet_accessories",
-          "name": "Pet Accessories",
-          "description": "Products and accessories used to care for, train, and transport pets, including collars, leashes, and pet carriers."
-        },
-        {
-          "id": "pet_health",
-          "name": "Pet Health",
-          "description": "Products that support pet wellness, preventive care, and health needs."
-        }
-      ]
+      "description": "Products for pet care, feeding, accessories, and health",
+      "children": []
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hardware, DIY tools, and shop equipment",
+      "children": []
+    },
+    {
+      "id": "automotive_parts",
+      "name": "Automotive Parts",
+      "description": "Automotive components, accessories, and maintenance supplies",
+      "children": []
     },
     {
       "id": "cosmetics",
       "name": "Cosmetics",
-      "description": "Beauty, personal care, and cosmetic products.",
-      "children": [
-        {
-          "id": "makeup",
-          "name": "Makeup",
-          "description": "Face, eye, and lip cosmetics for personal beautification."
-        },
-        {
-          "id": "skincare",
-          "name": "Skincare",
-          "description": "Products for skin care, moisturizers, and treatments."
-        },
-        {
-          "id": "fragrance",
-          "name": "Fragrance",
-          "description": "Perfume, deodorants, and scented cosmetic products."
-        },
-        {
-          "id": "cosmetics_haircare",
-          "name": "Haircare",
-          "description": "Haircare products, including shampoos, conditioners, and hair styling formulations."
-        },
-        {
-          "id": "cosmetics_nail_care",
-          "name": "Nail Care",
-          "description": "Products for manicures, nail polish, and nail health and treatment."
-        }
-      ]
+      "description": "Skincare, beauty, and personal care products",
+      "children": []
     },
     {
-      "id": "auto_parts",
-      "name": "Auto Parts",
-      "description": "Vehicle parts, fluids, and automotive maintenance items.",
-      "children": [
-        {
-          "id": "engine_parts",
-          "name": "Engine Parts",
-          "description": "Core engine components for vehicle repair and replacement."
-        },
-        {
-          "id": "brake_systems",
-          "name": "Brake Systems",
-          "description": "Brake pads, discs, and complete braking system components."
-        },
-        {
-          "id": "suspension_parts",
-          "name": "Suspension Parts",
-          "description": "Shocks, struts, and suspension system components for vehicles."
-        },
-        {
-          "id": "auto_tires",
-          "name": "Tires and Wheels",
-          "description": "Tires, wheels, rims, and related tire accessories for vehicles."
-        },
-        {
-          "id": "auto_electrical",
-          "name": "Auto Electrical",
-          "description": "Electrical and electronic components for vehicles, including batteries, wiring, and ignitions."
-        }
-      ]
+      "id": "outdoor_goods",
+      "name": "Outdoor Goods",
+      "description": "Camping, lighting, and outdoor living products",
+      "children": []
     }
   ]
 }

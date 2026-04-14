@@ -20,9 +20,10 @@
 - Story 7 status: passes true
 - Story 8 status: passes true
 - Story 9 status: passes true
-- Validation: 97 nodes, max depth 3, valid taxonomy structure
+- Story 10 status: passes true
+- Validation: 67 nodes, max depth 3, valid taxonomy structure
 - This is Experiment 10: best of all
-- Metrics: NLIV=not computed (edge-only), CSC=not computed (edge-only), Composite=not computed (edge-only), nodes=52
+- Metrics: NLIV=not computed (edge-only), CSC=not computed (edge-only), Composite=not computed (edge-only), nodes=67
 
 ## Decisions This Iteration
 - Added 3 Home L2 subcategories after batch NLIV validation: Furniture, Kitchen, Home Decor.
@@ -34,3 +35,9 @@
 - Ran one check_edge.py --batch for all 12 Clothing L3 candidate edges; all returned excellent NLIV scores.
 - Ran validate.py once at the end of Story 8 and it passed.
 - Completed Story 9 by expanding Home, Books, and Toys with 2-3 L3 categories per selected L2 (31 added nodes total) after one batch `check_edge.py` run. All edges returned excellent NLIV and `validate.py` passed.
+- Completed Story 10 by adding Sports as `sports_equipment` under `Outdoor Goods` and 3 L3 nodes: `team_sports`, `camping_gear`, `outdoor_sports`.
+- Completed Story 10 by expanding Tools with `hand_tools`, `power_tools`, and `tool_storage`.
+- Completed Story 10 by expanding Pet Products with `pet_food`, `pet_health`, and `pet_accessories`.
+- Completed Story 10 by expanding Cosmetics with `skin_care` and `makeup`.
+- Completed Story 10 by expanding Automotive Parts with `engine_parts`, `wheels_and_tires`, and `vehicle_electronics`.
+- All Story 10 edges were validated in one `check_edge.py --batch` run and taxonomy validated with a single `validate.py` pass.

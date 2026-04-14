@@ -62,7 +62,7 @@
       "id": 10,
       "title": "Expand L3: Sports + Tools + Pet + Cosmetics + Auto (2-3 per L2)",
       "acceptanceCriteria": "Each remaining L2 has 2-3 L3 children. NLIV > 0.42.",
-      "passes": false
+      "passes": true
     },
     {
       "id": 11,

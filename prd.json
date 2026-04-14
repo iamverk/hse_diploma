@@ -80,7 +80,7 @@
       "id": 13,
       "title": "Refine: Final optimization",
       "acceptanceCriteria": "Composite > 0.65. NLIV > 0.55. CSC > 0.40. >=150 nodes. Max depth <= 4.",
-      "passes": false
+      "passes": true
     }
   ]
 }

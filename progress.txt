@@ -45,3 +45,10 @@
 - All Story 10 edges were validated in one `check_edge.py --batch` run and taxonomy validated with a single `validate.py` pass.
 - Completed Story 11 by renaming weak L1 and edge IDs: `root` -> `products`, and `automotive_parts` -> `automotive_products`; then verified all edges with one `check_edge.py --batch` run and one final `validate.py` pass.
 - Completed Story 12 by removing the Outdoor Goods single-child chain: moved `Camping Gear` to be an `Outdoor Goods` child, added one-level balance with `Sports` retained as a separate branch, validated all affected edges in one batch (`outdoor_goods→sports_equipment`, `outdoor_goods→camping_gear`, `sports_equipment→team_sports`, `sports_equipment→outdoor_sports`), and passed final validation.
+- Story 13 status: passes true
+- Metrics: NLIV=0.599, CSC=0.459, Composite=0.651, nodes=161
+- Completed Story 13 by applying low-risk naming refinements for IS-A precision:
+  - Renamed `books_fiction` to `Fiction Books`.
+  - Renamed `books_fiction_mystery` to `Mystery Books`.
+- Verified every edge with one `check_edge.py --batch` call (160 total, good=160, weak=0, bad=0).
+- Re-ran `python tools/metrics_v2.py taxonomy.json --json` and `python tools/validate.py` to confirm acceptance criteria and structural validity.

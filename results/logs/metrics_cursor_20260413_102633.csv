@@ -1,0 +1,5 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,6,"Expand L2: Toys + Sporting Goods (3-5 each)",true,keep,0.5842690598673936,0.4592967244244569,0.6499889264596129,N/A,42,1494
+2,7,"Expand L2: Tools + Pet Products (3-5 each)",true,keep,0.5973544146152253,0.4849153131275137,0.6591410535632081,N/A,48,1000
+3,8,"Expand L2: Cosmetics + Automotive + Outdoor (3-5 each)",false,discard,0.5983103445318879,0.3512349724893136,0.6218588523144792,N/A,62,2726
+4,8,"Expand L2: Cosmetics + Automotive + Outdoor (3-5 each)",true,crash,0.6004662781448687,0.49487948759107886,0.664520573431465,N/A,60,2736

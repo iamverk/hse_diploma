@@ -1,0 +1,11 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,11,"Expand L3: Home Goods subcategories (2-3 each)",true,keep,0.6353027203468361,0.4579710429554704,0.6626496594501254,N/A,100,2624
+2,12,"Expand L3: Books + Toys subcategories (2-3 each)",true,keep,0.6359368943366683,0.44394067273137217,0.6562395810937034,N/A,120,1022
+3,13,"Expand L3: Sporting Goods + Tools subcategories (2-3 each)",true,keep,0.6330857846471999,0.3853912532771012,0.6370187928118415,N/A,136,1171
+4,14,"Expand L3: Pet Products + Cosmetics subcategories (2-3 each)",true,keep,0.6441373604022904,0.42784184213541665,0.654813545705626,N/A,152,1352
+5,15,"Expand L3: Automotive + Outdoor subcategories (2-3 each)",false,discard,0.6421593026129785,0.35591213714945374,0.6326244848876635,N/A,168,1190
+6,15,"Expand L3: Automotive + Outdoor subcategories (2-3 each)",false,discard,0.5619904800103261,0.45923531851253946,0.6330139064620484,N/A,27,1110
+7,15,"Expand L3: Automotive + Outdoor subcategories (2-3 each)",true,keep,0.6172102800011635,0.4152680303684348,0.6384918051173141,N/A,101,1586
+8,16,"Refine: Fix weak edges (NLIV < 0.3)",true,keep,0.6208900826818803,0.3867819871639829,0.6352151074157417,N/A,103,2118
+9,17,"Refine: MECE audit and balance",true,keep,0.6208900826818803,0.3867819871639829,0.6352151074157417,N/A,103,655
+10,18,"Refine: Final optimization",true,crash,0.6599321245852083,0.30099279959276887,0.6267894219743606,N/A,203,2729

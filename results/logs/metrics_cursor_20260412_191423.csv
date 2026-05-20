@@ -1,0 +1,3 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,1,"Initialize L1 skeleton from product corpus",true,crash,0.5008690178394317,0.0,0.5003476071357726,N/A,11,1508
+2,2,"Expand L2 for Electronics",false,crash,0.5008690178394317,0.0,0.5003476071357726,N/A,11,1508

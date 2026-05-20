@@ -1,0 +1,1280 @@
+{
+  "id": "apparel_accessories",
+  "name": "Apparel & Accessories",
+  "description": "Clothing, shoes, jewelry, and fashion accessories",
+  "children": [
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Products and items in the Clothing category",
+      "children": [
+        {
+          "id": "activewear",
+          "name": "Activewear",
+          "description": "Products and items in the Activewear category",
+          "children": [
+            {
+              "id": "american_football_pants",
+              "name": "American Football Pants",
+              "description": "Products and items in the American Football Pants category"
+            },
+            {
+              "id": "bicycle_activewear",
+              "name": "Bicycle Activewear",
+              "description": "Products and items in the Bicycle Activewear category",
+              "children": [
+                {
+                  "id": "bicycle_bibs",
+                  "name": "Bicycle Bibs",
+                  "description": "Products and items in the Bicycle Bibs category"
+                },
+                {
+                  "id": "bicycle_jerseys",
+                  "name": "Bicycle Jerseys",
+                  "description": "Products and items in the Bicycle Jerseys category"
+                },
+                {
+                  "id": "bicycle_shorts_and_briefs",
+                  "name": "Bicycle Shorts & Briefs",
+                  "description": "Products and items in the Bicycle Shorts & Briefs category"
+                },
+                {
+                  "id": "bicycle_skinsuits",
+                  "name": "Bicycle Skinsuits",
+                  "description": "Products and items in the Bicycle Skinsuits category"
+                },
+                {
+                  "id": "bicycle_tights",
+                  "name": "Bicycle Tights",
+                  "description": "Products and items in the Bicycle Tights category"
+                }
+              ]
+            },
+            {
+              "id": "boxing_shorts",
+              "name": "Boxing Shorts",
+              "description": "Products and items in the Boxing Shorts category"
+            },
+            {
+              "id": "dance_dresses_skirts_and_costumes",
+              "name": "Dance Dresses, Skirts & Costumes",
+              "description": "Products and items in the Dance Dresses, Skirts & Costumes category"
+            },
+            {
+              "id": "hunting_clothing",
+              "name": "Hunting Clothing",
+              "description": "Products and items in the Hunting Clothing category",
+              "children": [
+                {
+                  "id": "ghillie_suits",
+                  "name": "Ghillie Suits",
+                  "description": "Products and items in the Ghillie Suits category"
+                },
+                {
+                  "id": "hunting_and_fishing_vests",
+                  "name": "Hunting & Fishing Vests",
+                  "description": "Products and items in the Hunting & Fishing Vests category"
+                },
+                {
+                  "id": "hunting_and_tactical_pants",
+                  "name": "Hunting & Tactical Pants",
+                  "description": "Products and items in the Hunting & Tactical Pants category"
+                }
+              ]
+            },
+            {
+              "id": "martial_arts_shorts",
+              "name": "Martial Arts Shorts",
+              "description": "Products and items in the Martial Arts Shorts category"
+            },
+            {
+              "id": "motorcycle_protective_clothing",
+              "name": "Motorcycle Protective Clothing",
+              "description": "Products and items in the Motorcycle Protective Clothing category",
+              "children": [
+                {
+                  "id": "motorcycle_jackets",
+                  "name": "Motorcycle Jackets",
+                  "description": "Products and items in the Motorcycle Jackets category"
+                },
+                {
+                  "id": "motorcycle_pants",
+                  "name": "Motorcycle Pants",
+                  "description": "Products and items in the Motorcycle Pants category"
+                },
+                {
+                  "id": "motorcycle_suits",
+                  "name": "Motorcycle Suits",
+                  "description": "Products and items in the Motorcycle Suits category"
+                }
+              ]
+            },
+            {
+              "id": "paintball_clothing",
+              "name": "Paintball Clothing",
+              "description": "Products and items in the Paintball Clothing category"
+            }
+          ]
+        },
+        {
+          "id": "baby_and_toddler_clothing",
+          "name": "Baby & Toddler Clothing",
+          "description": "Products and items in the Baby & Toddler Clothing category",
+          "children": [
+            {
+              "id": "baby_and_toddler_bottoms",
+              "name": "Baby & Toddler Bottoms",
+              "description": "Products and items in the Baby & Toddler Bottoms category"
+            },
+            {
+              "id": "baby_and_toddler_diaper_covers",
+              "name": "Baby & Toddler Diaper Covers",
+              "description": "Products and items in the Baby & Toddler Diaper Covers category"
+            },
+            {
+              "id": "baby_and_toddler_dresses",
+              "name": "Baby & Toddler Dresses",
+              "description": "Products and items in the Baby & Toddler Dresses category"
+            },
+            {
+              "id": "baby_and_toddler_outerwear",
+              "name": "Baby & Toddler Outerwear",
+              "description": "Products and items in the Baby & Toddler Outerwear category"
+            },
+            {
+              "id": "baby_and_toddler_outfits",
+              "name": "Baby & Toddler Outfits",
+              "description": "Products and items in the Baby & Toddler Outfits category"
+            },
+            {
+              "id": "baby_and_toddler_sleepwear",
+              "name": "Baby & Toddler Sleepwear",
+              "description": "Products and items in the Baby & Toddler Sleepwear category"
+            },
+            {
+              "id": "baby_and_toddler_socks_and_tights",
+              "name": "Baby & Toddler Socks & Tights",
+              "description": "Products and items in the Baby & Toddler Socks & Tights category"
+            },
+            {
+              "id": "baby_and_toddler_swimwear",
+              "name": "Baby & Toddler Swimwear",
+              "description": "Products and items in the Baby & Toddler Swimwear category"
+            },
+            {
+              "id": "baby_and_toddler_tops",
+              "name": "Baby & Toddler Tops",
+              "description": "Products and items in the Baby & Toddler Tops category"
+            },
+            {
+              "id": "baby_one_pieces",
+              "name": "Baby One-Pieces",
+              "description": "Products and items in the Baby One-Pieces category"
+            },
+            {
+              "id": "toddler_underwear",
+              "name": "Toddler Underwear",
+              "description": "Products and items in the Toddler Underwear category"
+            }
+          ]
+        },
+        {
+          "id": "dresses",
+          "name": "Dresses",
+          "description": "Products and items in the Dresses category"
+        },
+        {
+          "id": "one_pieces",
+          "name": "One-Pieces",
+          "description": "Products and items in the One-Pieces category",
+          "children": [
+            {
+              "id": "jumpsuits_and_rompers",
+              "name": "Jumpsuits & Rompers",
+              "description": "Products and items in the Jumpsuits & Rompers category"
+            },
+            {
+              "id": "leotards_and_unitards",
+              "name": "Leotards & Unitards",
+              "description": "Products and items in the Leotards & Unitards category"
+            },
+            {
+              "id": "overalls",
+              "name": "Overalls",
+              "description": "Products and items in the Overalls category"
+            }
+          ]
+        },
+        {
+          "id": "outerwear",
+          "name": "Outerwear",
+          "description": "Products and items in the Outerwear category",
+          "children": [
+            {
+              "id": "chaps",
+              "name": "Chaps",
+              "description": "Products and items in the Chaps category"
+            },
+            {
+              "id": "coats_and_jackets",
+              "name": "Coats & Jackets",
+              "description": "Products and items in the Coats & Jackets category"
+            },
+            {
+              "id": "rain_pants",
+              "name": "Rain Pants",
+              "description": "Products and items in the Rain Pants category"
+            },
+            {
+              "id": "rain_suits",
+              "name": "Rain Suits",
+              "description": "Products and items in the Rain Suits category"
+            },
+            {
+              "id": "snow_pants_and_suits",
+              "name": "Snow Pants & Suits",
+              "description": "Products and items in the Snow Pants & Suits category"
+            },
+            {
+              "id": "vests",
+              "name": "Vests",
+              "description": "Products and items in the Vests category"
+            }
+          ]
+        },
+        {
+          "id": "outfit_sets",
+          "name": "Outfit Sets",
+          "description": "Products and items in the Outfit Sets category"
+        },
+        {
+          "id": "pants",
+          "name": "Pants",
+          "description": "Products and items in the Pants category"
+        },
+        {
+          "id": "shirts_and_tops",
+          "name": "Shirts & Tops",
+          "description": "Products and items in the Shirts & Tops category"
+        },
+        {
+          "id": "shorts",
+          "name": "Shorts",
+          "description": "Products and items in the Shorts category"
+        },
+        {
+          "id": "skirts",
+          "name": "Skirts",
+          "description": "Products and items in the Skirts category",
+          "children": [
+            {
+              "id": "knee_length_skirts",
+              "name": "Knee-Length Skirts",
+              "description": "Products and items in the Knee-Length Skirts category"
+            },
+            {
+              "id": "long_skirts",
+              "name": "Long Skirts",
+              "description": "Products and items in the Long Skirts category"
+            },
+            {
+              "id": "mini_skirts",
+              "name": "Mini Skirts",
+              "description": "Products and items in the Mini Skirts category"
+            }
+          ]
+        },
+        {
+          "id": "skorts",
+          "name": "Skorts",
+          "description": "Products and items in the Skorts category"
+        },
+        {
+          "id": "sleepwear_and_loungewear",
+          "name": "Sleepwear & Loungewear",
+          "description": "Products and items in the Sleepwear & Loungewear category",
+          "children": [
+            {
+              "id": "loungewear",
+              "name": "Loungewear",
+              "description": "Products and items in the Loungewear category"
+            },
+            {
+              "id": "nightgowns",
+              "name": "Nightgowns",
+              "description": "Products and items in the Nightgowns category"
+            },
+            {
+              "id": "pajamas",
+              "name": "Pajamas",
+              "description": "Products and items in the Pajamas category"
+            },
+            {
+              "id": "robes",
+              "name": "Robes",
+              "description": "Products and items in the Robes category"
+            }
+          ]
+        },
+        {
+          "id": "suits",
+          "name": "Suits",
+          "description": "Products and items in the Suits category",
+          "children": [
+            {
+              "id": "pant_suits",
+              "name": "Pant Suits",
+              "description": "Products and items in the Pant Suits category"
+            },
+            {
+              "id": "skirt_suits",
+              "name": "Skirt Suits",
+              "description": "Products and items in the Skirt Suits category"
+            },
+            {
+              "id": "tuxedos",
+              "name": "Tuxedos",
+              "description": "Products and items in the Tuxedos category"
+            }
+          ]
+        },
+        {
+          "id": "swimwear",
+          "name": "Swimwear",
+          "description": "Products and items in the Swimwear category"
+        },
+        {
+          "id": "traditional_and_ceremonial_clothing",
+          "name": "Traditional & Ceremonial Clothing",
+          "description": "Products and items in the Traditional & Ceremonial Clothing category",
+          "children": [
+            {
+              "id": "dirndls",
+              "name": "Dirndls",
+              "description": "Products and items in the Dirndls category"
+            },
+            {
+              "id": "hakama_trousers",
+              "name": "Hakama Trousers",
+              "description": "Products and items in the Hakama Trousers category"
+            },
+            {
+              "id": "japanese_black_formal_wear",
+              "name": "Japanese Black Formal Wear",
+              "description": "Products and items in the Japanese Black Formal Wear category"
+            },
+            {
+              "id": "kimono_outerwear",
+              "name": "Kimono Outerwear",
+              "description": "Products and items in the Kimono Outerwear category",
+              "children": [
+                {
+                  "id": "haori_jackets",
+                  "name": "Haori Jackets",
+                  "description": "Products and items in the Haori Jackets category"
+                },
+                {
+                  "id": "kimono_coats",
+                  "name": "Kimono Coats",
+                  "description": "Products and items in the Kimono Coats category"
+                }
+              ]
+            },
+            {
+              "id": "kimonos",
+              "name": "Kimonos",
+              "description": "Products and items in the Kimonos category",
+              "children": [
+                {
+                  "id": "bridal_kimonos",
+                  "name": "Bridal Kimonos",
+                  "description": "Products and items in the Bridal Kimonos category"
+                },
+                {
+                  "id": "casual_kimonos",
+                  "name": "Casual Kimonos",
+                  "description": "Products and items in the Casual Kimonos category"
+                },
+                {
+                  "id": "furisode_kimonos",
+                  "name": "Furisode Kimonos",
+                  "description": "Products and items in the Furisode Kimonos category"
+                },
+                {
+                  "id": "iromuji_kimonos",
+                  "name": "Iromuji Kimonos",
+                  "description": "Products and items in the Iromuji Kimonos category"
+                },
+                {
+                  "id": "komon_kimonos",
+                  "name": "Komon Kimonos",
+                  "description": "Products and items in the Komon Kimonos category"
+                },
+                {
+                  "id": "tomesode_and_houmongi_kimonos",
+                  "name": "Tomesode & Houmongi Kimonos",
+                  "description": "Products and items in the Tomesode & Houmongi Kimonos category"
+                }
+              ]
+            },
+            {
+              "id": "religious_ceremonial_clothing",
+              "name": "Religious Ceremonial Clothing",
+              "description": "Products and items in the Religious Ceremonial Clothing category",
+              "children": [
+                {
+                  "id": "baptism_and_communion_dresses",
+                  "name": "Baptism & Communion Dresses",
+                  "description": "Products and items in the Baptism & Communion Dresses category"
+                }
+              ]
+            },
+            {
+              "id": "saris_and_lehengas",
+              "name": "Saris & Lehengas",
+              "description": "Products and items in the Saris & Lehengas category"
+            },
+            {
+              "id": "traditional_leather_pants",
+              "name": "Traditional Leather Pants",
+              "description": "Products and items in the Traditional Leather Pants category"
+            },
+            {
+              "id": "yukata",
+              "name": "Yukata",
+              "description": "Products and items in the Yukata category"
+            }
+          ]
+        },
+        {
+          "id": "underwear_and_socks",
+          "name": "Underwear & Socks",
+          "description": "Products and items in the Underwear & Socks category",
+          "children": [
+            {
+              "id": "bra_accessories",
+              "name": "Bra Accessories",
+              "description": "Products and items in the Bra Accessories category",
+              "children": [
+                {
+                  "id": "bra_strap_pads",
+                  "name": "Bra Strap Pads",
+                  "description": "Products and items in the Bra Strap Pads category"
+                },
+                {
+                  "id": "bra_straps_and_extenders",
+                  "name": "Bra Straps & Extenders",
+                  "description": "Products and items in the Bra Straps & Extenders category"
+                },
+                {
+                  "id": "breast_enhancing_inserts",
+                  "name": "Breast Enhancing Inserts",
+                  "description": "Products and items in the Breast Enhancing Inserts category"
+                },
+                {
+                  "id": "breast_petals_and_concealers",
+                  "name": "Breast Petals & Concealers",
+                  "description": "Products and items in the Breast Petals & Concealers category"
+                }
+              ]
+            },
+            {
+              "id": "bras",
+              "name": "Bras",
+              "description": "Products and items in the Bras category"
+            },
+            {
+              "id": "hosiery",
+              "name": "Hosiery",
+              "description": "Products and items in the Hosiery category"
+            },
+            {
+              "id": "jock_straps",
+              "name": "Jock Straps",
+              "description": "Products and items in the Jock Straps category"
+            },
+            {
+              "id": "lingerie",
+              "name": "Lingerie",
+              "description": "Products and items in the Lingerie category"
+            },
+            {
+              "id": "lingerie_accessories",
+              "name": "Lingerie Accessories",
+              "description": "Products and items in the Lingerie Accessories category",
+              "children": [
+                {
+                  "id": "garter_belts",
+                  "name": "Garter Belts",
+                  "description": "Products and items in the Garter Belts category"
+                },
+                {
+                  "id": "garters",
+                  "name": "Garters",
+                  "description": "Products and items in the Garters category"
+                }
+              ]
+            },
+            {
+              "id": "long_johns",
+              "name": "Long Johns",
+              "description": "Products and items in the Long Johns category"
+            },
+            {
+              "id": "petticoats_and_pettipants",
+              "name": "Petticoats & Pettipants",
+              "description": "Products and items in the Petticoats & Pettipants category"
+            },
+            {
+              "id": "shapewear",
+              "name": "Shapewear",
+              "description": "Products and items in the Shapewear category"
+            },
+            {
+              "id": "socks",
+              "name": "Socks",
+              "description": "Products and items in the Socks category"
+            },
+            {
+              "id": "undershirts",
+              "name": "Undershirts",
+              "description": "Products and items in the Undershirts category"
+            },
+            {
+              "id": "underwear",
+              "name": "Underwear",
+              "description": "Products and items in the Underwear category"
+            },
+            {
+              "id": "underwear_slips",
+              "name": "Underwear Slips",
+              "description": "Products and items in the Underwear Slips category"
+            }
+          ]
+        },
+        {
+          "id": "uniforms",
+          "name": "Uniforms",
+          "description": "Products and items in the Uniforms category",
+          "children": [
+            {
+              "id": "contractor_pants_and_coveralls",
+              "name": "Contractor Pants & Coveralls",
+              "description": "Products and items in the Contractor Pants & Coveralls category"
+            },
+            {
+              "id": "flight_suits",
+              "name": "Flight Suits",
+              "description": "Products and items in the Flight Suits category"
+            },
+            {
+              "id": "food_service_uniforms",
+              "name": "Food Service Uniforms",
+              "description": "Products and items in the Food Service Uniforms category",
+              "children": [
+                {
+                  "id": "chef_s_hats",
+                  "name": "Chef's Hats",
+                  "description": "Products and items in the Chef's Hats category"
+                },
+                {
+                  "id": "chef_s_jackets",
+                  "name": "Chef's Jackets",
+                  "description": "Products and items in the Chef's Jackets category"
+                },
+                {
+                  "id": "chef_s_pants",
+                  "name": "Chef's Pants",
+                  "description": "Products and items in the Chef's Pants category"
+                }
+              ]
+            },
+            {
+              "id": "military_uniforms",
+              "name": "Military Uniforms",
+              "description": "Products and items in the Military Uniforms category"
+            },
+            {
+              "id": "school_uniforms",
+              "name": "School Uniforms",
+              "description": "Products and items in the School Uniforms category"
+            },
+            {
+              "id": "security_uniforms",
+              "name": "Security Uniforms",
+              "description": "Products and items in the Security Uniforms category"
+            },
+            {
+              "id": "sports_uniforms",
+              "name": "Sports Uniforms",
+              "description": "Products and items in the Sports Uniforms category",
+              "children": [
+                {
+                  "id": "american_football_uniforms",
+                  "name": "American Football Uniforms",
+                  "description": "Products and items in the American Football Uniforms category"
+                },
+                {
+                  "id": "baseball_uniforms",
+                  "name": "Baseball Uniforms",
+                  "description": "Products and items in the Baseball Uniforms category"
+                },
+                {
+                  "id": "basketball_uniforms",
+                  "name": "Basketball Uniforms",
+                  "description": "Products and items in the Basketball Uniforms category"
+                },
+                {
+                  "id": "cheerleading_uniforms",
+                  "name": "Cheerleading Uniforms",
+                  "description": "Products and items in the Cheerleading Uniforms category"
+                },
+                {
+                  "id": "cricket_uniforms",
+                  "name": "Cricket Uniforms",
+                  "description": "Products and items in the Cricket Uniforms category"
+                },
+                {
+                  "id": "hockey_uniforms",
+                  "name": "Hockey Uniforms",
+                  "description": "Products and items in the Hockey Uniforms category"
+                },
+                {
+                  "id": "martial_arts_uniforms",
+                  "name": "Martial Arts Uniforms",
+                  "description": "Products and items in the Martial Arts Uniforms category"
+                },
+                {
+                  "id": "officiating_uniforms",
+                  "name": "Officiating Uniforms",
+                  "description": "Products and items in the Officiating Uniforms category"
+                },
+                {
+                  "id": "soccer_uniforms",
+                  "name": "Soccer Uniforms",
+                  "description": "Products and items in the Soccer Uniforms category"
+                },
+                {
+                  "id": "softball_uniforms",
+                  "name": "Softball Uniforms",
+                  "description": "Products and items in the Softball Uniforms category"
+                },
+                {
+                  "id": "wrestling_uniforms",
+                  "name": "Wrestling Uniforms",
+                  "description": "Products and items in the Wrestling Uniforms category"
+                }
+              ]
+            },
+            {
+              "id": "white_coats",
+              "name": "White Coats",
+              "description": "Products and items in the White Coats category"
+            }
+          ]
+        },
+        {
+          "id": "wedding_and_bridal_party_dresses",
+          "name": "Wedding & Bridal Party Dresses",
+          "description": "Products and items in the Wedding & Bridal Party Dresses category",
+          "children": [
+            {
+              "id": "bridal_party_dresses",
+              "name": "Bridal Party Dresses",
+              "description": "Products and items in the Bridal Party Dresses category"
+            },
+            {
+              "id": "wedding_dresses",
+              "name": "Wedding Dresses",
+              "description": "Products and items in the Wedding Dresses category"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clothing_accessories",
+      "name": "Clothing Accessories",
+      "description": "Products and items in the Clothing Accessories category",
+      "children": [
+        {
+          "id": "arm_warmers_and_sleeves",
+          "name": "Arm Warmers & Sleeves",
+          "description": "Products and items in the Arm Warmers & Sleeves category"
+        },
+        {
+          "id": "baby_and_toddler_clothing_accessories",
+          "name": "Baby & Toddler Clothing Accessories",
+          "description": "Products and items in the Baby & Toddler Clothing Accessories category",
+          "children": [
+            {
+              "id": "baby_and_toddler_belts",
+              "name": "Baby & Toddler Belts",
+              "description": "Products and items in the Baby & Toddler Belts category"
+            },
+            {
+              "id": "baby_and_toddler_gloves_and_mittens",
+              "name": "Baby & Toddler Gloves & Mittens",
+              "description": "Products and items in the Baby & Toddler Gloves & Mittens category"
+            },
+            {
+              "id": "baby_and_toddler_hats",
+              "name": "Baby & Toddler Hats",
+              "description": "Products and items in the Baby & Toddler Hats category"
+            },
+            {
+              "id": "baby_protective_wear",
+              "name": "Baby Protective Wear",
+              "description": "Products and items in the Baby Protective Wear category"
+            }
+          ]
+        },
+        {
+          "id": "balaclavas",
+          "name": "Balaclavas",
+          "description": "Products and items in the Balaclavas category"
+        },
+        {
+          "id": "bandanas_and_headties",
+          "name": "Bandanas & Headties",
+          "description": "Products and items in the Bandanas & Headties category",
+          "children": [
+            {
+              "id": "bandanas",
+              "name": "Bandanas",
+              "description": "Products and items in the Bandanas category"
+            },
+            {
+              "id": "hair_care_wraps",
+              "name": "Hair Care Wraps",
+              "description": "Products and items in the Hair Care Wraps category"
+            }
+          ]
+        },
+        {
+          "id": "belt_buckles",
+          "name": "Belt Buckles",
+          "description": "Products and items in the Belt Buckles category"
+        },
+        {
+          "id": "belts",
+          "name": "Belts",
+          "description": "Products and items in the Belts category"
+        },
+        {
+          "id": "bridal_accessories",
+          "name": "Bridal Accessories",
+          "description": "Products and items in the Bridal Accessories category",
+          "children": [
+            {
+              "id": "bridal_veils",
+              "name": "Bridal Veils",
+              "description": "Products and items in the Bridal Veils category"
+            }
+          ]
+        },
+        {
+          "id": "button_studs",
+          "name": "Button Studs",
+          "description": "Products and items in the Button Studs category"
+        },
+        {
+          "id": "collar_stays",
+          "name": "Collar Stays",
+          "description": "Products and items in the Collar Stays category"
+        },
+        {
+          "id": "cufflinks",
+          "name": "Cufflinks",
+          "description": "Products and items in the Cufflinks category"
+        },
+        {
+          "id": "decorative_fans",
+          "name": "Decorative Fans",
+          "description": "Products and items in the Decorative Fans category"
+        },
+        {
+          "id": "earmuffs",
+          "name": "Earmuffs",
+          "description": "Products and items in the Earmuffs category"
+        },
+        {
+          "id": "gloves_and_mittens",
+          "name": "Gloves & Mittens",
+          "description": "Products and items in the Gloves & Mittens category"
+        },
+        {
+          "id": "hair_accessories",
+          "name": "Hair Accessories",
+          "description": "Products and items in the Hair Accessories category",
+          "children": [
+            {
+              "id": "hair_bun_and_volume_shapers",
+              "name": "Hair Bun & Volume Shapers",
+              "description": "Products and items in the Hair Bun & Volume Shapers category"
+            },
+            {
+              "id": "hair_combs",
+              "name": "Hair Combs",
+              "description": "Products and items in the Hair Combs category"
+            },
+            {
+              "id": "hair_extensions",
+              "name": "Hair Extensions",
+              "description": "Products and items in the Hair Extensions category"
+            },
+            {
+              "id": "hair_forks_and_sticks",
+              "name": "Hair Forks & Sticks",
+              "description": "Products and items in the Hair Forks & Sticks category"
+            },
+            {
+              "id": "hair_nets",
+              "name": "Hair Nets",
+              "description": "Products and items in the Hair Nets category"
+            },
+            {
+              "id": "hair_pins_claws_and_clips",
+              "name": "Hair Pins, Claws & Clips",
+              "description": "Products and items in the Hair Pins, Claws & Clips category",
+              "children": [
+                {
+                  "id": "barrettes",
+                  "name": "Barrettes",
+                  "description": "Products and items in the Barrettes category"
+                },
+                {
+                  "id": "hair_claws_and_clips",
+                  "name": "Hair Claws & Clips",
+                  "description": "Products and items in the Hair Claws & Clips category"
+                },
+                {
+                  "id": "hair_pins",
+                  "name": "Hair Pins",
+                  "description": "Products and items in the Hair Pins category"
+                }
+              ]
+            },
+            {
+              "id": "hair_wreaths",
+              "name": "Hair Wreaths",
+              "description": "Products and items in the Hair Wreaths category"
+            },
+            {
+              "id": "headbands",
+              "name": "Headbands",
+              "description": "Products and items in the Headbands category"
+            },
+            {
+              "id": "ponytail_holders",
+              "name": "Ponytail Holders",
+              "description": "Products and items in the Ponytail Holders category"
+            },
+            {
+              "id": "tiaras",
+              "name": "Tiaras",
+              "description": "Products and items in the Tiaras category"
+            },
+            {
+              "id": "wig_accessories",
+              "name": "Wig Accessories",
+              "description": "Products and items in the Wig Accessories category",
+              "children": [
+                {
+                  "id": "wig_caps",
+                  "name": "Wig Caps",
+                  "description": "Products and items in the Wig Caps category"
+                },
+                {
+                  "id": "wig_glue_and_tape",
+                  "name": "Wig Glue & Tape",
+                  "description": "Products and items in the Wig Glue & Tape category"
+                }
+              ]
+            },
+            {
+              "id": "wigs",
+              "name": "Wigs",
+              "description": "Products and items in the Wigs category"
+            }
+          ]
+        },
+        {
+          "id": "hand_muffs",
+          "name": "Hand Muffs",
+          "description": "Products and items in the Hand Muffs category"
+        },
+        {
+          "id": "handkerchiefs",
+          "name": "Handkerchiefs",
+          "description": "Products and items in the Handkerchiefs category"
+        },
+        {
+          "id": "hats",
+          "name": "Hats",
+          "description": "Products and items in the Hats category"
+        },
+        {
+          "id": "headwear",
+          "name": "Headwear",
+          "description": "Products and items in the Headwear category",
+          "children": [
+            {
+              "id": "fascinators",
+              "name": "Fascinators",
+              "description": "Products and items in the Fascinators category"
+            },
+            {
+              "id": "headdresses",
+              "name": "Headdresses",
+              "description": "Products and items in the Headdresses category"
+            },
+            {
+              "id": "turbans",
+              "name": "Turbans",
+              "description": "Products and items in the Turbans category"
+            }
+          ]
+        },
+        {
+          "id": "leg_warmers",
+          "name": "Leg Warmers",
+          "description": "Products and items in the Leg Warmers category"
+        },
+        {
+          "id": "leis",
+          "name": "Leis",
+          "description": "Products and items in the Leis category"
+        },
+        {
+          "id": "maternity_belts_and_support_bands",
+          "name": "Maternity Belts & Support Bands",
+          "description": "Products and items in the Maternity Belts & Support Bands category"
+        },
+        {
+          "id": "neck_gaiters",
+          "name": "Neck Gaiters",
+          "description": "Products and items in the Neck Gaiters category"
+        },
+        {
+          "id": "neckties",
+          "name": "Neckties",
+          "description": "Products and items in the Neckties category"
+        },
+        {
+          "id": "pinback_buttons",
+          "name": "Pinback Buttons",
+          "description": "Products and items in the Pinback Buttons category"
+        },
+        {
+          "id": "sashes",
+          "name": "Sashes",
+          "description": "Products and items in the Sashes category"
+        },
+        {
+          "id": "scarves_and_shawls",
+          "name": "Scarves & Shawls",
+          "description": "Products and items in the Scarves & Shawls category",
+          "children": [
+            {
+              "id": "scarves",
+              "name": "Scarves",
+              "description": "Products and items in the Scarves category"
+            },
+            {
+              "id": "shawls",
+              "name": "Shawls",
+              "description": "Products and items in the Shawls category"
+            }
+          ]
+        },
+        {
+          "id": "sunglasses",
+          "name": "Sunglasses",
+          "description": "Products and items in the Sunglasses category"
+        },
+        {
+          "id": "suspenders",
+          "name": "Suspenders",
+          "description": "Products and items in the Suspenders category"
+        },
+        {
+          "id": "tie_clips",
+          "name": "Tie Clips",
+          "description": "Products and items in the Tie Clips category"
+        },
+        {
+          "id": "traditional_clothing_accessories",
+          "name": "Traditional Clothing Accessories",
+          "description": "Products and items in the Traditional Clothing Accessories category",
+          "children": [
+            {
+              "id": "kimono_underclothes",
+              "name": "Kimono Underclothes",
+              "description": "Products and items in the Kimono Underclothes category"
+            },
+            {
+              "id": "obi_accessories",
+              "name": "Obi Accessories",
+              "description": "Products and items in the Obi Accessories category"
+            },
+            {
+              "id": "obis",
+              "name": "Obis",
+              "description": "Products and items in the Obis category"
+            },
+            {
+              "id": "tabi_socks",
+              "name": "Tabi Socks",
+              "description": "Products and items in the Tabi Socks category"
+            }
+          ]
+        },
+        {
+          "id": "wristbands",
+          "name": "Wristbands",
+          "description": "Products and items in the Wristbands category"
+        }
+      ]
+    },
+    {
+      "id": "costumes_and_accessories",
+      "name": "Costumes & Accessories",
+      "description": "Products and items in the Costumes & Accessories category",
+      "children": [
+        {
+          "id": "costume_accessories",
+          "name": "Costume Accessories",
+          "description": "Products and items in the Costume Accessories category",
+          "children": [
+            {
+              "id": "bald_caps",
+              "name": "Bald Caps",
+              "description": "Products and items in the Bald Caps category"
+            },
+            {
+              "id": "costume_accessory_sets",
+              "name": "Costume Accessory Sets",
+              "description": "Products and items in the Costume Accessory Sets category"
+            },
+            {
+              "id": "costume_capes",
+              "name": "Costume Capes",
+              "description": "Products and items in the Costume Capes category"
+            },
+            {
+              "id": "costume_gloves",
+              "name": "Costume Gloves",
+              "description": "Products and items in the Costume Gloves category"
+            },
+            {
+              "id": "costume_hats",
+              "name": "Costume Hats",
+              "description": "Products and items in the Costume Hats category"
+            },
+            {
+              "id": "costume_special_effects",
+              "name": "Costume Special Effects",
+              "description": "Products and items in the Costume Special Effects category"
+            },
+            {
+              "id": "costume_tobacco_products",
+              "name": "Costume Tobacco Products",
+              "description": "Products and items in the Costume Tobacco Products category"
+            },
+            {
+              "id": "pretend_jewelry",
+              "name": "Pretend Jewelry",
+              "description": "Products and items in the Pretend Jewelry category"
+            }
+          ]
+        },
+        {
+          "id": "costume_shoes",
+          "name": "Costume Shoes",
+          "description": "Products and items in the Costume Shoes category"
+        },
+        {
+          "id": "costumes",
+          "name": "Costumes",
+          "description": "Products and items in the Costumes category"
+        },
+        {
+          "id": "masks",
+          "name": "Masks",
+          "description": "Products and items in the Masks category"
+        }
+      ]
+    },
+    {
+      "id": "handbag_and_wallet_accessories",
+      "name": "Handbag & Wallet Accessories",
+      "description": "Products and items in the Handbag & Wallet Accessories category",
+      "children": [
+        {
+          "id": "checkbook_covers",
+          "name": "Checkbook Covers",
+          "description": "Products and items in the Checkbook Covers category"
+        },
+        {
+          "id": "keychains",
+          "name": "Keychains",
+          "description": "Products and items in the Keychains category"
+        },
+        {
+          "id": "lanyards",
+          "name": "Lanyards",
+          "description": "Products and items in the Lanyards category"
+        },
+        {
+          "id": "wallet_chains",
+          "name": "Wallet Chains",
+          "description": "Products and items in the Wallet Chains category"
+        }
+      ]
+    },
+    {
+      "id": "handbags_wallets_and_cases",
+      "name": "Handbags, Wallets & Cases",
+      "description": "Products and items in the Handbags, Wallets & Cases category",
+      "children": [
+        {
+          "id": "badge_and_pass_holders",
+          "name": "Badge & Pass Holders",
+          "description": "Products and items in the Badge & Pass Holders category"
+        },
+        {
+          "id": "business_card_cases",
+          "name": "Business Card Cases",
+          "description": "Products and items in the Business Card Cases category"
+        },
+        {
+          "id": "handbags",
+          "name": "Handbags",
+          "description": "Products and items in the Handbags category"
+        },
+        {
+          "id": "wallets_and_money_clips",
+          "name": "Wallets & Money Clips",
+          "description": "Products and items in the Wallets & Money Clips category"
+        }
+      ]
+    },
+    {
+      "id": "jewelry",
+      "name": "Jewelry",
+      "description": "Products and items in the Jewelry category",
+      "children": [
+        {
+          "id": "anklets",
+          "name": "Anklets",
+          "description": "Products and items in the Anklets category"
+        },
+        {
+          "id": "body_jewelry",
+          "name": "Body Jewelry",
+          "description": "Products and items in the Body Jewelry category"
+        },
+        {
+          "id": "bracelets",
+          "name": "Bracelets",
+          "description": "Products and items in the Bracelets category"
+        },
+        {
+          "id": "brooches_and_lapel_pins",
+          "name": "Brooches & Lapel Pins",
+          "description": "Products and items in the Brooches & Lapel Pins category"
+        },
+        {
+          "id": "charms_and_pendants",
+          "name": "Charms & Pendants",
+          "description": "Products and items in the Charms & Pendants category"
+        },
+        {
+          "id": "earrings",
+          "name": "Earrings",
+          "description": "Products and items in the Earrings category"
+        },
+        {
+          "id": "jewelry_sets",
+          "name": "Jewelry Sets",
+          "description": "Products and items in the Jewelry Sets category"
+        },
+        {
+          "id": "necklaces",
+          "name": "Necklaces",
+          "description": "Products and items in the Necklaces category"
+        },
+        {
+          "id": "rings",
+          "name": "Rings",
+          "description": "Products and items in the Rings category"
+        },
+        {
+          "id": "watch_accessories",
+          "name": "Watch Accessories",
+          "description": "Products and items in the Watch Accessories category",
+          "children": [
+            {
+              "id": "watch_bands",
+              "name": "Watch Bands",
+              "description": "Products and items in the Watch Bands category"
+            },
+            {
+              "id": "watch_stickers_and_decals",
+              "name": "Watch Stickers & Decals",
+              "description": "Products and items in the Watch Stickers & Decals category"
+            },
+            {
+              "id": "watch_winders",
+              "name": "Watch Winders",
+              "description": "Products and items in the Watch Winders category"
+            }
+          ]
+        },
+        {
+          "id": "watches",
+          "name": "Watches",
+          "description": "Products and items in the Watches category"
+        }
+      ]
+    },
+    {
+      "id": "shoe_accessories",
+      "name": "Shoe Accessories",
+      "description": "Products and items in the Shoe Accessories category",
+      "children": [
+        {
+          "id": "boot_liners",
+          "name": "Boot Liners",
+          "description": "Products and items in the Boot Liners category"
+        },
+        {
+          "id": "gaiters",
+          "name": "Gaiters",
+          "description": "Products and items in the Gaiters category"
+        },
+        {
+          "id": "shoe_covers",
+          "name": "Shoe Covers",
+          "description": "Products and items in the Shoe Covers category"
+        },
+        {
+          "id": "shoelaces",
+          "name": "Shoelaces",
+          "description": "Products and items in the Shoelaces category"
+        },
+        {
+          "id": "spurs",
+          "name": "Spurs",
+          "description": "Products and items in the Spurs category"
+        }
+      ]
+    },
+    {
+      "id": "shoes",
+      "name": "Shoes",
+      "description": "Products and items in the Shoes category"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo Review Report</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; margin: 0; background: #f8fafc; }
+    main { max-width: 1080px; margin: 0 auto; padding: 42px 28px 64px; background: white; }
+    h1 { font-size: 34px; margin-top: 0; }
+    h2 { margin-top: 34px; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px; }
+    h3 { margin-top: 24px; }
+    table { border-collapse: collapse; width: 100%; margin: 14px 0 22px; font-size: 14px; }
+    th, td { border: 1px solid #d1d5db; padding: 8px 10px; vertical-align: top; }
+    th { background: #f3f4f6; text-align: left; }
+    code { background: #f3f4f6; padding: 1px 4px; border-radius: 4px; }
+    p, li { line-height: 1.55; }
+  </style>
+</head>
+<body><main>
+<h1>Demo Review Report</h1>
+<p>Taxonomy: <code>taxonomy.json</code></p>
+<h2>Executive Summary</h2>
+<table><thead><tr><th>Check</th><th>Result</th></tr></thead><tbody>
+<tr><td>Agent judge verdict</td><td>pilot-ready with targeted review</td></tr>
+<tr><td>Agent judge score</td><td>3.95 / 5.00</td></tr>
+<tr><td>Blocking lint errors</td><td>0</td></tr>
+<tr><td>Product assignments needing review</td><td>74.0%</td></tr>
+<tr><td>Akeneo export files present</td><td>yes</td></tr>
+</tbody></table>
+<p>Interpretation: the taxonomy is structurally clean enough for a controlled PIM pilot, but product placement should enter a review queue before unattended import.</p>
+<h2>Taxonomy Structure</h2>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+<tr><td>Nodes</td><td>161</td></tr>
+<tr><td>Edges</td><td>160</td></tr>
+<tr><td>Leaves</td><td>119</td></tr>
+<tr><td>Max depth</td><td>4 levels</td></tr>
+<tr><td>Top-level categories</td><td>10</td></tr>
+<tr><td>Mean branching</td><td>3.810</td></tr>
+</tbody></table>
+<h3>Top-Level Leaf Distribution</h3>
+<table><thead><tr><th>Category</th><th>Leaves</th><th>Direct children</th></tr></thead><tbody>
+<tr><td>Books</td><td>18</td><td>7</td></tr>
+<tr><td>Home Goods</td><td>18</td><td>3</td></tr>
+<tr><td>Clothing</td><td>15</td><td>5</td></tr>
+<tr><td>Electronics</td><td>15</td><td>5</td></tr>
+<tr><td>Toys</td><td>12</td><td>2</td></tr>
+<tr><td>Automotive Products</td><td>9</td><td>3</td></tr>
+<tr><td>Pet Products</td><td>9</td><td>3</td></tr>
+<tr><td>Tools</td><td>9</td><td>3</td></tr>
+<tr><td>Outdoor Goods</td><td>8</td><td>2</td></tr>
+<tr><td>Cosmetics</td><td>6</td><td>2</td></tr>
+</tbody></table>
+<h2>Reference-Free Metrics</h2>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+<tr><td>CES mean</td><td>0.5989</td></tr>
+<tr><td>CES minimum</td><td>0.3620</td></tr>
+<tr><td>Weak edges</td><td>0</td></tr>
+<tr><td>CSC</td><td>0.4588</td></tr>
+<tr><td>RLPC</td><td>0.7452</td></tr>
+<tr><td>LLM judge mean</td><td>4.74 / 5.00</td></tr>
+<tr><td>LLM judge valid paths</td><td>96.0%</td></tr>
+<tr><td>RFTQ-J reconstructed</td><td>0.6911</td></tr>
+</tbody></table>
+<h2>Linter and Quality Flags</h2>
+<table><thead><tr><th>Severity</th><th>Count</th></tr></thead><tbody>
+<tr><td>error</td><td>0</td></tr>
+<tr><td>warn</td><td>12</td></tr>
+<tr><td>info</td><td>2</td></tr>
+</tbody></table>
+<p>Top deterministic flags:</p>
+<ul>
+<li><code>redundant_prefix</code>: Automotive Products -&gt; Automotive Wheels and Tires</li>
+<li><code>redundant_prefix</code>: Vehicle Electronics -&gt; Vehicle Navigation Electronics</li>
+<li><code>redundant_prefix</code>: Women&#x27;s Clothing -&gt; Women Tops</li>
+<li><code>redundant_prefix</code>: Skin Care -&gt; Skin Serums</li>
+<li><code>redundant_prefix</code>: Home Goods -&gt; Home Decor</li>
+<li><code>redundant_prefix</code>: Home Decor -&gt; Home Rugs</li>
+<li><code>redundant_prefix</code>: Outdoor Goods -&gt; Outdoor Recreation</li>
+<li><code>redundant_prefix</code>: Outdoor Recreation -&gt; Outdoor Cycling</li>
+<li><code>redundant_prefix</code>: Outdoor Recreation -&gt; Outdoor Team Sports</li>
+<li><code>redundant_prefix</code>: Pet Products -&gt; Pet Accessories</li>
+</ul>
+<h2>Product-to-Leaf Assignment</h2>
+<table><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody>
+<tr><td>Products assigned</td><td>150</td></tr>
+<tr><td>Leaf coverage in sample</td><td>53.8%</td></tr>
+<tr><td>Product coverage above threshold</td><td>54.0%</td></tr>
+<tr><td>Mean assignment score</td><td>0.3656</td></tr>
+<tr><td>Ambiguity rate</td><td>63.3%</td></tr>
+<tr><td>Needs-review rate</td><td>74.0%</td></tr>
+</tbody></table>
+<h3>Confident Assignment Examples</h3>
+<table><thead><tr><th>Product</th><th>Assigned leaf</th><th>Score</th></tr></thead><tbody>
+<tr><td>FURTIME Dog Bed Crate Pad Ultra Soft Washable Kennel Bed 24/30/36/42 Inch Anti-Slip C...</td><td>Pet Beds</td><td>0.628</td></tr>
+<tr><td>Mohawk Home Laguna Boardwalk Stripe Area Rug, 5&#x27;x8&#x27;, Blue/Grey</td><td>Home Rugs</td><td>0.554</td></tr>
+<tr><td>PetSafe Analog 2 Meal Programmable Pet Feeder, Automatic Dog and Cat Feeder - Dry or ...</td><td>Wet Food</td><td>0.543</td></tr>
+<tr><td>2LUV Women&#x27;s Stretchy 5 Pocket Skinny Color Uniform Pants Back to School Junior Cloth...</td><td>Jeans</td><td>0.535</td></tr>
+<tr><td>FZYTMY Funny Doormat Guns Make Me Happy You Not So Much Indoor Outdoor Entrance Floor...</td><td>Home Rugs</td><td>0.532</td></tr>
+</tbody></table>
+<h3>Review Queue Examples</h3>
+<table><thead><tr><th>Product</th><th>Proposed leaf</th><th>Score</th><th>Reason</th></tr></thead><tbody>
+<tr><td>Pregnancy Test Early, Docalon 5 Count Clear and Accurate Results Over 99% Accurate HC...</td><td>Early Readers</td><td>0.107</td><td>low_confidence\</td><td>ambiguous_top2</td></tr>
+<tr><td>Skald Thermogenic Fat Burner for Men and Women - Oxydynamic Fat Scorcher for Weight L...</td><td>Moisturizers</td><td>0.196</td><td>low_confidence\</td><td>ambiguous_top2</td></tr>
+<tr><td>AIRSCALE Digital Bathroom Weight Scale for People, Battery-Free Updated U-Power Techn...</td><td>Activewear</td><td>0.207</td><td>low_confidence\</td><td>ambiguous_top2</td></tr>
+<tr><td>Samsung Printer Xpress M3065FW Laser All-in-One</td><td>Laptops</td><td>0.221</td><td>low_confidence\</td><td>ambiguous_top2</td></tr>
+<tr><td>YILINM 50Feet Outdoor String Lights G40 Globe Patio Lights with 25 Shatterproof Bulbs...</td><td>Tents</td><td>0.225</td><td>low_confidence\</td><td>ambiguous_top2</td></tr>
+</tbody></table>
+<h2>Agent Judge</h2>
+<table><thead><tr><th>Criterion</th><th>Score</th></tr></thead><tbody>
+<tr><td>Global structure and navigability</td><td>5.00 / 5.00</td></tr>
+<tr><td>Naming specificity and category actionability</td><td>4.69 / 5.00</td></tr>
+<tr><td>Product placement readiness</td><td>2.92 / 5.00</td></tr>
+<tr><td>Governance and audit readiness</td><td>4.29 / 5.00</td></tr>
+</tbody></table>
+<h2>Akeneo Export Readiness</h2>
+<table><thead><tr><th>Artifact</th><th>Present</th><th>Rows/bytes</th></tr></thead><tbody>
+<tr><td><code>akeneo_categories.csv</code></td><td>yes</td><td>161</td></tr>
+<tr><td><code>akeneo_categories.xlsx</code></td><td>yes</td><td>12484</td></tr>
+<tr><td><code>akeneo_rest_payload.json</code></td><td>yes</td><td>161</td></tr>
+</tbody></table>
+<h2>Artifact Inventory</h2>
+<ul>
+<li><code>assignment_metrics.json</code>: product-placement summary</li>
+<li><code>product_assignments.csv</code>: product-to-leaf assignments and review flags</li>
+<li><code>agent_judge_exp10.json</code>: deterministic readiness judge output</li>
+<li><code>akeneo_categories.csv</code>, <code>akeneo_categories.xlsx</code>, <code>akeneo_rest_payload.json</code>: export payloads</li>
+<li><code>report.html</code>: browser-readable version of this report</li>
+</ul>
+<h2>Decision</h2>
+<p>Proceed with a controlled pilot import after category-manager review of low-confidence assignments and flagged naming issues. Do not run unattended bulk product categorization yet.</p>
+</main></body>
+</html>

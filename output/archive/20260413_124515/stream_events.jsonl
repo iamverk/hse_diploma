@@ -1,0 +1,5 @@
+{"ts": "2026-04-12T20:45:01.813627", "type": "stream_processed", "file": "output/cursor_stream_iter1.jsonl", "lines": 64, "tool_calls": 54, "file_edits": 0, "shell_calls": 30, "taxonomy_edited": false, "taxonomy_reads": 2}
+{"ts": "2026-04-12T21:06:36.876568", "type": "stream_processed", "file": "output/cursor_stream_iter2.jsonl", "lines": 83, "tool_calls": 72, "file_edits": 0, "shell_calls": 38, "taxonomy_edited": false, "taxonomy_reads": 2}
+{"ts": "2026-04-12T21:26:34.537362", "type": "stream_processed", "file": "output/cursor_stream_iter3.jsonl", "lines": 55, "tool_calls": 46, "file_edits": 0, "shell_calls": 34, "taxonomy_edited": false, "taxonomy_reads": 0}
+{"ts": "2026-04-12T21:54:21.795162", "type": "stream_processed", "file": "output/cursor_stream_iter4.jsonl", "lines": 61, "tool_calls": 52, "file_edits": 0, "shell_calls": 38, "taxonomy_edited": false, "taxonomy_reads": 2}
+{"ts": "2026-04-13T12:39:55.824123", "type": "stream_processed", "file": "output/cursor_stream_iter4.jsonl", "lines": 112, "tool_calls": 110, "file_edits": 33, "shell_calls": 78, "taxonomy_edited": true, "taxonomy_reads": 6}

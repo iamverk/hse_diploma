@@ -1,0 +1,55 @@
+{
+  "projectName": "Apparel & Accessories Taxonomy Construction",
+  "domain": "clothing",
+  "branchName": "taxonomy-clothing-v1",
+  "userStories": [
+    {
+      "id": 1,
+      "title": "Verify and complete L1 categories under Apparel & Accessories",
+      "acceptanceCriteria": "Apparel & Accessories has 8 direct children. validate.py passes with 0 errors.",
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Expand 'Clothing' to L2 subcategories",
+      "acceptanceCriteria": "'Clothing' has at least 18 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "Expand 'Clothing Accessories' to L2 subcategories",
+      "acceptanceCriteria": "'Clothing Accessories' has at least 31 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Expand 'Costumes & Accessories' to L2 subcategories",
+      "acceptanceCriteria": "'Costumes & Accessories' has at least 4 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Expand 'Handbag & Wallet Accessories' to L2 subcategories",
+      "acceptanceCriteria": "'Handbag & Wallet Accessories' has at least 4 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Add L3 leaf categories across Apparel & Accessories subcategories",
+      "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
+      "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
+      "passes": false
+    },
+    {
+      "id": 8,
+      "title": "Achieve edge F1 > 0.5 vs gold standard",
+      "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
+      "passes": false
+    }
+  ]
+}

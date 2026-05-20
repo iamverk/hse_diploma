@@ -1,0 +1,57 @@
+2cd7a43 story 17: mece audit and balance validated
+325f864 story 16: add retail-level wrappers for weak edges
+c80c828 story 15: expand automotive and outdoor L3 nodes
+baa5e27 story 14: expand pet and cosmetics L3 subcategories
+ef6bfcd story 13: expand sporting goods and tools l3 subcategories
+efe2a39 story 12: expand books + toys l3 categories
+e9388cf story 11: verify home goods l3 expansion
+292eaba story 11: expand home goods l3 subcategories
+28f9a4c restore taxonomy.json from HEAD (rollback bug corrupted working tree)
+5fb54ab story 10: expand clothing L3 subcategories
+18bce6f story 9: expand electronics L3 subcategories
+bbfb63f exp 9: 8/18 stories, all L2 done, composite 0.665, 60 nodes
+6fb0368 story 7: expand tools and pet products l2
+b6183d3 story 6: complete toys and sporting goods expansion
+5ef3d29 fix: CPU+file+taxonomy watchdog, detect CLI-based edits
+9a13b7b exp 9 pause: 5/18 stories done, composite 0.661
+ed2d7cd story 5: expand books l2 categories
+511d5d5 story 4: expand home goods to five L2 children
+6c26df0 story 3: expand clothing with apparel subcategories
+b1ae152 story 2: expand electronics L2 hierarchy
+cfe96ee watchdog 90s→180s: xhigh model needs more thinking time
+4e30e4c remove high from valid models, xhigh only
+dfd9cf2 fix: default model to xhigh, not high
+99ad77a tune: watchdog 90s, 18 stories, speed-first prompt
+9d4b4ed increase hard timeout to 2700s (45 min) — silence watchdog is real guard
+9dc8f60 fix: stream_monitor parse cursor-agent tool_call format (editToolCall/shellToolCall/readToolCall)
+4cb396c story 1: initialize L1 taxonomy skeleton from corpus
+0df90d0 fix: mtime-based watchdog in ralph.sh, stream_monitor as post-processor
+ef45c32 exp 9 setup: stream-json monitor + watchdog
+ff7123f story 17: finalize final optimization t
+43dc796 story 16: refine mece audit and balance
+bea678d story 15: finalize weak-edge cleanup
+2558bf4 story 14: expand auto parts L3 taxonomy
+0f1ba0a story 13: expand cosmetics L3 nodes
+e86089f story 12: expand Pet Products L3 categories
+af52d6c story 11: expand tools l3 taxonomy
+421c4f7 story 10: expand sporting goods l3
+6a9b1e1 story 9: expand toys L3 taxonomy
+a7c719b story 8: Expand L3: Books
+f12cf54 story 7: expand home goods l3 branches
+31b3c67 story 5: expand electronics L3 subtree
+61004df exp 8: re-atomize PRD — one domain per story (was multi-domain)
+8f099e6 story 4: expand remaining L1 domains to 3-7 L2 categories
+58940d1 story 3: complete home goods and books L2 expansion
+fd334cd restore metrics_v2.py from exp7 branch
+8ee7dde restore check_edge.py from exp7 branch
+572b8ff story 2: expand electronics and clothing L2 subtree
+37c91e0 exp 8 setup: hooks + rules + skills full stack
+8e1dffb story 8: expand major branches for edge F1
+14e2c92 story 7: resolve lint warnings and clean hierarchy
+8624931 story 6: add L3 leaf categories in electronics branches
+d4f348c story 5: expand communications to L2 subcategories
+1ecd0b5 story 4: expand circuit boards and components
+e50ca7a story 3: expand audio to L2 subcategories
+033c167 story 2: expand arcade equipment to L2 subcategories
+02a4b38 story 1: verify L1 Electronics categories\n\nRecorded completion for story 1 after confirming the Electronics node already has 19 L1 categories and validation/metrics checks pass.,
+aa69b51 Initial taxonomy setup

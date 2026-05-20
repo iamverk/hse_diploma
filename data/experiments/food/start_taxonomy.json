@@ -1,0 +1,22 @@
+{
+  "id": "food_beverages_tobacco",
+  "name": "Food, Beverages & Tobacco",
+  "description": "Food products, drinks, tobacco, and related items",
+  "children": [
+    {
+      "id": "beverages",
+      "name": "Beverages",
+      "description": "Products and items in the Beverages category"
+    },
+    {
+      "id": "food_items",
+      "name": "Food Items",
+      "description": "Products and items in the Food Items category"
+    },
+    {
+      "id": "tobacco_products",
+      "name": "Tobacco Products",
+      "description": "Products and items in the Tobacco Products category"
+    }
+  ]
+}

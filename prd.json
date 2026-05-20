@@ -1,0 +1,86 @@
+{
+  "projectName": "Taxonomy Construction — Exp 10 (Best of All)",
+  "domain": "multi",
+  "branchName": "experiment-10-best-of-all",
+  "iterationLimit": 50,
+  "userStories": [
+    {
+      "id": 1,
+      "title": "Initialize L1 skeleton (8-12 flat domains under root)",
+      "acceptanceCriteria": "Root has 8-12 L1 children. No wrapper nodes. >=10 nodes. NLIV > 0.30.",
+      "passes": true
+    },
+    {
+      "id": 2,
+      "title": "Expand L2: Electronics (3-5 subcategories)",
+      "acceptanceCriteria": "Electronics has 3-5 L2 children. NLIV > 0.35.",
+      "passes": true
+    },
+    {
+      "id": 3,
+      "title": "Expand L2: Clothing (3-5 subcategories)",
+      "acceptanceCriteria": "Clothing has 3-5 L2 children. NLIV > 0.35.",
+      "passes": true
+    },
+    {
+      "id": 4,
+      "title": "Expand L2: Home + Books (3-5 each)",
+      "acceptanceCriteria": "Home Goods and Books each have 3-5 L2 children. NLIV > 0.38.",
+      "passes": true
+    },
+    {
+      "id": 5,
+      "title": "Expand L2: Toys + Sports + Tools (3-5 each)",
+      "acceptanceCriteria": "Toys, Sporting Goods, Tools each have 3-5 L2 children. NLIV > 0.38.",
+      "passes": true
+    },
+    {
+      "id": 6,
+      "title": "Expand L2: Pet + Cosmetics + Auto (3-5 each)",
+      "acceptanceCriteria": "Pet Products, Cosmetics, Auto Parts each have 3-5 L2 children. NLIV > 0.38.",
+      "passes": true
+    },
+    {
+      "id": 7,
+      "title": "Expand L3: Electronics (2-3 per L2)",
+      "acceptanceCriteria": "Each Electronics L2 has 2-3 L3 children. NLIV > 0.42.",
+      "passes": true
+    },
+    {
+      "id": 8,
+      "title": "Expand L3: Clothing (2-3 per L2)",
+      "acceptanceCriteria": "Each Clothing L2 has 2-3 L3 children. NLIV > 0.42.",
+      "passes": true
+    },
+    {
+      "id": 9,
+      "title": "Expand L3: Home + Books + Toys (2-3 per L2)",
+      "acceptanceCriteria": "Each Home/Books/Toys L2 has 2-3 L3 children. NLIV > 0.42.",
+      "passes": true
+    },
+    {
+      "id": 10,
+      "title": "Expand L3: Sports + Tools + Pet + Cosmetics + Auto (2-3 per L2)",
+      "acceptanceCriteria": "Each remaining L2 has 2-3 L3 children. NLIV > 0.42.",
+      "passes": true
+    },
+    {
+      "id": 11,
+      "title": "Refine: Fix all weak edges (NLIV < 0.3)",
+      "acceptanceCriteria": "Zero weak edges. NLIV mean > 0.55. DO NOT add wrapper/grouping nodes.",
+      "passes": true
+    },
+    {
+      "id": 12,
+      "title": "Refine: MECE audit and structural balance",
+      "acceptanceCriteria": "CSC > 0.40. Zero chains. Branching CV < 0.7. Max depth <= 4.",
+      "passes": true
+    },
+    {
+      "id": 13,
+      "title": "Refine: Final optimization",
+      "acceptanceCriteria": "Composite > 0.65. NLIV > 0.55. CSC > 0.40. >=150 nodes. Max depth <= 4.",
+      "passes": true
+    }
+  ]
+}

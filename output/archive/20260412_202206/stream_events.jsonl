@@ -1,0 +1,2 @@
+{"ts": "2026-04-12T20:18:20.111867", "type": "stream_processed", "file": "output/cursor_stream_iter1.jsonl", "lines": 16, "tool_calls": 14, "file_edits": 0, "shell_calls": 8, "taxonomy_edited": false, "taxonomy_reads": 0}
+{"ts": "2026-04-12T20:20:59.598909", "type": "stream_processed", "file": "output/cursor_stream_iter2.jsonl", "lines": 14, "tool_calls": 12, "file_edits": 0, "shell_calls": 4, "taxonomy_edited": false, "taxonomy_reads": 0}

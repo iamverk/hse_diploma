@@ -1,0 +1,26 @@
+---
+description: Ralph loop iteration protocol — one story per iteration, forbidden files, completion signal
+alwaysApply: true
+---
+
+# Ralph Protocol
+
+## One Story Per Iteration
+- Work on exactly ONE story — the one specified in the prompt
+- Do NOT attempt multiple stories in a single iteration
+- Do NOT jump ahead after completing the current story
+- If the current story passes → commit, update progress.txt, output `<promise>COMPLETE</promise>`
+
+## Forbidden
+- NEVER read/cat/view `reference/gold_standard.json` or `reference/` directory
+- NEVER access `.hidden_eval/` directory
+- NEVER use `git log`, `git show`, `git checkout` or any git history commands
+- Your ONLY source of category knowledge is `data/products.jsonl`
+
+## Iteration Steps
+1. Read `progress.txt` (patterns + state)
+2. Read `prd.json` (current story from prompt)
+3. Sample products from `data/products.jsonl`
+4. Modify `taxonomy.json` (hooks auto-validate on save)
+5. Fix issues from auto-validation feedback
+6. If done: update `prd.json` (passes: true), update `progress.txt`, commit, `<promise>COMPLETE</promise>`

@@ -1,0 +1,18 @@
+{
+  "product_count": 150,
+  "leaf_count": 119,
+  "assigned_leaf_count": 64,
+  "leaf_coverage": 0.5378,
+  "threshold": 0.35,
+  "ambiguity_margin": 0.05,
+  "coverage": 0.54,
+  "mean_assignment_score": 0.3656,
+  "min_assignment_score": 0.1071,
+  "max_assignment_score": 0.6278,
+  "low_confidence_count": 69,
+  "ambiguity_count": 95,
+  "ambiguity_rate": 0.6333,
+  "needs_review_count": 111,
+  "needs_review_rate": 0.74,
+  "backend": "sentence-transformer:all-MiniLM-L6-v2"
+}

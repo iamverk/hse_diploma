@@ -1,0 +1,55 @@
+{
+  "projectName": "Electronics Taxonomy Construction",
+  "domain": "electronics",
+  "branchName": "taxonomy-electronics-v1",
+  "userStories": [
+    {
+      "id": 1,
+      "title": "Verify and complete L1 categories under Electronics",
+      "acceptanceCriteria": "Electronics has 19 direct children. validate.py passes with 0 errors.",
+      "passes": false
+    },
+    {
+      "id": 2,
+      "title": "Expand 'Arcade Equipment' to L2 subcategories",
+      "acceptanceCriteria": "'Arcade Equipment' has at least 6 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 3,
+      "title": "Expand 'Audio' to L2 subcategories",
+      "acceptanceCriteria": "'Audio' has at least 7 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 4,
+      "title": "Expand 'Circuit Boards & Components' to L2 subcategories",
+      "acceptanceCriteria": "'Circuit Boards & Components' has at least 7 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 5,
+      "title": "Expand 'Communications' to L2 subcategories",
+      "acceptanceCriteria": "'Communications' has at least 9 children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 6,
+      "title": "Add L3 leaf categories across Electronics subcategories",
+      "acceptanceCriteria": "Major L2 nodes each have 2-5 leaf children. validate.py passes.",
+      "passes": false
+    },
+    {
+      "id": 7,
+      "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
+      "acceptanceCriteria": "tools/validate.py reports 0 errors and 0 warnings.",
+      "passes": false
+    },
+    {
+      "id": 8,
+      "title": "Achieve edge F1 > 0.5 vs gold standard",
+      "acceptanceCriteria": "python tools/metrics.py reports edge_f1 >= 0.50",
+      "passes": false
+    }
+  ]
+}

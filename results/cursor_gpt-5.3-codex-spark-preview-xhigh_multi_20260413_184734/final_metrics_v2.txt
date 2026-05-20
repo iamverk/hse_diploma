@@ -1,0 +1,28 @@
+============================================================
+REFERENCE-FREE TAXONOMY METRICS
+============================================================
+
+Nodes: 203  Edges: 202  Leaves: 121  Max depth: 5
+
+--- NLIV (Edge Validity) ---
+  Mean:  0.6599
+  Min:   0.3448
+  Weak edges (NLIV < 0.3): 0
+
+--- CSC (Semantic Coherence) ---
+  Score:   0.3010
+  p-value: 0.0000
+  Pairs:   200
+
+--- NTED (Stability) ---
+  Distance:  1.0000
+  Added:     202  Removed: 0  Unchanged: 0
+
+--- Structural Health ---
+  Chains:      0
+  Branching:   mean=2.5  std=1.1  CV=0.46
+  Leaf ratio:  0.60
+
+============================================================
+COMPOSITE SCORE: 0.6268
+============================================================

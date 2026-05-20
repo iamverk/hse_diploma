@@ -1,0 +1,7 @@
+{"ts": "2026-04-12T18:49:20.892375", "type": "monitor_start", "pid": 0, "silence_timeout": 5}
+{"ts": "2026-04-12T18:49:20.892806", "type": "taxonomy_edit", "tool": "Edit", "edit_num": 1}
+{"ts": "2026-04-12T18:49:21.196674", "type": "shell_call", "command": "echo hello"}
+{"ts": "2026-04-12T18:49:21.197057", "type": "message_complete", "tool_calls": 2, "file_edits": 1, "shell_calls": 1, "taxonomy_edited": true}
+{"ts": "2026-04-12T18:49:21.197163", "type": "monitor_stop", "tool_calls": 2, "file_edits": 1, "shell_calls": 1, "taxonomy_edited": true}
+{"ts": "2026-04-12T18:51:14.194849", "type": "monitor_start", "pid": 99999, "silence_timeout": 3}
+{"ts": "2026-04-12T18:51:14.195750", "type": "monitor_stop", "tool_calls": 0, "file_edits": 0, "shell_calls": 0, "taxonomy_edited": false}

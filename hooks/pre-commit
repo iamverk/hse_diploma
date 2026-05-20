@@ -1,0 +1,15 @@
+#!/bin/bash
+# Pre-commit hook: validate taxonomy before allowing commit.
+# Install: cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+if [ -f "taxonomy.json" ]; then
+    echo "Running taxonomy validation..."
+    python tools/validate.py taxonomy.json
+    if [ $? -ne 0 ]; then
+        echo ""
+        echo "COMMIT BLOCKED: Taxonomy validation failed."
+        echo "Fix the errors above and try again."
+        exit 1
+    fi
+    echo "Taxonomy validation passed."
+fi

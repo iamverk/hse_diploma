@@ -1,0 +1,54 @@
+## Discovered Patterns
+- Atomic stories (1 domain, 1 level) prevent timeouts
+- check_edge.py --batch is faster than individual calls
+- Wu-Palmer CSC has ceiling for domains with poor WordNet coverage (Pet Products, Cosmetics)
+- NEVER create wrapper/grouping nodes (Retail Goods, Consumer Products, etc.) — kills CSC
+- Keep L1 domains flat under root — 8-12 direct children of root
+- Max 3-5 greps for product discovery, then add nodes
+- Max depth 4: root → L1 → L2 → L3 (L4 only if needed)
+- CLI add-node produces output that keeps watchdog happy
+- Batch edge checks help catch weak names early (e.g., “Home Entertainment” under Electronics)
+- [APPEND-ONLY]
+
+## Current State
+- Story 1 status: passes true
+- Story 2 status: passes true
+- Story 3 status: passes true
+- Story 4 status: passes true
+- Story 5 status: passes true
+- Story 6 status: passes true
+- Story 7 status: passes true
+- Story 8 status: passes true
+- Story 9 status: passes true
+- Story 10 status: passes true
+- Story 11 status: passes true
+- Story 12 status: passes true
+- Validation: 67 nodes, max depth 3, valid taxonomy structure
+- This is Experiment 10: best of all
+- Metrics: NLIV=0.70, CSC=not computed (edge-only), Composite=not computed (edge-only), nodes=67
+
+## Decisions This Iteration
+- Added 3 Home L2 subcategories after batch NLIV validation: Furniture, Kitchen, Home Decor.
+- Added 3 Books L2 subcategories after batch NLIV validation: Fiction, Non-Fiction, Children’s Books.
+- Completed Story 5 by adding 3 Toys, 3 Sports, and 3 Tools L2 children validated with batch check_edge (all GOOD), and verified taxonomy with validate.py.
+- Completed Story 6 by adding 2 L2 nodes each to Pet Products, Cosmetics, and Auto Parts: Pet Accessories, Pet Health, Haircare, Nail Care, Tires and Wheels, Auto Electrical. All 6 edges passed check_edge.py, and final taxonomy validated with validate.py.
+- Completed Story 7 by adding 10 Electronics L3 nodes (Computers, Components, Communications, Networking, Video) with batch check_edge.py validation (all good), then validated taxonomy with validate.py.
+- Completed Story 8 by adding 12 Clothing L3 nodes: Belts, Hats, Costumes, Masks, Handbags, Wallets, Earrings, Necklaces, Insoles, Shoe Laces, Tops, Bottoms.
+- Ran one check_edge.py --batch for all 12 Clothing L3 candidate edges; all returned excellent NLIV scores.
+- Ran validate.py once at the end of Story 8 and it passed.
+- Completed Story 9 by expanding Home, Books, and Toys with 2-3 L3 categories per selected L2 (31 added nodes total) after one batch `check_edge.py` run. All edges returned excellent NLIV and `validate.py` passed.
+- Completed Story 10 by adding Sports as `sports_equipment` under `Outdoor Goods` and 3 L3 nodes: `team_sports`, `camping_gear`, `outdoor_sports`.
+- Completed Story 10 by expanding Tools with `hand_tools`, `power_tools`, and `tool_storage`.
+- Completed Story 10 by expanding Pet Products with `pet_food`, `pet_health`, and `pet_accessories`.
+- Completed Story 10 by expanding Cosmetics with `skin_care` and `makeup`.
+- Completed Story 10 by expanding Automotive Parts with `engine_parts`, `wheels_and_tires`, and `vehicle_electronics`.
+- All Story 10 edges were validated in one `check_edge.py --batch` run and taxonomy validated with a single `validate.py` pass.
+- Completed Story 11 by renaming weak L1 and edge IDs: `root` -> `products`, and `automotive_parts` -> `automotive_products`; then verified all edges with one `check_edge.py --batch` run and one final `validate.py` pass.
+- Completed Story 12 by removing the Outdoor Goods single-child chain: moved `Camping Gear` to be an `Outdoor Goods` child, added one-level balance with `Sports` retained as a separate branch, validated all affected edges in one batch (`outdoor_goods→sports_equipment`, `outdoor_goods→camping_gear`, `sports_equipment→team_sports`, `sports_equipment→outdoor_sports`), and passed final validation.
+- Story 13 status: passes true
+- Metrics: NLIV=0.599, CSC=0.459, Composite=0.651, nodes=161
+- Completed Story 13 by applying low-risk naming refinements for IS-A precision:
+  - Renamed `books_fiction` to `Fiction Books`.
+  - Renamed `books_fiction_mystery` to `Mystery Books`.
+- Verified every edge with one `check_edge.py --batch` call (160 total, good=160, weak=0, bad=0).
+- Re-ran `python tools/metrics_v2.py taxonomy.json --json` and `python tools/validate.py` to confirm acceptance criteria and structural validity.

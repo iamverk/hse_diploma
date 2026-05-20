@@ -1,0 +1,229 @@
+{
+  "id": "root",
+  "name": "Products",
+  "description": "Root node of the product category taxonomy",
+  "children": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices, components, and accessories",
+      "children": [
+        {
+          "id": "computers",
+          "name": "Computers",
+          "description": "Laptops, desktops, and workstations"
+        },
+        {
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital still and video cameras, webcams, and imaging accessories"
+        },
+        {
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Smartphones, cellular devices, and mobile communication hardware"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, smart displays, streaming receivers, and video playback screens"
+        },
+        {
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Apparel, footwear, and accessories",
+      "children": [
+        {
+          "id": "mens_clothing",
+          "name": "Men's Clothing",
+          "description": "Clothing designed for adult men including shirts, pants, and outerwear"
+        },
+        {
+          "id": "womens_clothing",
+          "name": "Women's Clothing",
+          "description": "Clothing designed for adult women including tops, bottoms, and dresses"
+        },
+        {
+          "id": "kids_clothing",
+          "name": "Kids Clothing",
+          "description": "Clothing for babies, children, and teens"
+        },
+        {
+          "id": "footwear",
+          "name": "Footwear",
+          "description": "Shoes, sandals, boots, socks, and related foot wear"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "description": "Headwear, belts, jewelry, watches, and other apparel accessories"
+        }
+      ]
+    },
+    {
+      "id": "home_goods",
+      "name": "Home Goods",
+      "description": "Household essentials, decor, and home maintenance items",
+      "children": [
+        {
+          "id": "home_decor",
+          "name": "Home Decor",
+          "description": "Decorative accents, artwork, and styling products for rooms"
+        },
+        {
+          "id": "home_storage",
+          "name": "Home Storage",
+          "description": "Storage systems, organizers, racks, and containers for the home"
+        },
+        {
+          "id": "home_improvement",
+          "name": "Home Improvement",
+          "description": "Repair, maintenance, and fixture-related home products"
+        },
+        {
+          "id": "cleaning_supplies",
+          "name": "Cleaning Supplies",
+          "description": "Household cleaning, sanitation, and upkeep products"
+        },
+        {
+          "id": "furniture",
+          "name": "Furniture",
+          "description": "Major household furniture pieces and seating for living spaces"
+        }
+      ]
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "description": "Printed and digital books, magazines, and related reading media",
+      "children": [
+        {
+          "id": "fiction_books",
+          "name": "Fiction Books",
+          "description": "Novels, literary fiction, and narrative story titles"
+        },
+        {
+          "id": "non_fiction_books",
+          "name": "Non-Fiction Books",
+          "description": "Narrative nonfiction, biographies, and informational reading books"
+        },
+        {
+          "id": "textbooks",
+          "name": "Textbooks",
+          "description": "Educational textbooks, workbooks, and course materials"
+        },
+        {
+          "id": "cookbooks",
+          "name": "Cookbooks",
+          "description": "Recipe books and practical cooking guides"
+        },
+        {
+          "id": "digital_books",
+          "name": "Digital Books",
+          "description": "Ebooks, digital editions, and electronic reading books"
+        }
+      ]
+    },
+    {
+      "id": "toys",
+      "name": "Toys",
+      "description": "Children's toys, games, and play accessories",
+      "children": [
+        {
+          "id": "educational_toys",
+          "name": "Educational Toys",
+          "description": "STEM and educational play items that support learning"
+        },
+        {
+          "id": "building_toys",
+          "name": "Building Toys",
+          "description": "Vehicle, construction, and assembling toy sets for hands-on play"
+        },
+        {
+          "id": "dolls_and_figures",
+          "name": "Dolls and Figures",
+          "description": "Dolls, plush toys, action figures, and figurines for imaginative play"
+        },
+        {
+          "id": "remote_control_toys",
+          "name": "Remote Control Toys",
+          "description": "Remote-controlled and battery-powered toys for active indoor play"
+        },
+        {
+          "id": "puzzles_and_games",
+          "name": "Puzzles and Games",
+          "description": "Board games, puzzles, and table games for children"
+        }
+      ]
+    },
+    {
+      "id": "pet_products",
+      "name": "Pet Products",
+      "description": "Products for pet care, feeding, accessories, and health",
+      "children": []
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hardware, DIY tools, and shop equipment",
+      "children": []
+    },
+    {
+      "id": "automotive_parts",
+      "name": "Automotive Parts",
+      "description": "Automotive components, accessories, and maintenance supplies",
+      "children": []
+    },
+    {
+      "id": "cosmetics",
+      "name": "Cosmetics",
+      "description": "Skincare, beauty, and personal care products",
+      "children": []
+    },
+    {
+      "id": "outdoor_goods",
+      "name": "Outdoor Goods",
+      "description": "Camping, lighting, and outdoor living products",
+      "children": []
+    },
+    {
+      "id": "sporting_goods",
+      "name": "Sporting Goods",
+      "description": "Sports and athletic equipment, recreation, and outdoor sport activities",
+      "children": [
+        {
+          "id": "water_sports",
+          "name": "Water Sports",
+          "description": "Swimming, paddle, and other water-based sporting activities"
+        },
+        {
+          "id": "outdoor_recreation",
+          "name": "Outdoor Recreation",
+          "description": "Camping, hiking, and general outdoor play and recreation"
+        },
+        {
+          "id": "racket_sports",
+          "name": "Racket Sports",
+          "description": "Tennis, badminton, table tennis, and similar racket activities"
+        },
+        {
+          "id": "ball_sports",
+          "name": "Ball Sports",
+          "description": "Bat-and-ball and goal sports driven by bouncing balls and targets"
+        },
+        {
+          "id": "team_sports",
+          "name": "Team Sports",
+          "description": "Multi-player team sports gear such as football and soccer"
+        }
+      ]
+    }
+  ]
+}

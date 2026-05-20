@@ -1,0 +1,2 @@
+iteration,story_id,story_title,passed,status,nliv_mean,csc_score,composite,sem_edge_f1,node_count,elapsed_sec
+1,6,"Expand L2: Toys + Sporting Goods (3-5 each)",false,crash,0.5754352904135182,0.5013378644773339,0.6573496690569945,N/A,32,1409

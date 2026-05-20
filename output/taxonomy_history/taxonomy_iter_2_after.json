@@ -1,0 +1,119 @@
+{
+  "id": "root",
+  "name": "Products",
+  "description": "Root node of the product category taxonomy",
+  "children": [
+    {
+      "id": "electronics",
+      "name": "Electronics",
+      "description": "Electronic devices, components, and accessories",
+      "children": [
+        {
+          "id": "computers",
+          "name": "Computers",
+          "description": "Laptops, desktops, and workstations"
+        },
+        {
+          "id": "cameras",
+          "name": "Cameras",
+          "description": "Digital still and video cameras, webcams, and imaging accessories"
+        },
+        {
+          "id": "smartphones",
+          "name": "Smartphones",
+          "description": "Smartphones, cellular devices, and mobile communication hardware"
+        },
+        {
+          "id": "televisions",
+          "name": "Televisions",
+          "description": "TVs, smart displays, streaming receivers, and video playback screens"
+        },
+        {
+          "id": "headphones",
+          "name": "Headphones",
+          "description": "Over-ear and in-ear headphones, earbuds, and other personal audio devices"
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "name": "Clothing",
+      "description": "Apparel, footwear, and accessories",
+      "children": [
+        {
+          "id": "mens_clothing",
+          "name": "Men's Clothing",
+          "description": "Clothing designed for adult men including shirts, pants, and outerwear"
+        },
+        {
+          "id": "womens_clothing",
+          "name": "Women's Clothing",
+          "description": "Clothing designed for adult women including tops, bottoms, and dresses"
+        },
+        {
+          "id": "kids_clothing",
+          "name": "Kids Clothing",
+          "description": "Clothing for babies, children, and teens"
+        },
+        {
+          "id": "footwear",
+          "name": "Footwear",
+          "description": "Shoes, sandals, boots, socks, and related foot wear"
+        },
+        {
+          "id": "accessories",
+          "name": "Accessories",
+          "description": "Headwear, belts, jewelry, watches, and other apparel accessories"
+        }
+      ]
+    },
+    {
+      "id": "home_goods",
+      "name": "Home Goods",
+      "description": "Household essentials, decor, and home maintenance items",
+      "children": []
+    },
+    {
+      "id": "books",
+      "name": "Books",
+      "description": "Printed and digital books, magazines, and related reading media",
+      "children": []
+    },
+    {
+      "id": "toys",
+      "name": "Toys",
+      "description": "Children's toys, games, and play accessories",
+      "children": []
+    },
+    {
+      "id": "pet_products",
+      "name": "Pet Products",
+      "description": "Products for pet care, feeding, accessories, and health",
+      "children": []
+    },
+    {
+      "id": "tools",
+      "name": "Tools",
+      "description": "Hardware, DIY tools, and shop equipment",
+      "children": []
+    },
+    {
+      "id": "automotive_parts",
+      "name": "Automotive Parts",
+      "description": "Automotive components, accessories, and maintenance supplies",
+      "children": []
+    },
+    {
+      "id": "cosmetics",
+      "name": "Cosmetics",
+      "description": "Skincare, beauty, and personal care products",
+      "children": []
+    },
+    {
+      "id": "outdoor_goods",
+      "name": "Outdoor Goods",
+      "description": "Camping, lighting, and outdoor living products",
+      "children": []
+    }
+  ]
+}

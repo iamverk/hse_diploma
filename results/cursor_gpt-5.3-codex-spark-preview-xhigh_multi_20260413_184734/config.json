@@ -1,0 +1,10 @@
+{
+  "tool": "cursor",
+  "model": "gpt-5.3-codex-spark-preview-xhigh",
+  "domain": "multi",
+  "max_iterations": 50,
+  "actual_iterations": 10,
+  "watchdog_timeout": 180,
+  "timestamp": "20260413_184734",
+  "experiment": "v9-stream-watchdog"
+}

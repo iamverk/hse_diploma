@@ -1,0 +1,28 @@
+ff7123f story 17: finalize final optimization t
+43dc796 story 16: refine mece audit and balance
+bea678d story 15: finalize weak-edge cleanup
+2558bf4 story 14: expand auto parts L3 taxonomy
+0f1ba0a story 13: expand cosmetics L3 nodes
+e86089f story 12: expand Pet Products L3 categories
+af52d6c story 11: expand tools l3 taxonomy
+421c4f7 story 10: expand sporting goods l3
+6a9b1e1 story 9: expand toys L3 taxonomy
+a7c719b story 8: Expand L3: Books
+f12cf54 story 7: expand home goods l3 branches
+31b3c67 story 5: expand electronics L3 subtree
+61004df exp 8: re-atomize PRD — one domain per story (was multi-domain)
+8f099e6 story 4: expand remaining L1 domains to 3-7 L2 categories
+58940d1 story 3: complete home goods and books L2 expansion
+fd334cd restore metrics_v2.py from exp7 branch
+8ee7dde restore check_edge.py from exp7 branch
+572b8ff story 2: expand electronics and clothing L2 subtree
+37c91e0 exp 8 setup: hooks + rules + skills full stack
+8e1dffb story 8: expand major branches for edge F1
+14e2c92 story 7: resolve lint warnings and clean hierarchy
+8624931 story 6: add L3 leaf categories in electronics branches
+d4f348c story 5: expand communications to L2 subcategories
+1ecd0b5 story 4: expand circuit boards and components
+e50ca7a story 3: expand audio to L2 subcategories
+033c167 story 2: expand arcade equipment to L2 subcategories
+02a4b38 story 1: verify L1 Electronics categories\n\nRecorded completion for story 1 after confirming the Electronics node already has 19 L1 categories and validation/metrics checks pass.,
+aa69b51 Initial taxonomy setup

@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "total_issues": 14,
+    "by_severity": {
+      "error": 0,
+      "warn": 12,
+      "info": 2
+    },
+    "by_type": {
+      "redundant_prefix": 12,
+      "low_information_leaf": 2
+    },
+    "source": "metrics_v2 weak-edge count plus deterministic agent-judge flags"
+  },
+  "issues": [
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Automotive Products",
+      "child": "Automotive Wheels and Tires"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Vehicle Electronics",
+      "child": "Vehicle Navigation Electronics"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Women's Clothing",
+      "child": "Women Tops"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Skin Care",
+      "child": "Skin Serums"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Home Goods",
+      "child": "Home Decor"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Home Decor",
+      "child": "Home Rugs"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Outdoor Goods",
+      "child": "Outdoor Recreation"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Outdoor Recreation",
+      "child": "Outdoor Cycling"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Outdoor Recreation",
+      "child": "Outdoor Team Sports"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Pet Products",
+      "child": "Pet Accessories"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Pet Products",
+      "child": "Pet Food"
+    },
+    {
+      "severity": "warn",
+      "type": "redundant_prefix",
+      "parent": "Pet Products",
+      "child": "Pet Health"
+    },
+    {
+      "severity": "info",
+      "type": "low_information_leaf",
+      "path": "Products > Tools > Power Tools > Grinding Tools",
+      "label": "Grinding Tools"
+    },
+    {
+      "severity": "info",
+      "type": "low_information_leaf",
+      "path": "Products > Tools > Power Tools > Saw Tools",
+      "label": "Saw Tools"
+    }
+  ]
+}

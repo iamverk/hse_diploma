@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the master's thesis below."
+title: "Taxonomy Construction and Automated Quality Assessment via Iterative LLM-based Agent Pipelines"
+type: software
+authors:
+  - family-names: Makarenkova
+    given-names: Vera
+    email: makarenkova.vera00711@gmail.com
+    affiliation: HSE University, Moscow
+license: MIT
+version: 0.1.0
+date-released: "2026-06-01"
+repository-code: "https://github.com/iamverk/hse_diploma"
+keywords:
+  - taxonomy induction
+  - reference-free evaluation
+  - llm agents
+  - ralph loop
+  - product taxonomy
+  - ontology
+preferred-citation:
+  type: thesis
+  title: "Taxonomy Construction and Automated Quality Assessment via Iterative LLM-based Agent Pipelines"
+  authors:
+    - family-names: Makarenkova
+      given-names: Vera
+  year: 2026
+  institution:
+    name: "HSE University, Moscow"
+  thesis-type: "Master's thesis"
+references:
+  - type: article
+    authors:
+      - family-names: Gao
+        given-names: Tianjian
+      - family-names: Langlais
+        given-names: Philippe
+    title: "RaTE: a Reproducible automatic Taxonomy Evaluation by Filling the gap"
+    year: 2023
+    url: "https://arxiv.org/abs/2307.09706"
+  - type: conference-paper
+    authors:
+      - family-names: Zeng
+        given-names: Qingkai
+    title: "Chain-of-Layer: Iteratively Prompting LLMs for Taxonomy Induction"
+    year: 2024
+    conference:
+      name: CIKM
+  - type: article
+    authors:
+      - family-names: Wang
+        given-names: Guanzhi
+    title: "Voyager: An Open-Ended Embodied Agent with Large Language Models"
+    year: 2023
+  - type: conference-paper
+    authors:
+      - family-names: Zheng
+        given-names: Lianmin
+    title: "Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena"
+    year: 2023
+    conference:
+      name: NeurIPS

@@ -13,7 +13,6 @@ import sys
 import json
 from pathlib import Path
 
-# Add tools directory to path
 sys.path.insert(0, str(Path(__file__).parent))
 from taxonomy_core import load_taxonomy, validate, lint
 
@@ -26,15 +25,12 @@ def main():
 
     taxonomy = load_taxonomy(path)
 
-    # Run validation
     result = validate(taxonomy)
 
-    # Run linting
     issues = lint(taxonomy)
     lint_errors = [i for i in issues if i["severity"] == "error"]
     lint_warnings = [i for i in issues if i["severity"] == "warning"]
 
-    # Print results
     print("=" * 60)
     print("TAXONOMY VALIDATION REPORT")
     print("=" * 60)

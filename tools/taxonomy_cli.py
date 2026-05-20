@@ -2,7 +2,7 @@
 """
 taxonomy_cli.py — CLI interface for taxonomy operations.
 
-Used by Ralph loop agents (Claude Code, Codex) via bash commands.
+Used by Ralph loop agents through shell commands.
 
 Usage:
     python tools/taxonomy_cli.py tree

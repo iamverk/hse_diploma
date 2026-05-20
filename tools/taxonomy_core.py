@@ -5,6 +5,8 @@ Shared logic used by both MCP server and CLI tools.
 Taxonomy is stored as a nested JSON structure and manipulated via networkx DiGraph.
 """
 
+from __future__ import annotations
+
 import json
 import copy
 from pathlib import Path
@@ -17,10 +19,6 @@ except ImportError:
     raise ImportError("networkx is required: pip install networkx")
 
 
-# ---------------------------------------------------------------------------
-# I/O
-# ---------------------------------------------------------------------------
-
 def load_taxonomy(path: str | Path) -> dict:
     """Load taxonomy from a JSON file."""
     with open(path, "r", encoding="utf-8") as f:
@@ -32,10 +30,6 @@ def save_taxonomy(taxonomy: dict, path: str | Path) -> None:
     with open(path, "w", encoding="utf-8") as f:
         json.dump(taxonomy, f, ensure_ascii=False, indent=2)
 
-
-# ---------------------------------------------------------------------------
-# Conversions: nested dict <-> networkx DiGraph
-# ---------------------------------------------------------------------------
 
 def _taxonomy_to_graph(taxonomy: dict) -> nx.DiGraph:
     """Convert nested taxonomy dict to a networkx DiGraph."""
@@ -75,10 +69,6 @@ def _find_root(G: nx.DiGraph) -> str:
     return roots[0]
 
 
-# ---------------------------------------------------------------------------
-# Taxonomy operations
-# ---------------------------------------------------------------------------
-
 def add_node(taxonomy: dict, parent_id: str, node_id: str, name: str,
              description: str = "") -> dict:
     """Add a new node under the specified parent. Returns updated taxonomy."""
@@ -88,7 +78,6 @@ def add_node(taxonomy: dict, parent_id: str, node_id: str, name: str,
         if node["id"] == parent_id:
             if "children" not in node:
                 node["children"] = []
-            # Check duplicate
             if any(c["id"] == node_id for c in node["children"]):
                 raise ValueError(f"Node '{node_id}' already exists under '{parent_id}'")
             node["children"].append({
@@ -140,11 +129,9 @@ def move_node(taxonomy: dict, node_id: str, new_parent_id: str) -> dict:
         raise ValueError(f"New parent '{new_parent_id}' not found")
     if node_id == _find_root(G):
         raise ValueError("Cannot move root node")
-    # Check: new_parent is not a descendant of node
     if new_parent_id in nx.descendants(G, node_id):
         raise ValueError(f"Cannot move '{node_id}' under its own descendant '{new_parent_id}'")
 
-    # Remove old edge
     old_parent = list(G.predecessors(node_id))[0]
     G.remove_edge(old_parent, node_id)
     G.add_edge(new_parent_id, node_id)
@@ -198,37 +185,28 @@ def get_subtree(taxonomy: dict, node_id: str, max_depth: int = 3) -> Optional[di
     return _trim(copy.deepcopy(subtree), 0)
 
 
-# ---------------------------------------------------------------------------
-# Validation
-# ---------------------------------------------------------------------------
-
 def validate(taxonomy: dict) -> dict:
     """Validate taxonomy structure. Returns {valid: bool, errors: [...], warnings: [...]}."""
     errors = []
     warnings = []
 
-    # 1. Check it converts to a valid DAG
     try:
         G = _taxonomy_to_graph(taxonomy)
     except Exception as e:
         return {"valid": False, "errors": [f"Cannot parse taxonomy: {e}"], "warnings": []}
 
-    # 2. Must be a DAG (no cycles)
     if not nx.is_directed_acyclic_graph(G):
         cycles = list(nx.simple_cycles(G))
         errors.append(f"Graph contains cycles: {cycles[:3]}")
 
-    # 3. Exactly one root
     roots = [n for n, d in G.in_degree() if d == 0]
     if len(roots) != 1:
         errors.append(f"Expected 1 root, found {len(roots)}: {roots}")
 
-    # 4. No orphans (nodes with no edges except root)
     isolates = list(nx.isolates(G))
     if len(G.nodes) > 1 and isolates:
         errors.append(f"Orphan nodes (no connections): {isolates}")
 
-    # 5. No duplicate IDs
     all_ids = []
     def _collect_ids(node):
         all_ids.append(node["id"])
@@ -239,20 +217,17 @@ def validate(taxonomy: dict) -> dict:
     if dupes:
         errors.append(f"Duplicate node IDs: {dupes}")
 
-    # 6. Warnings: depth > 7
     if roots and not errors:
         root = roots[0]
         longest_path = nx.dag_longest_path_length(G)
         if longest_path > 7:
             warnings.append(f"Max depth is {longest_path}, recommended ≤ 7")
 
-    # 7. Warnings: nodes with only 1 child
     for node in G.nodes():
         successors = list(G.successors(node))
         if len(successors) == 1:
             warnings.append(f"Node '{node}' has only 1 child — consider merging")
 
-    # 8. Warnings: very flat branches (fanout > 20)
     for node in G.nodes():
         successors = list(G.successors(node))
         if len(successors) > 20:
@@ -271,10 +246,6 @@ def validate(taxonomy: dict) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
-# Metrics (comparison with reference taxonomy)
-# ---------------------------------------------------------------------------
-
 def compute_metrics(taxonomy: dict, reference: dict) -> dict:
     """Compute quality metrics comparing taxonomy to a reference (gold standard)."""
     G_pred = _taxonomy_to_graph(taxonomy)
@@ -283,7 +254,6 @@ def compute_metrics(taxonomy: dict, reference: dict) -> dict:
     pred_edges = set(G_pred.edges())
     gold_edges = set(G_gold.edges())
 
-    # Edge-level precision / recall / F1
     if len(pred_edges) == 0:
         precision = 0.0
     else:
@@ -296,12 +266,10 @@ def compute_metrics(taxonomy: dict, reference: dict) -> dict:
 
     f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
 
-    # Node coverage
     pred_nodes = set(G_pred.nodes())
     gold_nodes = set(G_gold.nodes())
     node_coverage = len(pred_nodes & gold_nodes) / len(gold_nodes) if gold_nodes else 0.0
 
-    # Ancestor F1 (softer metric: for each node, check if ancestor set matches)
     ancestor_precisions = []
     ancestor_recalls = []
     common_nodes = pred_nodes & gold_nodes
@@ -317,7 +285,6 @@ def compute_metrics(taxonomy: dict, reference: dict) -> dict:
     avg_anc_r = sum(ancestor_recalls) / len(ancestor_recalls) if ancestor_recalls else 0.0
     anc_f1 = 2 * avg_anc_p * avg_anc_r / (avg_anc_p + avg_anc_r) if (avg_anc_p + avg_anc_r) > 0 else 0.0
 
-    # Structural balance: std of fanout at each level
     depths = {}
     if nx.is_directed_acyclic_graph(G_pred):
         root = _find_root(G_pred)
@@ -340,42 +307,33 @@ def compute_metrics(taxonomy: dict, reference: dict) -> dict:
     }
 
 
-# ---------------------------------------------------------------------------
-# Linting (find anomalies)
-# ---------------------------------------------------------------------------
-
 def lint(taxonomy: dict) -> list[dict]:
     """Find structural anomalies in the taxonomy."""
     issues = []
     G = _taxonomy_to_graph(taxonomy)
 
-    # 1. Orphan nodes
     for node in nx.isolates(G):
         issues.append({"type": "orphan", "node": node, "severity": "error",
                         "message": f"Node '{node}' has no connections"})
 
-    # 2. Single-child nodes
     for node in G.nodes():
         children = list(G.successors(node))
         if len(children) == 1:
             issues.append({"type": "single_child", "node": node, "severity": "warning",
                             "message": f"Node '{node}' has only 1 child '{children[0]}' — consider merging"})
 
-    # 3. Very high fanout (> 15)
     for node in G.nodes():
         children = list(G.successors(node))
         if len(children) > 15:
             issues.append({"type": "high_fanout", "node": node, "severity": "warning",
                             "message": f"Node '{node}' has {len(children)} children — consider splitting"})
 
-    # 4. Empty names
     for node in G.nodes():
         name = G.nodes[node].get("name", "")
         if not name or name.strip() == "":
             issues.append({"type": "empty_name", "node": node, "severity": "error",
                             "message": f"Node '{node}' has an empty name"})
 
-    # 5. Duplicate names at same level (siblings with identical names)
     def _check_sibling_dupes(node_dict: dict):
         children = node_dict.get("children", [])
         names = [c.get("name", "") for c in children]
@@ -391,7 +349,6 @@ def lint(taxonomy: dict) -> list[dict]:
 
     _check_sibling_dupes(taxonomy)
 
-    # 6. Excessive depth (> 7)
     if nx.is_directed_acyclic_graph(G):
         longest = nx.dag_longest_path_length(G)
         if longest > 7:
@@ -401,10 +358,6 @@ def lint(taxonomy: dict) -> list[dict]:
 
     return issues
 
-
-# ---------------------------------------------------------------------------
-# Diff (compare two versions)
-# ---------------------------------------------------------------------------
 
 def diff(taxonomy_old: dict, taxonomy_new: dict) -> dict:
     """Compare two taxonomy versions and return differences."""
@@ -421,7 +374,6 @@ def diff(taxonomy_old: dict, taxonomy_new: dict) -> dict:
     added_edges = new_edges - old_edges
     removed_edges = old_edges - new_edges
 
-    # Detect moves: node exists in both, but parent changed
     moved = []
     for node in old_nodes & new_nodes:
         old_parents = set(G_old.predecessors(node))
@@ -448,10 +400,6 @@ def diff(taxonomy_old: dict, taxonomy_new: dict) -> dict:
         }
     }
 
-
-# ---------------------------------------------------------------------------
-# Pretty print
-# ---------------------------------------------------------------------------
 
 def print_tree(taxonomy: dict, indent: int = 0) -> str:
     """Return a human-readable tree string."""

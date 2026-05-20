@@ -3,11 +3,11 @@
 metrics_v2.py — Reference-free taxonomy quality metrics.
 
 Metrics:
-  1. NLIV  — Natural Language Inference Validity (cosine similarity proxy)
+  1. CES   — Cosine Edge Score (embedding cosine for parent-child edges)
   2. CSC   — Concept Semantic Coherence (Spearman: cosine vs Wu-Palmer)
   3. NTED  — Normalized Tree Edit Distance proxy (edge Jaccard)
   4. Structural Health — chains, balance, depth, branching
-  5. Composite Score — weighted combination for stopping criterion
+  5. RFTQ-D — deterministic weighted quality score for stopping criterion
 
 Usage:
     python tools/metrics_v2.py [taxonomy.json] [previous_taxonomy.json]
@@ -25,14 +25,9 @@ import networkx as nx
 from scipy.stats import spearmanr
 from collections import defaultdict
 
-# Add tools dir to path for imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from taxonomy_core import load_taxonomy, _taxonomy_to_graph
 
-
-# ============================================================
-# Embedder singleton (lazy load)
-# ============================================================
 
 _EMBEDDER = None
 
@@ -40,7 +35,7 @@ def _get_embedder():
     global _EMBEDDER
     if _EMBEDDER is None:
         from sentence_transformers import SentenceTransformer
-        _EMBEDDER = SentenceTransformer('all-MiniLM-L6-v2')
+        _EMBEDDER = SentenceTransformer('all-MiniLM-L6-v2', local_files_only=True)
     return _EMBEDDER
 
 
@@ -50,26 +45,22 @@ def _node_name(G, node_id):
     return data.get("name", node_id)
 
 
-# ============================================================
-# 1. NLIV (Natural Language Inference Validity)
-# ============================================================
-
-def compute_nliv(G, embedder=None):
+def compute_ces(G, embedder=None):
     """
     For each edge (parent, child), compute cosine similarity of embeddings
     as a proxy for IS-A validity.
 
     Returns:
-        dict with nliv_mean, nliv_min, weak_edges, edge_scores
+        dict with primary ces_mean/ces_min keys and legacy nliv_mean/nliv_min
+        aliases for older CSV/report consumers.
     """
     if embedder is None:
         embedder = _get_embedder()
 
     edges = list(G.edges())
     if not edges:
-        return {"nliv_mean": 0.0, "nliv_min": 0.0, "weak_edges": [], "edge_scores": {}}
+        return {"ces_mean": 0.0, "ces_min": 0.0, "nliv_mean": 0.0, "nliv_min": 0.0, "weak_edges": [], "edge_scores": {}}
 
-    # Collect unique names
     all_names = list(set(_node_name(G, n) for n in G.nodes()))
     name_to_idx = {name: i for i, name in enumerate(all_names)}
     embeddings = embedder.encode(all_names, normalize_embeddings=True)
@@ -85,20 +76,24 @@ def compute_nliv(G, embedder=None):
 
     scores = list(edge_scores.values())
     weak = [(p, c, s) for (p, c), s in edge_scores.items() if s < 0.3]
-    # Sort weak edges by score ascending (worst first)
     weak.sort(key=lambda x: x[2])
 
+    ces_mean = float(np.mean(scores))
+    ces_min = float(np.min(scores))
     return {
-        "nliv_mean": float(np.mean(scores)),
-        "nliv_min": float(np.min(scores)),
+        "ces_mean": ces_mean,
+        "ces_min": ces_min,
+        "nliv_mean": ces_mean,
+        "nliv_min": ces_min,
         "weak_edges": weak,
         "edge_scores": edge_scores
     }
 
 
-# ============================================================
-# 2. CSC (Concept Semantic Coherence)
-# ============================================================
+def compute_nliv(G, embedder=None):
+    """Legacy alias for compute_ces; kept for older scripts and notebooks."""
+    return compute_ces(G, embedder)
+
 
 def _wu_palmer_similarity(G, u, v, root):
     """Wu-Palmer similarity for two nodes in a tree."""
@@ -107,7 +102,6 @@ def _wu_palmer_similarity(G, u, v, root):
         path_u = nx.shortest_path(undirected, root, u)
         path_v = nx.shortest_path(undirected, root, v)
 
-        # LCA = last common node in paths from root
         lca_depth = 0
         for a, b in zip(path_u, path_v):
             if a == b:
@@ -142,7 +136,6 @@ def compute_csc(G, embedder=None, sample_size=200):
     if len(nodes) < 3:
         return {"csc_score": 0.0, "p_value": 1.0, "n_pairs": 0}
 
-    # Find root
     roots = [n for n in nodes if G.in_degree(n) == 0]
     root = roots[0] if roots else nodes[0]
 
@@ -177,10 +170,6 @@ def compute_csc(G, embedder=None, sample_size=200):
     }
 
 
-# ============================================================
-# 3. NTED proxy (edge Jaccard distance)
-# ============================================================
-
 def compute_nted_proxy(G_current, G_previous):
     """
     Edge Jaccard distance between current and previous taxonomy.
@@ -194,7 +183,6 @@ def compute_nted_proxy(G_current, G_previous):
             "edges_unchanged": 0
         }
 
-    # Use node names for edge comparison (IDs may differ between iterations)
     def _name_edges(G):
         return set(
             (_node_name(G, u), _node_name(G, v))
@@ -218,10 +206,6 @@ def compute_nted_proxy(G_current, G_previous):
         "edges_unchanged": len(unchanged)
     }
 
-
-# ============================================================
-# 4. Structural Health
-# ============================================================
 
 def compute_structural_health(G):
     """
@@ -264,28 +248,41 @@ def compute_structural_health(G):
     }
 
 
-# ============================================================
-# 5. Composite Score
-# ============================================================
-
-def compute_composite_score(nliv_mean, csc_score, structural_health):
+def compute_rftq_score(ces_mean, csc_score, structural_health, rlpc_score=None, judge_score=None):
     """
-    Weighted composite: NLIV 0.4 + CSC 0.3 + structural 0.3.
-    Structural sub-score penalizes chains and imbalance.
+    RFTQ quality score:
+      0.30 CES + 0.20 CSC + 0.25 RLPC + 0.15 LLM-judge + 0.10 Structural
+    Falls back to the older 0.4/0.3/0.3 formula when rlpc_score is None for
+    backward compatibility with early logs.
+    judge_score is normalized 0-1 (rating/5). If None, weight is redistributed to CES.
     """
     chain_penalty = min(structural_health.get("chain_count", 0) * 0.05, 0.3)
     cv_penalty = min(structural_health.get("branching_cv", 0) * 0.2, 0.3)
     struct_score = max(0, 1.0 - chain_penalty - cv_penalty)
 
-    composite = 0.4 * max(nliv_mean, 0) + 0.3 * max(csc_score, 0) + 0.3 * struct_score
-    return float(composite)
+    if rlpc_score is None:
+        rftq = 0.4 * max(ces_mean, 0) + 0.3 * max(csc_score, 0) + 0.3 * struct_score
+        return float(rftq)
+
+    if judge_score is None:
+        rftq = (
+            0.45 * max(ces_mean, 0)
+            + 0.20 * max(csc_score, 0)
+            + 0.25 * max(rlpc_score, 0)
+            + 0.10 * struct_score
+        )
+    else:
+        rftq = (
+            0.30 * max(ces_mean, 0)
+            + 0.20 * max(csc_score, 0)
+            + 0.25 * max(rlpc_score, 0)
+            + 0.15 * max(judge_score, 0)
+            + 0.10 * struct_score
+        )
+    return float(rftq)
 
 
-# ============================================================
-# 6. compute_all_metrics
-# ============================================================
-
-def compute_all_metrics(G_current, G_previous=None, embedder=None):
+def compute_all_metrics(G_current, G_previous=None, embedder=None, with_rlpc=True, with_judge=False):
     """
     Compute all reference-free metrics.
 
@@ -293,6 +290,8 @@ def compute_all_metrics(G_current, G_previous=None, embedder=None):
         G_current: networkx DiGraph of current taxonomy
         G_previous: networkx DiGraph of previous iteration (or None)
         embedder: SentenceTransformer (loaded automatically if None)
+        with_rlpc: include Root-to-Leaf Path Coherence (RFTQ)
+        with_judge: include LLM-as-judge (requires OPENAI_API_KEY)
 
     Returns:
         dict with all metrics
@@ -300,24 +299,47 @@ def compute_all_metrics(G_current, G_previous=None, embedder=None):
     if embedder is None:
         embedder = _get_embedder()
 
-    nliv = compute_nliv(G_current, embedder)
+    ces = compute_ces(G_current, embedder)
     csc = compute_csc(G_current, embedder)
     nted = compute_nted_proxy(G_current, G_previous)
     structural = compute_structural_health(G_current)
-    composite = compute_composite_score(nliv["nliv_mean"], csc["csc_score"], structural)
 
-    return {
-        "nliv": nliv,
+    rlpc = None
+    rlpc_score_val = None
+    if with_rlpc:
+        try:
+            from path_coherence import compute_path_coherence
+            rlpc = compute_path_coherence(G_current, embedder=embedder, with_judge=with_judge)
+            rlpc_score_val = rlpc["rlpc_score"]
+        except Exception as e:
+            rlpc = {"error": str(e)}
+
+    judge_score_val = None
+    if rlpc and with_judge and "llm_judge" in rlpc:
+        j = rlpc["llm_judge"]
+        if j.get("judge_mean") is not None:
+            judge_score_val = j["judge_mean"] / 5.0
+
+    rftq_d = compute_rftq_score(
+        ces["ces_mean"],
+        csc["csc_score"],
+        structural,
+        rlpc_score=rlpc_score_val,
+        judge_score=judge_score_val,
+    )
+
+    out = {
+        "ces": ces,
+        "nliv": ces,
         "csc": csc,
         "nted": nted,
         "structural": structural,
-        "composite_score": composite
+        "rftq_d": rftq_d,
     }
+    if rlpc is not None:
+        out["rlpc"] = rlpc
+    return out
 
-
-# ============================================================
-# CLI
-# ============================================================
 
 def main():
     taxonomy_path = sys.argv[1] if len(sys.argv) > 1 else "taxonomy.json"
@@ -339,22 +361,28 @@ def main():
     metrics = compute_all_metrics(G, G_prev)
 
     if json_output:
-        # Machine-readable: strip non-serializable fields
         output = {
-            "nliv_mean": metrics["nliv"]["nliv_mean"],
-            "nliv_min": metrics["nliv"]["nliv_min"],
-            "weak_edges_count": len(metrics["nliv"]["weak_edges"]),
+            "ces_mean": metrics["ces"]["ces_mean"],
+            "ces_min": metrics["ces"]["ces_min"],
+            "nliv_mean": metrics["ces"]["nliv_mean"],
+            "nliv_min": metrics["ces"]["nliv_min"],
+            "weak_edges_count": len(metrics["ces"]["weak_edges"]),
             "csc_score": metrics["csc"]["csc_score"],
             "csc_p_value": metrics["csc"]["p_value"],
             "nted": metrics["nted"]["nted"],
             "edges_added": metrics["nted"]["edges_added"],
             "edges_removed": metrics["nted"]["edges_removed"],
-            "composite_score": metrics["composite_score"],
+            "rftq_d": metrics["rftq_d"],
             **{k: v for k, v in metrics["structural"].items() if k != "chain_nodes"},
         }
+        if "rlpc" in metrics and "rlpc_score" in metrics["rlpc"]:
+            r = metrics["rlpc"]
+            output["rlpc_score"] = r["rlpc_score"]
+            output["rlpc_mono"] = r["monotonicity"]["mono_mean_score"]
+            output["rlpc_step"] = r["step_coherence"]["step_mean"]
+            output["rlpc_path_nli"] = r["path_nli"]["path_nli_mean"]
         print(json.dumps(output, indent=2))
     else:
-        # Human-readable
         print("=" * 60)
         print("REFERENCE-FREE TAXONOMY METRICS")
         print("=" * 60)
@@ -363,11 +391,11 @@ def main():
         print(f"Nodes: {s['node_count']}  Edges: {s['edge_count']}  "
               f"Leaves: {s['leaf_count']}  Max depth: {s['max_depth']}")
         print()
-        print("--- NLIV (Edge Validity) ---")
-        print(f"  Mean:  {metrics['nliv']['nliv_mean']:.4f}")
-        print(f"  Min:   {metrics['nliv']['nliv_min']:.4f}")
-        weak = metrics["nliv"]["weak_edges"]
-        print(f"  Weak edges (NLIV < 0.3): {len(weak)}")
+        print("--- CES (Cosine Edge Score; legacy key: nliv_mean) ---")
+        print(f"  Mean:  {metrics['ces']['ces_mean']:.4f}")
+        print(f"  Min:   {metrics['ces']['ces_min']:.4f}")
+        weak = metrics["ces"]["weak_edges"]
+        print(f"  Weak edges (CES < 0.3): {len(weak)}")
         for p, c, sc in weak[:5]:
             print(f"    {_node_name(G, p)} -> {_node_name(G, c)}: {sc:.3f}")
         print()
@@ -390,8 +418,16 @@ def main():
               f"std={s['branching_std']:.1f}  CV={s['branching_cv']:.2f}")
         print(f"  Leaf ratio:  {s['leaf_ratio']:.2f}")
         print()
+        if "rlpc" in metrics and "rlpc_score" in metrics["rlpc"]:
+            r = metrics["rlpc"]
+            print("--- RLPC (Root-to-Leaf Path Coherence) ---")
+            print(f"  Score:      {r['rlpc_score']:.4f}")
+            print(f"  Mono:       {r['monotonicity']['mono_mean_score']:.3f}")
+            print(f"  Step:       {r['step_coherence']['step_mean']:.3f}")
+            print(f"  Path NLI:   {r['path_nli']['path_nli_mean']:.3f}")
+            print()
         print(f"{'=' * 60}")
-        print(f"COMPOSITE SCORE: {metrics['composite_score']:.4f}")
+        print(f"RFTQ-D SCORE: {metrics['rftq_d']:.4f}")
         print(f"{'=' * 60}")
 
 

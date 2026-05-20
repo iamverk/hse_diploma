@@ -1,0 +1,1129 @@
+[
+  {
+    "code": "products",
+    "parent": null,
+    "labels": {
+      "en_US": "Products"
+    }
+  },
+  {
+    "code": "automotive_products",
+    "parent": "products",
+    "labels": {
+      "en_US": "Automotive Products"
+    }
+  },
+  {
+    "code": "engine_parts",
+    "parent": "automotive_products",
+    "labels": {
+      "en_US": "Engine Parts"
+    }
+  },
+  {
+    "code": "engine_parts_fuel_system",
+    "parent": "engine_parts",
+    "labels": {
+      "en_US": "Fuel Components"
+    }
+  },
+  {
+    "code": "engine_parts_ignition_system",
+    "parent": "engine_parts",
+    "labels": {
+      "en_US": "Ignition System"
+    }
+  },
+  {
+    "code": "engine_parts_transmission_parts",
+    "parent": "engine_parts",
+    "labels": {
+      "en_US": "Transmission Parts"
+    }
+  },
+  {
+    "code": "vehicle_electronics",
+    "parent": "automotive_products",
+    "labels": {
+      "en_US": "Vehicle Electronics"
+    }
+  },
+  {
+    "code": "vehicle_electronics_batteries",
+    "parent": "vehicle_electronics",
+    "labels": {
+      "en_US": "Batteries"
+    }
+  },
+  {
+    "code": "vehicle_electronics_infotainment",
+    "parent": "vehicle_electronics",
+    "labels": {
+      "en_US": "In-Car Infotainment"
+    }
+  },
+  {
+    "code": "vehicle_electronics_navigation",
+    "parent": "vehicle_electronics",
+    "labels": {
+      "en_US": "Vehicle Navigation Electronics"
+    }
+  },
+  {
+    "code": "wheels_and_tires",
+    "parent": "automotive_products",
+    "labels": {
+      "en_US": "Automotive Wheels and Tires"
+    }
+  },
+  {
+    "code": "wheels_and_tires_brakes",
+    "parent": "wheels_and_tires",
+    "labels": {
+      "en_US": "Wheel Brakes"
+    }
+  },
+  {
+    "code": "wheels_and_tires_rims",
+    "parent": "wheels_and_tires",
+    "labels": {
+      "en_US": "Rims"
+    }
+  },
+  {
+    "code": "wheels_and_tires_tires",
+    "parent": "wheels_and_tires",
+    "labels": {
+      "en_US": "Tires"
+    }
+  },
+  {
+    "code": "books",
+    "parent": "products",
+    "labels": {
+      "en_US": "Books"
+    }
+  },
+  {
+    "code": "books_children_books",
+    "parent": "books",
+    "labels": {
+      "en_US": "Children Books"
+    }
+  },
+  {
+    "code": "books_children_activity_books",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Activity Books"
+    }
+  },
+  {
+    "code": "books_children_books_board_books",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Board Books"
+    }
+  },
+  {
+    "code": "books_children_books_early_readers",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Early Readers"
+    }
+  },
+  {
+    "code": "books_children_books_pop_up_books",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Pop-Up Books"
+    }
+  },
+  {
+    "code": "books_children_chapter_books",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Chapter Books"
+    }
+  },
+  {
+    "code": "books_children_picture_books",
+    "parent": "books_children_books",
+    "labels": {
+      "en_US": "Picture Books"
+    }
+  },
+  {
+    "code": "books_fiction",
+    "parent": "books",
+    "labels": {
+      "en_US": "Fiction Books"
+    }
+  },
+  {
+    "code": "books_fiction_fantasy",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Fantasy"
+    }
+  },
+  {
+    "code": "books_fiction_historical_fiction",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Historical Fiction"
+    }
+  },
+  {
+    "code": "books_fiction_mystery",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Mystery Books"
+    }
+  },
+  {
+    "code": "books_fiction_romance",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Romance"
+    }
+  },
+  {
+    "code": "books_fiction_science_fiction",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Science Fiction"
+    }
+  },
+  {
+    "code": "books_fiction_thriller",
+    "parent": "books_fiction",
+    "labels": {
+      "en_US": "Thrillers"
+    }
+  },
+  {
+    "code": "books_non_fiction",
+    "parent": "books",
+    "labels": {
+      "en_US": "Non-Fiction"
+    }
+  },
+  {
+    "code": "books_non_fiction_biography",
+    "parent": "books_non_fiction",
+    "labels": {
+      "en_US": "Biography"
+    }
+  },
+  {
+    "code": "books_non_fiction_memoir",
+    "parent": "books_non_fiction",
+    "labels": {
+      "en_US": "Memoir"
+    }
+  },
+  {
+    "code": "books_non_fiction_history",
+    "parent": "books",
+    "labels": {
+      "en_US": "History Books"
+    }
+  },
+  {
+    "code": "books_non_fiction_science",
+    "parent": "books",
+    "labels": {
+      "en_US": "Science Books"
+    }
+  },
+  {
+    "code": "books_non_fiction_self_help",
+    "parent": "books",
+    "labels": {
+      "en_US": "Self-Help Books"
+    }
+  },
+  {
+    "code": "books_reference_guides",
+    "parent": "books",
+    "labels": {
+      "en_US": "Reference Guides"
+    }
+  },
+  {
+    "code": "clothing",
+    "parent": "products",
+    "labels": {
+      "en_US": "Clothing"
+    }
+  },
+  {
+    "code": "accessories",
+    "parent": "clothing",
+    "labels": {
+      "en_US": "Fashion Accessories"
+    }
+  },
+  {
+    "code": "accessories_belts",
+    "parent": "accessories",
+    "labels": {
+      "en_US": "Belts"
+    }
+  },
+  {
+    "code": "accessories_hats",
+    "parent": "accessories",
+    "labels": {
+      "en_US": "Headwear"
+    }
+  },
+  {
+    "code": "accessories_watches",
+    "parent": "accessories",
+    "labels": {
+      "en_US": "Dress Watches"
+    }
+  },
+  {
+    "code": "footwear",
+    "parent": "clothing",
+    "labels": {
+      "en_US": "Footwear"
+    }
+  },
+  {
+    "code": "footwear_boots",
+    "parent": "footwear",
+    "labels": {
+      "en_US": "Boots"
+    }
+  },
+  {
+    "code": "footwear_sandals",
+    "parent": "footwear",
+    "labels": {
+      "en_US": "Sandals"
+    }
+  },
+  {
+    "code": "footwear_sneakers",
+    "parent": "footwear",
+    "labels": {
+      "en_US": "Sneakers"
+    }
+  },
+  {
+    "code": "kids_clothing",
+    "parent": "clothing",
+    "labels": {
+      "en_US": "Kids Clothing"
+    }
+  },
+  {
+    "code": "kids_clothing_onesies",
+    "parent": "kids_clothing",
+    "labels": {
+      "en_US": "Baby Onesies"
+    }
+  },
+  {
+    "code": "kids_clothing_school_uniforms",
+    "parent": "kids_clothing",
+    "labels": {
+      "en_US": "School Uniforms"
+    }
+  },
+  {
+    "code": "kids_clothing_toddler_sets",
+    "parent": "kids_clothing",
+    "labels": {
+      "en_US": "Toddler Sets"
+    }
+  },
+  {
+    "code": "mens_clothing",
+    "parent": "clothing",
+    "labels": {
+      "en_US": "Men's Clothing"
+    }
+  },
+  {
+    "code": "mens_clothing_jeans",
+    "parent": "mens_clothing",
+    "labels": {
+      "en_US": "Jeans"
+    }
+  },
+  {
+    "code": "mens_clothing_outerwear",
+    "parent": "mens_clothing",
+    "labels": {
+      "en_US": "Outerwear"
+    }
+  },
+  {
+    "code": "mens_clothing_shirts",
+    "parent": "mens_clothing",
+    "labels": {
+      "en_US": "Shirts"
+    }
+  },
+  {
+    "code": "womens_clothing",
+    "parent": "clothing",
+    "labels": {
+      "en_US": "Women's Clothing"
+    }
+  },
+  {
+    "code": "womens_clothing_activewear",
+    "parent": "womens_clothing",
+    "labels": {
+      "en_US": "Activewear"
+    }
+  },
+  {
+    "code": "womens_clothing_dresses",
+    "parent": "womens_clothing",
+    "labels": {
+      "en_US": "Dresses"
+    }
+  },
+  {
+    "code": "womens_clothing_tops",
+    "parent": "womens_clothing",
+    "labels": {
+      "en_US": "Women Tops"
+    }
+  },
+  {
+    "code": "cosmetics",
+    "parent": "products",
+    "labels": {
+      "en_US": "Cosmetics"
+    }
+  },
+  {
+    "code": "makeup",
+    "parent": "cosmetics",
+    "labels": {
+      "en_US": "Makeup"
+    }
+  },
+  {
+    "code": "makeup_eyes",
+    "parent": "makeup",
+    "labels": {
+      "en_US": "Eye Makeup"
+    }
+  },
+  {
+    "code": "makeup_foundation",
+    "parent": "makeup",
+    "labels": {
+      "en_US": "Foundation"
+    }
+  },
+  {
+    "code": "makeup_lips",
+    "parent": "makeup",
+    "labels": {
+      "en_US": "Lip Makeup"
+    }
+  },
+  {
+    "code": "skin_care",
+    "parent": "cosmetics",
+    "labels": {
+      "en_US": "Skin Care"
+    }
+  },
+  {
+    "code": "skin_care_cleansers",
+    "parent": "skin_care",
+    "labels": {
+      "en_US": "Cleansers"
+    }
+  },
+  {
+    "code": "skin_care_moisturizers",
+    "parent": "skin_care",
+    "labels": {
+      "en_US": "Moisturizers"
+    }
+  },
+  {
+    "code": "skin_care_serums",
+    "parent": "skin_care",
+    "labels": {
+      "en_US": "Skin Serums"
+    }
+  },
+  {
+    "code": "electronics",
+    "parent": "products",
+    "labels": {
+      "en_US": "Electronics"
+    }
+  },
+  {
+    "code": "cameras",
+    "parent": "electronics",
+    "labels": {
+      "en_US": "Cameras"
+    }
+  },
+  {
+    "code": "cameras_lenses",
+    "parent": "cameras",
+    "labels": {
+      "en_US": "Lenses"
+    }
+  },
+  {
+    "code": "cameras_memory_cards",
+    "parent": "cameras",
+    "labels": {
+      "en_US": "Camera Memory Cards"
+    }
+  },
+  {
+    "code": "cameras_tripods",
+    "parent": "cameras",
+    "labels": {
+      "en_US": "Tripods"
+    }
+  },
+  {
+    "code": "computers",
+    "parent": "electronics",
+    "labels": {
+      "en_US": "Computers"
+    }
+  },
+  {
+    "code": "computers_desktops",
+    "parent": "computers",
+    "labels": {
+      "en_US": "Desktops"
+    }
+  },
+  {
+    "code": "computers_laptops",
+    "parent": "computers",
+    "labels": {
+      "en_US": "Laptops"
+    }
+  },
+  {
+    "code": "computers_peripherals",
+    "parent": "computers",
+    "labels": {
+      "en_US": "Peripherals"
+    }
+  },
+  {
+    "code": "headphones",
+    "parent": "electronics",
+    "labels": {
+      "en_US": "Headphones"
+    }
+  },
+  {
+    "code": "headphones_earbuds",
+    "parent": "headphones",
+    "labels": {
+      "en_US": "Earbuds"
+    }
+  },
+  {
+    "code": "headphones_noise_cancellation",
+    "parent": "headphones",
+    "labels": {
+      "en_US": "Noise Cancellation"
+    }
+  },
+  {
+    "code": "headphones_wireless",
+    "parent": "headphones",
+    "labels": {
+      "en_US": "Wireless Audio"
+    }
+  },
+  {
+    "code": "smartphones",
+    "parent": "electronics",
+    "labels": {
+      "en_US": "Smartphones"
+    }
+  },
+  {
+    "code": "smartphones_cases",
+    "parent": "smartphones",
+    "labels": {
+      "en_US": "Phone Cases"
+    }
+  },
+  {
+    "code": "smartphones_chargers",
+    "parent": "smartphones",
+    "labels": {
+      "en_US": "Phone Chargers"
+    }
+  },
+  {
+    "code": "smartphones_screen_protectors",
+    "parent": "smartphones",
+    "labels": {
+      "en_US": "Screen Protectors"
+    }
+  },
+  {
+    "code": "televisions",
+    "parent": "electronics",
+    "labels": {
+      "en_US": "Televisions"
+    }
+  },
+  {
+    "code": "televisions_home_cinema",
+    "parent": "televisions",
+    "labels": {
+      "en_US": "Home Cinema"
+    }
+  },
+  {
+    "code": "televisions_mounts",
+    "parent": "televisions",
+    "labels": {
+      "en_US": "TV Mounts"
+    }
+  },
+  {
+    "code": "televisions_streaming_devices",
+    "parent": "televisions",
+    "labels": {
+      "en_US": "Streaming Devices"
+    }
+  },
+  {
+    "code": "home_goods",
+    "parent": "products",
+    "labels": {
+      "en_US": "Home Goods"
+    }
+  },
+  {
+    "code": "home_goods_decor",
+    "parent": "home_goods",
+    "labels": {
+      "en_US": "Home Decor"
+    }
+  },
+  {
+    "code": "home_goods_decor_candles",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Decorative Home Candles"
+    }
+  },
+  {
+    "code": "home_goods_decor_lighting",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Decorative Lighting"
+    }
+  },
+  {
+    "code": "home_goods_decor_rugs",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Home Rugs"
+    }
+  },
+  {
+    "code": "home_goods_decor_vases",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Decorative Vases"
+    }
+  },
+  {
+    "code": "home_goods_decor_wall",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Wall Decor"
+    }
+  },
+  {
+    "code": "home_goods_decor_wall_art",
+    "parent": "home_goods_decor",
+    "labels": {
+      "en_US": "Wall Art"
+    }
+  },
+  {
+    "code": "home_goods_furniture",
+    "parent": "home_goods",
+    "labels": {
+      "en_US": "Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_bedroom",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Bedroom Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_dining_room",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Dining Room Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_living_room",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Living Room Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_office",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Office Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_outdoor",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Outdoor Furniture"
+    }
+  },
+  {
+    "code": "home_goods_furniture_storage",
+    "parent": "home_goods_furniture",
+    "labels": {
+      "en_US": "Storage Furniture"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware",
+    "parent": "home_goods",
+    "labels": {
+      "en_US": "Kitchenware"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_bakeware",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Bakeware"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_cookware",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Cookware"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_cutlery",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Cutlery"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_dining_sets",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Dining Sets"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_food_storage",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Food Storage"
+    }
+  },
+  {
+    "code": "home_goods_kitchenware_utensils",
+    "parent": "home_goods_kitchenware",
+    "labels": {
+      "en_US": "Utensils"
+    }
+  },
+  {
+    "code": "outdoor_goods",
+    "parent": "products",
+    "labels": {
+      "en_US": "Outdoor Goods"
+    }
+  },
+  {
+    "code": "camping_gear",
+    "parent": "outdoor_goods",
+    "labels": {
+      "en_US": "Camping Gear"
+    }
+  },
+  {
+    "code": "camping_gear_sleeping_bags",
+    "parent": "camping_gear",
+    "labels": {
+      "en_US": "Sleeping Bags"
+    }
+  },
+  {
+    "code": "camping_gear_stoves",
+    "parent": "camping_gear",
+    "labels": {
+      "en_US": "Camp Stoves"
+    }
+  },
+  {
+    "code": "camping_gear_tents",
+    "parent": "camping_gear",
+    "labels": {
+      "en_US": "Tents"
+    }
+  },
+  {
+    "code": "sports_equipment",
+    "parent": "outdoor_goods",
+    "labels": {
+      "en_US": "Outdoor Recreation"
+    }
+  },
+  {
+    "code": "outdoor_sports",
+    "parent": "sports_equipment",
+    "labels": {
+      "en_US": "Adventure Sports"
+    }
+  },
+  {
+    "code": "sports_equipment_cycling",
+    "parent": "sports_equipment",
+    "labels": {
+      "en_US": "Outdoor Cycling"
+    }
+  },
+  {
+    "code": "sports_equipment_fishing",
+    "parent": "sports_equipment",
+    "labels": {
+      "en_US": "Fishing"
+    }
+  },
+  {
+    "code": "sports_equipment_hiking",
+    "parent": "sports_equipment",
+    "labels": {
+      "en_US": "Hiking"
+    }
+  },
+  {
+    "code": "team_sports",
+    "parent": "sports_equipment",
+    "labels": {
+      "en_US": "Outdoor Team Sports"
+    }
+  },
+  {
+    "code": "pet_products",
+    "parent": "products",
+    "labels": {
+      "en_US": "Pet Products"
+    }
+  },
+  {
+    "code": "pet_accessories",
+    "parent": "pet_products",
+    "labels": {
+      "en_US": "Pet Accessories"
+    }
+  },
+  {
+    "code": "pet_accessories_beds",
+    "parent": "pet_accessories",
+    "labels": {
+      "en_US": "Pet Beds"
+    }
+  },
+  {
+    "code": "pet_accessories_collars",
+    "parent": "pet_accessories",
+    "labels": {
+      "en_US": "Collars"
+    }
+  },
+  {
+    "code": "pet_accessories_leashes",
+    "parent": "pet_accessories",
+    "labels": {
+      "en_US": "Leashes"
+    }
+  },
+  {
+    "code": "pet_food",
+    "parent": "pet_products",
+    "labels": {
+      "en_US": "Pet Food"
+    }
+  },
+  {
+    "code": "pet_food_dry_food",
+    "parent": "pet_food",
+    "labels": {
+      "en_US": "Dry Food"
+    }
+  },
+  {
+    "code": "pet_food_treats",
+    "parent": "pet_food",
+    "labels": {
+      "en_US": "Treats"
+    }
+  },
+  {
+    "code": "pet_food_wet_food",
+    "parent": "pet_food",
+    "labels": {
+      "en_US": "Wet Food"
+    }
+  },
+  {
+    "code": "pet_health",
+    "parent": "pet_products",
+    "labels": {
+      "en_US": "Pet Health"
+    }
+  },
+  {
+    "code": "pet_health_grooming",
+    "parent": "pet_health",
+    "labels": {
+      "en_US": "Pet Grooming"
+    }
+  },
+  {
+    "code": "pet_health_medications",
+    "parent": "pet_health",
+    "labels": {
+      "en_US": "Pet Medications"
+    }
+  },
+  {
+    "code": "pet_health_vitamins",
+    "parent": "pet_health",
+    "labels": {
+      "en_US": "Pet Supplements"
+    }
+  },
+  {
+    "code": "tools",
+    "parent": "products",
+    "labels": {
+      "en_US": "Tools"
+    }
+  },
+  {
+    "code": "hand_tools",
+    "parent": "tools",
+    "labels": {
+      "en_US": "Hand Tools"
+    }
+  },
+  {
+    "code": "hand_tools_clamps",
+    "parent": "hand_tools",
+    "labels": {
+      "en_US": "Clamps"
+    }
+  },
+  {
+    "code": "hand_tools_hammers",
+    "parent": "hand_tools",
+    "labels": {
+      "en_US": "Hammers"
+    }
+  },
+  {
+    "code": "hand_tools_screwdrivers",
+    "parent": "hand_tools",
+    "labels": {
+      "en_US": "Screwdrivers"
+    }
+  },
+  {
+    "code": "power_tools",
+    "parent": "tools",
+    "labels": {
+      "en_US": "Power Tools"
+    }
+  },
+  {
+    "code": "power_tools_drills",
+    "parent": "power_tools",
+    "labels": {
+      "en_US": "Power Drills"
+    }
+  },
+  {
+    "code": "power_tools_grinders",
+    "parent": "power_tools",
+    "labels": {
+      "en_US": "Grinding Tools"
+    }
+  },
+  {
+    "code": "power_tools_saws",
+    "parent": "power_tools",
+    "labels": {
+      "en_US": "Saw Tools"
+    }
+  },
+  {
+    "code": "tool_storage",
+    "parent": "tools",
+    "labels": {
+      "en_US": "Tool Storage"
+    }
+  },
+  {
+    "code": "tool_storage_tool_benches",
+    "parent": "tool_storage",
+    "labels": {
+      "en_US": "Tool Benches"
+    }
+  },
+  {
+    "code": "tool_storage_tool_boxes",
+    "parent": "tool_storage",
+    "labels": {
+      "en_US": "Tool Boxes"
+    }
+  },
+  {
+    "code": "tool_storage_wall_racks",
+    "parent": "tool_storage",
+    "labels": {
+      "en_US": "Tool Wall Storage"
+    }
+  },
+  {
+    "code": "toys",
+    "parent": "products",
+    "labels": {
+      "en_US": "Toys"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys",
+    "parent": "toys",
+    "labels": {
+      "en_US": "Action Figure Toys"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_anime",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Anime Figures"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_collectibles",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Collectible Figures"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_figurines",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Figurines"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_movie_figures",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Movie Figures"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_statues",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Action Figure Statues"
+    }
+  },
+  {
+    "code": "toys_action_figure_toys_superheroes",
+    "parent": "toys_action_figure_toys",
+    "labels": {
+      "en_US": "Superhero Figures"
+    }
+  },
+  {
+    "code": "toys_board_games",
+    "parent": "toys",
+    "labels": {
+      "en_US": "Board Games"
+    }
+  },
+  {
+    "code": "toys_board_games_card_games",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Card Games"
+    }
+  },
+  {
+    "code": "toys_board_games_dice_games",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Dice Games"
+    }
+  },
+  {
+    "code": "toys_board_games_family",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Family Games"
+    }
+  },
+  {
+    "code": "toys_board_games_party_games",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Party Games"
+    }
+  },
+  {
+    "code": "toys_board_games_strategic",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Strategic Board Games"
+    }
+  },
+  {
+    "code": "toys_board_games_strategy",
+    "parent": "toys_board_games",
+    "labels": {
+      "en_US": "Strategy Games"
+    }
+  }
+]

@@ -27,7 +27,6 @@ from pathlib import Path
 from collections import defaultdict
 
 
-# ── Domain config ──────────────────────────────────────────────────────────────
 DOMAINS = {
     "electronics": {
         "root_prefix": "Electronics",
@@ -56,7 +55,6 @@ DOMAINS = {
 }
 
 
-# ── Parser ─────────────────────────────────────────────────────────────────────
 def parse_taxonomy_file(filepath: str) -> list[dict]:
     """
     Parse Google Product Taxonomy txt file.
@@ -75,7 +73,6 @@ def parse_taxonomy_file(filepath: str) -> list[dict]:
             line = line.strip()
             if not line or line.startswith("#"):
                 continue
-            # Split on " - " (first occurrence only)
             match = re.match(r"^(\d+)\s+-\s+(.+)$", line)
             if not match:
                 continue
@@ -86,7 +83,6 @@ def parse_taxonomy_file(filepath: str) -> list[dict]:
     return entries
 
 
-# ── Node ID generation ─────────────────────────────────────────────────────────
 def name_to_id(name: str) -> str:
     """Convert category name to lowercase_snake_case id."""
     s = name.lower()
@@ -106,7 +102,6 @@ def make_unique_id(base_id: str, used: set) -> str:
     return f"{base_id}_{i}"
 
 
-# ── Taxonomy builder ───────────────────────────────────────────────────────────
 def build_taxonomy_json(entries: list[dict], domain_cfg: dict) -> dict:
     """
     Build nested taxonomy JSON from filtered entries.
@@ -121,15 +116,12 @@ def build_taxonomy_json(entries: list[dict], domain_cfg: dict) -> dict:
     """
     prefix = domain_cfg["root_prefix"]
 
-    # Filter entries belonging to this domain (path starts with root_prefix)
     domain_entries = [
         e for e in entries
         if e["parts"][0] == prefix
     ]
 
-    # Build nested dict: path_tuple → node_info
-    # We'll use a tree structure: node = {name, description, children_dict}
-    tree = {}  # path_tuple -> {"name": str, "children": dict}
+    tree = {}
 
     for entry in domain_entries:
         parts = entry["parts"]
@@ -165,10 +157,8 @@ def build_taxonomy_json(entries: list[dict], domain_cfg: dict) -> dict:
 
     used_ids: set = set()
 
-    # Build root node — override id/name/description from config
     root_key = (prefix,)
     if root_key not in tree:
-        # No entries matched
         return {
             "id": domain_cfg["root_id"],
             "name": domain_cfg["root_name"],
@@ -201,7 +191,6 @@ def make_start_taxonomy(full_taxonomy: dict, max_depth: int = 2) -> dict:
     return _trim(full_taxonomy, 1)
 
 
-# ── PRD generator ──────────────────────────────────────────────────────────────
 def make_prd(domain: str, full_taxonomy: dict) -> dict:
     """Generate prd.json task list for a domain."""
     domain_name = full_taxonomy["name"]
@@ -214,7 +203,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
 
     stories = []
 
-    # Story 1: Verify L1 structure
     stories.append({
         "id": 1,
         "title": f"Verify and complete L1 categories under {domain_name}",
@@ -225,7 +213,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
         "passes": False,
     })
 
-    # Stories 2+: Expand each L1 category to L2
     for i, l1 in enumerate(l1_children[:4], start=2):
         l2_children = get_children(l1)
         target = max(2, len(l2_children))
@@ -239,7 +226,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
             "passes": False,
         })
 
-    # Story: Add L3 leaf nodes
     stories.append({
         "id": len(stories) + 1,
         "title": f"Add L3 leaf categories across {domain_name} subcategories",
@@ -249,7 +235,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
         "passes": False,
     })
 
-    # Story: Lint cleanup
     stories.append({
         "id": len(stories) + 1,
         "title": "Run lint and fix all warnings (single-child nodes, missing descriptions)",
@@ -257,7 +242,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
         "passes": False,
     })
 
-    # Story: Metrics target
     stories.append({
         "id": len(stories) + 1,
         "title": "Achieve edge F1 > 0.5 vs gold standard",
@@ -275,7 +259,6 @@ def make_prd(domain: str, full_taxonomy: dict) -> dict:
     }
 
 
-# ── Stats ──────────────────────────────────────────────────────────────────────
 def count_nodes(node: dict) -> int:
     return 1 + sum(count_nodes(c) for c in node.get("children", []))
 
@@ -287,7 +270,6 @@ def max_depth_fn(node: dict, d: int = 1) -> int:
     return max(max_depth_fn(c, d + 1) for c in children)
 
 
-# ── Main ───────────────────────────────────────────────────────────────────────
 def main():
     parser = argparse.ArgumentParser(description="Prepare experiment datasets from Google Taxonomy")
     parser.add_argument(
@@ -333,7 +315,6 @@ def main():
 
         print(f"\n── {domain.upper()} ──")
 
-        # Build full gold standard taxonomy
         full = build_taxonomy_json(all_entries, cfg)
         total_nodes = count_nodes(full)
         depth = max_depth_fn(full)
@@ -343,7 +324,6 @@ def main():
         gold_path.write_text(json.dumps(full, indent=2, ensure_ascii=False))
         print(f"  Saved: {gold_path}")
 
-        # Build start taxonomy (L1-L2 only)
         start = make_start_taxonomy(full, max_depth=args.start_depth)
         start_nodes = count_nodes(start)
         print(f"  start_taxonomy: {start_nodes} nodes (L1-L{args.start_depth})")
@@ -352,7 +332,6 @@ def main():
         start_path.write_text(json.dumps(start, indent=2, ensure_ascii=False))
         print(f"  Saved: {start_path}")
 
-        # Build prd.json
         prd = make_prd(domain, full)
         prd_path = domain_dir / "prd.json"
         prd_path.write_text(json.dumps(prd, indent=2, ensure_ascii=False))

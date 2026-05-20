@@ -22,11 +22,10 @@ import subprocess
 from datetime import datetime
 from pathlib import Path
 
-# ── Config ─────────────────────────────────────────────────────────────
 VALIDATE_SCRIPT = "tools/validate.py"
 EVENTS_LOG = "output/stream_events.jsonl"
 METRICS_LOG = "output/hook_metrics.jsonl"
-PYTHON = os.environ.get("PYTHON", "/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python")
+PYTHON = os.environ.get("PYTHON", sys.executable)
 
 
 def log_event(event_type: str, data: dict):
@@ -58,12 +57,14 @@ def log_metrics(metrics: dict):
     """Append metrics to hook_metrics.jsonl."""
     if not metrics:
         return
+    legacy_nliv_mean = metrics.get("nliv_mean", "N/A")
     entry = {
         "ts": datetime.now().isoformat(),
         "source": "stream_monitor",
-        "nliv_mean": metrics.get("nliv_mean", "N/A"),
+        "ces_mean": metrics.get("ces_mean", legacy_nliv_mean),
+        "nliv_mean": legacy_nliv_mean,
         "csc_score": metrics.get("csc_score", "N/A"),
-        "composite": metrics.get("composite_score", "N/A"),
+        "rftq_d": metrics.get("rftq_d", "N/A"),
         "node_count": metrics.get("node_count", "N/A"),
         "passed": metrics.get("passed", False),
     }
@@ -104,13 +105,10 @@ def process_stream_file(filepath: str):
 
             event_type = event.get("type", "")
 
-            # Tool call detection — cursor-agent stream-json format:
-            # {"type": "tool_call", "tool_call": {"editToolCall": {"args": {"path": "..."}}}}
             if event_type == "tool_call":
                 tool_calls += 1
                 tc = event.get("tool_call", {})
 
-                # Extract path from any tool call type
                 file_path = ""
                 tool_kind = ""
                 for key in tc:
@@ -120,16 +118,13 @@ def process_stream_file(filepath: str):
                         file_path = args.get("path", args.get("file_path", ""))
                         break
 
-                # Detect taxonomy.json edits
                 if tool_kind in ("edit", "write"):
                     if "taxonomy.json" in str(file_path):
                         taxonomy_edited = True
                         file_edits += 1
 
-                # Detect shell calls — including taxonomy edits via CLI
                 if tool_kind == "shell":
                     shell_calls += 1
-                    # Check if shell command modifies taxonomy
                     cmd = tc.get("shellToolCall", {}).get("args", {}).get("command", "")
                     result = tc.get("shellToolCall", {}).get("result", {})
                     result_text = str(result.get("stdout", "") or result.get("success", ""))
@@ -137,7 +132,6 @@ def process_stream_file(filepath: str):
                         taxonomy_edited = True
                         file_edits += 1
 
-                # Detect taxonomy reads
                 if tool_kind == "read":
                     if "taxonomy.json" in str(file_path):
                         taxonomy_reads += 1
@@ -154,7 +148,6 @@ def process_stream_file(filepath: str):
 
     log_event("stream_processed", summary)
 
-    # If taxonomy was edited, validate
     if taxonomy_edited:
         metrics = run_validate()
         if metrics:

@@ -1,0 +1,65 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blind-taxonomy"
+version = "0.1.0"
+description = "Iterative LLM-agent pipeline for blind product taxonomy construction and reference-free quality assessment"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Vera Makarenkova", email = "makarenkova.vera00711@gmail.com" }]
+keywords = [
+    "taxonomy",
+    "llm-agent",
+    "ralph-loop",
+    "reference-free-evaluation",
+    "product-taxonomy",
+    "ontology-induction",
+    "cursor-agent",
+    "taxonomy-as-code",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "networkx>=3.0",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "sentence-transformers>=2.2",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+pim = ["openpyxl>=3.1"]
+mcp = ["mcp>=0.5"]
+dev = ["pytest>=7", "ruff>=0.1"]
+
+[project.scripts]
+blind-tax-validate    = "tools.validate:main"
+blind-tax-metrics     = "tools.metrics_v2:main"
+blind-tax-paths       = "tools.path_coherence:main"
+blind-tax-lint        = "tools.taxonomy_linter:main"
+blind-tax-akeneo      = "tools.akeneo_export:main"
+blind-tax-assign      = "tools.assignment:main"
+blind-tax-agent-judge = "tools.agent_judge:main"
+blind-tax-report      = "tools.reporting:main"
+blind-tax-stats       = "tools.stats_analysis:main"
+blind-tax-converge    = "tools.convergence_analysis:main"
+blind-tax-render      = "tools.render_tree:main"
+blind-tax-cli         = "tools.taxonomy_cli:main"
+
+[project.urls]
+Repository = "https://github.com/iamverk/hse_diploma"
+Thesis     = "https://hse.ru/edu/vkr/"
+
+[tool.setuptools]
+packages = ["tools"]

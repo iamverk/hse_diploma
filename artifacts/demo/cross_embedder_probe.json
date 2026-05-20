@@ -1,0 +1,175 @@
+{
+  "purpose": "Cross-embedder sanity probe for CES and CSC on key thesis taxonomies.",
+  "interpretation_scope": "Post-hoc robustness check only; not used by the construction loop or rollback gate.",
+  "models": {
+    "all-MiniLM-L6-v2": "sentence-transformers/all-MiniLM-L6-v2",
+    "all-mpnet-base-v2": "sentence-transformers/all-mpnet-base-v2",
+    "bge-base-en-v1.5": "BAAI/bge-base-en-v1.5"
+  },
+  "methods": {
+    "Ralph Exp. 7": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp7_results/taxonomy_final.json",
+    "Ralph Exp. 10": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/taxonomy_final.json",
+    "CoL-light": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/col_baseline_results/taxonomy_col_inline.json",
+    "Naive": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/naive_baseline_results/taxonomy_naive_inline.json"
+  },
+  "results": {
+    "all-MiniLM-L6-v2": {
+      "Ralph Exp. 7": {
+        "nodes": 211,
+        "ces_mean": 0.620399,
+        "ces_min": 0.35516,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.491461,
+        "csc_p_value": 1.4746352654873583e-13,
+        "csc_pairs": 200
+      },
+      "Ralph Exp. 10": {
+        "nodes": 161,
+        "ces_mean": 0.598893,
+        "ces_min": 0.361986,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.458823,
+        "csc_p_value": 8.326542413092542e-12,
+        "csc_pairs": 200
+      },
+      "CoL-light": {
+        "nodes": 239,
+        "ces_mean": 0.529994,
+        "ces_min": 0.041511,
+        "weak_edges_below_0_3": 16,
+        "csc_score": 0.25816,
+        "csc_p_value": 0.00022354128043797583,
+        "csc_pairs": 200
+      },
+      "Naive": {
+        "nodes": 265,
+        "ces_mean": 0.535501,
+        "ces_min": -0.046912,
+        "weak_edges_below_0_3": 19,
+        "csc_score": 0.235932,
+        "csc_p_value": 0.0007702280695351963,
+        "csc_pairs": 200
+      }
+    },
+    "all-mpnet-base-v2": {
+      "Ralph Exp. 7": {
+        "nodes": 211,
+        "ces_mean": 0.628561,
+        "ces_min": 0.268335,
+        "weak_edges_below_0_3": 1,
+        "csc_score": 0.522407,
+        "csc_p_value": 2.121954389655031e-15,
+        "csc_pairs": 200
+      },
+      "Ralph Exp. 10": {
+        "nodes": 161,
+        "ces_mean": 0.611591,
+        "ces_min": 0.32705,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.463797,
+        "csc_p_value": 4.627291538786625e-12,
+        "csc_pairs": 200
+      },
+      "CoL-light": {
+        "nodes": 239,
+        "ces_mean": 0.550623,
+        "ces_min": 0.03535,
+        "weak_edges_below_0_3": 12,
+        "csc_score": 0.25639,
+        "csc_p_value": 0.00024769932161680734,
+        "csc_pairs": 200
+      },
+      "Naive": {
+        "nodes": 265,
+        "ces_mean": 0.56337,
+        "ces_min": 0.015176,
+        "weak_edges_below_0_3": 12,
+        "csc_score": 0.20458,
+        "csc_p_value": 0.0036625095147224396,
+        "csc_pairs": 200
+      }
+    },
+    "bge-base-en-v1.5": {
+      "Ralph Exp. 7": {
+        "nodes": 211,
+        "ces_mean": 0.763803,
+        "ces_min": 0.59216,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.5293,
+        "csc_p_value": 7.770072534689203e-16,
+        "csc_pairs": 200
+      },
+      "Ralph Exp. 10": {
+        "nodes": 161,
+        "ces_mean": 0.750944,
+        "ces_min": 0.602839,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.464858,
+        "csc_p_value": 4.0775018919615624e-12,
+        "csc_pairs": 200
+      },
+      "CoL-light": {
+        "nodes": 239,
+        "ces_mean": 0.726711,
+        "ces_min": 0.495347,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.274313,
+        "csc_p_value": 8.468878550496106e-05,
+        "csc_pairs": 200
+      },
+      "Naive": {
+        "nodes": 265,
+        "ces_mean": 0.733695,
+        "ces_min": 0.525775,
+        "weak_edges_below_0_3": 0,
+        "csc_score": 0.219954,
+        "csc_p_value": 0.0017508122310872264,
+        "csc_pairs": 200
+      }
+    }
+  },
+  "rankings": {
+    "all-MiniLM-L6-v2": {
+      "by_ces": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "Naive",
+        "CoL-light"
+      ],
+      "by_csc": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "CoL-light",
+        "Naive"
+      ]
+    },
+    "all-mpnet-base-v2": {
+      "by_ces": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "Naive",
+        "CoL-light"
+      ],
+      "by_csc": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "CoL-light",
+        "Naive"
+      ]
+    },
+    "bge-base-en-v1.5": {
+      "by_ces": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "Naive",
+        "CoL-light"
+      ],
+      "by_csc": [
+        "Ralph Exp. 7",
+        "Ralph Exp. 10",
+        "CoL-light",
+        "Naive"
+      ]
+    }
+  }
+}

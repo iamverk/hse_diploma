@@ -1,21 +1,16 @@
 #!/usr/bin/env python3
 """
-check_edge.py — CLI tool to check IS-A edge quality (NLIV) before adding.
+check_edge.py — CLI tool to check IS-A edge quality (CES) before adding.
 
 Usage:
-    # Single edge (loads model each time — slow, ~30s)
     python tools/check_edge.py "Electronics" "Headphones"
-
-    # Batch — check many edges at once (loads model ONCE — fast!)
     python tools/check_edge.py --batch '[{"parent":"A","child":"B"},...]'
-
-    # Interactive mode — model loaded once, reads edges from stdin
     python tools/check_edge.py --interactive
     > Electronics|Headphones
     > Electronics|Dog Food
     > (empty line or Ctrl+D to exit)
 
-Returns JSON with NLIV score and verdict.
+Returns JSON with CES score and verdict. The legacy `nliv` key is kept for old scripts.
 """
 
 import sys
@@ -23,7 +18,6 @@ import json
 import warnings
 import os
 
-# Suppress noisy warnings from torch/transformers
 warnings.filterwarnings("ignore")
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
@@ -37,18 +31,19 @@ def check_one(parent, child, embedder):
     import numpy as np
     p = embedder.encode(parent, normalize_embeddings=True)
     c = embedder.encode(child, normalize_embeddings=True)
-    nliv = float(np.dot(p, c))
+    ces = float(np.dot(p, c))
 
-    if nliv >= 0.5:
+    if ces >= 0.5:
         verdict = "EXCELLENT"
-    elif nliv >= 0.4:
+    elif ces >= 0.4:
         verdict = "GOOD"
-    elif nliv >= 0.3:
+    elif ces >= 0.3:
         verdict = "WEAK"
     else:
         verdict = "BAD"
 
-    return {"parent": parent, "child": child, "nliv": round(nliv, 4), "verdict": verdict}
+    score = round(ces, 4)
+    return {"parent": parent, "child": child, "ces": score, "nliv": score, "verdict": verdict}
 
 
 def main():
@@ -63,15 +58,13 @@ def main():
     if sys.argv[1] == "--batch":
         edges = json.loads(sys.argv[2])
         results = [check_one(e["parent"], e["child"], embedder) for e in edges]
-        results.sort(key=lambda x: x["nliv"])
+        results.sort(key=lambda x: x["ces"])
         good = sum(1 for r in results if r["verdict"] in ("EXCELLENT", "GOOD"))
         weak = sum(1 for r in results if r["verdict"] == "WEAK")
         bad = sum(1 for r in results if r["verdict"] == "BAD")
         print(json.dumps({"total": len(results), "good": good, "weak": weak, "bad": bad, "edges": results}, indent=2))
 
     elif sys.argv[1] == "--interactive":
-        # Interactive mode: read "parent|child" lines from stdin
-        # Model loaded ONCE, all checks are instant
         print("READY", flush=True)
         for line in sys.stdin:
             line = line.strip()

@@ -134,12 +134,6 @@ The thesis evidence is deliberately bounded:
 
 That scope is part of the claim. The repository demonstrates an auditable workflow for one blind product-taxonomy setting; it does not claim universal generalization across all corpora, product domains, and model families.
 
-## AI Assistance Note
-
-This README was edited with AI assistance for wording, structure, and layout. The assistance was limited to presentation: it did not create the experimental results, metric definitions, source attribution, or final interpretation.
-
-The thesis contains a separate AI-use declaration for the written work and diagrams.
-
 ## Citation
 
 ```bibtex

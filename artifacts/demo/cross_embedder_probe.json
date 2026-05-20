@@ -7,10 +7,10 @@
     "bge-base-en-v1.5": "BAAI/bge-base-en-v1.5"
   },
   "methods": {
-    "Ralph Exp. 7": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp7_results/taxonomy_final.json",
-    "Ralph Exp. 10": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/taxonomy_final.json",
-    "CoL-light": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/col_baseline_results/taxonomy_col_inline.json",
-    "Naive": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/naive_baseline_results/taxonomy_naive_inline.json"
+    "Ralph Exp. 7": ".hidden_eval/exp7_results/taxonomy_final.json",
+    "Ralph Exp. 10": ".hidden_eval/exp10_results/taxonomy_final.json",
+    "CoL-light": ".hidden_eval/col_baseline_results/taxonomy_col_inline.json",
+    "Naive": ".hidden_eval/naive_baseline_results/taxonomy_naive_inline.json"
   },
   "results": {
     "all-MiniLM-L6-v2": {

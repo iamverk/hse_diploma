@@ -1,5 +1,5 @@
 {
-  "taxonomy_path": "/Users/iamverk/Desktop/HSE/diploma/diploma/../.hidden_eval/exp10_results/taxonomy_final.json",
+  "taxonomy_path": "taxonomy.json",
   "overall_score_1_5": 3.95,
   "overall_normalized": 0.79,
   "verdict": "pilot-ready with targeted review",

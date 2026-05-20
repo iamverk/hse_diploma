@@ -1,10 +1,10 @@
 {
-  "taxonomy": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/taxonomy_final.json",
-  "path_sample": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/judge_paths.json",
+  "taxonomy": ".hidden_eval/exp10_results/taxonomy_final.json",
+  "path_sample": ".hidden_eval/exp10_results/judge_paths.json",
   "judges": [
     {
       "name": "Claude Opus 4.7",
-      "source": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/judge_ratings.json",
+      "source": ".hidden_eval/exp10_results/judge_ratings.json",
       "mean": 4.74,
       "median": 5,
       "pct_valid_ge4": 0.96,

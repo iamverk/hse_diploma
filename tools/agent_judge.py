@@ -31,6 +31,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from taxonomy_core import _taxonomy_to_graph, load_taxonomy
 
 
+REPO_ROOT = Path(__file__).resolve().parents[1]
+
+
 GENERIC_TERMS = {
     "accessories",
     "accessory",
@@ -115,6 +118,22 @@ def _load_assignment_metrics(path: str | Path | None) -> dict | None:
         return None
     with open(metrics_path, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def _display_path(path: str | Path | None) -> str:
+    if not path:
+        return ""
+    raw = str(path)
+    p = Path(raw)
+    try:
+        return str(p.resolve().relative_to(REPO_ROOT.resolve()))
+    except (OSError, ValueError):
+        pass
+    parts = p.parts
+    if ".hidden_eval" in parts:
+        idx = parts.index(".hidden_eval")
+        return str(Path(".hidden_eval", *parts[idx + 1:]))
+    return raw if not p.is_absolute() else p.name
 
 
 def _score_assignment(metrics: dict | None) -> tuple[float | None, list[str], list[str]]:
@@ -285,7 +304,7 @@ def build_agent_judge_report(taxonomy: dict, assignment_metrics: dict | None = N
     overall = round(overall, 2)
 
     return {
-        "taxonomy_path": taxonomy_path,
+        "taxonomy_path": _display_path(taxonomy_path),
         "overall_score_1_5": overall,
         "overall_normalized": round(overall / 5.0, 4),
         "verdict": _verdict(overall),

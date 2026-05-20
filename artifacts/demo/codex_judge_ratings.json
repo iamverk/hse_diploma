@@ -2,8 +2,8 @@
   "model": "codex-agent",
   "date": "2026-05-17",
   "reviewer_role": "Codex agent, second model-style audit",
-  "taxonomy": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/taxonomy_final.json",
-  "paths_source": "/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/judge_paths.json",
+  "taxonomy": ".hidden_eval/exp10_results/taxonomy_final.json",
+  "paths_source": ".hidden_eval/exp10_results/judge_paths.json",
   "rubric": "1=invalid IS-A, 2=major parent-child error, 3=product taxonomy issue or activity/category mismatch, 4=minor naming/scope flaw, 5=clean product-category path",
   "scope_note": "This is a protocol audit by Codex agent on the same 50 sampled paths previously rated by Claude Opus 4.7. It is not a human evaluation and not a live external API call. GPT-4o-mini was not used for this protocol.",
   "ratings": [

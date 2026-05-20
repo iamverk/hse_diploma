@@ -1,6 +1,6 @@
 # Agent Judge Report
 
-Taxonomy: `/Users/iamverk/Desktop/HSE/diploma/diploma/../.hidden_eval/exp10_results/taxonomy_final.json`
+Taxonomy: `taxonomy.json`
 
 Overall score: **3.95 / 5.00** (0.790 normalized)
 

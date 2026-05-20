@@ -41,6 +41,22 @@ DEFAULT_HIDDEN_EXP10 = Path(
 )
 
 
+def _display_path(path: str | Path | None) -> str:
+    if not path:
+        return ""
+    raw = str(path)
+    p = Path(raw)
+    try:
+        return str(p.resolve().relative_to(REPO_ROOT.resolve()))
+    except (OSError, ValueError):
+        pass
+    parts = p.parts
+    if ".hidden_eval" in parts:
+        idx = parts.index(".hidden_eval")
+        return str(Path(".hidden_eval", *parts[idx + 1:]))
+    return raw if not p.is_absolute() else p.name
+
+
 def _load_json(path: str | Path | None, default: Any = None) -> Any:
     if not path:
         return default
@@ -268,7 +284,7 @@ def build_report_data(args: argparse.Namespace) -> dict:
     metrics_json["rftq_j"] = _rftq_j_from_metrics(metrics_json)
 
     return {
-        "taxonomy_path": args.taxonomy,
+        "taxonomy_path": _display_path(args.taxonomy),
         "artifact_dir": str(args.artifact_dir),
         "taxonomy_stats": stats,
         "metrics": metrics_json,

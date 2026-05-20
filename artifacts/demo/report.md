@@ -1,6 +1,6 @@
 # Demo Review Report
 
-Taxonomy: `/Users/iamverk/Desktop/HSE/diploma/diploma/../.hidden_eval/exp10_results/taxonomy_final.json`
+Taxonomy: `taxonomy.json`
 
 ## Executive Summary
 

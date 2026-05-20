@@ -4,8 +4,8 @@ This protocol records a second model-style audit of the same 50 sampled root-to-
 
 ## Scope
 
-- Taxonomy: `/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/taxonomy_final.json`
-- Path sample: `/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/exp10_results/judge_paths.json`
+- Taxonomy: `.hidden_eval/exp10_results/taxonomy_final.json`
+- Path sample: `.hidden_eval/exp10_results/judge_paths.json`
 - First judge: Claude Opus 4.7, stored in `.hidden_eval/exp10_results/judge_ratings.json`
 - Second judge: Codex agent environment, stored in `artifacts/demo/codex_judge_ratings.json`
 - Rubric: 1 = invalid IS-A, 2 = major parent-child error, 3 = product-taxonomy issue or activity/category mismatch, 4 = minor naming/scope flaw, 5 = clean product-category path.

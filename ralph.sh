@@ -14,8 +14,8 @@
 
 trap '' HUP  # Ignore SIGHUP — survive laptop lid close
 
-# ── Ensure homebrew tools (jq, etc.) are in PATH ────────────────────────────
-export PATH="/Users/iamverk/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
+# ── Ensure common local tools (jq, etc.) are in PATH ─────────────────────────
+export PATH="$HOME/.local/bin:/opt/homebrew/bin:/usr/local/bin:$PATH"
 
 # ── Defaults ────────────────────────────────────────────────────────────────
 MAX_ITERATIONS=40
@@ -49,7 +49,7 @@ done
 PRD_FILE="prd.json"
 PROGRESS_FILE="progress.txt"
 TAXONOMY_FILE="taxonomy.json"
-PYTHON="/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python"
+PYTHON="${PYTHON:-python}"
 export PYTHON  # stream_monitor.py uses this
 LOG_DIR="results/logs"
 HISTORY_DIR="output/taxonomy_history"
@@ -344,11 +344,16 @@ ONE story only. Commit: 'story $CURRENT_ID: <description>'"
     COMPOSITE=$(echo "$V2_RAW" | jq -r '.composite_score // "N/A"' 2>/dev/null || echo "N/A")
     NODE_COUNT=$(echo "$V2_RAW" | jq -r '.node_count // "N/A"' 2>/dev/null || echo "N/A")
 
-    # Reference-based metrics (Edge F1 vs gold — post-hoc only)
-    GOLD_PATH="/Users/iamverk/Desktop/HSE/diploma/.hidden_eval/gold_standard.json"
-    METRICS_RAW=$($PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" 2>/dev/null || echo "")
-    SEM_F1=$(echo "$METRICS_RAW" | grep -i "^Sem Edge F1" | head -1 | awk '{print $NF}')
-    [ -z "$SEM_F1" ] && SEM_F1="N/A"
+    # Reference-based metrics are optional and post-hoc only.
+    # Set GOLD_PATH to a local gold taxonomy if one is available.
+    GOLD_PATH="${GOLD_PATH:-}"
+    if [ -n "$GOLD_PATH" ] && [ -f "$GOLD_PATH" ]; then
+        METRICS_RAW=$($PYTHON tools/metrics.py "$TAXONOMY_FILE" "$GOLD_PATH" 2>/dev/null || echo "")
+        SEM_F1=$(echo "$METRICS_RAW" | grep -i "^Sem Edge F1" | head -1 | awk '{print $NF}')
+        [ -z "$SEM_F1" ] && SEM_F1="N/A"
+    else
+        SEM_F1="N/A"
+    fi
 
     # ── ROLLBACK CHECK: did composite score degrade? ─────────────────────────
     if [ "$ITER_STATUS" != "crash" ] && [ -n "$PREV_COMPOSITE" ] && [ "$COMPOSITE" != "N/A" ]; then

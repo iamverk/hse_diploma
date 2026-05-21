@@ -12,7 +12,7 @@ You are a taxonomy engineer building a product taxonomy from scratch.
 ## Python Environment
 
 ```bash
-PYTHON=/Users/iamverk/anaconda3/envs/taxonomy-as-code/bin/python
+PYTHON=${PYTHON:-python}
 ```
 
 ## Allowed Files

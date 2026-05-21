@@ -18,8 +18,16 @@ ENV/
 # IDEs
 .vscode/
 .idea/
+.cursor/
 *.swp
 .DS_Store
+
+# Local agent/thesis workspaces
+.context/
+.claude/
+quarkdown-output/
+.gradle/
+node_modules/
 
 # Local logs / output
 output/
@@ -29,6 +37,11 @@ stream_*.jsonl
 hook_metrics.jsonl
 .cursor/cache/
 
+# Local generated thesis exports
+thesis_full_en_latest.*
+Makarenkova_diploma_en.*
+Макаренкова_диплом_на_англ.*
+
 # Test caches
 .pytest_cache/
 .ruff_cache/
@@ -36,3 +49,8 @@ hook_metrics.jsonl
 
 # Don't ship private eval data
 .hidden_eval/
+
+# Local environment files
+.env
+.env.*
+!.env.example

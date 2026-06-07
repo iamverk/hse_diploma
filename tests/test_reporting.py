@@ -97,5 +97,5 @@ RFTQ-D SCORE: 0.6500
     markdown = render_markdown_report(data)
 
     assert data["taxonomy_stats"]["nodes"] == 5
-    assert "Demo Review Report" in markdown
+    assert "Taxonomy Review Report" in markdown
     assert "Akeneo Export Readiness" in markdown

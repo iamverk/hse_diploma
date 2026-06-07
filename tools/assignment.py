@@ -5,12 +5,12 @@ Assign products to leaf categories in a taxonomy.
 The module is intentionally self-contained and works offline. By default it
 tries to use a locally cached sentence-transformer model; if that is not
 available, it falls back to a deterministic lexical hashing encoder. The
-fallback is useful for demos and CI, while the sentence-transformer backend is
+fallback is useful for offline smoke runs and CI, while the sentence-transformer backend is
 the intended production-candidate mode.
 
 Usage:
     python tools/assignment.py data/products.jsonl taxonomy.json
-    python tools/assignment.py data/products.jsonl taxonomy.json --out artifacts/demo/product_assignments.csv
+    python tools/assignment.py data/products.jsonl taxonomy.json --out artifacts/local/product_assignments.csv
     python tools/assignment.py data/products.jsonl taxonomy.json --backend lexical --limit 100
 """
 
@@ -161,7 +161,7 @@ def _stable_bucket(token: str, dim: int) -> int:
 
 
 def _lexical_hash_encode(texts: Iterable[str], dim: int = 2048) -> np.ndarray:
-    """Small deterministic bag-of-words encoder for offline demos and tests."""
+    """Small deterministic bag-of-words encoder for offline smoke runs and tests."""
     rows = []
     for text in texts:
         vec = np.zeros(dim, dtype=np.float32)
@@ -400,13 +400,13 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Assign products to leaf taxonomy categories")
     parser.add_argument("products", nargs="?", default="data/products.jsonl", help="Input products JSONL")
     parser.add_argument("taxonomy", nargs="?", default="taxonomy.json", help="Input taxonomy JSON")
-    parser.add_argument("--out", default="artifacts/demo/product_assignments.csv", help="Output CSV path")
-    parser.add_argument("--metrics-out", default="artifacts/demo/assignment_metrics.json", help="Output metrics JSON path")
+    parser.add_argument("--out", default="artifacts/local/product_assignments.csv", help="Output CSV path")
+    parser.add_argument("--metrics-out", default="artifacts/local/assignment_metrics.json", help="Output metrics JSON path")
     parser.add_argument("--report-out", default=None, help="Optional Markdown review report path")
     parser.add_argument("--threshold", type=float, default=DEFAULT_THRESHOLD, help="Low-confidence score threshold")
     parser.add_argument("--ambiguity-margin", type=float, default=DEFAULT_AMBIGUITY_MARGIN, help="Top-1/top-2 ambiguity margin")
     parser.add_argument("--top-k", type=int, default=DEFAULT_TOP_K, help="Number of top leaves to keep")
-    parser.add_argument("--limit", type=int, default=None, help="Optional product row limit for demos")
+    parser.add_argument("--limit", type=int, default=None, help="Optional product row limit")
     parser.add_argument("--backend", choices=["auto", "sentence-transformer", "lexical"], default="auto")
     parser.add_argument("--model", default="all-MiniLM-L6-v2", help="Sentence-transformer model name")
     parser.add_argument("--hash-dim", type=int, default=2048, help="Lexical hashing dimension")

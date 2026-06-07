@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Generate a unified demo review report.
+Generate a unified taxonomy review report.
 
 The report is meant for thesis/productization review: it combines taxonomy
 structure, reference-free metrics, judge ratings, product assignment quality,
@@ -30,7 +30,7 @@ from tools.agent_judge import build_agent_judge_report
 from tools.taxonomy_core import load_taxonomy
 
 
-DEFAULT_ARTIFACT_DIR = Path("artifacts/demo")
+DEFAULT_ARTIFACT_DIR = Path("artifacts/local")
 REPO_ROOT = Path(__file__).resolve().parents[1]
 WORKSPACE_ROOT = Path(os.environ.get("BLIND_TAXONOMY_WORKSPACE", str(REPO_ROOT.parent)))
 DEFAULT_HIDDEN_EXP10 = Path(
@@ -355,7 +355,7 @@ def render_markdown_report(data: dict) -> str:
     verdict = agent.get("verdict", "n/a")
 
     lines = [
-        "# Demo Review Report",
+        "# Taxonomy Review Report",
         "",
         f"Taxonomy: `{data['taxonomy_path']}`",
         "",
@@ -504,7 +504,7 @@ def render_markdown_report(data: dict) -> str:
     return "\n".join(lines) + "\n"
 
 
-def markdown_to_html(markdown: str, title: str = "Demo Review Report") -> str:
+def markdown_to_html(markdown: str, title: str = "Taxonomy Review Report") -> str:
     lines = markdown.splitlines()
     body = []
     in_ul = False
@@ -587,7 +587,7 @@ def _inline_html(text: str) -> str:
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Generate a unified demo review report")
+    parser = argparse.ArgumentParser(description="Generate a unified taxonomy review report")
     parser.add_argument("--taxonomy", default=str(DEFAULT_HIDDEN_EXP10 / "taxonomy_final.json"))
     parser.add_argument("--metrics-text", default=str(DEFAULT_HIDDEN_EXP10 / "metrics_v2_final.txt"))
     parser.add_argument("--rlpc-json", default=str(DEFAULT_HIDDEN_EXP10 / "rlpc.json"))

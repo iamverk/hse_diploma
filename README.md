@@ -6,7 +6,6 @@ Code and experiment artifacts for the HSE master's thesis:
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
-[![Demo](https://img.shields.io/badge/demo-make%20demo-informational.svg)](Makefile)
 [![Thesis Artifact](https://img.shields.io/badge/HSE-master's%20thesis-6b7280.svg)](CITATION.cff)
 
 This repository contains a reproducible pipeline for building a product taxonomy from a raw product corpus when no seed taxonomy and no gold labels are available. The package name is `blind-taxonomy`; the repository name is `hse_diploma`.
@@ -25,7 +24,6 @@ The core idea is simple: treat the taxonomy as a versioned artifact. An LLM agen
 | `tools/agent_judge.py` | Deterministic readiness review for the production candidate |
 | `tools/akeneo_export.py` | CSV, XLSX, and REST-style JSON export for Akeneo PIM |
 | `tools/reporting.py` | One review report that pulls together metrics, assignment, linter, judge, and export status |
-| `demo/run_demo.sh` | Small reproducible demo used for the productization pass |
 
 ## Pipeline
 
@@ -88,16 +86,6 @@ cd hse_diploma
 python -m venv .venv
 source .venv/bin/activate
 pip install -e ".[dev,pim]"
-
-make demo
-```
-
-The demo writes reviewable artifacts to `artifacts/demo/`, including product assignments, assignment metrics, Akeneo exports, an agent-judge report, and a consolidated HTML report.
-
-For a small offline smoke run:
-
-```bash
-PRODUCTS=demo/products_sample.jsonl PRODUCT_LIMIT=8 BACKEND=lexical bash demo/run_demo.sh
 ```
 
 ## Common Commands
@@ -107,7 +95,7 @@ python tools/validate.py taxonomy.json
 python tools/metrics_v2.py taxonomy.json --json
 python tools/path_coherence.py taxonomy.json --json
 python tools/taxonomy_linter.py taxonomy.json
-python tools/assignment.py data/products.jsonl taxonomy.json --out artifacts/demo/product_assignments.csv
+python tools/assignment.py data/products.jsonl taxonomy.json --out artifacts/local/product_assignments.csv
 python tools/akeneo_export.py taxonomy.json --xlsx
 python tools/reporting.py
 ```

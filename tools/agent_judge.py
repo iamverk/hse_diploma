@@ -10,7 +10,7 @@ JSON/Markdown report.
 
 Usage:
     python tools/agent_judge.py taxonomy.json
-    python tools/agent_judge.py taxonomy.json --assignment-metrics artifacts/demo/assignment_metrics.json
+    python tools/agent_judge.py taxonomy.json --assignment-metrics artifacts/local/assignment_metrics.json
 """
 
 from __future__ import annotations
@@ -480,8 +480,8 @@ def parse_args() -> argparse.Namespace:
         default=None,
         help="Optional assignment metrics JSON from tools/assignment.py",
     )
-    parser.add_argument("--out", default="artifacts/demo/agent_judge_report.json", help="Output JSON report")
-    parser.add_argument("--report-out", default="artifacts/demo/agent_judge_report.md", help="Output Markdown report")
+    parser.add_argument("--out", default="artifacts/local/agent_judge_report.json", help="Output JSON report")
+    parser.add_argument("--report-out", default="artifacts/local/agent_judge_report.md", help="Output Markdown report")
     return parser.parse_args()
 
 
@@ -489,7 +489,7 @@ def main() -> None:
     args = parse_args()
     assignment_metrics_path = args.assignment_metrics
     if assignment_metrics_path is None:
-        default_metrics = Path("artifacts/demo/assignment_metrics.json")
+        default_metrics = Path("artifacts/local/assignment_metrics.json")
         assignment_metrics_path = str(default_metrics) if default_metrics.exists() else None
 
     taxonomy = load_taxonomy(args.taxonomy)

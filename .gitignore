@@ -31,6 +31,9 @@ node_modules/
 
 # Local logs / output
 output/
+demo/
+artifacts/demo/
+artifacts/local/
 *.log
 stderr.log
 stream_*.jsonl

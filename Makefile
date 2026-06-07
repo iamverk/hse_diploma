@@ -1,9 +1,6 @@
-.PHONY: demo test compile
+.PHONY: test compile
 
 PYTHON ?= python
-
-demo:
-	PYTHON="$(PYTHON)" bash demo/run_demo.sh
 
 test:
 	$(PYTHON) -m pytest tests/test_assignment.py tests/test_agent_judge.py tests/test_reporting.py
